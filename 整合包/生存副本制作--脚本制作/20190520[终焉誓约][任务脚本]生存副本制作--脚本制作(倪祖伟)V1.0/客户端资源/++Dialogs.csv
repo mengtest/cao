@@ -1,0 +1,7 @@
+﻿,required,required,required,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional
+,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,string,int32,int32,int32,string,string,int32,int32,int32,int32,int32,int32,int32,int32,int32
+,indexId,Id,Index,IsSkip,talkId,Leftid,leftFace,leftAlpha,Midid,midFace,midAlpha,Rightid,rightFace,rightAlpha,action,data,bgName,bgFadeIn,hideContine,interactBtn,nextBtns,effectClipID,bgmClipID,voiceId,screenShake,leftMagicEffect,midMagicEffect,rightMagicEffect,GuideID,showItemId
+备注,,对白ID,下标,1：能跳过 0：不能跳过（默认不能跳过）,说话者,左半身像，填写NPCid,左边表情编号,左边透明度,中间半身像,中间表情,中间透明度,右半身像，填写NPCid,右边表情编号,右边透明度,点击继续后的动作Id,对应数据,背景,背景是否淡入,是否不显示继续按钮（默认显示）,对白互动按钮,下一步选项按钮,音效ID,背景音乐ID,配音ID,屏幕震动,左边魔法效果,中间魔法效果,右边魔法效果,同时触发的引导ID,对白同时显示的物品id
+,9999001,99990,1,0,-1,-1,0,-1,-1,0,-1,-1,0,-1,0,,0,0,0,,,0,0,0,0,0,0,0,0,0
+,9999101,99991,1,0,-1,-1,0,-1,-1,0,-1,-1,0,-1,0,,0,0,0,,,0,0,0,0,0,0,0,0,0
+,9999201,99992,1,0,-1,-1,0,-1,-1,0,-1,-1,0,-1,0,,0,0,0,,,0,0,0,0,0,0,0,0,0
