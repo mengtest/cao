@@ -1,0 +1,9 @@
+﻿,required,required,required,required
+,uint32,uint32,uint32,uint32
+,id,level,min_syn_active,award_id
+备注,流水ID,奖励等级,活跃值下限,奖励ID
+,1,1,1050,7000109
+,2,2,1600,7000110
+,3,3,2250,7000111
+,4,4,3000,7000112
+,5,5,3850,7000113

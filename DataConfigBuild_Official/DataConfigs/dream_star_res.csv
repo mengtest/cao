@@ -1,0 +1,16 @@
+﻿,required,required,required,required,required
+,uint32,string,string,string,string
+,id,show_bounses1,show_bounses2,show_bounses3,backbackground
+备注,章节ID,奖励预览,奖励预览,奖励预览,关卡背景图路径
+,1,"1,50","1,100","1,200",Textures/Atlas/Dyn/BG/wenli_dream_01.png
+,2,"1,50","1,100","1,200",Textures/Atlas/Dyn/BG/wenli_dream_01.png
+,3,"1,100","1,150","1,300",Textures/Atlas/Dyn/BG/wenli_dream_01.png
+,4,"1,100","1,150","1,300",Textures/Atlas/Dyn/BG/wenli_dream_01.png
+,5,"1,150","1,200","1,400",Textures/Atlas/Dyn/BG/wenli_dream_01.png
+,6,"1,150","1,200","1,400",Textures/Atlas/Dyn/BG/wenli_dream_01.png
+,7,"1,200","1,300","1,600",Textures/Atlas/Dyn/BG/wenli_dream_01.png
+,8,"1,200","1,300","1,600",Textures/Atlas/Dyn/BG/wenli_dream_01.png
+,9,"1,300","1,450","1,900",Textures/Atlas/Dyn/BG/wenli_dream_01.png
+,10,"1,300","1,450","1,900",Textures/Atlas/Dyn/BG/wenli_dream_01.png
+,11,"1,400","1,600","1,1200",Textures/Atlas/Dyn/BG/wenli_dream_01.png
+,12,"1,400","1,600","1,1200",Textures/Atlas/Dyn/BG/wenli_dream_01.png

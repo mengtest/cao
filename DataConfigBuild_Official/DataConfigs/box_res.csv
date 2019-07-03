@@ -1,0 +1,7 @@
+﻿,required,required,required,required,required
+,int32,string,int32,int32,int32
+,box_id,box_icon_path,box_drop1,box_drop2,box_drop3
+备注,宝箱id,宝箱图标路径,宝箱掉落1,宝箱掉落2,宝箱掉落3
+,101,Textures/Atlas/GUI/FriendChestPanel/New/cumuxiang.png,1,3,210000
+,102,Textures/Atlas/GUI/FriendChestPanel/New/miyinxiang.png,210023,3010013,6003003
+,103,Textures/Atlas/GUI/FriendChestPanel/New/lianjinbaoxiang.png,2120013,3040013,210023

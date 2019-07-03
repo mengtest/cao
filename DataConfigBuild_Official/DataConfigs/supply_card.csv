@@ -1,0 +1,5 @@
+﻿,required,required,required,required,required,required,required
+,uint32,uint32,uint32,uint32,uint32,uint32,uint32
+,id,card_type,card_time,buy_award,daily_award,trail_id,trail_time
+备注,特权卡id,特权卡类型,生效天数,购买时的奖励id,每天领的奖励id,体验卡的物品id,体验卡的生效天数
+,1,1,30,7000807,7000808,210104,1

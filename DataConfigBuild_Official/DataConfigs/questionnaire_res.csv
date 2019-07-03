@@ -1,0 +1,6 @@
+﻿,required,required
+,int32,string
+,id,url
+备注,问卷id,问卷url地址
+,1,http://wj.sd.99.com/q/aABJJj
+,2,http://wj.sd.99.com/q/byEz2u

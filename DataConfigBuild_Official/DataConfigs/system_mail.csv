@@ -1,0 +1,4 @@
+﻿,required,required,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional
+,uint32,uint32,string,string,uint32,uint32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32
+,id,type,start_time,over_time,failure_length,min_level,item1_id,item1_num,item2_id,item2_num,item3_id,item3_num,item4_id,item4_num,item5_id,item5_num
+备注,id,邮件类型,开始时间,结束时间,failure_length,min_level,附件1id,附件1数量,附件2id,附件2数量,附件3id,附件3数量,附件4id,附件4数量,附件5id,附件5数量

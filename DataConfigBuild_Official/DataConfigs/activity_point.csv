@@ -1,0 +1,10 @@
+﻿,required,required,required,required,required
+,uint32,uint32,uint32,uint32,uint32
+,id,activity_id,need_point,award_id,mask
+备注,id,活动id,所需积分,奖励id,奖励掩码
+,10000,10004,30,7000000,1
+,10001,10004,90,7000001,2
+,10002,10004,180,7000002,3
+,10003,10004,300,7000003,4
+,10004,10004,450,7000004,5
+,10005,10004,650,7000005,6

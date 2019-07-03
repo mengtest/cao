@@ -1,0 +1,6 @@
+﻿,required,required,required,required,required
+,uint32,uint32,uint32,string,string
+,id,LevelID,maskcode,name,condition
+备注,流水ID,地图ID,地图掩码,地图名称,地图解锁条件
+,1,2005,1,失落群岛,该片区未开放
+,2,2003,2,古加尼尔,该片区未开放

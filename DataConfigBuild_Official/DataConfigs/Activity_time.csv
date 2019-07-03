@@ -1,0 +1,4 @@
+﻿,required,optional,optional,optional,optional,optional
+,uint32,uint32,uint32,uint32,uint32,uint32
+,id,cycle,ready_time,start_time,end_time,activity_id
+备注,id,周期,开启时间,开启时间,截止时间,活动ID

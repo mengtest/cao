@@ -1,0 +1,8 @@
+﻿,required,required,required
+,uint32,uint32,uint32
+,id,activity_data,award_id
+备注,累积id,活跃度,奖励预览
+,1,15,7000803
+,2,40,7000804
+,3,70,7000805
+,4,100,7000806

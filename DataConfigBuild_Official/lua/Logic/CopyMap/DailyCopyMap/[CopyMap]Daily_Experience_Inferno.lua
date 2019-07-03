@@ -1,0 +1,745 @@
+--region *.lua
+--Date
+--此文件由[BabeLua]插件自动生成
+
+
+
+--endregion
+local nCopyMapId = 3091
+
+local nTempDataId = 1169
+
+local tMonsterGroup = {}
+--tMonsterGroup.First_1 = 200426
+--tMonsterGroup.First_2 = 200441
+--tMonsterGroup.First_3 = 200442
+--tMonsterGroup.First_4 = 200443
+--tMonsterGroup.First_5 = 200444
+tMonsterGroup.Yamozi_1 = 200427
+--tMonsterGroup.Yamozi_2 = 200445
+--tMonsterGroup.Yamozi_3 = 200446
+--tMonsterGroup.Yamozi_4 = 200447
+--tMonsterGroup.Yamozi_5 = 200448
+tMonsterGroup.Diaoxiang = 200428
+tMonsterGroup.JiXieShiXiang = 200469
+tMonsterGroup.FenNu = 200470
+
+--local nTarget_1 = 60178 --删除该任务
+local nTarget_2 = 60179
+
+local tNpcGroup = {}
+tNpcGroup.Box = 40198
+tNpcGroup.Diaoxiang = 60342
+tNpcGroup.Diaoxiang_Monster = 60343
+tNpcGroup.Diaoxiang_ExpBall = 60344
+tNpcGroup.Heilong = 20596
+tNpcGroup.Taleiya = 20597
+tNpcGroup.SuperBox_1 = 40215
+tNpcGroup.SuperBox_2 = 40216
+tNpcGroup.Yazimo = 20639
+
+local nGenId_Box = 3091004
+
+local tGenId = {}
+--tGenId.MonsterFirst_1 = 3091001
+--tGenId.MonsterFirst_2 = 3091020
+--tGenId.MonsterFirst_3 = 3091021
+--tGenId.MonsterFirst_4 = 3091022
+--tGenId.MonsterFirst_5 = 3091023
+tGenId.MonsterYazimo_1 = 3091002
+--tGenId.MonsterYazimo_2 = 3091024
+--tGenId.MonsterYazimo_3 = 3091025
+--tGenId.MonsterYazimo_4 = 3091026
+--tGenId.MonsterYazimo_5 = 3091027
+tGenId.MonsterDiaoxiang = 3091003
+tGenId.MonsterJiXieShiXiang = 3091029
+tGenId.MonsterFenNu = 3091030
+tGenId.MonsterDiaoxiang = 3091003
+--tGenId.Box = 3091004
+tGenId.Diaoxiang_1 = 3091005
+tGenId.Diaoxiang_2 = 3091006
+tGenId.Diaoxiang_3 = 3091007
+tGenId.Diaoxiang_4 = 3091008
+tGenId.Diaoxiang_5 = 3091009
+tGenId.Diaoxiang_6 = 3091010
+tGenId.Diaoxiang_Monstetr = 3091011
+tGenId.ExpBall_1 = 3091012
+tGenId.ExpBall_2 = 3091013
+tGenId.Heilong_1 = 3091014
+tGenId.Heilong_2 = 3091015
+tGenId.Heilong_3 = 3091016
+tGenId.Heilong_4 = 3091017
+tGenId.Heilong_5 = 3091018
+tGenId.Taleiya = 3091019
+tGenId.SuperBox_1 = 3091031
+tGenId.SuperBox_2 = 3091032
+tGenId.Yazimo = 3091033
+
+local tDialog = {}
+tDialog.EnterCopymap_1 = 6450
+tDialog.EnterCopymap_2 = 6451
+tDialog.EnterCopymap_3 = 6452
+tDialog.EnterCopymap_4 = 6453
+tDialog.EnterCopymap_5 = 6454
+tDialog.JixieBeforeBattle_1 = 6455
+tDialog.JixieBeforeBattle_2 = 6456
+tDialog.JixieBeforeBattle_3 = 6457
+tDialog.JixieBeforeBattle_4 = 6458
+tDialog.JixieBeforeBattle_5 = 6459
+tDialog.JixieAfterBattle = 6460
+tDialog.PassBoxNotfull_1 = 6461
+tDialog.PassBoxNotfull_2 = 6462
+tDialog.PassBoxNotfull_3 = 6463
+tDialog.PassBoxNotfull_4 = 6464
+tDialog.PassBoxNotfull_5 = 6465
+tDialog.PassBoxFull_1 = 6466
+tDialog.PassBoxFull_2 = 6467
+tDialog.PassBoxFull_3 = 6468
+tDialog.PassBoxFull_4 = 6469
+tDialog.PassBoxFull_5 = 6470
+tDialog.PassBoxFull_6 = 6471
+tDialog.PassBoxFull_7 = 6472
+tDialog.HeilongNpc_1 = 6473
+tDialog.HeilongNpc_2 = 6474
+tDialog.HeilongNpc_3 = 6475
+tDialog.HeilongNpc_4 = 6476
+tDialog.HeilongNpc_5 = 6477
+tDialog.YazimoBeforeBattle_1 = 6478
+tDialog.YazimoBeforeBattle_2 = 6479
+tDialog.YazimoBeforeBattle_3 = 6480
+tDialog.YazimoBeforeBattle_4 = 6481
+tDialog.YazimoBeforeBattle_5 = 6482
+tDialog.DiaoxiangMonster_1 = 6483
+tDialog.DiaoxiangMonster_2 = 6484
+tDialog.DiaoxiangMonster_3 = 6485
+tDialog.DiaoxiangMonster_4 = 6486
+tDialog.DiaoxiangMonster_5 = 6487
+tDialog.TaleiyaHasHero_1 = 6488
+tDialog.TaleiyaHasHero_2 = 6489
+tDialog.TaleiyaHasHero_3 = 6490
+tDialog.TaleiyaNoHero_1 = 6491
+tDialog.TaleiyaNoHero_2 = 6492
+tDialog.TaleiyaNoHero_3 = 6493
+
+local tAward_id = {}
+tAward_id.Box = 1000410
+tAward_id.Diaoxiang = 1000411 
+tAward_id.ExpBall = 1000412
+tAward_id.Heilong = 1000413
+tAward_id.Taleiya_HasHero = 1000414
+tAward_id.Taleiya_NoHero = 1000415
+tAward_id.SuperBox_1 = 1000424
+tAward_id.SuperBox_2 = 1000425
+
+
+rwtNpcGroup[tNpcGroup.Box] = rwtNpcGroup[tNpcGroup.Box] or {}  --通关宝箱
+rwtNpcGroup[tNpcGroup.Box]["Type"] = CONST_NPCGROUP_TYPE.TreasureBox
+rwtNpcGroup[tNpcGroup.Box]["NotDel"] = 1
+rwtNpcGroup[tNpcGroup.Box]["Awards"] = {}
+rwtNpcGroup[tNpcGroup.Box]["Awards"]["Events"] = {}
+rwtNpcGroup[tNpcGroup.Box]["Awards"]["Events"][1] = {}
+rwtNpcGroup[tNpcGroup.Box]["Awards"]["Events"][1]["ChkGenEventNoExist"]	= tGenId
+rwtNpcGroup[tNpcGroup.Box]["Awards"]["Events"][1]["FailEvents"] = {}
+rwtNpcGroup[tNpcGroup.Box]["Awards"]["Events"][1]["FailEvents"]["OpenDialog"] = {}	   --失败对白
+rwtNpcGroup[tNpcGroup.Box]["Awards"]["Events"][1]["FailEvents"]["OpenDialog"]["tDialog"] =  {tDialog.PassBoxNotfull_1,tDialog.PassBoxNotfull_2,tDialog.PassBoxNotfull_3,tDialog.PassBoxNotfull_4,tDialog.PassBoxNotfull_5}
+rwtNpcGroup[tNpcGroup.Box]["Awards"]["Events"][1]["OpenDialog"] = {}		  --成功对白
+rwtNpcGroup[tNpcGroup.Box]["Awards"]["Events"][1]["OpenDialog"]["tDialog"] =  {tDialog.PassBoxFull_1,tDialog.PassBoxFull_2,tDialog.PassBoxFull_3,tDialog.PassBoxFull_4,tDialog.PassBoxFull_5,tDialog.PassBoxFull_6,tDialog.PassBoxFull_7}
+rwtNpcGroup[tNpcGroup.Box]["Awards"]["Events"][1]["DynDelete"] = {} 
+rwtNpcGroup[tNpcGroup.Box]["Awards"]["Events"][1]["DynDelete"][1] = nGenId_Box
+rwtNpcGroup[tNpcGroup.Box]["Awards"]["Events"][1]["GetServerAward"] = {}
+rwtNpcGroup[tNpcGroup.Box]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TREASURE_BOX
+rwtNpcGroup[tNpcGroup.Box]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tNpcGroup.Box
+rwtNpcGroup[tNpcGroup.Box]["Awards"]["Events"][1]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
+rwtNpcGroup[tNpcGroup.Box]["Awards"]["Events"][1]["GetServerAward"]["AwardId"] = tAward_id.Box  
+rwtNpcGroup[tNpcGroup.Box]["ChooseAwards"] = {}		  --强制打开通关宝箱奖励
+rwtNpcGroup[tNpcGroup.Box]["ChooseAwards"]["Events"] = {}
+rwtNpcGroup[tNpcGroup.Box]["ChooseAwards"]["Events"][1] = {}
+rwtNpcGroup[tNpcGroup.Box]["ChooseAwards"]["Events"][1]["OpenDialog"] = {}		  --成功对白
+rwtNpcGroup[tNpcGroup.Box]["ChooseAwards"]["Events"][1]["OpenDialog"]["tDialog"] =  {tDialog.PassBoxFull_1,tDialog.PassBoxFull_2,tDialog.PassBoxFull_3,tDialog.PassBoxFull_4,tDialog.PassBoxFull_5,tDialog.PassBoxFull_6,tDialog.PassBoxFull_7}
+rwtNpcGroup[tNpcGroup.Box]["ChooseAwards"]["Events"][1]["DynDelete"] = {} 
+rwtNpcGroup[tNpcGroup.Box]["ChooseAwards"]["Events"][1]["DynDelete"][1] = nGenId_Box
+rwtNpcGroup[tNpcGroup.Box]["ChooseAwards"]["Events"][1]["GetServerAward"] = {}
+rwtNpcGroup[tNpcGroup.Box]["ChooseAwards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TREASURE_BOX
+rwtNpcGroup[tNpcGroup.Box]["ChooseAwards"]["Events"][1]["GetServerAward"]["ActionId"] = tNpcGroup.Box
+rwtNpcGroup[tNpcGroup.Box]["ChooseAwards"]["Events"][1]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
+rwtNpcGroup[tNpcGroup.Box]["ChooseAwards"]["Events"][1]["GetServerAward"]["AwardId"] = tAward_id.Box     
+
+
+rwtNpcGroup[tNpcGroup.SuperBox_1] = rwtNpcGroup[tNpcGroup.SuperBox_1] or {}  --稀有宝箱
+rwtNpcGroup[tNpcGroup.SuperBox_1]["Type"] = CONST_NPCGROUP_TYPE.TreasureBox
+rwtNpcGroup[tNpcGroup.SuperBox_1]["Awards"] = {}
+rwtNpcGroup[tNpcGroup.SuperBox_1]["Awards"]["Events"] = {}
+rwtNpcGroup[tNpcGroup.SuperBox_1]["Awards"]["Events"][1] = {}
+rwtNpcGroup[tNpcGroup.SuperBox_1]["Awards"]["Events"][1]["GetServerAward"] = {}
+rwtNpcGroup[tNpcGroup.SuperBox_1]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TREASURE_BOX
+rwtNpcGroup[tNpcGroup.SuperBox_1]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tNpcGroup.SuperBox_1
+rwtNpcGroup[tNpcGroup.SuperBox_1]["Awards"]["Events"][1]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
+rwtNpcGroup[tNpcGroup.SuperBox_1]["Awards"]["Events"][1]["GetServerAward"]["AwardId"] = tAward_id.SuperBox_1
+
+rwtNpcGroup[tNpcGroup.SuperBox_2] = rwtNpcGroup[tNpcGroup.SuperBox_2] or {}  --稀有宝箱
+rwtNpcGroup[tNpcGroup.SuperBox_2]["Type"] = CONST_NPCGROUP_TYPE.TreasureBox
+rwtNpcGroup[tNpcGroup.SuperBox_2]["Awards"] = {}
+rwtNpcGroup[tNpcGroup.SuperBox_2]["Awards"]["Events"] = {}
+rwtNpcGroup[tNpcGroup.SuperBox_2]["Awards"]["Events"][1] = {}
+rwtNpcGroup[tNpcGroup.SuperBox_2]["Awards"]["Events"][1]["GetServerAward"] = {}
+rwtNpcGroup[tNpcGroup.SuperBox_2]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TREASURE_BOX
+rwtNpcGroup[tNpcGroup.SuperBox_2]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tNpcGroup.SuperBox_2
+rwtNpcGroup[tNpcGroup.SuperBox_2]["Awards"]["Events"][1]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
+rwtNpcGroup[tNpcGroup.SuperBox_2]["Awards"]["Events"][1]["GetServerAward"]["AwardId"] = tAward_id.SuperBox_2
+
+
+rwtNpcGroup[tNpcGroup.Diaoxiang] = rwtNpcGroup[tNpcGroup.Diaoxiang] or {}  --雕像
+rwtNpcGroup[tNpcGroup.Diaoxiang]["Type"] = CONST_NPCGROUP_TYPE.Collect
+rwtNpcGroup[tNpcGroup.Diaoxiang]["CollectTime"] = 3
+rwtNpcGroup[tNpcGroup.Diaoxiang]["Awards"] = {}  
+rwtNpcGroup[tNpcGroup.Diaoxiang]["Awards"]["Events"] = {}   
+rwtNpcGroup[tNpcGroup.Diaoxiang]["Awards"]["Events"][1] = {}
+rwtNpcGroup[tNpcGroup.Diaoxiang]["Awards"]["Events"][1]["GetServerAward"] = {}          
+rwtNpcGroup[tNpcGroup.Diaoxiang]["Awards"]["Events"][1]["GetServerAward"]["AwardId"] = tAward_id.Diaoxiang
+rwtNpcGroup[tNpcGroup.Diaoxiang]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tNpcGroup.Diaoxiang
+rwtNpcGroup[tNpcGroup.Diaoxiang]["Awards"]["Events"][1]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
+rwtNpcGroup[tNpcGroup.Diaoxiang]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TIPS
+
+rwtNpcGroup[tNpcGroup.Diaoxiang_Monster] = rwtNpcGroup[tNpcGroup.Diaoxiang_Monster] or {}  --怪物雕像
+rwtNpcGroup[tNpcGroup.Diaoxiang_Monster]["Type"] = CONST_NPCGROUP_TYPE.Collect
+rwtNpcGroup[tNpcGroup.Diaoxiang_Monster]["CollectTime"] = 3
+rwtNpcGroup[tNpcGroup.Diaoxiang_Monster]["Awards"] = {}  
+rwtNpcGroup[tNpcGroup.Diaoxiang_Monster]["Awards"]["Events"] = {}   
+rwtNpcGroup[tNpcGroup.Diaoxiang_Monster]["Awards"]["Events"][1] = {}
+rwtNpcGroup[tNpcGroup.Diaoxiang_Monster]["Awards"]["Events"][1]["OpenDialog"] = {}		  --成功对白
+rwtNpcGroup[tNpcGroup.Diaoxiang_Monster]["Awards"]["Events"][1]["OpenDialog"]["tDialog"] = {tDialog.DiaoxiangMonster_1,tDialog.DiaoxiangMonster_2,tDialog.DiaoxiangMonster_3,tDialog.DiaoxiangMonster_4,tDialog.DiaoxiangMonster_5}
+
+
+rwtNpcGroup[tNpcGroup.Diaoxiang_ExpBall] = rwtNpcGroup[tNpcGroup.Diaoxiang_ExpBall] or {}  --雕像
+rwtNpcGroup[tNpcGroup.Diaoxiang_ExpBall]["Type"] = CONST_NPCGROUP_TYPE.Collect
+rwtNpcGroup[tNpcGroup.Diaoxiang_ExpBall]["CollectTime"] = 3
+rwtNpcGroup[tNpcGroup.Diaoxiang_ExpBall]["Awards"] = {}  
+rwtNpcGroup[tNpcGroup.Diaoxiang_ExpBall]["Awards"]["Events"] = {}   
+rwtNpcGroup[tNpcGroup.Diaoxiang_ExpBall]["Awards"]["Events"][1] = {}
+rwtNpcGroup[tNpcGroup.Diaoxiang_ExpBall]["Awards"]["Events"][1]["GetServerAward"] = {}          
+rwtNpcGroup[tNpcGroup.Diaoxiang_ExpBall]["Awards"]["Events"][1]["GetServerAward"]["AwardId"] = tAward_id.Diaoxiang
+rwtNpcGroup[tNpcGroup.Diaoxiang_ExpBall]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tNpcGroup.Diaoxiang
+rwtNpcGroup[tNpcGroup.Diaoxiang_ExpBall]["Awards"]["Events"][1]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
+rwtNpcGroup[tNpcGroup.Diaoxiang_ExpBall]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TIPS
+
+local nAwardHeroId = 101
+
+rwtNpcGroup[tNpcGroup.Heilong] = rwtNpcGroup[tNpcGroup.Heilong] or {}
+rwtNpcGroup[tNpcGroup.Heilong]["InterfaceFunc"] = function(nNpcGroupType,nNpcGroupId,nGenEventId)
+	local tOpenDialog = {tDialog.HeilongNpc_1,tDialog.HeilongNpc_2,tDialog.HeilongNpc_3,tDialog.HeilongNpc_4,tDialog.HeilongNpc_5}
+	local nRandom = math.random(1,#tOpenDialog)
+	rwOpenNpcChatDialog(tOpenDialog[nRandom],CONST_NPCCHAT_TYPE.COPYMAP,nGenEventId)	
+end
+
+rwtNpcGroup[tNpcGroup.Yazimo] = rwtNpcGroup[tNpcGroup.Yazimo] or {}
+rwtNpcGroup[tNpcGroup.Yazimo]["InterfaceFunc"]= function()
+	if not rwHasGenEvent(tGenId.MonsterYazimo_1) then
+		rwAddGenEvent(tGenId.MonsterYazimo_1)
+	end
+	local tOpenDialog = {tDialog.YazimoBeforeBattle_1,tDialog.YazimoBeforeBattle_2,tDialog.YazimoBeforeBattle_3,tDialog.YazimoBeforeBattle_4,tDialog.YazimoBeforeBattle_5}
+	local nRandom = math.random(1,#tOpenDialog)
+	rwOpenNpcChatDialog(tOpenDialog[nRandom])	
+--	rwAutoBattle(tGenId.MonsterYazimo_1)
+end
+rwtDialog[tDialog.YazimoBeforeBattle_1] = rwtDialog[tDialog.YazimoBeforeBattle_1] or {}
+rwtDialog[tDialog.YazimoBeforeBattle_1]["DialogEndInit"] = {}
+rwtDialog[tDialog.YazimoBeforeBattle_1]["DialogEndInit"]["Events"] = {}
+rwtDialog[tDialog.YazimoBeforeBattle_1]["DialogEndInit"]["Events"][1] = {}
+rwtDialog[tDialog.YazimoBeforeBattle_1]["DialogEndInit"]["Events"][1]["AutoBattle"] = {}       
+rwtDialog[tDialog.YazimoBeforeBattle_1]["DialogEndInit"]["Events"][1]["AutoBattle"]["GenId"] = tGenId.MonsterYazimo_1
+
+rwtDialog[tDialog.YazimoBeforeBattle_2] = rwtDialog[tDialog.YazimoBeforeBattle_1]
+rwtDialog[tDialog.YazimoBeforeBattle_3] = rwtDialog[tDialog.YazimoBeforeBattle_1]
+rwtDialog[tDialog.YazimoBeforeBattle_4] = rwtDialog[tDialog.YazimoBeforeBattle_1]
+rwtDialog[tDialog.YazimoBeforeBattle_5] = rwtDialog[tDialog.YazimoBeforeBattle_1]
+
+function CopyMap_DailyExpDepth_YazimoDead()
+    if rwHasGenEvent(tGenId.Yazimo) then
+		rwDelGenEvent(tGenId.Yazimo)
+	end
+end
+--小怪死亡触发
+rwtMonsterGroup_Func[tMonsterGroup.Yamozi_1] = rwtMonsterGroup_Func[tMonsterGroup.Yamozi_1] or {}
+table.insert(rwtMonsterGroup_Func[tMonsterGroup.Yamozi_1],CopyMap_DailyExpDepth_YazimoDead)
+
+rwtNpcGroup[tNpcGroup.Taleiya] = rwtNpcGroup[tNpcGroup.Taleiya] or {}
+rwtNpcGroup[tNpcGroup.Taleiya]["Type"] = CONST_NPCGROUP_TYPE.SingleNpc
+rwtNpcGroup[tNpcGroup.Taleiya]["NpcId"]= 3701
+
+rwtNpc[3701] =rwtNpc[3701] or {}
+rwtNpc[3701]["NpcProcess"] = function ()
+	local tHeroList = rwHeroGetAllInFight()
+	for i = 1,#tHeroList do
+		if tHeroList[i] == nAwardHeroId then
+			local tOpenDialog = {tDialog.TaleiyaHasHero_1,tDialog.TaleiyaHasHero_2,tDialog.TaleiyaHasHero_3}
+			local nRandom = math.random(1,#tOpenDialog)
+			rwOpenNpcChatDialog(tOpenDialog[nRandom])
+			return
+		end
+	end
+	local tOpenDialog = {tDialog.TaleiyaNoHero_1,tDialog.TaleiyaNoHero_2,tDialog.TaleiyaNoHero_3}
+	local nRandom = math.random(1,#tOpenDialog)
+	rwOpenNpcChatDialog(tOpenDialog[nRandom])
+end
+
+rwtDialog[tDialog.HeilongNpc_1] = rwtDialog[tDialog.HeilongNpc_1] or {}
+rwtDialog[tDialog.HeilongNpc_1]["DialogEndInit"] = {}
+rwtDialog[tDialog.HeilongNpc_1]["DialogEndInit"]["Events"] = {}
+rwtDialog[tDialog.HeilongNpc_1]["DialogEndInit"]["Events"][1] = {}
+rwtDialog[tDialog.HeilongNpc_1]["DialogEndInit"]["Events"][1]["DynDelete"] = {}
+rwtDialog[tDialog.HeilongNpc_1]["DialogEndInit"]["Events"][1]["DynDelete"]["GenIdBynId"] = true
+rwtDialog[tDialog.HeilongNpc_1]["DialogEndInit"]["Events"][1]["ChkGenEventIsExist"] = {"IdForDialog"}
+rwtDialog[tDialog.HeilongNpc_1]["DialogEndInit"]["Events"][1]["GetServerAward"] = {}          
+rwtDialog[tDialog.HeilongNpc_1]["DialogEndInit"]["Events"][1]["GetServerAward"]["AwardId"] = tAward_id.Heilong
+rwtDialog[tDialog.HeilongNpc_1]["DialogEndInit"]["Events"][1]["GetServerAward"]["ActionId"] = tNpcGroup.Heilong
+rwtDialog[tDialog.HeilongNpc_1]["DialogEndInit"]["Events"][1]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
+rwtDialog[tDialog.HeilongNpc_1]["DialogEndInit"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TIPS
+
+rwtDialog[tDialog.HeilongNpc_2] = rwtDialog[tDialog.HeilongNpc_1] 
+rwtDialog[tDialog.HeilongNpc_3] = rwtDialog[tDialog.HeilongNpc_1] 
+rwtDialog[tDialog.HeilongNpc_4] = rwtDialog[tDialog.HeilongNpc_1] 
+rwtDialog[tDialog.HeilongNpc_5] = rwtDialog[tDialog.HeilongNpc_1] 
+
+rwtDialog[tDialog.TaleiyaHasHero_1] = rwtDialog[tDialog.TaleiyaHasHero_1] or {}
+rwtDialog[tDialog.TaleiyaHasHero_1]["DialogEndInit"] = {}
+rwtDialog[tDialog.TaleiyaHasHero_1]["DialogEndInit"]["Events"] = {}
+rwtDialog[tDialog.TaleiyaHasHero_1]["DialogEndInit"]["Events"][1] = {}
+rwtDialog[tDialog.TaleiyaHasHero_1]["DialogEndInit"]["Events"][1]["GetServerAward"] = {}          
+rwtDialog[tDialog.TaleiyaHasHero_1]["DialogEndInit"]["Events"][1]["GetServerAward"]["AwardId"] = tAward_id.Taleiya_HasHero
+rwtDialog[tDialog.TaleiyaHasHero_1]["DialogEndInit"]["Events"][1]["GetServerAward"]["ActionId"] = tNpcGroup.Taleiya
+rwtDialog[tDialog.TaleiyaHasHero_1]["DialogEndInit"]["Events"][1]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
+rwtDialog[tDialog.TaleiyaHasHero_1]["DialogEndInit"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TIPS
+rwtDialog[tDialog.TaleiyaHasHero_1]["DialogEndInit"]["Events"][1]["DynDelete"] = {tGenId.Taleiya}
+
+rwtDialog[tDialog.TaleiyaHasHero_2] = rwtDialog[tDialog.TaleiyaHasHero_1]
+rwtDialog[tDialog.TaleiyaHasHero_3] = rwtDialog[tDialog.TaleiyaHasHero_1]
+
+rwtDialog[tDialog.TaleiyaNoHero_1] = rwtDialog[tDialog.TaleiyaNoHero_1] or {}
+rwtDialog[tDialog.TaleiyaNoHero_1]["DialogEndInit"] = {}
+rwtDialog[tDialog.TaleiyaNoHero_1]["DialogEndInit"]["Events"] = {}
+rwtDialog[tDialog.TaleiyaNoHero_1]["DialogEndInit"]["Events"][1] = {}
+rwtDialog[tDialog.TaleiyaNoHero_1]["DialogEndInit"]["Events"][1]["GetServerAward"] = {}          
+rwtDialog[tDialog.TaleiyaNoHero_1]["DialogEndInit"]["Events"][1]["GetServerAward"]["AwardId"] = tAward_id.Taleiya_NoHero
+rwtDialog[tDialog.TaleiyaNoHero_1]["DialogEndInit"]["Events"][1]["GetServerAward"]["ActionId"] = tNpcGroup.Taleiya
+rwtDialog[tDialog.TaleiyaNoHero_1]["DialogEndInit"]["Events"][1]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
+rwtDialog[tDialog.TaleiyaNoHero_1]["DialogEndInit"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TIPS
+rwtDialog[tDialog.TaleiyaNoHero_1]["DialogEndInit"]["Events"][1]["DynDelete"] = {tGenId.Taleiya}
+
+rwtDialog[tDialog.TaleiyaNoHero_2] = rwtDialog[tDialog.TaleiyaNoHero_1]
+rwtDialog[tDialog.TaleiyaNoHero_3] = rwtDialog[tDialog.TaleiyaNoHero_1]
+
+rwtDialog[tDialog.PassBoxNotfull_1] = rwtDialog[tDialog.PassBoxNotfull_1] or {}
+rwtDialog[tDialog.PassBoxNotfull_1]["OptionFunc1"] = function ()
+	return false
+end
+rwtDialog[tDialog.PassBoxNotfull_1]["OptionFunc2"] = function (nIndex,nType,nId,nOptionIndex)
+	LinkTreasureBoxOpenSucc(tNpcGroup.Box,nGenId_Box,1)
+end
+rwtDialog[tDialog.PassBoxNotfull_2] = rwtDialog[tDialog.PassBoxNotfull_1]
+rwtDialog[tDialog.PassBoxNotfull_3] = rwtDialog[tDialog.PassBoxNotfull_1]
+rwtDialog[tDialog.PassBoxNotfull_4] = rwtDialog[tDialog.PassBoxNotfull_1]
+rwtDialog[tDialog.PassBoxNotfull_5] = rwtDialog[tDialog.PassBoxNotfull_1]
+
+rwtDialog[tDialog.DiaoxiangMonster_1] = rwtDialog[tDialog.DiaoxiangMonster_1] or {}
+rwtDialog[tDialog.DiaoxiangMonster_1]["DialogEndInit"] = {}
+rwtDialog[tDialog.DiaoxiangMonster_1]["DialogEndInit"]["Events"] = {}
+rwtDialog[tDialog.DiaoxiangMonster_1]["DialogEndInit"]["Events"][1] = {}
+rwtDialog[tDialog.DiaoxiangMonster_1]["DialogEndInit"]["Events"][1]["AutoBattle"] = {}
+rwtDialog[tDialog.DiaoxiangMonster_1]["DialogEndInit"]["Events"][1]["AutoBattle"]["GenId"] = tGenId.MonsterDiaoxiang
+
+rwtDialog[tDialog.DiaoxiangMonster_2] = rwtDialog[tDialog.DiaoxiangMonster_1]
+rwtDialog[tDialog.DiaoxiangMonster_3] = rwtDialog[tDialog.DiaoxiangMonster_1]
+rwtDialog[tDialog.DiaoxiangMonster_4] = rwtDialog[tDialog.DiaoxiangMonster_1]
+rwtDialog[tDialog.DiaoxiangMonster_5] = rwtDialog[tDialog.DiaoxiangMonster_1]
+
+
+
+--rwtTarget[nTarget_1] = {}
+--rwtTarget[nTarget_1]["Title"] = tLuaText[LANGUAGE_CONFIG][21578]
+--rwtTarget[nTarget_1]["KillMonsterGroup"] = {tMonsterGroup.First_1,tMonsterGroup.First_2,tMonsterGroup.First_3,tMonsterGroup.First_4,tMonsterGroup.First_5}
+--rwtTarget[nTarget_1]["ReqCount"] = 1
+
+rwtTarget[nTarget_2] = {}
+rwtTarget[nTarget_2]["Title"] =tLuaText[LANGUAGE_CONFIG][21578]
+rwtTarget[nTarget_2]["ReqTreasureBox"] = tNpcGroup.Box
+rwtTarget[nTarget_2]["ReqCount"] = 1
+
+rwtCopyMapMission[nCopyMapId] = rwtCopyMapMission[nCopyMapId] or {}
+rwtCopyMapMission[nCopyMapId]["ReqLev"] = 1
+rwtCopyMapMission[nCopyMapId]["Difficulty"] = 1
+rwtCopyMapMission[nCopyMapId]["TimeLimit"] = CONST_USER_TIMESTYPE.Daily_CopyMap_Exp
+--rwtCopyMapMission[nCopyMapId]["TimeLimitMsg"] = tLuaText[LANGUAGE_CONFIG][10045]
+rwtCopyMapMission[nCopyMapId]["TargetStepNum"] = 1
+--rwtCopyMapMission[nCopyMapId]["Target1"] = {nTarget_1} --删除任务1
+rwtCopyMapMission[nCopyMapId]["Target1"] = {nTarget_2}
+rwtCopyMapMission[nCopyMapId]["Target99"] = {60072}
+--rwtCopyMapMission[nCopyMapId]["PassSetTemp"] = {}
+--rwtCopyMapMission[nCopyMapId]["PassSetTemp"]["TempDataId"] = nTempDataId
+--rwtCopyMapMission[nCopyMapId]["PassSetTemp"]["SetValue"] = 0
+rwtCopyMapMission[nCopyMapId]["PassSetTempGroup"] = {}
+rwtCopyMapMission[nCopyMapId]["PassSetTempGroup"][1] = {}
+rwtCopyMapMission[nCopyMapId]["PassSetTempGroup"][1]["TempDataId"] = nTempDataId
+rwtCopyMapMission[nCopyMapId]["PassSetTempGroup"][1]["SetValue"] = 0
+rwtCopyMapMission[nCopyMapId]["PassSetTempGroup"][1]["DataIndex"] = CONST_TEMP_DATA.Data1
+rwtCopyMapMission[nCopyMapId]["PassSetTempGroup"][2] = {}
+rwtCopyMapMission[nCopyMapId]["PassSetTempGroup"][2]["TempDataId"] = nTempDataId
+rwtCopyMapMission[nCopyMapId]["PassSetTempGroup"][2]["SetValue"] = 0
+rwtCopyMapMission[nCopyMapId]["PassSetTempGroup"][2]["DataIndex"] = CONST_TEMP_DATA.Data2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][1]["OpenDialog"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][1]["OpenDialog"]["tDialog"] = {tDialog.EnterCopymap_1,tDialog.EnterCopymap_2,tDialog.EnterCopymap_3,tDialog.EnterCopymap_4,tDialog.EnterCopymap_5}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["ChkEventCond"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["ChkUserTempData"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["ChkUserTempData"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["ChkUserTempData"][1]["Record"] = nTempDataId
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["ChkUserTempData"][1]["DataValue"] = CONST_TEMP_DATA.Data1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["ChkUserTempData"][1]["Value"] = {1,2,3}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["RandomType"] = CONST_RANDOM_EVENT_TYPE.COMBINATION
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["MinRate"] =  0
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["MaxRate"] =  4000
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["RandomNum"] = 1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["TempDataID"] = nTempDataId
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["SetValue"] = 1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["DataIndex"] = CONST_TEMP_DATA.Data1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["RandomNum"] = 3
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["tGenId"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["tGenId"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["tGenId"][1]["GenId"] = tGenId.Heilong_1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["tGenId"][1]["Pos"] = "-84.35,15.72,-0.28"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["tGenId"][1]["RotationY"] = 90
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["tGenId"][2] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["tGenId"][2]["GenId"] = tGenId.Heilong_2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["tGenId"][2]["Pos"] = "-94.04,18.29,9.97"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["tGenId"][2]["RotationY"] = 180
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["tGenId"][3] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["tGenId"][3]["GenId"] = tGenId.Heilong_3
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["tGenId"][3]["Pos"] = "-94.28,18.29,-9.29"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["tGenId"][3]["RotationY"] = 0
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["tGenId"][4] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["tGenId"][4]["GenId"] = tGenId.Heilong_4
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["tGenId"][4]["Pos"] = "-105.80,21.99,-11.05"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["tGenId"][4]["RotationY"] = 90
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["tGenId"][5] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["tGenId"][5]["GenId"] = tGenId.Heilong_5
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["tGenId"][5]["Pos"] = "-104.85,22.00,10.92"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["tGenId"][5]["RotationY"] = 90
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["RemainRandomNum"] = 1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["tOtherGenId"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["tOtherGenId"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][1]["tOtherGenId"][1]["GenId"] = tGenId.Yazimo
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["RandomType"] = CONST_RANDOM_EVENT_TYPE.COMBINATION
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["MinRate"] = 4001
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["MaxRate"] = 7000
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["TempDataID"] = nTempDataId
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["SetValue"] = 2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["DataIndex"] = CONST_TEMP_DATA.Data1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["RandomNum"] = 2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["tGenId"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["tGenId"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["tGenId"][1]["GenId"] = tGenId.Diaoxiang_1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["tGenId"][1]["Pos"] = "-78.48,17.72097,-6"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["tGenId"][2] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["tGenId"][2]["GenId"] = tGenId.Diaoxiang_2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["tGenId"][2]["Pos"] = "-72.65,17.72097,-6"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["tGenId"][3] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["tGenId"][3]["GenId"] = tGenId.Diaoxiang_3
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["tGenId"][3]["Pos"] = "-84.07,17.72097,-6"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["tGenId"][4] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["tGenId"][4]["GenId"] = tGenId.Diaoxiang_4
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["tGenId"][4]["Pos"] = "-78.48,17.72097,6"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["tGenId"][5] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["tGenId"][5]["GenId"] = tGenId.Diaoxiang_5
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["tGenId"][5]["Pos"] = "-72.65,17.72097,6"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["tGenId"][6] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["tGenId"][6]["GenId"] = tGenId.Diaoxiang_6
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["tGenId"][6]["Pos"] = "-84.07,17.72097,6"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["RemainRandomNum"] = 1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["tOtherGenId"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["tOtherGenId"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][2]["tOtherGenId"][1]["GenId"] = tGenId.Diaoxiang_Monstetr
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["RandomType"] = CONST_RANDOM_EVENT_TYPE.COMBINATION
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["MinRate"] =  7001
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["MaxRate"] =  10000
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["TempDataID"] = nTempDataId
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["DataIndex"] = CONST_TEMP_DATA.Data1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["SetValue"] = 3
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["RandomNum"] = 3
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["tGenId"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["tGenId"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["tGenId"][1]["GenId"] = tGenId.Heilong_1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["tGenId"][1]["Pos"] = "-84.35,15.72,-0.28"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["tGenId"][1]["RotationY"] = 90
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["tGenId"][2] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["tGenId"][2]["GenId"] = tGenId.Heilong_2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["tGenId"][2]["Pos"] = "-94.04,18.29,9.97"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["tGenId"][2]["RotationY"] = 180
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["tGenId"][3] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["tGenId"][3]["GenId"] = tGenId.Heilong_3
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["tGenId"][3]["Pos"] = "-94.28,18.29,-9.29"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["tGenId"][3]["RotationY"] = 0
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["tGenId"][4] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["tGenId"][4]["GenId"] = tGenId.Heilong_4
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["tGenId"][4]["Pos"] = "-105.80,21.99,-11.05"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["tGenId"][4]["RotationY"] = 90
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["tGenId"][5] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["tGenId"][5]["GenId"] = tGenId.Heilong_5
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["tGenId"][5]["Pos"] = "-104.85,22.00,10.92"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["tGenId"][5]["RotationY"] = 90
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["RemainRandomNum"] = 1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["tOtherGenId"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["tOtherGenId"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][3]["tOtherGenId"][1]["GenId"] = tGenId.Taleiya
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][4] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][4]["RandomType"] = CONST_RANDOM_EVENT_TYPE.COMBINATION
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][4]["MinRate"] = 0
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][4]["MaxRate"] = 4000
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][4]["RandomNum"] = 2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][4]["tGenId"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][4]["tGenId"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][4]["tGenId"][1]["GenId"] = tGenId.Diaoxiang_1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][4]["tGenId"][2] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][4]["tGenId"][2]["GenId"] = tGenId.Diaoxiang_2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][4]["tGenId"][3] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][4]["tGenId"][3]["GenId"] = tGenId.Diaoxiang_3
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][4]["tGenId"][4] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][4]["tGenId"][4]["GenId"] = tGenId.Diaoxiang_4
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][4]["tGenId"][5] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][4]["tGenId"][5]["GenId"] = tGenId.Diaoxiang_5
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][4]["tGenId"][6] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][4]["tGenId"][6]["GenId"] = tGenId.Diaoxiang_6
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][5] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][5]["RandomType"] = CONST_RANDOM_EVENT_TYPE.COMBINATION
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][5]["MinRate"] = 7001
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][5]["MaxRate"] = 10000
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][5]["RandomNum"] = 2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][5]["tGenId"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][5]["tGenId"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][5]["tGenId"][1]["GenId"] = tGenId.Diaoxiang_1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][5]["tGenId"][2] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][5]["tGenId"][2]["GenId"] = tGenId.Diaoxiang_2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][5]["tGenId"][3] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][5]["tGenId"][3]["GenId"] = tGenId.Diaoxiang_3
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][5]["tGenId"][4] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][5]["tGenId"][4]["GenId"] = tGenId.Diaoxiang_4
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][5]["tGenId"][5] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][5]["tGenId"][5]["GenId"] = tGenId.Diaoxiang_5
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][5]["tGenId"][6] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][5]["tGenId"][6]["GenId"] = tGenId.Diaoxiang_6
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][6] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][6]["RandomType"] = CONST_RANDOM_EVENT_TYPE.COMBINATION
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][6]["MinRate"] = 4001
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][6]["MaxRate"] = 7000
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][6]["RandomNum"] = 3
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][6]["tGenId"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][6]["tGenId"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][6]["tGenId"][1]["GenId"] = tGenId.Heilong_1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][6]["tGenId"][2] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][6]["tGenId"][2]["GenId"] = tGenId.Heilong_2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][6]["tGenId"][3] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][6]["tGenId"][3]["GenId"] = tGenId.Heilong_3
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][6]["tGenId"][4] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][6]["tGenId"][4]["GenId"] = tGenId.Heilong_4
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][6]["tGenId"][5] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["FailEvents"]["RandomCreare"][6]["tGenId"][5]["GenId"] = tGenId.Heilong_5
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["RandomType"] = CONST_RANDOM_EVENT_TYPE.COMBINATION
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["TempDataID"] = nTempDataId
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["DataIndex"] = CONST_TEMP_DATA.Data1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["Value"] = 1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["RandomNum"] = 3
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["tGenId"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["tGenId"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["tGenId"][1]["GenId"] = tGenId.Heilong_1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["tGenId"][1]["Pos"] = "-84.35,15.72,-0.28"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["tGenId"][1]["RotationY"] = 90
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["tGenId"][2] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["tGenId"][2]["GenId"] = tGenId.Heilong_2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["tGenId"][2]["Pos"] = "-94.04,18.29,9.97"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["tGenId"][2]["RotationY"] = 180
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["tGenId"][3] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["tGenId"][3]["GenId"] = tGenId.Heilong_3
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["tGenId"][3]["Pos"] = "-94.28,18.29,-9.29"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["tGenId"][3]["RotationY"] = 0
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["tGenId"][4] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["tGenId"][4]["GenId"] = tGenId.Heilong_4
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["tGenId"][4]["Pos"] = "-105.80,21.99,-11.05"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["tGenId"][4]["RotationY"] = 90
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["tGenId"][5] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["tGenId"][5]["GenId"] = tGenId.Heilong_5
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["tGenId"][5]["Pos"] = "-104.85,22.00,10.92"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["tGenId"][5]["RotationY"] = 90
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["RemainRandomNum"] = 1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["tOtherGenId"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["tOtherGenId"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][1]["tOtherGenId"][1]["GenId"] = tGenId.Yazimo
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["RandomType"] = CONST_RANDOM_EVENT_TYPE.COMBINATION
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["TempDataID"] = nTempDataId
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["Value"] = 2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["DataIndex"] = CONST_TEMP_DATA.Data1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["RandomNum"] = 2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["tGenId"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["tGenId"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["tGenId"][1]["GenId"] = tGenId.Diaoxiang_1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["tGenId"][1]["Pos"] = "-78.48,17.72097,-6"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["tGenId"][2] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["tGenId"][2]["GenId"] = tGenId.Diaoxiang_2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["tGenId"][2]["Pos"] = "-72.65,17.72097,-6"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["tGenId"][3] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["tGenId"][3]["GenId"] = tGenId.Diaoxiang_3
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["tGenId"][3]["Pos"] = "-84.07,17.72097,-6"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["tGenId"][4] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["tGenId"][4]["GenId"] = tGenId.Diaoxiang_4
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["tGenId"][4]["Pos"] = "-78.48,17.72097,6"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["tGenId"][5] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["tGenId"][5]["GenId"] = tGenId.Diaoxiang_5
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["tGenId"][5]["Pos"] = "-72.65,17.72097,6"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["tGenId"][6] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["tGenId"][6]["GenId"] = tGenId.Diaoxiang_6
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["tGenId"][6]["Pos"] = "-84.07,17.72097,6"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["RemainRandomNum"] = 1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["tOtherGenId"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["tOtherGenId"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][2]["tOtherGenId"][1]["GenId"] = tGenId.Diaoxiang_Monstetr
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["RandomType"] = CONST_RANDOM_EVENT_TYPE.COMBINATION
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["TempDataID"] = nTempDataId
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["DataIndex"] = CONST_TEMP_DATA.Data1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["Value"] = 3
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["RandomNum"] = 3
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["tGenId"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["tGenId"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["tGenId"][1]["GenId"] = tGenId.Heilong_1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["tGenId"][1]["Pos"] = "-84.35,15.72,-0.28"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["tGenId"][1]["RotationY"] = 90
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["tGenId"][2] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["tGenId"][2]["GenId"] = tGenId.Heilong_2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["tGenId"][2]["Pos"] = "-94.04,18.29,9.97"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["tGenId"][2]["RotationY"] = 180
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["tGenId"][3] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["tGenId"][3]["GenId"] = tGenId.Heilong_3
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["tGenId"][3]["Pos"] = "-94.28,18.29,-9.29"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["tGenId"][3]["RotationY"] = 0
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["tGenId"][4] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["tGenId"][4]["GenId"] = tGenId.Heilong_4
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["tGenId"][4]["Pos"] = "-105.80,21.99,-11.05"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["tGenId"][4]["RotationY"] = 90
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["tGenId"][5] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["tGenId"][5]["GenId"] = tGenId.Heilong_5
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["tGenId"][5]["Pos"] = "-104.85,22.00,10.92"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["tGenId"][5]["RotationY"] = 90
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["RemainRandomNum"] = 1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["tOtherGenId"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["tOtherGenId"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][3]["tOtherGenId"][1]["GenId"] = tGenId.Taleiya
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][4] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][4]["RandomType"] = CONST_RANDOM_EVENT_TYPE.COMBINATION
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][4]["TempDataID"] = nTempDataId
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][4]["Value"] = 1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][4]["RandomNum"] = 2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][4]["DataIndex"] = CONST_TEMP_DATA.Data1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][4]["tGenId"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][4]["tGenId"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][4]["tGenId"][1]["GenId"] = tGenId.Diaoxiang_1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][4]["tGenId"][2] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][4]["tGenId"][2]["GenId"] = tGenId.Diaoxiang_2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][4]["tGenId"][3] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][4]["tGenId"][3]["GenId"] = tGenId.Diaoxiang_3
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][4]["tGenId"][4] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][4]["tGenId"][4]["GenId"] = tGenId.Diaoxiang_4
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][4]["tGenId"][5] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][4]["tGenId"][5]["GenId"] = tGenId.Diaoxiang_5
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][4]["tGenId"][6] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][4]["tGenId"][6]["GenId"] = tGenId.Diaoxiang_6
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][5] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][5]["RandomType"] = CONST_RANDOM_EVENT_TYPE.COMBINATION
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][5]["TempDataID"] = nTempDataId
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][5]["DataIndex"] = CONST_TEMP_DATA.Data1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][5]["Value"] = 3
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][5]["RandomNum"] = 2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][5]["tGenId"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][5]["tGenId"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][5]["tGenId"][1]["GenId"] = tGenId.Diaoxiang_1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][5]["tGenId"][2] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][5]["tGenId"][2]["GenId"] = tGenId.Diaoxiang_2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][5]["tGenId"][3] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][5]["tGenId"][3]["GenId"] = tGenId.Diaoxiang_3
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][5]["tGenId"][4] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][5]["tGenId"][4]["GenId"] = tGenId.Diaoxiang_4
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][5]["tGenId"][5] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][5]["tGenId"][5]["GenId"] = tGenId.Diaoxiang_5
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][5]["tGenId"][6] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][5]["tGenId"][6]["GenId"] = tGenId.Diaoxiang_6
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][6] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][6]["RandomType"] = CONST_RANDOM_EVENT_TYPE.COMBINATION
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][6]["TempDataID"] = nTempDataId
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][6]["DataIndex"] = CONST_TEMP_DATA.Data1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][6]["Value"] = 2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][6]["RandomNum"] = 3
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][6]["tGenId"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][6]["tGenId"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][6]["tGenId"][1]["GenId"] = tGenId.Heilong_1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][6]["tGenId"][2] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][6]["tGenId"][2]["GenId"] = tGenId.Heilong_2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][6]["tGenId"][3] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][6]["tGenId"][3]["GenId"] = tGenId.Heilong_3
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][6]["tGenId"][4] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][6]["tGenId"][4]["GenId"] = tGenId.Heilong_4
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][6]["tGenId"][5] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][1]["RandomCreateByTemp"][6]["tGenId"][5]["GenId"] = tGenId.Heilong_5
+
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["ChkEventCond"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["ChkUserTempData"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["ChkUserTempData"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["ChkUserTempData"][1]["Record"] = nTempDataId
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["ChkUserTempData"][1]["DataValue"] = CONST_TEMP_DATA.Data2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["ChkUserTempData"][1]["Value"] = {1,2,3}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["FailEvents"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["FailEvents"]["RandomCreare"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["FailEvents"]["RandomCreare"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["FailEvents"]["RandomCreare"][1]["RandomType"] = CONST_RANDOM_EVENT_TYPE.COMBINATION
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["FailEvents"]["RandomCreare"][1]["MinRate"] =  0
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["FailEvents"]["RandomCreare"][1]["MaxRate"] =  3500
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["FailEvents"]["RandomCreare"][1]["TempDataID"] = nTempDataId
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["FailEvents"]["RandomCreare"][1]["SetValue"] = 1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["FailEvents"]["RandomCreare"][1]["DataIndex"] = CONST_TEMP_DATA.Data2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["FailEvents"]["RandomCreare"][1]["FixGen"] = {tGenId.SuperBox_1,tGenId.MonsterJiXieShiXiang}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["FailEvents"]["RandomCreare"][2] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["FailEvents"]["RandomCreare"][2]["RandomType"] = CONST_RANDOM_EVENT_TYPE.COMBINATION
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["FailEvents"]["RandomCreare"][2]["MinRate"] =  3501
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["FailEvents"]["RandomCreare"][2]["MaxRate"] =  5000
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["FailEvents"]["RandomCreare"][2]["TempDataID"] = nTempDataId
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["FailEvents"]["RandomCreare"][2]["SetValue"] = 2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["FailEvents"]["RandomCreare"][2]["DataIndex"] = CONST_TEMP_DATA.Data2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["FailEvents"]["RandomCreare"][2]["FixGen"] = {tGenId.SuperBox_2,tGenId.MonsterFenNu}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["FailEvents"]["RandomCreare"][3] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["FailEvents"]["RandomCreare"][3]["RandomType"] = CONST_RANDOM_EVENT_TYPE.COMBINATION
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["FailEvents"]["RandomCreare"][3]["MinRate"] =  5001
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["FailEvents"]["RandomCreare"][3]["MaxRate"] =  10000
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["FailEvents"]["RandomCreare"][3]["TempDataID"] = nTempDataId
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["FailEvents"]["RandomCreare"][3]["SetValue"] = 3
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["FailEvents"]["RandomCreare"][3]["DataIndex"] = CONST_TEMP_DATA.Data2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["RandomCreateByTemp"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["RandomCreateByTemp"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["RandomCreateByTemp"][1]["RandomType"] = CONST_RANDOM_EVENT_TYPE.COMBINATION
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["RandomCreateByTemp"][1]["TempDataID"] = nTempDataId
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["RandomCreateByTemp"][1]["DataIndex"] = CONST_TEMP_DATA.Data2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["RandomCreateByTemp"][1]["Value"] = 1
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["RandomCreateByTemp"][1]["FixGen"] = {tGenId.SuperBox_1,tGenId.MonsterJiXieShiXiang}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["RandomCreateByTemp"][2] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["RandomCreateByTemp"][2]["RandomType"] = CONST_RANDOM_EVENT_TYPE.COMBINATION
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["RandomCreateByTemp"][2]["TempDataID"] = nTempDataId
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["RandomCreateByTemp"][2]["DataIndex"] = CONST_TEMP_DATA.Data2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["RandomCreateByTemp"][2]["Value"] = 2
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["RandomEvents"][2]["RandomCreateByTemp"][2]["FixGen"] = {tGenId.SuperBox_2,tGenId.MonsterFenNu}

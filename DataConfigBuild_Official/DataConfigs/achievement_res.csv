@@ -1,0 +1,10 @@
+﻿,required,required,required,required
+,uint32,string,string,string
+,type,monitor_type,icon_uncheck_path,icon_check_path
+备注,成就大类型,监听类型组,未选中态的图标路径,选中态的图标路径
+,1,1;2;3;4;5;6;18,Textures/Atlas/GUI/Shop/icon_benming-01.png,Textures/Atlas/GUI/Shop/icon_benming-02.png
+,2,10;11,Textures/Atlas/GUI/Shop/icon_jingji-01.png,Textures/Atlas/GUI/Shop/icon_jingji-02.png
+,3,8;14,Textures/Atlas/GUI/Shop/icon_gonghui-01.png,Textures/Atlas/GUI/Shop/icon_gonghui-02.png
+,4,15;16,Textures/Atlas/GUI/Shop/icon_consumables.png,Textures/Atlas/GUI/Shop/icon_consumables_selected.png
+,5,12;13;17;19,Textures/Atlas/GUI/Shop/icon_yingxiong-01.png,Textures/Atlas/GUI/Shop/icon_yingxiong-02.png
+,6,7;9,Textures/Atlas/GUI/Shop/icon_materials.png,Textures/Atlas/GUI/Shop/icon_materials_selected.png

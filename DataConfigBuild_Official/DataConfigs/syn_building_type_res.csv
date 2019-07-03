@@ -1,0 +1,6 @@
+﻿,required,required,required
+,uint32,uint32,string
+,id,building_type,texture
+备注,ID,建筑类型,建筑图片路径
+,9999999,1,Textures\Atlas\Dyn\SynBuildings\Architecture1.png
+,1,1,Textures\Atlas\Dyn\SynBuildings\Architecture1.png

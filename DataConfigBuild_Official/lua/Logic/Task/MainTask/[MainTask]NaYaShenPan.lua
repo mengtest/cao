@@ -1,0 +1,871 @@
+--region *.lua
+--Date
+--此文件由[BabeLua]插件自动生成
+
+
+
+--endregion
+
+local tMapId = {}
+tMapId.CopyMap = 3086
+tMapId.Koudai = 2005
+tMapId.Tiankong = 2004
+tMapId.Wanggong = 2006
+
+
+local tNpc = {}
+tNpc.Taleiya = 3398
+tNpc.Yazimo = 3660
+
+local tNpcGroup = {}
+tNpcGroup.EnterCopyMap = 50061
+tNpcGroup.Taleiya_Koudai = 20673
+tNpcGroup.Taleiya_Wanggong = 20420
+tNpcGroup.Taleiya_Tiankong = 20674
+tNpcGroup.NpcYazimo = 20675
+tNpcGroup.Chigua_A = 20676
+tNpcGroup.Chigua_B = 20677
+tNpcGroup.Chigua_C = 20678
+tNpcGroup.Chigua_D = 20679
+tNpcGroup.Chigua_E = 20680
+tNpcGroup.Trap_Xuncha_1 = 30616
+tNpcGroup.Trap_Xuncha_2 = 30617
+tNpcGroup.Trap_Xuncha_3 = 30618
+tNpcGroup.Trap_Escort = 30619
+tNpcGroup.Trap_Fayan = 30620
+tNpcGroup.Trap_ShenPan = 30621
+tNpcGroup.Trap_HuaZhuang = 30622
+
+local nMonsterGroup_FenNu = 900463
+
+local tGenId = {}
+tGenId.EnterCopyMap = 3086001
+tGenId.Taleiya_Koudai = 20050289
+tGenId.Taleiya_Wanggong = 20040002
+tGenId.Taleiya_Tiankong = 20040061
+tGenId.NpcYazimo = 20040062
+tGenId.Chigua_A_1 = 20040063
+tGenId.Chigua_B_1 = 20040064
+tGenId.Chigua_C_1 = 20040065
+tGenId.Chigua_D_1 = 20040066
+tGenId.Chigua_E_1 = 20040067
+tGenId.Chigua_A_2 = 20040068
+tGenId.Chigua_B_2 = 20040069
+tGenId.Chigua_C_2 = 20040070
+tGenId.Chigua_D_2 = 20040071
+tGenId.Trap_Xuncha_1 = 20040072
+tGenId.Trap_Xuncha_2 = 20040073
+tGenId.Trap_Xuncha_3 = 20040074
+tGenId.Trap_Escort = 20040075
+tGenId.Trap_Fayan = 20040076
+tGenId.Trap_ShenPan = 20040077
+tGenId.Trap_HuaZhuang = 20040078
+tGenId.Monster_FenNu = 20040079
+
+tGenId.LianJun_1  = 20050253
+tGenId.LianJun_2  = 20050254
+tGenId.LianJun_3  = 20050255
+tGenId.LianJun_4  = 20050256
+tGenId.LianJun_5  = 20050257
+tGenId.LianJun_6  = 20050258
+tGenId.LianJun_7  = 20050259
+tGenId.LianJun_8  = 20050260
+tGenId.LianJun_9  = 20050261
+tGenId.LianJun_10 = 20050262
+tGenId.LianJun_11 = 20050263
+tGenId.LianJun_12 = 20050264
+tGenId.LianJun_13 = 20050265
+tGenId.LianJun_14 = 20050266
+
+local tMainTask_NaYaShenPan = {}
+tMainTask_NaYaShenPan.Pretask = 10648
+
+tMainTask_NaYaShenPan.CopyMap_Heilong = 10655 --黑龙副本
+tMainTask_NaYaShenPan.ShiMing_1 = 10656  --不辱使命
+tMainTask_NaYaShenPan.ShiMing_2 = 10657
+tMainTask_NaYaShenPan.ShiMing_3 = 10658
+tMainTask_NaYaShenPan.Xuncha_1 = 10659  --女王叫我来巡查
+tMainTask_NaYaShenPan.Xuncha_2 = 10660
+tMainTask_NaYaShenPan.Xuncha_3 = 10661
+tMainTask_NaYaShenPan.Xuncha_4 = 10662
+tMainTask_NaYaShenPan.Xuncha_5 = 10663
+tMainTask_NaYaShenPan.Xuncha_6 = 10674
+
+tMainTask_NaYaShenPan.Gongshen_1 = 10664   --纳雅公审
+tMainTask_NaYaShenPan.Gongshen_2 = 10665
+tMainTask_NaYaShenPan.Gongshen_3 = 10666
+tMainTask_NaYaShenPan.Gongshen_4 = 10667
+tMainTask_NaYaShenPan.Tiaowu_1 = 10668  --唱歌不如跳舞
+tMainTask_NaYaShenPan.Tiaowu_2 = 10669
+tMainTask_NaYaShenPan.Tiaowu_3 = 10670
+tMainTask_NaYaShenPan.Tiaowu_4 = 10671
+tMainTask_NaYaShenPan.Buyaowuhui_1 = 10672  --不要误会
+tMainTask_NaYaShenPan.Buyaowuhui_2 = 10673
+--主线最后任务（新片区再移动）
+tMainTask_NaYaShenPan.nFinalTask = 10619
+
+local tDialog ={}
+tDialog.ShiMing_1 = 12246
+tDialog.ShiMing_2 = 12247
+tDialog.ShiMing_3 = 12248
+tDialog.Xuncha_1 = 12249  
+tDialog.Xuncha_2 = 12250
+tDialog.Xuncha_3 = 12251
+tDialog.Gongshen_1 = 12252
+tDialog.Gongshen_2 = 12253 
+tDialog.Gongshen_3 = 12254   
+tDialog.Gongshen_4 = 12255
+tDialog.Tiaowu_1 = 12256
+tDialog.Tiaowu_2 = 12257
+tDialog.Tiaowu_3 = 12258  
+tDialog.Buyaowuhui_1 = 12259
+tDialog.Buyaowuhui_2 = 12260
+tDialog.Cg = 12261
+tDialog.TiaoguoDonghua = 12262
+
+local tAward_Id = {}
+tAward_Id.HeiLong = 2000374
+tAward_Id.ShiMing = 2000375
+tAward_Id.XunCha = 2000376
+tAward_Id.GongShen = 2000377
+tAward_Id.TiaoWu = 2000378
+tAward_Id.BuYaoWuHui = 2000379
+
+rwtNpcGroup[tNpcGroup.Trap_Xuncha_1] = rwtNpcGroup[tNpcGroup.Trap_Xuncha_1] or {} 
+rwtNpcGroup[tNpcGroup.Trap_Xuncha_1]["Type"] = CONST_NPCGROUP_TYPE.Trap
+rwtNpcGroup[tNpcGroup.Trap_Xuncha_2] = rwtNpcGroup[tNpcGroup.Trap_Xuncha_2] or {} 
+rwtNpcGroup[tNpcGroup.Trap_Xuncha_2]["Type"] = CONST_NPCGROUP_TYPE.Trap
+rwtNpcGroup[tNpcGroup.Trap_Xuncha_3] = rwtNpcGroup[tNpcGroup.Trap_Xuncha_3] or {} 
+rwtNpcGroup[tNpcGroup.Trap_Xuncha_3]["Type"] = CONST_NPCGROUP_TYPE.Trap
+rwtNpcGroup[tNpcGroup.Trap_Escort] = rwtNpcGroup[tNpcGroup.Trap_Escort] or {} 
+rwtNpcGroup[tNpcGroup.Trap_Escort]["Type"] = CONST_NPCGROUP_TYPE.Trap
+rwtNpcGroup[tNpcGroup.Trap_Fayan] = rwtNpcGroup[tNpcGroup.Trap_Fayan] or {} 
+rwtNpcGroup[tNpcGroup.Trap_Fayan]["Type"] = CONST_NPCGROUP_TYPE.Trap
+rwtNpcGroup[tNpcGroup.Trap_ShenPan] = rwtNpcGroup[tNpcGroup.Trap_ShenPan] or {} 
+rwtNpcGroup[tNpcGroup.Trap_ShenPan]["Type"] = CONST_NPCGROUP_TYPE.Trap
+rwtNpcGroup[tNpcGroup.Trap_HuaZhuang] = rwtNpcGroup[tNpcGroup.Trap_HuaZhuang] or {} 
+rwtNpcGroup[tNpcGroup.Trap_HuaZhuang]["Type"] = CONST_NPCGROUP_TYPE.Trap
+
+rwtNpcGroup[tNpcGroup.Chigua_A] = rwtNpcGroup[tNpcGroup.Chigua_A] or {}  
+rwtNpcGroup[tNpcGroup.Chigua_A]["Type"] = CONST_NPCGROUP_TYPE.SingleNpc
+rwtNpcGroup[tNpcGroup.Chigua_B] = rwtNpcGroup[tNpcGroup.Chigua_B] or {}  
+rwtNpcGroup[tNpcGroup.Chigua_B]["Type"] = CONST_NPCGROUP_TYPE.SingleNpc
+rwtNpcGroup[tNpcGroup.Chigua_C] = rwtNpcGroup[tNpcGroup.Chigua_C] or {}  
+rwtNpcGroup[tNpcGroup.Chigua_C]["Type"] = CONST_NPCGROUP_TYPE.SingleNpc
+rwtNpcGroup[tNpcGroup.Chigua_D] = rwtNpcGroup[tNpcGroup.Chigua_D] or {}  
+rwtNpcGroup[tNpcGroup.Chigua_D]["Type"] = CONST_NPCGROUP_TYPE.SingleNpc
+rwtNpcGroup[tNpcGroup.Chigua_E] = rwtNpcGroup[tNpcGroup.Chigua_E] or {}  
+rwtNpcGroup[tNpcGroup.Chigua_E]["Type"] = CONST_NPCGROUP_TYPE.SingleNpc
+
+rwtNpcGroup[tNpcGroup.Taleiya_Koudai] = rwtNpcGroup[tNpcGroup.Taleiya_Koudai] or {}  
+rwtNpcGroup[tNpcGroup.Taleiya_Koudai]["Type"] = CONST_NPCGROUP_TYPE.SingleNpc
+rwtNpcGroup[tNpcGroup.Taleiya_Koudai]["NpcId"]= tNpc.Taleiya
+
+rwtNpcGroup[tNpcGroup.Taleiya_Tiankong] = rwtNpcGroup[tNpcGroup.Taleiya_Tiankong] or {}  
+rwtNpcGroup[tNpcGroup.Taleiya_Tiankong]["Type"] = CONST_NPCGROUP_TYPE.SingleNpc
+rwtNpcGroup[tNpcGroup.Taleiya_Tiankong]["NpcId"]= tNpc.Taleiya
+
+rwtNpcGroup[tNpcGroup.NpcYazimo] = rwtNpcGroup[tNpcGroup.NpcYazimo] or {}  
+rwtNpcGroup[tNpcGroup.NpcYazimo]["Type"] = CONST_NPCGROUP_TYPE.SingleNpc
+rwtNpcGroup[tNpcGroup.NpcYazimo]["NpcId"]= tNpc.Yazimo
+
+
+
+-------------------------------------------------
+--
+--			任务流程
+--
+-------------------------------------------------
+----------------
+--黑龙战舰
+----------------
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong] = {}
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["Title"] = tLuaText[LANGUAGE_CONFIG][21602]
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["PreTaskId"] = tMainTask_NaYaShenPan.Pretask
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["NextTaskId"] = tMainTask_NaYaShenPan.ShiMing_1
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.PASS_COPYMAP
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["OpenCopyMap"] = tMapId.CopyMap
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["IsClickComplete"] = 1
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"] = {}
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][1] = {}
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][1]["GenId"] = tGenId.EnterCopyMap
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][1]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][2] = {}
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][2]["GenId"] = tGenId.LianJun_1
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][2]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][2]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][3] = {}
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][3]["GenId"] = tGenId.LianJun_2
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][3]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][3]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][4] = {}
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][4]["GenId"] = tGenId.LianJun_3
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][4]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][4]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][5] = {}
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][5]["GenId"] = tGenId.LianJun_4
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][5]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][5]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][6] = {}
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][6]["GenId"] = tGenId.LianJun_5
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][6]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][6]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][7] = {}
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][7]["GenId"] = tGenId.LianJun_6
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][7]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][7]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][8] = {}
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][8]["GenId"] = tGenId.LianJun_7
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][8]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][8]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][9] = {}
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][9]["GenId"] = tGenId.LianJun_8
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][9]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][9]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][10] = {}
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][10]["GenId"] = tGenId.LianJun_9
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][10]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][10]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][11] = {}
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][11]["GenId"] = tGenId.LianJun_10
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][11]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][11]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][12] = {}
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][12]["GenId"] = tGenId.LianJun_11
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][12]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][12]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][13] = {}
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][13]["GenId"] = tGenId.LianJun_12
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][13]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][13]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][14] = {}
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][14]["GenId"] = tGenId.LianJun_13
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][14]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][14]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][15] = {}
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][15]["GenId"] = tGenId.LianJun_14
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][15]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][15]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][16] = {}
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][16]["GenId"] = tGenId.Taleiya_Koudai
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][16]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["DynaNpcGroupGen"][16]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["PassCopyMap1"] = tMapId.CopyMap
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["PassCopyMapCount1"] = 1
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["Awards"] = {}
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["Awards"]["Events"] = {}
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["Awards"]["Events"][1] = {}
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["Awards"]["Events"][1]["GetServerAward"] = {}
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["Awards"]["Events"][1]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.AWARD
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["Awards"]["Events"][1]["GetServerAward"]["AwardId"] = tAward_Id.HeiLong
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TASK
+rwtTask[tMainTask_NaYaShenPan.CopyMap_Heilong]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tMainTask_NaYaShenPan.CopyMap_Heilong
+
+----------------
+--不辱使命
+----------------
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["Title"] = tLuaText[LANGUAGE_CONFIG][21603]
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["PreTaskId"] = tMainTask_NaYaShenPan.CopyMap_Heilong
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["NextTaskId"] = tMainTask_NaYaShenPan.ShiMing_2
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.ESCORT
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["ReqTrap1" ]= tNpcGroup.Trap_Escort
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["AcceptDialogId"] = tDialog.ShiMing_1
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][1] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][1]["GenId"] = tGenId.Taleiya_Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][1]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][2] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][2]["GenId"] = tGenId.LianJun_1
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][2]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][2]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][3] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][3]["GenId"] = tGenId.LianJun_2
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][3]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][3]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][4] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][4]["GenId"] = tGenId.LianJun_3
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][4]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][4]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][5] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][5]["GenId"] = tGenId.LianJun_4
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][5]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][5]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][6] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][6]["GenId"] = tGenId.LianJun_5
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][6]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][6]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][7] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][7]["GenId"] = tGenId.LianJun_6
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][7]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][7]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][8] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][8]["GenId"] = tGenId.LianJun_7
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][8]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][8]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][9] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][9]["GenId"] = tGenId.LianJun_8
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][9]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][9]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][10] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][10]["GenId"] = tGenId.LianJun_9
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][10]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][10]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][11] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][11]["GenId"] = tGenId.LianJun_10
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][11]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][11]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][12] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][12]["GenId"] = tGenId.LianJun_11
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][12]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][12]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][13] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][13]["GenId"] = tGenId.LianJun_12
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][13]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][13]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][14] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][14]["GenId"] = tGenId.LianJun_13
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][14]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][14]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][15] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][15]["GenId"] = tGenId.LianJun_14
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][15]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][15]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][16] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][16]["GenId"] = tGenId.Trap_Escort
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][16]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["DynaNpcGroupGen"][16]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["StartAutoWay"] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["StartAutoWay"]["FindWayTypeId"] = 1
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["StartAutoWay"]["FindWayMapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup.Taleiya_Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["StartAutoWay"]["FindWayGenId"] = tGenId.Taleiya_Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_1]["IsClickComplete"] = 0
+
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["Title"] = tLuaText[LANGUAGE_CONFIG][21603]
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["PreTaskId"] = tMainTask_NaYaShenPan.ShiMing_1
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["NextTaskId"] = tMainTask_NaYaShenPan.ShiMing_3
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DialogId"] = tDialog.ShiMing_2
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["TaskNpc"] = tNpc.Taleiya
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][1] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][1]["GenId"] = tGenId.Taleiya_Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][1]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][2] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][2]["GenId"] = tGenId.LianJun_1
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][2]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][2]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][3] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][3]["GenId"] = tGenId.LianJun_2
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][3]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][3]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][4] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][4]["GenId"] = tGenId.LianJun_3
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][4]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][4]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][5] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][5]["GenId"] = tGenId.LianJun_4
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][5]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][5]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][6] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][6]["GenId"] = tGenId.LianJun_5
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][6]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][6]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][7] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][7]["GenId"] = tGenId.LianJun_6
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][7]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][7]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][8] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][8]["GenId"] = tGenId.LianJun_7
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][8]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][8]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][9] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][9]["GenId"] = tGenId.LianJun_8
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][9]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][9]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][10] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][10]["GenId"] = tGenId.LianJun_9
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][10]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][10]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][11] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][11]["GenId"] = tGenId.LianJun_10
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][11]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][11]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][12] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][12]["GenId"] = tGenId.LianJun_11
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][12]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][12]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][13] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][13]["GenId"] = tGenId.LianJun_12
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][13]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][13]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][14] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][14]["GenId"] = tGenId.LianJun_13
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][14]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][14]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][15] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][15]["GenId"] = tGenId.LianJun_14
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][15]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["DynaNpcGroupGen"][15]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["StartAutoWay"] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["StartAutoWay"]["FindWayTypeId"]=1
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["StartAutoWay"]["FindWayMapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup.Taleiya_Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["StartAutoWay"]["FindWayGenId"] = tGenId.Taleiya_Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_2]["IsClickComplete"] = 0
+
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["Title"] = tLuaText[LANGUAGE_CONFIG][21603]
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["PreTaskId"] = tMainTask_NaYaShenPan.ShiMing_2
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["NextTaskId"] = tMainTask_NaYaShenPan.Xuncha_1
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DialogId"] = tDialog.ShiMing_3
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["TaskNpc"] = tNpc.Taleiya
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][1] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][1]["GenId"] = tGenId.Taleiya_Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][1]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][2] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][2]["GenId"] = tGenId.LianJun_1
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][2]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][2]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][3] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][3]["GenId"] = tGenId.LianJun_2
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][3]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][3]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][4] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][4]["GenId"] = tGenId.LianJun_3
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][4]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][4]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][5] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][5]["GenId"] = tGenId.LianJun_4
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][5]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][5]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][6] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][6]["GenId"] = tGenId.LianJun_5
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][6]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][6]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][7] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][7]["GenId"] = tGenId.LianJun_6
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][7]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][7]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][8] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][8]["GenId"] = tGenId.LianJun_7
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][8]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][8]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][9] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][9]["GenId"] = tGenId.LianJun_8
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][9]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][9]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][10] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][10]["GenId"] = tGenId.LianJun_9
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][10]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][10]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][11] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][11]["GenId"] = tGenId.LianJun_10
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][11]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][11]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][12] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][12]["GenId"] = tGenId.LianJun_11
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][12]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][12]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][13] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][13]["GenId"] = tGenId.LianJun_12
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][13]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][13]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][14] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][14]["GenId"] = tGenId.LianJun_13
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][14]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][14]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][15] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][15]["GenId"] = tGenId.LianJun_14
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][15]["MapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["DynaNpcGroupGen"][15]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["StartAutoWay"] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["StartAutoWay"]["FindWayTypeId"]=1
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["StartAutoWay"]["FindWayMapId"] = tMapId.Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup.Taleiya_Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["StartAutoWay"]["FindWayGenId"] = tGenId.Taleiya_Koudai
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["IsClickComplete"] = 0
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["Awards"] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["Awards"]["Events"] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["Awards"]["Events"][1] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["Awards"]["Events"][1]["GetServerAward"] = {}
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["Awards"]["Events"][1]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.AWARD
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["Awards"]["Events"][1]["GetServerAward"]["AwardId"] = tAward_Id.ShiMing
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TASK
+rwtTask[tMainTask_NaYaShenPan.ShiMing_3]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tMainTask_NaYaShenPan.ShiMing_3
+----------------
+--女王叫我去巡查
+----------------
+
+rwtTask[tMainTask_NaYaShenPan.Xuncha_1] = {}
+rwtTask[tMainTask_NaYaShenPan.Xuncha_1]["Title"] = tLuaText[LANGUAGE_CONFIG][21604]
+rwtTask[tMainTask_NaYaShenPan.Xuncha_1]["PreTaskId"] = tMainTask_NaYaShenPan.ShiMing_3
+rwtTask[tMainTask_NaYaShenPan.Xuncha_1]["NextTaskId"] = tMainTask_NaYaShenPan.Xuncha_2
+rwtTask[tMainTask_NaYaShenPan.Xuncha_1]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
+rwtTask[tMainTask_NaYaShenPan.Xuncha_1]["DialogId"] = tDialog.Xuncha_1
+rwtTask[tMainTask_NaYaShenPan.Xuncha_1]["TaskNpc"] = tNpc.Taleiya
+rwtTask[tMainTask_NaYaShenPan.Xuncha_1]["StartAutoWay"] = {}
+rwtTask[tMainTask_NaYaShenPan.Xuncha_1]["StartAutoWay"]["FindWayTypeId"]= 1
+rwtTask[tMainTask_NaYaShenPan.Xuncha_1]["StartAutoWay"]["FindWayMapId"] = tMapId.Wanggong
+rwtTask[tMainTask_NaYaShenPan.Xuncha_1]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup.Taleiya_Wanggong
+rwtTask[tMainTask_NaYaShenPan.Xuncha_1]["StartAutoWay"]["FindWayGenId"] = tGenId.Taleiya_Wanggong
+rwtTask[tMainTask_NaYaShenPan.Xuncha_1]["IsClickComplete"] = 0
+
+rwtTask[tMainTask_NaYaShenPan.Xuncha_2] = {}
+rwtTask[tMainTask_NaYaShenPan.Xuncha_2]["Title"] = tLuaText[LANGUAGE_CONFIG][21604]
+rwtTask[tMainTask_NaYaShenPan.Xuncha_2]["PreTaskId"] = tMainTask_NaYaShenPan.Xuncha_1
+rwtTask[tMainTask_NaYaShenPan.Xuncha_2]["NextTaskId"] = tMainTask_NaYaShenPan.Xuncha_3
+rwtTask[tMainTask_NaYaShenPan.Xuncha_2]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TRAP_IN
+rwtTask[tMainTask_NaYaShenPan.Xuncha_2]["ReqTrap1" ]= tNpcGroup.Trap_Xuncha_1
+rwtTask[tMainTask_NaYaShenPan.Xuncha_2]["IsClickComplete"] = 0
+rwtTask[tMainTask_NaYaShenPan.Xuncha_2]["DynaNpcGroupGen"] = {}
+rwtTask[tMainTask_NaYaShenPan.Xuncha_2]["DynaNpcGroupGen"][1] = {}
+rwtTask[tMainTask_NaYaShenPan.Xuncha_2]["DynaNpcGroupGen"][1]["GenId"] = tGenId.Trap_Xuncha_1
+rwtTask[tMainTask_NaYaShenPan.Xuncha_2]["DynaNpcGroupGen"][1]["MapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Xuncha_2]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tMainTask_NaYaShenPan.Xuncha_2]["DynaNpcGroupGen"][2] = {}
+rwtTask[tMainTask_NaYaShenPan.Xuncha_2]["DynaNpcGroupGen"][2]["GenId"] = tGenId.Chigua_A_1
+rwtTask[tMainTask_NaYaShenPan.Xuncha_2]["DynaNpcGroupGen"][2]["MapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Xuncha_2]["DynaNpcGroupGen"][2]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.Xuncha_2]["DynaNpcGroupGen"][3] = {}
+rwtTask[tMainTask_NaYaShenPan.Xuncha_2]["DynaNpcGroupGen"][3]["GenId"] = tGenId.Chigua_B_1
+rwtTask[tMainTask_NaYaShenPan.Xuncha_2]["DynaNpcGroupGen"][3]["MapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Xuncha_2]["DynaNpcGroupGen"][3]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.Xuncha_2]["StartAutoWay"] = {}
+rwtTask[tMainTask_NaYaShenPan.Xuncha_2]["StartAutoWay"]["FindWayTypeId"] = 0
+rwtTask[tMainTask_NaYaShenPan.Xuncha_2]["StartAutoWay"]["FindWayMapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Xuncha_2]["StartAutoWay"]["FindWayPos"] = "-12.39,4.42,33.37"
+
+rwtTask[tMainTask_NaYaShenPan.Xuncha_3] = {}
+rwtTask[tMainTask_NaYaShenPan.Xuncha_3]["Title"] = tLuaText[LANGUAGE_CONFIG][21604]
+rwtTask[tMainTask_NaYaShenPan.Xuncha_3]["PreTaskId"] = tMainTask_NaYaShenPan.Xuncha_2
+rwtTask[tMainTask_NaYaShenPan.Xuncha_3]["NextTaskId"] = tMainTask_NaYaShenPan.Xuncha_4
+rwtTask[tMainTask_NaYaShenPan.Xuncha_3]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TRAP_IN
+rwtTask[tMainTask_NaYaShenPan.Xuncha_3]["ReqTrap1" ]= tNpcGroup.Trap_Xuncha_2
+rwtTask[tMainTask_NaYaShenPan.Xuncha_3]["IsClickComplete"] = 0
+rwtTask[tMainTask_NaYaShenPan.Xuncha_3]["DynaNpcGroupGen"] = {}
+rwtTask[tMainTask_NaYaShenPan.Xuncha_3]["DynaNpcGroupGen"][1] = {}
+rwtTask[tMainTask_NaYaShenPan.Xuncha_3]["DynaNpcGroupGen"][1]["GenId"] = tGenId.Trap_Xuncha_2
+rwtTask[tMainTask_NaYaShenPan.Xuncha_3]["DynaNpcGroupGen"][1]["MapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Xuncha_3]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tMainTask_NaYaShenPan.Xuncha_3]["DynaNpcGroupGen"][2] = {}
+rwtTask[tMainTask_NaYaShenPan.Xuncha_3]["DynaNpcGroupGen"][2]["GenId"] = tGenId.Chigua_C_1
+rwtTask[tMainTask_NaYaShenPan.Xuncha_3]["DynaNpcGroupGen"][2]["MapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Xuncha_3]["DynaNpcGroupGen"][2]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.Xuncha_3]["DynaNpcGroupGen"][3] = {}
+rwtTask[tMainTask_NaYaShenPan.Xuncha_3]["DynaNpcGroupGen"][3]["GenId"] = tGenId.Chigua_D_1
+rwtTask[tMainTask_NaYaShenPan.Xuncha_3]["DynaNpcGroupGen"][3]["MapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Xuncha_3]["DynaNpcGroupGen"][3]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.Xuncha_3]["StartAutoWay"] = {}
+rwtTask[tMainTask_NaYaShenPan.Xuncha_3]["StartAutoWay"]["FindWayTypeId"] = 0
+rwtTask[tMainTask_NaYaShenPan.Xuncha_3]["StartAutoWay"]["FindWayMapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Xuncha_3]["StartAutoWay"]["FindWayPos"] = "96.34,-0.10,10.42"
+
+rwtTask[tMainTask_NaYaShenPan.Xuncha_4] = {}
+rwtTask[tMainTask_NaYaShenPan.Xuncha_4]["Title"] = tLuaText[LANGUAGE_CONFIG][21604]
+rwtTask[tMainTask_NaYaShenPan.Xuncha_4]["PreTaskId"] = tMainTask_NaYaShenPan.Xuncha_3
+rwtTask[tMainTask_NaYaShenPan.Xuncha_4]["NextTaskId"] = tMainTask_NaYaShenPan.Xuncha_5
+rwtTask[tMainTask_NaYaShenPan.Xuncha_4]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_TRAP
+rwtTask[tMainTask_NaYaShenPan.Xuncha_4]["ReqTrap1" ]= tNpcGroup.Trap_Xuncha_3
+rwtTask[tMainTask_NaYaShenPan.Xuncha_4]["DialogId"] = tDialog.Xuncha_2
+rwtTask[tMainTask_NaYaShenPan.Xuncha_4]["IsClickComplete"] = 0
+rwtTask[tMainTask_NaYaShenPan.Xuncha_4]["DynaNpcGroupGen"] = {}
+rwtTask[tMainTask_NaYaShenPan.Xuncha_4]["DynaNpcGroupGen"][1] = {}
+rwtTask[tMainTask_NaYaShenPan.Xuncha_4]["DynaNpcGroupGen"][1]["GenId"] = tGenId.Trap_Xuncha_3
+rwtTask[tMainTask_NaYaShenPan.Xuncha_4]["DynaNpcGroupGen"][1]["MapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Xuncha_4]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tMainTask_NaYaShenPan.Xuncha_4]["DynaNpcGroupGen"][2] = {}
+rwtTask[tMainTask_NaYaShenPan.Xuncha_4]["DynaNpcGroupGen"][2]["GenId"] = tGenId.Chigua_E_1
+rwtTask[tMainTask_NaYaShenPan.Xuncha_4]["DynaNpcGroupGen"][2]["MapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Xuncha_4]["DynaNpcGroupGen"][2]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.Xuncha_4]["StartAutoWay"] = {}
+rwtTask[tMainTask_NaYaShenPan.Xuncha_4]["StartAutoWay"]["FindWayTypeId"] = 0
+rwtTask[tMainTask_NaYaShenPan.Xuncha_4]["StartAutoWay"]["FindWayMapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Xuncha_4]["StartAutoWay"]["FindWayPos"] = "24.66,0.71,-50.23"
+
+rwtTask[tMainTask_NaYaShenPan.Xuncha_5] = {}
+rwtTask[tMainTask_NaYaShenPan.Xuncha_5]["Title"] = tLuaText[LANGUAGE_CONFIG][21604]
+rwtTask[tMainTask_NaYaShenPan.Xuncha_5]["PreTaskId"] = tMainTask_NaYaShenPan.Xuncha_4
+rwtTask[tMainTask_NaYaShenPan.Xuncha_5]["NextTaskId"] = tMainTask_NaYaShenPan.Xuncha_6
+rwtTask[tMainTask_NaYaShenPan.Xuncha_5]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
+rwtTask[tMainTask_NaYaShenPan.Xuncha_5]["DialogId"] = tDialog.Xuncha_3
+rwtTask[tMainTask_NaYaShenPan.Xuncha_5]["TaskNpc"] = tNpc.Taleiya
+rwtTask[tMainTask_NaYaShenPan.Xuncha_5]["StartAutoWay"] = {}
+rwtTask[tMainTask_NaYaShenPan.Xuncha_5]["StartAutoWay"]["FindWayTypeId"]= 1
+rwtTask[tMainTask_NaYaShenPan.Xuncha_5]["StartAutoWay"]["FindWayMapId"] = tMapId.Wanggong
+rwtTask[tMainTask_NaYaShenPan.Xuncha_5]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup.Taleiya_Wanggong
+rwtTask[tMainTask_NaYaShenPan.Xuncha_5]["StartAutoWay"]["FindWayGenId"] = tGenId.Taleiya_Wanggong
+rwtTask[tMainTask_NaYaShenPan.Xuncha_5]["IsClickComplete"] = 0
+
+rwtTask[tMainTask_NaYaShenPan.Xuncha_6] = {}
+rwtTask[tMainTask_NaYaShenPan.Xuncha_6]["Title"] = tLuaText[LANGUAGE_CONFIG][21604]
+rwtTask[tMainTask_NaYaShenPan.Xuncha_6]["PreTaskId"] = tMainTask_NaYaShenPan.Xuncha_5
+rwtTask[tMainTask_NaYaShenPan.Xuncha_6]["NextTaskId"] = tMainTask_NaYaShenPan.Gongshen_1
+rwtTask[tMainTask_NaYaShenPan.Xuncha_6]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.UPLEVEL
+rwtTask[tMainTask_NaYaShenPan.Xuncha_6]["NeedLevel"] = 55
+--rwtTask[tMainTask_NaYaShenPan.Xuncha_6]["LackDialogId"] = 1000
+--rwtTask[tMainTask_NaYaShenPan.Xuncha_6]["DialogId"] = 1000
+rwtTask[tMainTask_NaYaShenPan.Xuncha_6]["Awards"] = {}
+rwtTask[tMainTask_NaYaShenPan.Xuncha_6]["Awards"]["Events"] = {}
+rwtTask[tMainTask_NaYaShenPan.Xuncha_6]["Awards"]["Events"][1] = {}
+rwtTask[tMainTask_NaYaShenPan.Xuncha_6]["Awards"]["Events"][1]["GetServerAward"] = {}
+rwtTask[tMainTask_NaYaShenPan.Xuncha_6]["Awards"]["Events"][1]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.AWARD
+rwtTask[tMainTask_NaYaShenPan.Xuncha_6]["Awards"]["Events"][1]["GetServerAward"]["AwardId"] = tAward_Id.XunCha
+rwtTask[tMainTask_NaYaShenPan.Xuncha_6]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TASK
+rwtTask[tMainTask_NaYaShenPan.Xuncha_6]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tMainTask_NaYaShenPan.Xuncha_6
+
+----------------
+--纳雅公审
+----------------
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["Title"] = tLuaText[LANGUAGE_CONFIG][21605]
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["PreTaskId"] = tMainTask_NaYaShenPan.Xuncha_6
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["NextTaskId"] = tMainTask_NaYaShenPan.Gongshen_2
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["DialogId"] = tDialog.Gongshen_1
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["TaskNpc"] = tNpc.Taleiya
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["DynaNpcGroupGen"] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["DynaNpcGroupGen"][1] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["DynaNpcGroupGen"][1]["GenId"] = tGenId.Taleiya_Tiankong
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["DynaNpcGroupGen"][1]["MapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["DynaNpcGroupGen"][2] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["DynaNpcGroupGen"][2]["GenId"] = tGenId.NpcYazimo
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["DynaNpcGroupGen"][2]["MapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["DynaNpcGroupGen"][2]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["DynaNpcGroupGen"][3] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["DynaNpcGroupGen"][3]["GenId"] = tGenId.Chigua_A_2
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["DynaNpcGroupGen"][3]["MapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["DynaNpcGroupGen"][3]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["DynaNpcGroupGen"][4] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["DynaNpcGroupGen"][4]["GenId"] = tGenId.Chigua_B_2
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["DynaNpcGroupGen"][4]["MapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["DynaNpcGroupGen"][4]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["DynaNpcGroupGen"][5] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["DynaNpcGroupGen"][5]["GenId"] = tGenId.Chigua_C_2
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["DynaNpcGroupGen"][5]["MapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["DynaNpcGroupGen"][5]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["DynaNpcGroupGen"][6] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["DynaNpcGroupGen"][6]["GenId"] = tGenId.Chigua_D_2
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["DynaNpcGroupGen"][6]["MapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["DynaNpcGroupGen"][6]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["StartAutoWay"] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["StartAutoWay"]["FindWayTypeId"]= 1
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["StartAutoWay"]["FindWayMapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup.Taleiya_Tiankong
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["StartAutoWay"]["FindWayGenId"] = tGenId.Taleiya_Tiankong
+rwtTask[tMainTask_NaYaShenPan.Gongshen_1]["IsClickComplete"] = 0
+
+rwtTask[tMainTask_NaYaShenPan.Gongshen_2] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_2]["Title"] = tLuaText[LANGUAGE_CONFIG][21605]
+rwtTask[tMainTask_NaYaShenPan.Gongshen_2]["PreTaskId"] = tMainTask_NaYaShenPan.Gongshen_1
+rwtTask[tMainTask_NaYaShenPan.Gongshen_2]["NextTaskId"] = tMainTask_NaYaShenPan.Gongshen_3
+rwtTask[tMainTask_NaYaShenPan.Gongshen_2]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_PANEL
+--rwtTask[tMainTask_NaYaShenPan.Gongshen_2]["ReqTrap1" ]= tNpcGroup.Trap_ShenPan
+rwtTask[tMainTask_NaYaShenPan.Gongshen_2]["AcceptDialogId"] = tDialog.Gongshen_3
+rwtTask[tMainTask_NaYaShenPan.Gongshen_2]["DialogId"] = tDialog.Gongshen_3
+rwtTask[tMainTask_NaYaShenPan.Gongshen_2]["IsClickComplete"] = 0
+rwtTask[tMainTask_NaYaShenPan.Gongshen_2]["DynaNpcGroupGen"] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_2]["DynaNpcGroupGen"][1] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_2]["DynaNpcGroupGen"][1]["GenId"] = tGenId.Trap_ShenPan
+rwtTask[tMainTask_NaYaShenPan.Gongshen_2]["DynaNpcGroupGen"][1]["MapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Gongshen_2]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tMainTask_NaYaShenPan.Gongshen_2]["DynaNpcGroupGen"][2] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_2]["DynaNpcGroupGen"][2]["GenId"] = tGenId.Taleiya_Tiankong
+rwtTask[tMainTask_NaYaShenPan.Gongshen_2]["DynaNpcGroupGen"][2]["MapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Gongshen_2]["DynaNpcGroupGen"][2]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.Gongshen_2]["DynaNpcGroupGen"][3] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_2]["DynaNpcGroupGen"][3]["GenId"] = tGenId.NpcYazimo
+rwtTask[tMainTask_NaYaShenPan.Gongshen_2]["DynaNpcGroupGen"][3]["MapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Gongshen_2]["DynaNpcGroupGen"][3]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+--rwtTask[tMainTask_NaYaShenPan.Gongshen_2]["StartAutoWay"] = {}
+--rwtTask[tMainTask_NaYaShenPan.Gongshen_2]["StartAutoWay"]["FindWayTypeId"] = 0
+--rwtTask[tMainTask_NaYaShenPan.Gongshen_2]["StartAutoWay"]["FindWayMapId"] = tMapId.Tiankong
+--rwtTask[tMainTask_NaYaShenPan.Gongshen_2]["StartAutoWay"]["FindWayPos"] = "14.02,4.86,-0.22"
+
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["Title"] = tLuaText[LANGUAGE_CONFIG][21605]
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["PreTaskId"] = tMainTask_NaYaShenPan.Gongshen_2
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["NextTaskId"] = tMainTask_NaYaShenPan.Gongshen_4
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.KILLMONSTER
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["ReqTrap1" ]= tNpcGroup.Trap_ShenPan
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["DialogId"] = tDialog.Cg
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["DynaNpcGroupGen"] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["DynaNpcGroupGen"][1] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["DynaNpcGroupGen"][1]["GenId"] = tGenId.Trap_ShenPan
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["DynaNpcGroupGen"][1]["MapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["DynaNpcGroupGen"][2] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["DynaNpcGroupGen"][2]["GenId"] = tGenId.Taleiya_Tiankong
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["DynaNpcGroupGen"][2]["MapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["DynaNpcGroupGen"][2]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["DynaNpcGroupGen"][3] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["DynaNpcGroupGen"][3]["GenId"] = tGenId.NpcYazimo
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["DynaNpcGroupGen"][3]["MapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["DynaNpcGroupGen"][3]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["MonsterGroupGenId"] = tGenId.Monster_FenNu
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["KillMonsterGroup1" ]= nMonsterGroup_FenNu
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["IsClickComplete"] = 0
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["StartAutoWay"] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["StartAutoWay"]["FindWayTypeId"] = 0
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["StartAutoWay"]["FindWayMapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["StartAutoWay"]["FindWayPos"] = "14.02,4.86,-0.22"
+rwtTask[tMainTask_NaYaShenPan.Gongshen_3]["DialogueEndFunc"] = function ()
+	if rwHasGenEvent (tGenId.NpcYazimo) then
+		rwDelGenEvent(tGenId.NpcYazimo)
+	end
+	if rwHasGenEvent (tGenId.Trap_ShenPan) then
+		rwDelGenEvent(tGenId.Trap_ShenPan)
+	end
+end
+
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["Title"] = tLuaText[LANGUAGE_CONFIG][21605]
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["PreTaskId"] = tMainTask_NaYaShenPan.Gongshen_3
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["NextTaskId"] = tMainTask_NaYaShenPan.Tiaowu_1
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_TRAP
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["ReqTrap1" ]= tNpcGroup.Trap_ShenPan
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["DialogId"] = tDialog.Gongshen_4
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["IsClickComplete"] = 0
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["DynaNpcGroupGen"] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["DynaNpcGroupGen"][1] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["DynaNpcGroupGen"][1]["GenId"] = tGenId.Trap_ShenPan
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["DynaNpcGroupGen"][1]["MapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["DynaNpcGroupGen"][2] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["DynaNpcGroupGen"][2]["GenId"] = tGenId.Taleiya_Tiankong
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["DynaNpcGroupGen"][2]["MapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["DynaNpcGroupGen"][2]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["StartAutoWay"] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["StartAutoWay"]["FindWayTypeId"] = 0
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["StartAutoWay"]["FindWayMapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["StartAutoWay"]["FindWayPos"] = "14.02,4.86,-0.22"
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["Awards"] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["Awards"]["Events"] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["Awards"]["Events"][1] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["Awards"]["Events"][1]["GetServerAward"] = {}
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["Awards"]["Events"][1]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.AWARD
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["Awards"]["Events"][1]["GetServerAward"]["AwardId"] = tAward_Id.GongShen
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TASK
+rwtTask[tMainTask_NaYaShenPan.Gongshen_4]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tMainTask_NaYaShenPan.Gongshen_4
+
+----------------
+--唱歌不如跳舞
+----------------
+
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_1] = {}
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_1]["Title"] = tLuaText[LANGUAGE_CONFIG][21606]
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_1]["PreTaskId"] = tMainTask_NaYaShenPan.Gongshen_4
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_1]["NextTaskId"] = tMainTask_NaYaShenPan.Tiaowu_2
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_1]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_TRAP
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_1]["ReqTrap1" ]= tNpcGroup.Trap_HuaZhuang
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_1]["DialogId"] = tDialog.Tiaowu_1
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_1]["IsClickComplete"] = 0
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_1]["DynaNpcGroupGen"] = {}
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_1]["DynaNpcGroupGen"][1] = {}
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_1]["DynaNpcGroupGen"][1]["GenId"] = tGenId.Trap_HuaZhuang
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_1]["DynaNpcGroupGen"][1]["MapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_1]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_1]["StartAutoWay"] = {}
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_1]["StartAutoWay"]["FindWayTypeId"] = 0
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_1]["StartAutoWay"]["FindWayMapId"] = tMapId.Tiankong
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_1]["StartAutoWay"]["FindWayPos"] = "-54.97,0.71,71.73"
+
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_2] = {}
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_2]["Title"] = tLuaText[LANGUAGE_CONFIG][21606]
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_2]["PreTaskId"] = tMainTask_NaYaShenPan.Tiaowu_1
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_2]["NextTaskId"] = tMainTask_NaYaShenPan.Tiaowu_3
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_2]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_PANEL
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_2]["DialogId"] = tDialog.TiaoguoDonghua
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_2]["IsClickComplete"] = 0
+
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_3] = {}
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_3]["Title"] = tLuaText[LANGUAGE_CONFIG][21606]
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_3]["PreTaskId"] = tMainTask_NaYaShenPan.Tiaowu_2
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_3]["NextTaskId"] = tMainTask_NaYaShenPan.Tiaowu_4
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_3]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_PANEL
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_3]["DialogId"] = tDialog.Tiaowu_2
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_3]["IsClickComplete"] = 0
+
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_4] = {}
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_4]["Title"] = tLuaText[LANGUAGE_CONFIG][21606]
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_4]["PreTaskId"] = tMainTask_NaYaShenPan.Tiaowu_3
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_4]["NextTaskId"] = tMainTask_NaYaShenPan.Buyaowuhui_1
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_4]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_4]["DialogId"] = tDialog.Tiaowu_3
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_4]["TaskNpc"] = tNpc.Taleiya
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_4]["StartAutoWay"] = {}
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_4]["StartAutoWay"]["FindWayTypeId"]= 1
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_4]["StartAutoWay"]["FindWayMapId"] = tMapId.Wanggong
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_4]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup.Taleiya_Wanggong
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_4]["StartAutoWay"]["FindWayGenId"] = tGenId.Taleiya_Wanggong
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_4]["IsClickComplete"] = 0
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_4]["Awards"] = {}
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_4]["Awards"]["Events"] = {}
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_4]["Awards"]["Events"][1] = {}
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_4]["Awards"]["Events"][1]["GetServerAward"] = {}
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_4]["Awards"]["Events"][1]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.AWARD
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_4]["Awards"]["Events"][1]["GetServerAward"]["AwardId"] = tAward_Id.TiaoWu
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_4]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TASK
+rwtTask[tMainTask_NaYaShenPan.Tiaowu_4]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tMainTask_NaYaShenPan.Tiaowu_4
+
+----------------
+--请不要误会
+----------------
+
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_1] = {}
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_1]["Title"] = tLuaText[LANGUAGE_CONFIG][21607]
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_1]["PreTaskId"] = tMainTask_NaYaShenPan.Tiaowu_4
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_1]["NextTaskId"] = tMainTask_NaYaShenPan.Buyaowuhui_2
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_1]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_1]["DialogId"] = tDialog.Buyaowuhui_1
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_1]["TaskNpc"] = tNpc.Taleiya
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_1]["StartAutoWay"] = {}
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_1]["StartAutoWay"]["FindWayTypeId"]= 1
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_1]["StartAutoWay"]["FindWayMapId"] = tMapId.Wanggong
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_1]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup.Taleiya_Wanggong
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_1]["StartAutoWay"]["FindWayGenId"] = tGenId.Taleiya_Wanggong
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_1]["IsClickComplete"] = 0
+
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_2] = {}
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_2]["Title"] = tLuaText[LANGUAGE_CONFIG][21607]
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_2]["PreTaskId"] = tMainTask_NaYaShenPan.Buyaowuhui_1
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_2]["NextTaskId"] = tMainTask_NaYaShenPan.nFinalTask
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_2]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_2]["DialogId"] = tDialog.Buyaowuhui_2
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_2]["TaskNpc"] = tNpc.Taleiya
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_2]["StartAutoWay"] = {}
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_2]["StartAutoWay"]["FindWayTypeId"]= 1
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_2]["StartAutoWay"]["FindWayMapId"] = tMapId.Wanggong
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_2]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup.Taleiya_Wanggong
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_2]["StartAutoWay"]["FindWayGenId"] = tGenId.Taleiya_Wanggong
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_2]["IsClickComplete"] = 0
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_2]["Awards"] = {}
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_2]["Awards"]["Events"] = {}
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_2]["Awards"]["Events"][1] = {}
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_2]["Awards"]["Events"][1]["GetServerAward"] = {}
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_2]["Awards"]["Events"][1]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.AWARD
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_2]["Awards"]["Events"][1]["GetServerAward"]["AwardId"] = tAward_Id.BuYaoWuHui
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_2]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TASK
+rwtTask[tMainTask_NaYaShenPan.Buyaowuhui_2]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tMainTask_NaYaShenPan.Buyaowuhui_2
+
+
+-------------------------------------------------
+--                   [ MainTaskToEnd ]
+--				主线最后任务（新片区再移动）
+-------------------------------------------------
+--冒险者，你真棒！
+rwtTask[tMainTask_NaYaShenPan.nFinalTask] = {}
+rwtTask[tMainTask_NaYaShenPan.nFinalTask]["Title"] = tLuaText[LANGUAGE_CONFIG][21481]
+rwtTask[tMainTask_NaYaShenPan.nFinalTask]["PreTaskId"] = tMainTask_NaYaShenPan.Buyaowuhui_2
+rwtTask[tMainTask_NaYaShenPan.nFinalTask]["TaskType"] = CONST_TASK_TYPE.MAIN
+rwtTask[tMainTask_NaYaShenPan.nFinalTask]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
+rwtTask[tMainTask_NaYaShenPan.nFinalTask]["TaskTips"] = "当前主线任务已全部完成"

@@ -1,0 +1,14 @@
+﻿,required,required,required,required,required
+,uint32,float,float,uint32,string
+,signId,signWidth,signHeight,useDirection,res
+备注,标记id,标记宽度（占小地图UI宽的比）,标记高度（占小地图UI高的比）,是否使用方向（指向形小地图标记）,资源名
+,0,0.27,0.325,1,Player
+,1,0.2204,0.27,0,Mission
+,2,0.1653,0.1653,0,Npc
+,3,0.1157,0.1157,0,AiPlayer
+,4,0.2535,0.2314,0,Enemy
+,5,0.3416,0.314,0,Boss
+,6,0.1653,0.1653,0,Shop
+,7,0.1818,0.336,0,Transfer
+,8,0.2535,0.2754,0,Instance
+,9,0.2535,0.2314,0,EnemyElite

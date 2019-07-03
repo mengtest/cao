@@ -1,0 +1,8 @@
+﻿,required,required
+,uint32,string
+,id,path
+备注,旗子id,icon路径
+,9999999,Textures\Atlas\Dyn\SynFlags\1.png
+,1,Textures\Atlas\Dyn\SynFlags\1.png
+,2,Textures\Atlas\Dyn\SynFlags\2.png
+,3,Textures\Atlas\Dyn\SynFlags\3.png
