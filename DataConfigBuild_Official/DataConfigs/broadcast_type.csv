@@ -1,0 +1,7 @@
+﻿,required,required,required,required,required
+,uint32,uint32,uint32,uint32,uint32
+,id,type,monitor_id,activity_id,data1
+备注,广播id,广播类型,监听ID,活动ID,data1
+,1,1,2222,0,0
+,2,1,2269,0,0
+,3,1,2285,0,0
