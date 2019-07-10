@@ -1129,7 +1129,7 @@ tNPCGroupManyHeroes["Tulo"] 		= 20948		--特罗德,0,0,1
 tNPCGroupManyHeroes["TuloMainCity"] = 20228		--特罗德主城
 tNPCGroupManyHeroes["TaiLei"] 		= 20949		--泰雷,0,0,1,1
 
-tNPCGroupManyHeroes["Trap"] 		= 20949		--泰雷,0,0,1,1
+tNPCGroupManyHeroes["Trap"] 		= 30658		--马车陷阱
 
 local tNPCManyHeroes = {}
 tNPCManyHeroes["FengJiSuDi"] 		= 3815		--风迹速递NPC,
@@ -1144,11 +1144,26 @@ tGenIdManyHeroes["Tulo"] 			= 20010251		--特罗德,0,0,1
 tGenIdManyHeroes["TuloMainCity"] 	= 1000047		--特罗德主城
 tGenIdManyHeroes["TaiLei"] 			= 20010252		--泰雷,0,0,1,1
 
+tGenIdManyHeroes["Trap"] 			= 2002041		--马车陷阱
+
+tGenIdManyHeroes["MonsterLang"] 			= 2002036		--武装狼人战士
+tGenIdManyHeroes["MonsterXiong"] 			= 2002037		--武装熊人战士
+tGenIdManyHeroes["MonsterLuJiao"] 			= 2002038		--鹿角兽队长
+tGenIdManyHeroes["MonsterAnHei"] 			= 2002039		--暗黑战魂
+tGenIdManyHeroes["MonsterAPu"] 				= 2002040		--狂化阿噗
+
+local tMonsterGroupManyHeroes = {}
+tMonsterGroupManyHeroes["MonsterLang"] 				= 900585		--武装狼人战士
+tMonsterGroupManyHeroes["MonsterXiong"] 			= 900586		--武装熊人战士
+tMonsterGroupManyHeroes["MonsterLuJiao"] 			= 900587		--鹿角兽队长
+tMonsterGroupManyHeroes["MonsterAnHei"] 			= 900588		--暗黑战魂
+tMonsterGroupManyHeroes["MonsterAPu"] 				= 900589		--狂化阿噗
 --===================================================
 rwtNpcGroup[tNPCGroupManyHeroes["SaLin"]] = rwtNpcGroup[tNPCGroupManyHeroes["SaLin"]] or {}  --萨林
 rwtNpcGroup[tNPCGroupManyHeroes["SaLin"]]["Type"] = CONST_NPCGROUP_TYPE.SingleNpc
 rwtNpcGroup[tNPCGroupManyHeroes["SaLin"]]["NpcId"]= tNPCManyHeroes["SaLin"]
 --===================================================
+--禁卫军的紧急招募函-阅读招募函
 rwtTask[tTaskManyHeroesTask[1]] = {}
 rwtTask[tTaskManyHeroesTask[1]]["Title"] = tLuaText[LANGUAGE_CONFIG][21800]
 rwtTask[tTaskManyHeroesTask[1]]["TaskType"] = CONST_TASK_TYPE.SIDE
@@ -1156,7 +1171,7 @@ rwtTask[tTaskManyHeroesTask[1]]["TaskType"] = CONST_TASK_TYPE.SIDE
 rwtTask[tTaskManyHeroesTask[1]]["NextTaskId"] = rwtTask[tTaskManyHeroesTask[2]]
 rwtTask[tTaskManyHeroesTask[1]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_PANEL
 rwtTask[tTaskManyHeroesTask[1]]["DialogId"] = tDialogManyHeroes[1]
-
+--禁卫军的秘密任务-前往报道
 rwtTask[tTaskManyHeroesTask[2]] = {}
 rwtTask[tTaskManyHeroesTask[2]]["Title"] = tLuaText[LANGUAGE_CONFIG][21801]
 rwtTask[tTaskManyHeroesTask[2]]["TaskType"] = CONST_TASK_TYPE.SIDE
@@ -1169,13 +1184,13 @@ rwtTask[tTaskManyHeroesTask[2]]["DynaNpcGroupGen"] = {}
 rwtTask[tTaskManyHeroesTask[2]]["DynaNpcGroupGen"][1] = {}
 rwtTask[tTaskManyHeroesTask[2]]["DynaNpcGroupGen"][1]["GenId"] = tGenIdManyHeroes["SaLin"]
 rwtTask[tTaskManyHeroesTask[2]]["DynaNpcGroupGen"][1]["MapId"] = 2002
-rwtTask[tTaskManyHeroesTask[2]]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tTaskManyHeroesTask[2]]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
 rwtTask[tTaskManyHeroesTask[2]]["StartAutoWay"] = {}
 rwtTask[tTaskManyHeroesTask[2]]["StartAutoWay"]["FindWayTypeId"] = 1
 rwtTask[tTaskManyHeroesTask[2]]["StartAutoWay"]["FindWayMapId"] = 2002
-rwtTask[tTaskManyHeroesTask[2]]["StartAutoWay"]["FindWayGroupId"] = tNPCManyHeroes["SaLin"]
+rwtTask[tTaskManyHeroesTask[2]]["StartAutoWay"]["FindWayGroupId"] = tNPCGroupManyHeroes["SaLin"]
 rwtTask[tTaskManyHeroesTask[2]]["StartAutoWay"]["FindWayGenId"] = tGenIdManyHeroes["SaLin"]
-
+--禁卫军的秘密任务-收集样本
 rwtTask[tTaskManyHeroesTask[3]] = {}
 rwtTask[tTaskManyHeroesTask[3]]["Title"] = tLuaText[LANGUAGE_CONFIG][21801]
 rwtTask[tTaskManyHeroesTask[3]]["TaskType"] = CONST_TASK_TYPE.SIDE
@@ -1186,8 +1201,28 @@ rwtTask[tTaskManyHeroesTask[3]]["DynaNpcGroupGen"] = {}
 rwtTask[tTaskManyHeroesTask[3]]["DynaNpcGroupGen"][1] = {}
 rwtTask[tTaskManyHeroesTask[3]]["DynaNpcGroupGen"][1]["GenId"] = tGenIdManyHeroes["SaLin"]
 rwtTask[tTaskManyHeroesTask[3]]["DynaNpcGroupGen"][1]["MapId"] = 2002
-rwtTask[tTaskManyHeroesTask[3]]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
-
+rwtTask[tTaskManyHeroesTask[3]]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tTaskManyHeroesTask[3]]["DynaNpcGroupGen"][2] = {}
+rwtTask[tTaskManyHeroesTask[3]]["DynaNpcGroupGen"][2]["GenId"] = tGenIdManyHeroes["MonsterLang"]
+rwtTask[tTaskManyHeroesTask[3]]["DynaNpcGroupGen"][2]["MapId"] = 2002
+rwtTask[tTaskManyHeroesTask[3]]["DynaNpcGroupGen"][2]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tTaskManyHeroesTask[3]]["DynaNpcGroupGen"][3] = {}
+rwtTask[tTaskManyHeroesTask[3]]["DynaNpcGroupGen"][3]["GenId"] = tGenIdManyHeroes["MonsterXiong"]
+rwtTask[tTaskManyHeroesTask[3]]["DynaNpcGroupGen"][3]["MapId"] = 2002
+rwtTask[tTaskManyHeroesTask[3]]["DynaNpcGroupGen"][3]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tTaskManyHeroesTask[3]]["DynaNpcGroupGen"][4] = {}
+rwtTask[tTaskManyHeroesTask[3]]["DynaNpcGroupGen"][4]["GenId"] = tGenIdManyHeroes["MonsterLuJiao"]
+rwtTask[tTaskManyHeroesTask[3]]["DynaNpcGroupGen"][4]["MapId"] = 2002
+rwtTask[tTaskManyHeroesTask[3]]["DynaNpcGroupGen"][4]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tTaskManyHeroesTask[3]]["DynaNpcGroupGen"][5] = {}
+rwtTask[tTaskManyHeroesTask[3]]["DynaNpcGroupGen"][5]["GenId"] = tGenIdManyHeroes["MonsterAnHei"]
+rwtTask[tTaskManyHeroesTask[3]]["DynaNpcGroupGen"][5]["MapId"] = 2002
+rwtTask[tTaskManyHeroesTask[3]]["DynaNpcGroupGen"][5]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tTaskManyHeroesTask[3]]["DynaNpcGroupGen"][6] = {}
+rwtTask[tTaskManyHeroesTask[3]]["DynaNpcGroupGen"][6]["GenId"] = tGenIdManyHeroes["MonsterAPu"]
+rwtTask[tTaskManyHeroesTask[3]]["DynaNpcGroupGen"][6]["MapId"] = 2002
+rwtTask[tTaskManyHeroesTask[3]]["DynaNpcGroupGen"][6]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete	
+--禁卫军的秘密任务-上交样本
 rwtTask[tTaskManyHeroesTask[4]] = {}
 rwtTask[tTaskManyHeroesTask[4]]["Title"] = tLuaText[LANGUAGE_CONFIG][21801]
 rwtTask[tTaskManyHeroesTask[4]]["TaskType"] = CONST_TASK_TYPE.SIDE
@@ -1204,9 +1239,9 @@ rwtTask[tTaskManyHeroesTask[4]]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_IN
 rwtTask[tTaskManyHeroesTask[4]]["StartAutoWay"] = {}
 rwtTask[tTaskManyHeroesTask[4]]["StartAutoWay"]["FindWayTypeId"] = 1
 rwtTask[tTaskManyHeroesTask[4]]["StartAutoWay"]["FindWayMapId"] = 2002
-rwtTask[tTaskManyHeroesTask[4]]["StartAutoWay"]["FindWayGroupId"] = tNPCManyHeroes["SaLin"]
+rwtTask[tTaskManyHeroesTask[4]]["StartAutoWay"]["FindWayGroupId"] = tNPCGroupManyHeroes["SaLin"]
 rwtTask[tTaskManyHeroesTask[4]]["StartAutoWay"]["FindWayGenId"] = tGenIdManyHeroes["SaLin"]
-
+--后续的考验-拜访特罗德
 rwtTask[tTaskManyHeroesTask[5]] = {}
 rwtTask[tTaskManyHeroesTask[5]]["Title"] = tLuaText[LANGUAGE_CONFIG][21802]
 rwtTask[tTaskManyHeroesTask[5]]["TaskType"] = CONST_TASK_TYPE.SIDE
@@ -1218,23 +1253,114 @@ rwtTask[tTaskManyHeroesTask[5]]["TaskNpc"] = tNPCManyHeroes["TuloMainCity"]
 rwtTask[tTaskManyHeroesTask[5]]["StartAutoWay"] = {}
 rwtTask[tTaskManyHeroesTask[5]]["StartAutoWay"]["FindWayTypeId"] = 1
 rwtTask[tTaskManyHeroesTask[5]]["StartAutoWay"]["FindWayMapId"] = 1000
-rwtTask[tTaskManyHeroesTask[5]]["StartAutoWay"]["FindWayGroupId"] = tNPCManyHeroes["TuloMainCity"]
+rwtTask[tTaskManyHeroesTask[5]]["StartAutoWay"]["FindWayGroupId"] = tNPCGroupManyHeroes["TuloMainCity"]
 rwtTask[tTaskManyHeroesTask[5]]["StartAutoWay"]["FindWayGenId"] = tGenIdManyHeroes["TuloMainCity"]
-
+--神秘试炼场-寻找泰雷
 rwtTask[tTaskManyHeroesTask[6]] = {}
-rwtTask[tTaskManyHeroesTask[6]]["Title"] = tLuaText[LANGUAGE_CONFIG][21802]
+rwtTask[tTaskManyHeroesTask[6]]["Title"] = tLuaText[LANGUAGE_CONFIG][21803]
 rwtTask[tTaskManyHeroesTask[6]]["TaskType"] = CONST_TASK_TYPE.SIDE
 rwtTask[tTaskManyHeroesTask[6]]["PreTaskId"] = tTaskManyHeroesTask[5]
 rwtTask[tTaskManyHeroesTask[6]]["NextTaskId"] = tTaskManyHeroesTask[7]
 rwtTask[tTaskManyHeroesTask[6]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_TRAP
 rwtTask[tTaskManyHeroesTask[6]]["DialogId"] = tDialogManyHeroes[6]
 rwtTask[tTaskManyHeroesTask[6]]["ReqTrap1"] = tNPCGroupManyHeroes["Trap"]
+rwtTask[tTaskManyHeroesTask[6]]["DynaNpcGroupGen"] = {}
+rwtTask[tTaskManyHeroesTask[6]]["DynaNpcGroupGen"][1] = {}
+rwtTask[tTaskManyHeroesTask[6]]["DynaNpcGroupGen"][1]["GenId"] = tGenIdManyHeroes["Trap"]
+rwtTask[tTaskManyHeroesTask[6]]["DynaNpcGroupGen"][1]["MapId"] = 1000
+rwtTask[tTaskManyHeroesTask[6]]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
 rwtTask[tTaskManyHeroesTask[6]]["StartAutoWay"] = {}
 rwtTask[tTaskManyHeroesTask[6]]["StartAutoWay"]["FindWayTypeId"] = 1
 rwtTask[tTaskManyHeroesTask[6]]["StartAutoWay"]["FindWayMapId"] = 1000
-rwtTask[tTaskManyHeroesTask[6]]["StartAutoWay"]["FindWayGroupId"] = tNPCManyHeroes["TuloMainCity"]
-rwtTask[tTaskManyHeroesTask[6]]["StartAutoWay"]["FindWayGenId"] = tGenIdManyHeroes["TuloMainCity"]
+rwtTask[tTaskManyHeroesTask[6]]["StartAutoWay"]["FindWayGroupId"] = tNPCGroupManyHeroes["Trap"]
+rwtTask[tTaskManyHeroesTask[6]]["StartAutoWay"]["FindWayGenId"] = tGenIdManyHeroes["Trap"]
+--神秘试炼场-寻找泰雷
+rwtTask[tTaskManyHeroesTask[7]] = {}
+rwtTask[tTaskManyHeroesTask[7]]["Title"] = tLuaText[LANGUAGE_CONFIG][21803]
+rwtTask[tTaskManyHeroesTask[7]]["TaskType"] = CONST_TASK_TYPE.SIDE
+rwtTask[tTaskManyHeroesTask[7]]["PreTaskId"] = tTaskManyHeroesTask[6]
+rwtTask[tTaskManyHeroesTask[7]]["NextTaskId"] = tTaskManyHeroesTask[8]
+rwtTask[tTaskManyHeroesTask[7]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
+rwtTask[tTaskManyHeroesTask[7]]["DialogId"] = tDialogManyHeroes[7]
+rwtTask[tTaskManyHeroesTask[7]]["TaskNpc"] = tNPCGroupManyHeroes["TaiLei"]
+rwtTask[tTaskManyHeroesTask[7]]["DynaNpcGroupGen"] = {}
+rwtTask[tTaskManyHeroesTask[7]]["DynaNpcGroupGen"][1] = {}
+rwtTask[tTaskManyHeroesTask[7]]["DynaNpcGroupGen"][1]["GenId"] = tGenIdManyHeroes["TaiLei"]
+rwtTask[tTaskManyHeroesTask[7]]["DynaNpcGroupGen"][1]["MapId"] = 2001
+rwtTask[tTaskManyHeroesTask[7]]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tTaskManyHeroesTask[7]]["StartAutoWay"] = {}
+rwtTask[tTaskManyHeroesTask[7]]["StartAutoWay"]["FindWayTypeId"] = 1
+rwtTask[tTaskManyHeroesTask[7]]["StartAutoWay"]["FindWayMapId"] = 2001
+rwtTask[tTaskManyHeroesTask[7]]["StartAutoWay"]["FindWayGroupId"] = tNPCGroupManyHeroes["TaiLei"]
+rwtTask[tTaskManyHeroesTask[7]]["StartAutoWay"]["FindWayGenId"] = tGenIdManyHeroes["TaiLei"]
+--黯月城-通关黯月城
+rwtTask[tTaskManyHeroesTask[8]] = {}
+rwtTask[tTaskManyHeroesTask[8]]["Title"] = tLuaText[LANGUAGE_CONFIG][21804]
+rwtTask[tTaskManyHeroesTask[8]]["TaskType"] = CONST_TASK_TYPE.SIDE
+rwtTask[tTaskManyHeroesTask[8]]["PreTaskId"] = tTaskManyHeroesTask[7]
+rwtTask[tTaskManyHeroesTask[8]]["NextTaskId"] = tTaskManyHeroesTask[9]
+rwtTask[tTaskManyHeroesTask[8]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.PASS_COPYMAP
+rwtTask[tTaskManyHeroesTask[8]]["PassCopyMap1"] = {3097}
+-- rwtTask[tTaskManyHeroesTask[8]]["OpenCopyMap"] = 3097
+rwtTask[tTaskManyHeroesTask[8]]["DynaNpcGroupGen"] = {}
+rwtTask[tTaskManyHeroesTask[8]]["DynaNpcGroupGen"][1] = {}
+rwtTask[tTaskManyHeroesTask[8]]["DynaNpcGroupGen"][1]["GenId"] = tGenIdManyHeroes["TaiLei"]
+rwtTask[tTaskManyHeroesTask[8]]["DynaNpcGroupGen"][1]["MapId"] = 2001
+rwtTask[tTaskManyHeroesTask[8]]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tTaskManyHeroesTask[8]]["StartAutoWay"] = {}
+rwtTask[tTaskManyHeroesTask[8]]["StartAutoWay"]["FindWayTypeId"] = 1
+rwtTask[tTaskManyHeroesTask[8]]["StartAutoWay"]["FindWayMapId"] = 2001
+rwtTask[tTaskManyHeroesTask[8]]["StartAutoWay"]["FindWayGroupId"] = tNPCGroupManyHeroes["TaiLei"]
+rwtTask[tTaskManyHeroesTask[8]]["StartAutoWay"]["FindWayGenId"] = tGenIdManyHeroes["TaiLei"]
+--体验报告-汇报特罗德
+rwtTask[tTaskManyHeroesTask[9]] = {}
+rwtTask[tTaskManyHeroesTask[9]]["Title"] = tLuaText[LANGUAGE_CONFIG][21805]
+rwtTask[tTaskManyHeroesTask[9]]["TaskType"] = CONST_TASK_TYPE.SIDE
+rwtTask[tTaskManyHeroesTask[9]]["PreTaskId"] = tTaskManyHeroesTask[8]
+-- rwtTask[tTaskManyHeroesTask[9]]["NextTaskId"] = tTaskManyHeroesTask[8]
+rwtTask[tTaskManyHeroesTask[9]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
+rwtTask[tTaskManyHeroesTask[9]]["DialogId"] = tDialogManyHeroes[7]
+rwtTask[tTaskManyHeroesTask[9]]["TaskNpc"] = tNPCGroupManyHeroes["Tulo"]
+rwtTask[tTaskManyHeroesTask[9]]["DynaNpcGroupGen"] = {}
+rwtTask[tTaskManyHeroesTask[9]]["DynaNpcGroupGen"][1] = {}
+rwtTask[tTaskManyHeroesTask[9]]["DynaNpcGroupGen"][1]["GenId"] = tGenIdManyHeroes["Tulo"]
+rwtTask[tTaskManyHeroesTask[9]]["DynaNpcGroupGen"][1]["MapId"] = 2001
+rwtTask[tTaskManyHeroesTask[9]]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tTaskManyHeroesTask[9]]["DynaNpcGroupGen"][2] = {}
+rwtTask[tTaskManyHeroesTask[9]]["DynaNpcGroupGen"][2]["GenId"] = tGenIdManyHeroes["TaiLei"]
+rwtTask[tTaskManyHeroesTask[9]]["DynaNpcGroupGen"][2]["MapId"] = 2001
+rwtTask[tTaskManyHeroesTask[9]]["DynaNpcGroupGen"][2]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[tTaskManyHeroesTask[9]]["StartAutoWay"] = {}
+rwtTask[tTaskManyHeroesTask[9]]["StartAutoWay"]["FindWayTypeId"] = 1
+rwtTask[tTaskManyHeroesTask[9]]["StartAutoWay"]["FindWayMapId"] = 2001
+rwtTask[tTaskManyHeroesTask[9]]["StartAutoWay"]["FindWayGroupId"] = tNPCGroupManyHeroes["Tulo"]
+rwtTask[tTaskManyHeroesTask[9]]["StartAutoWay"]["FindWayGenId"] = tGenIdManyHeroes["Tulo"]
+-- rwtTask[tTaskManyHeroesTask[9]]["UnLockSysId"] = {CONST_SYSTEM_FUNCTION.SKILL_UPLEV}  --技能升级
 
-function moqiManyHero()
-	rwAddGenEvent(3011001,"", 200151, 0, 0, 1, true)
+function rwManyHeroesBeforeTask()
+	local taskid = tTaskManyHeroesTask[2]
+	local index = rwTaskGetData(taskid,CONST_TASK_INFO_INDEX.TASK_DATA1)
+	local Random = rwGetRandInt(3,5)
+	if index + Random >= 10 then
+		local nVal = 10
+		rwTaskSetData(taskid, CONST_TASK_INFO_INDEX.TASK_DATA1, nVal)
+		rwTaskSetData(taskid, CONST_TASK_INFO_INDEX.TASK_FINISH_FLAG,2)	
+	else
+		rwTaskSetData(taskid, CONST_TASK_INFO_INDEX.TASK_DATA1, index + Random)	
+	end
 end
+
+rwtMonsterGroup_Func[tMonsterGroupManyHeroes["MonsterLang"]] = rwtMonsterGroup_Func[tMonsterGroupManyHeroes["MonsterLang"]] or {}
+table.insert(rwtMonsterGroup_Func[tMonsterGroupManyHeroes["MonsterLang"]],rwManyHeroesBeforeTask)
+
+rwtMonsterGroup_Func[tMonsterGroupManyHeroes["MonsterXiong"]] = rwtMonsterGroup_Func[tMonsterGroupManyHeroes["MonsterXiong"]] or {}
+table.insert(rwtMonsterGroup_Func[tMonsterGroupManyHeroes["MonsterXiong"]],rwManyHeroesBeforeTask)
+
+rwtMonsterGroup_Func[tMonsterGroupManyHeroes["MonsterLuJiao"]] = rwtMonsterGroup_Func[tMonsterGroupManyHeroes["MonsterLuJiao"]] or {}
+table.insert(rwtMonsterGroup_Func[tMonsterGroupManyHeroes["MonsterLuJiao"]],rwManyHeroesBeforeTask)
+
+rwtMonsterGroup_Func[tMonsterGroupManyHeroes["MonsterAnHei"]] = rwtMonsterGroup_Func[tMonsterGroupManyHeroes["MonsterAnHei"]] or {}
+table.insert(rwtMonsterGroup_Func[tMonsterGroupManyHeroes["MonsterAnHei"]],rwManyHeroesBeforeTask)
+
+rwtMonsterGroup_Func[tMonsterGroupManyHeroes["MonsterAPu"]] = rwtMonsterGroup_Func[tMonsterGroupManyHeroes["MonsterAPu"]] or {}
+table.insert(rwtMonsterGroup_Func[tMonsterGroupManyHeroes["MonsterAPu"]],rwManyHeroesBeforeTask)
