@@ -9,6 +9,7 @@ delete from monster_group where `id` >=900585 and `id` <=900589;
 delete from monster where `id` >=9000654 and `id` <=9000658;
 delete from gen_event where `id` in (2002035,2002036,2002037,2002038,2002039,2002040,2002041,20010251,20010252);
 delete from npc_group where `id` in (20947,20948,20949,30658);
+delete from task_index where `taskid` >=70219 and `taskid` <=70227;
 #打开注释部分
 
 ###################################################
@@ -42,3 +43,14 @@ INSERT INTO `npc_group` (`id`, `name`) VALUES
 (20948, '特罗德'),
 (20949, '泰雷'),
 (30658, '马车旁陷阱');
+
+INSERT INTO `task_index` (`taskid`, `data_index`, `mask_index`) VALUES 
+(70219, 21, 62),
+(70220, 21, 63),
+(70221, 22, 1),
+(70222, 22, 2),
+(70223, 22, 3),
+(70224, 22, 4),
+(70225, 22, 5),
+(70226, 22, 6),
+(70227, 22, 7);

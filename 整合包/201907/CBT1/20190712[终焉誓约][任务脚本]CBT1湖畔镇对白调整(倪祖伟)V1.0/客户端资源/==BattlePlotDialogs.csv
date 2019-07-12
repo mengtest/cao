@@ -1,0 +1,5 @@
+﻿,required,required,required,required,required,required,required
+,uint32,uint32,uint32,uint32,uint32,uint32,string
+,id,monsterId,monsterGroupId,triggerType,min,max,dlgArray
+备注,id,怪物ID,触发的怪物组id,触发类型：默认0 血量百分比触发,最小值,最大值,对白组
+,900032603,9000326,9000326,0,50,92,10081;10083;10084;10086;10085

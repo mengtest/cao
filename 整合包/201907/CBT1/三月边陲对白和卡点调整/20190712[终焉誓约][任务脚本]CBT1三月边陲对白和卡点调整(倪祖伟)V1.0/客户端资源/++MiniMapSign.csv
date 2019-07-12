@@ -1,0 +1,6 @@
+﻿,required,required,required,required,required
+,uint32,float,float,uint32,string
+,signId,signWidth,signHeight,useDirection,res
+备注,标记id,标记宽度（占小地图UI宽的比）,标记高度（占小地图UI高的比）,是否使用方向（指向形小地图标记）,资源名
+,10,0.2148,0.3194,0,Map
+,999,0.1101,0.1101,0,Path
