@@ -375,6 +375,7 @@ function QuickSendAcceptTaskFromNpc(nData2,nData3)
 		end
 		local tDialogOption = {}
 		tDialogOption["Text"] = {}
+        tDialogOption["Text"]["DialogId"] = 60895
 		tDialogOption["Text"]["Content"] = sMessage
 		tDialogOption["Text"]["TalkId"] = 3774
 		tDialogOption["Text"]["Midid"] = 3774
@@ -425,6 +426,7 @@ function QuickSendGoToNextTown(nData2,nData3)
 	sMessage = sMessage.. "呼，终于把这里的速递都送完了！唔……还有<color=#bd1011>" .. nRemainTaskNum .."</color>件速递没<br>有送。要加快脚步，赶紧去派送下个城镇的速递了！"
 	local tDialogOption = {}
 	tDialogOption["Text"] = {}
+    tDialogOption["Text"]["DialogId"] = 60896
 	tDialogOption["Text"]["Content"] = sMessage
 	tDialogOption["Text"]["TalkId"] = 101
 	tDialogOption["Text"]["LeftId"] = 101

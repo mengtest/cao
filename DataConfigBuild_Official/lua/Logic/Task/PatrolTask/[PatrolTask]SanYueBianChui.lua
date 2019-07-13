@@ -287,7 +287,7 @@ rwtTask[tSYBCXunCha.Task1_7]["DialogId"] = tDialogId.Task1_7
 rwtTask[tSYBCXunCha.Task1_7]["PatrolLastTask"] = 1
 rwtTask[tSYBCXunCha.Task1_7]["StartAutoWay"] = {}
 rwtTask[tSYBCXunCha.Task1_7]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tSYBCXunCha.Task1_7]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tSYBCXunCha.Task1_7]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tSYBCXunCha.Task1_7]["StartAutoWay"]["FindWayGroupId"] = 20115
 rwtTask[tSYBCXunCha.Task1_7]["StartAutoWay"]["FindWayGenId"] = 2001658
 
@@ -390,6 +390,6 @@ rwtTask[tSYBCXunCha.Task2_5]["DialogId"] = tDialogId.Task2_5
 rwtTask[tSYBCXunCha.Task2_5]["PatrolLastTask"] = 1
 rwtTask[tSYBCXunCha.Task2_5]["StartAutoWay"] = {}
 rwtTask[tSYBCXunCha.Task2_5]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tSYBCXunCha.Task2_5]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tSYBCXunCha.Task2_5]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tSYBCXunCha.Task2_5]["StartAutoWay"]["FindWayGroupId"] = 20115
 rwtTask[tSYBCXunCha.Task2_5]["StartAutoWay"]["FindWayGenId"] = 2001658

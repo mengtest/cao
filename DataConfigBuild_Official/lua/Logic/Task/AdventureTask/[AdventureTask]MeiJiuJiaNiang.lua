@@ -59,8 +59,8 @@ local nGen_AnDaoFu = 2001655
        -- end
     -- end   
 -- end
--- rwtSceneLoad_Func[1001] = rwtSceneLoad_Func[1001] or {}
--- table.insert(rwtSceneLoad_Func[1001],Adventure_CreateTrap_MeiJiuJiaNiang)    --插入切图函数
+-- rwtSceneLoad_Func[1000] = rwtSceneLoad_Func[1000] or {}
+-- table.insert(rwtSceneLoad_Func[1000],Adventure_CreateTrap_MeiJiuJiaNiang)    --插入切图函数
 
 -----------------------------------------------任务流程-----------------------------------------------------------
 
@@ -136,7 +136,7 @@ rwtTask[nTask_Adventure_Meijiu_5]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TAL
 rwtTask[nTask_Adventure_Meijiu_5]["TaskNpc"] = nNpc_AnDaoFu
 rwtTask[nTask_Adventure_Meijiu_5]["StartAutoWay"] = {}
 rwtTask[nTask_Adventure_Meijiu_5]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[nTask_Adventure_Meijiu_5]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[nTask_Adventure_Meijiu_5]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[nTask_Adventure_Meijiu_5]["StartAutoWay"]["FindWayGroupId"] = nNpcGroup_AnDaoFu
 rwtTask[nTask_Adventure_Meijiu_5]["StartAutoWay"]["FindWayGenId"] = nGen_AnDaoFu
 rwtTask[nTask_Adventure_Meijiu_5]["IsClickComplete"] = 0

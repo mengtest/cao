@@ -92,6 +92,26 @@ end
     return GetUserTimesLimit(nType)
  end
 
+-- 获取开服天数
+-- @return int开服天数
+function rwGetServerOpenDays()
+	return GetServerOpenDays()
+end
+
+-- 获取玩家角色创建天数(创建单天返回1
+-- @return int
+function rwGetUserRoleCreationDays()
+	return GetUserRoleCreationDays()
+end
+
+-- 获取指定活动id开始和结束时间戳
+-- 目前只针对dailyact表中的type=6,7,8,9的限时活动。
+-- 其中type=8限时循环活动，与type=9不限时循环活动做一样处理，返回的皆为当前周期（或下个周期）的起始时间戳和截止时间戳。
+-- @param nDailyactId 活动id
+ function rwGetDailyactStartAndEndTime(nDailyactId)
+	nDailyactId = nDailyactId or 0
+	return GetDailyactStartAndEndTime(nDailyactId)
+ end
 --===================================================================
 --==============================功能函数=============================
 --===================================================================
@@ -100,7 +120,7 @@ end
 -- @param sStr JSON串
 -- @param sFunc String类型，函数
 function rwAddDlgText(sStr,sFunc)
-sFunc = sFunc or ""
+	sFunc = sFunc or ""
     rwPrintNormalLog({Func = "rwAddDlgText",sStr = sStr,sFunc = sFunc})
     AddDlgText(sStr,sFunc)
 end
@@ -362,6 +382,57 @@ function rwSynAudioInfo(nAudioId, nControlType, nFadeInTime, nFadeOutTime)
     nFadeInTime = nFadeInTime or 0
     nFadeOutTime = nFadeOutTime or 0
     return SynAudioInfo(nAudioId, nControlType, nFadeInTime, nFadeOutTime)
+end
+
+-- 获取全服事件单个数据
+-- @param nRegIndex 全服事件id
+-- @param nDataIndex 对应data参数位
+-- @return int
+function rwGetGlobalReg(nRegIndex,nDataIndex)
+	nRegIndex = nRegIndex or 0
+	nDataIndex = nDataIndex or 0
+	rwPrintNormalLog({Func = "rwGetGlobalReg",nRegIndex = nRegIndex, nDataIndex = nDataIndex})
+	return GetGlobalReg(nRegIndex, nDataIndex)
+end
+-- 设置全服事件单个数据
+-- @param nRegIndex 全服事件id
+-- @param nDataIndex 对应data参数位
+-- @param nData 参数设置内容
+-- @return 布尔值
+function rwSetGlobalReg(nRegIndex,nDataIndex,nData)
+	nRegIndex = nRegIndex or 0
+	nDataIndex = nDataIndex or 0
+	nData = nData or 0
+	rwPrintNormalLog({Func = "rwSetGlobalReg",nRegIndex = nRegIndex, nDataIndex = nDataIndex, nData = nData})
+	return SetGlobalReg(nRegIndex, nDataIndex, nData)
+end
+-- 获取全服事件多个数据
+-- @param nRegIndex 全服事件id
+-- @return int
+function rwGetAllGlobalReg(nRegIndex)
+	nRegIndex = nRegIndex or 0
+	rwPrintNormalLog({Func = "rwGetAllGlobalReg",nRegIndex = nRegIndex})
+	return GetAllGlobalReg(nRegIndex) 
+end
+-- 设置全服事件多个数据
+-- @param nRegIndex 全服事件id
+-- @param nData1 
+-- @param nData2
+-- @param nData3
+-- @param nData4
+-- @param nData5
+-- @param nData6
+-- @return 布尔值
+function rwSetAllGlobalReg(nRegIndex, nData1, nData2, nData3, nData4, nData5, nData6) 
+	nRegIndex = nRegIndex or 0
+	nData1 = nData1  or 0
+	nData2 = nData2  or 0
+	nData3 = nData3  or 0
+	nData4 = nData4  or 0
+	nData5 = nData5  or 0
+	nData6 = nData6  or 0
+	rwPrintNormalLog({Func = "rwSetAllGlobalReg",nRegIndex = nRegIndex, nData1 = nData1, nData2 = nData2, nData3 = nData3, nData4 = nData4, nData5 = nData5, nData6 = nData6})
+	return SetAllGlobalReg(nRegIndex, nData1, nData2, nData3, nData4, nData5, nData6) 
 end
 
 

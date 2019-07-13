@@ -1,0 +1,5 @@
+﻿,required,optional,required,required,required,optional,optional,optional
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32
+,id,name,sort,amount_limit,flag,price,awardid,actionid
+备注,物品id,名称,物品类型,叠加上限,物品flag,售出金币,奖励id,Action id
+,7000312,驱虫剂,8,9999,2,0,0,0

@@ -235,20 +235,11 @@ function rwLoadFunC()
         end
         --陷阱
         if v["ReqTrap"] and v["ReqTrap"] ~= 0 then
-            local nTrapId = v["ReqTrap"]
-            if rwChkTable(nTrapId) then
-                for j,k in pairs(nTrapId) do
-					rwtTargetTrapInfo[k] = rwtTargetTrapInfo[k] or {}
-					if(not rwComElementIsExit(rwtTargetTrapInfo[k],i)) then
-						table.insert(rwtTargetTrapInfo[k],i)					
-					end
-				end
-            elseif rwChkInt(nTrapId) then
-                rwtTargetTrapInfo[nTrapId] = rwtTargetTrapInfo[nTrapId] or {}
-                if(not rwComElementIsExit(rwtTargetTrapInfo[nTrapId],i)) then
-			    	table.insert(rwtTargetTrapInfo[nTrapId],i)
-			    end
-            end
+			local nTrapId = v["ReqTrap"]
+            rwtTargetTrapInfo[nTrapId] = rwtTargetTrapInfo[nTrapId] or {}
+            if(not rwComElementIsExit(rwtTargetTrapInfo[nTrapId],i)) then
+				table.insert(rwtTargetTrapInfo[nTrapId],i)
+			end
         end    
         --采集
         if v["ReqCollectId"] and v["ReqCollectId"] ~= 0 then 
@@ -275,23 +266,6 @@ function rwLoadFunC()
 				end
 			end
 			
-        end
-
-        if rwChkTable(v["OtherComplete"]) then
-            local monsterGroup = v["OtherComplete"]["ChkBattal"]
-            if rwChkInt(monsterGroup) then
-                rwtTargetCompleteChkBattalInfo[monsterGroup] = rwtTargetCompleteChkBattalInfo[monsterGroup] or {}
-                if(not rwComElementIsExit(rwtTargetCompleteChkBattalInfo[monsterGroup],i)) then
-					table.insert(rwtTargetCompleteChkBattalInfo[monsterGroup],i)
-				end
-            elseif rwChkTable(monsterGroup) then
-                for j,k in pairs(monsterGroup) do
-                    rwtTargetCompleteChkBattalInfo[k] = rwtTargetCompleteChkBattalInfo[k] or {}
-					if(not rwComElementIsExit(rwtTargetCompleteChkBattalInfo[k],i)) then
-						table.insert(rwtTargetCompleteChkBattalInfo[k],i)
-					end
-                end
-            end
         end
     end
     for i,v in pairs(rwtCopyMapMission) do 

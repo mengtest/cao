@@ -938,7 +938,7 @@ rwtTask[tFengChe.Task19]["TaskNpc"] = 3005
 rwtTask[tFengChe.Task19]["DialogId"] = 11670
 rwtTask[tFengChe.Task19]["StartAutoWay"] = {}
 rwtTask[tFengChe.Task19]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tFengChe.Task19]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tFengChe.Task19]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tFengChe.Task19]["StartAutoWay"]["FindWayGroupId"] = 20112
 rwtTask[tFengChe.Task19]["StartAutoWay"]["FindWayGenId"] = 2001655
 
@@ -963,7 +963,7 @@ rwtTask[tFengChe.Task21]["AcceptDialogId"] = 10715
 rwtTask[tFengChe.Task21]["DialogId"] = 10716
 rwtTask[tFengChe.Task21]["StartAutoWay"] = {}
 rwtTask[tFengChe.Task21]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tFengChe.Task21]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tFengChe.Task21]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tFengChe.Task21]["StartAutoWay"]["FindWayGroupId"] = 20112
 rwtTask[tFengChe.Task21]["StartAutoWay"]["FindWayGenId"] = 2001655
 rwtTask[tFengChe.Task21]["Awards"] = {}

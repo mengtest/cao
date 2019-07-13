@@ -578,6 +578,7 @@ function rwActivity_GoldMonster_TimeLimit_DuiJiang_Dialog(nUserId,nAwardItem_num
         tTimeLimit_GoldMonster_DuiJiang_DialogInfo[nUserId] = {}
         tTimeLimit_GoldMonster_DuiJiang_DialogInfo[nUserId][1] = {}
         tTimeLimit_GoldMonster_DuiJiang_DialogInfo[nUserId][1]["Text"] = {}
+        tTimeLimit_GoldMonster_DuiJiang_DialogInfo[nUserId][1]["Text"]["DialogId"] = 60889
         tTimeLimit_GoldMonster_DuiJiang_DialogInfo[nUserId][1]["Text"]["Content"] = "本次你们获得的赏金有："..nAwardItem_num.."个悬赏礼箱"
         tTimeLimit_GoldMonster_DuiJiang_DialogInfo[nUserId][1]["Text"]["TalkId"] = nNpcId_KeLin 
         tTimeLimit_GoldMonster_DuiJiang_DialogInfo[nUserId][1]["Text"]["LeftId"] = nNpcId_KeLin 

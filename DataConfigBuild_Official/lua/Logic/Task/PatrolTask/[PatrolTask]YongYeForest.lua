@@ -250,7 +250,7 @@ rwtTask[tPatrol.nAfterTask1_6]["DialogId"] = nDialogId_Npc_BiDuoMao_1
 rwtTask[tPatrol.nAfterTask1_6]["PatrolLastTask"] = 1
 rwtTask[tPatrol.nAfterTask1_6]["StartAutoWay"] = {}
 rwtTask[tPatrol.nAfterTask1_6]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tPatrol.nAfterTask1_6]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tPatrol.nAfterTask1_6]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tPatrol.nAfterTask1_6]["StartAutoWay"]["FindWayGroupId"] = 20115
 rwtTask[tPatrol.nAfterTask1_6]["StartAutoWay"]["FindWayGenId"] = 2001658
 
@@ -327,6 +327,6 @@ rwtTask[tPatrol.nAfterTask2_4]["DialogId"] = nDialogId_Npc_BiDuoMao_2
 rwtTask[tPatrol.nAfterTask2_4]["PatrolLastTask"] = 1
 rwtTask[tPatrol.nAfterTask2_4]["StartAutoWay"] = {}
 rwtTask[tPatrol.nAfterTask2_4]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tPatrol.nAfterTask2_4]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tPatrol.nAfterTask2_4]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tPatrol.nAfterTask2_4]["StartAutoWay"]["FindWayGroupId"] = 20115
 rwtTask[tPatrol.nAfterTask2_4]["StartAutoWay"]["FindWayGenId"] = 2001658

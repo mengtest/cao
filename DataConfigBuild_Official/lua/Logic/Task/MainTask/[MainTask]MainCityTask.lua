@@ -564,23 +564,30 @@ rwtNpcGroup[nNpcGroup_GaoShiByZLLM]["Type"] = CONST_NPCGROUP_TYPE.SingleNpc
 rwtNpcGroup[nNpcGroup_GaoShiByZLLM]["NpcId"]= nNpc_GaoShiByZLLM
 
 rwtNpc[nNpc_GaoShiByZLLM] = rwtNpc[nNpc_GaoShiByZLLM] or {}
-rwtNpc[nNpc_GaoShiByZLLM]["ChkOpen"] = true
-rwtNpc[nNpc_GaoShiByZLLM]["DialogId"] = 1796        --解锁功能未接受任务对白
-rwtNpc[nNpc_GaoShiByZLLM]["NotOpenDialogId"] = 1795 --未解锁功能对白
---rwtNpc[nNpc_GaoShiByZLLM]["TaskIngDialogId"] = 1797 --任务中对白
-rwtNpc[nNpc_GaoShiByZLLM]["Option"] = {}
-rwtNpc[nNpc_GaoShiByZLLM]["Option"][1] = {}
-rwtNpc[nNpc_GaoShiByZLLM]["Option"][1]["Title"]= tLuaText[LANGUAGE_CONFIG][40000]
-rwtNpc[nNpc_GaoShiByZLLM]["Option"][1]["State"] = 0
-rwtNpc[nNpc_GaoShiByZLLM]["Option"][1]["Chk"] = function(nNpcId)
-    --未解锁自律联盟不显示按钮
-    if not rwHasUserRecordData_System_Unlock(CONST_SYSTEM_FUNCTION.DAILY_TASK) then
-        return false
+rwtNpc[nNpc_GaoShiByZLLM]["NpcProcess"] = function()
+   if not rwHasUserRecordData_System_Unlock(CONST_SYSTEM_FUNCTION.DAILY_TASK) then
+        rwOpenNpcChatDialog(1795)
+    else
+        rwOpenLocalWnd(CONST_MENUTYPE.Reward)
     end
---     --打开悬赏界面
---    rwOpenLocalWnd(CONST_MENUTYPE.Reward)
-    return true
 end
+--rwtNpc[nNpc_GaoShiByZLLM]["ChkOpen"] = true
+--rwtNpc[nNpc_GaoShiByZLLM]["DialogId"] = 1796        --解锁功能未接受任务对白
+--rwtNpc[nNpc_GaoShiByZLLM]["NotOpenDialogId"] = 1795 --未解锁功能对白
+----rwtNpc[nNpc_GaoShiByZLLM]["TaskIngDialogId"] = 1797 --任务中对白
+--rwtNpc[nNpc_GaoShiByZLLM]["Option"] = {}
+--rwtNpc[nNpc_GaoShiByZLLM]["Option"][1] = {}
+--rwtNpc[nNpc_GaoShiByZLLM]["Option"][1]["Title"]= tLuaText[LANGUAGE_CONFIG][40000]
+--rwtNpc[nNpc_GaoShiByZLLM]["Option"][1]["State"] = 0
+--rwtNpc[nNpc_GaoShiByZLLM]["Option"][1]["Chk"] = function(nNpcId)
+--    --未解锁自律联盟不显示按钮
+--    if not rwHasUserRecordData_System_Unlock(CONST_SYSTEM_FUNCTION.DAILY_TASK) then
+--        return false
+--    end
+----     --打开悬赏界面
+----    rwOpenLocalWnd(CONST_MENUTYPE.Reward)
+--    return true
+--end
 --rwtNpc[nNpc_GaoShiByZLLM]["Option"][1]["TaskChk"] = function(nNpcId)
 --    --玩家身上有悬赏类任务显示任务中对白
 --    local tTaskList = rwTaskGetListByType(CONST_TASK_TYPE.REWARD)

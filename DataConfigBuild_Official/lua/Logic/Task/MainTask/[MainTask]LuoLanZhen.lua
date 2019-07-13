@@ -1452,7 +1452,7 @@ rwtTask[tLuoLanZhen.Task_30]["Awards"]["Events"][1]["GetServerAward"]["ActionId"
 
 rwtTask[tLuoLanZhen.Task_30]["StartAutoWay"] = {}
 rwtTask[tLuoLanZhen.Task_30]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tLuoLanZhen.Task_30]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tLuoLanZhen.Task_30]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tLuoLanZhen.Task_30]["StartAutoWay"]["FindWayGroupId"] = nNpcmap_TuoMaSi
 rwtTask[tLuoLanZhen.Task_30]["StartAutoWay"]["FindWayGenId"] = nNpcmap_TuoMaSi_GenId
 rwtTask[tLuoLanZhen.Task_30]["UnLockSysId"] = {CONST_SYSTEM_FUNCTION.CREAVE_SKILL_RUNE,CONST_SYSTEM_FUNCTION.DAILY_TASK}  --符文镶嵌,自律联盟
@@ -1485,7 +1485,7 @@ rwtTask[tLuoLanZhen.Task_30]["AcceptExtraTaskId"] = {tGuideBranchTask.RuneMosaic
 
 -- rwtTask[tLuoLanZhen.Task_34]["StartAutoWay"] = {}
 -- rwtTask[tLuoLanZhen.Task_34]["StartAutoWay"]["FindWayTypeId"] = 1
--- rwtTask[tLuoLanZhen.Task_34]["StartAutoWay"]["FindWayMapId"] = 1001
+-- rwtTask[tLuoLanZhen.Task_34]["StartAutoWay"]["FindWayMapId"] = 1000
 -- rwtTask[tLuoLanZhen.Task_34]["StartAutoWay"]["FindWayGroupId"] = nNpcmap_TuoMaSi
 -- rwtTask[tLuoLanZhen.Task_34]["StartAutoWay"]["FindWayGenId"] = nNpcmap_TuoMaSi_GenId
 -- rwtTask[tLuoLanZhen.Task_34]["UnLockSysId"] = {CONST_SYSTEM_FUNCTION.DAILY_TASK}  --自律联盟

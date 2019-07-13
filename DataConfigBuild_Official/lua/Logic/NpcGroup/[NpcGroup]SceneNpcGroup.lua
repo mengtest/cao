@@ -423,3 +423,25 @@ rwtNpc[tSingleNpc.nNpc_XiuXingZhe]["DialogId"] = {1783,1784}
 rwtNpcGroup[tSingleNpc.nNpcGroup_XiuXingZhe] = rwtNpcGroup[tSingleNpc.nNpcGroup_XiuXingZhe] or {}
 rwtNpcGroup[tSingleNpc.nNpcGroup_XiuXingZhe]["Type"] = CONST_NPCGROUP_TYPE.SingleNpc
 rwtNpcGroup[tSingleNpc.nNpcGroup_XiuXingZhe]["NpcId"]= tSingleNpc.nNpc_XiuXingZhe
+
+
+
+--景点 零态模拟机 2005
+tSingleNpc.nNpc_LingTaiMoNiJi = 3450
+tSingleNpc.nNpcGroup_LingTaiMoNiJi  = 70041
+tSingleNpc.nGenId_NpcGroup_LingTaiMoNiJi = 20050340
+
+rwtNpc[tSingleNpc.nNpc_LingTaiMoNiJi] = rwtNpc[tSingleNpc.nNpc_LingTaiMoNiJi] or {}
+rwtNpc[tSingleNpc.nNpc_LingTaiMoNiJi]["DialogId"] = {1837}
+rwtNpc[tSingleNpc.nNpc_LingTaiMoNiJi]["SceneNpcChk"] = function()
+	if rwHeroIsHas(301) then
+		rwOpenNpcChatDialog(1836,CONST_NPCCHAT_TYPE.NPC)
+		return true
+	else
+		return false
+	end
+end
+
+rwtNpcGroup[tSingleNpc.nNpcGroup_LingTaiMoNiJi] = rwtNpcGroup[tSingleNpc.nNpcGroup_LingTaiMoNiJi] or {}
+rwtNpcGroup[tSingleNpc.nNpcGroup_LingTaiMoNiJi]["Type"] = CONST_NPCGROUP_TYPE.SingleNpc
+rwtNpcGroup[tSingleNpc.nNpcGroup_LingTaiMoNiJi]["NpcId"]= tSingleNpc.nNpc_LingTaiMoNiJi

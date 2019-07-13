@@ -179,7 +179,7 @@ rwtTask[nTaskId_1_Finish]["TaskNpc"] = nNpc_TuoMaSi
 
 rwtTask[nTaskId_1_Finish]["StartAutoWay"] = {}
 rwtTask[nTaskId_1_Finish]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[nTaskId_1_Finish]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[nTaskId_1_Finish]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[nTaskId_1_Finish]["StartAutoWay"]["FindWayGroupId"] = nSingleNpcGroup_1
 rwtTask[nTaskId_1_Finish]["StartAutoWay"]["FindWayGenId"] = nSingleNpcGroup_1_GenId
 
@@ -226,7 +226,7 @@ rwtTask[nTaskId_2_Finish]["TaskNpc"] = nNpc_TuoMaSi
 
 rwtTask[nTaskId_2_Finish]["StartAutoWay"] = {}
 rwtTask[nTaskId_2_Finish]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[nTaskId_2_Finish]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[nTaskId_2_Finish]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[nTaskId_2_Finish]["StartAutoWay"]["FindWayGroupId"] = nSingleNpcGroup_1
 rwtTask[nTaskId_2_Finish]["StartAutoWay"]["FindWayGenId"] = nSingleNpcGroup_1_GenId
 
@@ -274,7 +274,7 @@ rwtTask[nTaskId_3_Finish]["TaskNpc"] = nNpc_TuoMaSi
 
 rwtTask[nTaskId_3_Finish]["StartAutoWay"] = {}
 rwtTask[nTaskId_3_Finish]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[nTaskId_3_Finish]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[nTaskId_3_Finish]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[nTaskId_3_Finish]["StartAutoWay"]["FindWayGroupId"] = nSingleNpcGroup_1
 rwtTask[nTaskId_3_Finish]["StartAutoWay"]["FindWayGenId"] = nSingleNpcGroup_1_GenId
 
@@ -322,7 +322,7 @@ rwtTask[nTaskId_4_Finish]["TaskNpc"] = nNpc_TuoMaSi
 
 rwtTask[nTaskId_4_Finish]["StartAutoWay"] = {}
 rwtTask[nTaskId_4_Finish]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[nTaskId_4_Finish]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[nTaskId_4_Finish]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[nTaskId_4_Finish]["StartAutoWay"]["FindWayGroupId"] = nSingleNpcGroup_1
 rwtTask[nTaskId_4_Finish]["StartAutoWay"]["FindWayGenId"] = nSingleNpcGroup_1_GenId
 
@@ -369,7 +369,7 @@ rwtTask[nTaskId_5_Finish]["TaskNpc"] = nNpc_TuoMaSi
 
 rwtTask[nTaskId_5_Finish]["StartAutoWay"] = {}
 rwtTask[nTaskId_5_Finish]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[nTaskId_5_Finish]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[nTaskId_5_Finish]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[nTaskId_5_Finish]["StartAutoWay"]["FindWayGroupId"] = nSingleNpcGroup_1
 rwtTask[nTaskId_5_Finish]["StartAutoWay"]["FindWayGenId"] = nSingleNpcGroup_1_GenId
 
@@ -417,7 +417,7 @@ rwtTask[nTaskId_6_Finish]["TaskNpc"] = nNpc_TuoMaSi
 
 rwtTask[nTaskId_6_Finish]["StartAutoWay"] = {}
 rwtTask[nTaskId_6_Finish]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[nTaskId_6_Finish]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[nTaskId_6_Finish]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[nTaskId_6_Finish]["StartAutoWay"]["FindWayGroupId"] = nSingleNpcGroup_1
 rwtTask[nTaskId_6_Finish]["StartAutoWay"]["FindWayGenId"] = nSingleNpcGroup_1_GenId
 
@@ -464,7 +464,7 @@ rwtTask[nTaskId_7_Finish]["TaskNpc"] = nNpc_TuoMaSi
 
 rwtTask[nTaskId_7_Finish]["StartAutoWay"] = {}
 rwtTask[nTaskId_7_Finish]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[nTaskId_7_Finish]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[nTaskId_7_Finish]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[nTaskId_7_Finish]["StartAutoWay"]["FindWayGroupId"] = nSingleNpcGroup_1
 rwtTask[nTaskId_7_Finish]["StartAutoWay"]["FindWayGenId"] = nSingleNpcGroup_1_GenId
 
@@ -511,7 +511,7 @@ rwtTask[nTaskId_9_Finish]["TaskNpc"] = nNpc_TuoMaSi
 
 rwtTask[nTaskId_9_Finish]["StartAutoWay"] = {}
 rwtTask[nTaskId_9_Finish]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[nTaskId_9_Finish]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[nTaskId_9_Finish]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[nTaskId_9_Finish]["StartAutoWay"]["FindWayGroupId"] = nSingleNpcGroup_1
 rwtTask[nTaskId_9_Finish]["StartAutoWay"]["FindWayGenId"] = nSingleNpcGroup_1_GenId
 
@@ -558,7 +558,7 @@ rwtTask[nTaskId_10_Finish]["TaskNpc"] = nNpc_TuoMaSi
 
 rwtTask[nTaskId_10_Finish]["StartAutoWay"] = {}
 rwtTask[nTaskId_10_Finish]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[nTaskId_10_Finish]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[nTaskId_10_Finish]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[nTaskId_10_Finish]["StartAutoWay"]["FindWayGroupId"] = nSingleNpcGroup_1
 rwtTask[nTaskId_10_Finish]["StartAutoWay"]["FindWayGenId"] = nSingleNpcGroup_1_GenId
 
@@ -604,7 +604,7 @@ rwtTask[nTaskId_13_Finish]["TaskNpc"] = nNpc_TuoMaSi
 
 rwtTask[nTaskId_13_Finish]["StartAutoWay"] = {}
 rwtTask[nTaskId_13_Finish]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[nTaskId_13_Finish]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[nTaskId_13_Finish]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[nTaskId_13_Finish]["StartAutoWay"]["FindWayGroupId"] = nSingleNpcGroup_1
 rwtTask[nTaskId_13_Finish]["StartAutoWay"]["FindWayGenId"] = nSingleNpcGroup_1_GenId
 

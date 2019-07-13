@@ -3465,3 +3465,124 @@ CREATE TABLE `user_function_time` (
   `time_flag` bigint(20) NOT NULL DEFAULT 0,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+alter table `battle_replay` add version int(11) not null default 0 after info;
+
+
+-- V5.3
+
+CREATE TABLE `broadcast_type` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `type` int(11) NOT NULL DEFAULT 0,
+  `audience` int(11) NOT NULL DEFAULT 0,
+  `channel` int(11) NOT NULL DEFAULT 0,
+  `monitor_id` int(11) NOT NULL DEFAULT 0,
+  `activity_id` int(11) NOT NULL DEFAULT 0,
+  `data1` bigint(20) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE `system_broadcast` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `audience` int(11) NOT NULL DEFAULT 0,
+  `channel` int(11) NOT NULL DEFAULT 0,
+  `activation_time` bigint(20) NOT NULL DEFAULT 0,
+  `invalid_time` bigint(20) NOT NULL DEFAULT 0,
+  `loop_time` int(11) NOT NULL DEFAULT 0,
+  `set_time` varchar(256) not null default '',
+  `text`  varchar(256) not null default '',
+  `is_open` int(11) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+alter table `luckymoney_type` add min_num int(11) not null default 0 after money_num;
+
+alter table `syndicate` add donate_times int(11) not null default 0 after reward_life;
+alter table `syndicate` add last_donate_date bigint(20) not null default 0 after donate_times;
+drop table `syn_boss_record`;
+
+CREATE TABLE `poker_adapt_info` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `adapt_level` int(11) NOT NULL DEFAULT 0,
+  `poker_id` int(11) NOT NULL DEFAULT 0,
+  `weight` int(11) NOT NULL DEFAULT 0,
+  `boss_id` int(11) NOT NULL DEFAULT 0,
+  `taskgroup_id` int(11) NOT NULL DEFAULT 0,
+  `information` int(11) NOT NULL DEFAULT 0,
+  `point` int(11) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+CREATE TABLE `poker_overflow` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `poker_id` int(11) NOT NULL DEFAULT 0,
+  `overflow` int(11) NOT NULL DEFAULT 0,
+  `weight1` int(11) NOT NULL DEFAULT 0,
+  `weight2` int(11) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+CREATE TABLE `poker_task` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `taskgroup_id` int(11) NOT NULL DEFAULT 0,
+  `task_id` int(11) NOT NULL DEFAULT 0,
+  `time` int(11) NOT NULL DEFAULT 0,
+  `get_infomation` int(11) NOT NULL DEFAULT 0,
+  `condition1` int(11) NOT NULL DEFAULT 0,
+  `data1` int(11) NOT NULL DEFAULT 0,
+  `condition2` int(11) NOT NULL DEFAULT 0,
+  `data2` int(11) NOT NULL DEFAULT 0,
+  `condition3` int(11) NOT NULL DEFAULT 0,
+  `data3` int(11) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `user_poker` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(20) NOT NULL DEFAULT 0,
+  `point` int(11) NOT NULL DEFAULT 0,
+  `mask` int(11) NOT NULL DEFAULT 0,
+  `pokerid1` int(11) NOT NULL DEFAULT 0,
+  `information` int(11) NOT NULL DEFAULT 0,
+  `pokerid2` int(11) NOT NULL DEFAULT 0,
+  `pokerid3` int(11) NOT NULL DEFAULT 0,
+  `pokerid4` int(11) NOT NULL DEFAULT 0,
+  `data1` int(11) NOT NULL DEFAULT 0,
+  `data2` int(11) NOT NULL DEFAULT 0,
+  `level` int(11) NOT NULL DEFAULT 0,
+  `time` bigint(20) NOT NULL DEFAULT 0, 
+  `complete` int(11) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+ALTER TABLE `user_poker` ADD INDEX idx_user_id( `user_id` );
+
+CREATE TABLE `user_poker_task` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(20) NOT NULL DEFAULT 0,
+  `type` int(11) NOT NULL DEFAULT 0,
+  `task_id1` int(11) NOT NULL DEFAULT 0,
+  `time1` bigint(20) NOT NULL DEFAULT 0, 
+  `hero1` varchar(128) not null default '',
+  `task_id2` int(11) NOT NULL DEFAULT 0,
+  `time2` bigint(20) NOT NULL DEFAULT 0, 
+  `hero2` varchar(128) not null default '',
+  `task_id3` int(11) NOT NULL DEFAULT 0,
+  `time3` bigint(20) NOT NULL DEFAULT 0, 
+  `hero3` varchar(128) not null default '',
+  `task_id4` int(11) NOT NULL DEFAULT 0,
+  `time4` bigint(20) NOT NULL DEFAULT 0, 
+  `hero4` varchar(128) not null default '',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+ALTER TABLE `user_poker_task` ADD INDEX idx_user_id( `user_id` );
+
+CREATE TABLE `server_event` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `data1` int(11) NOT NULL DEFAULT 0,
+  `data2` int(11) NOT NULL DEFAULT 0,
+  `data3` int(11) NOT NULL DEFAULT 0,
+  `data4` int(11) NOT NULL DEFAULT 0,
+  `data5` int(11) NOT NULL DEFAULT 0,
+  `data6` int(11) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;

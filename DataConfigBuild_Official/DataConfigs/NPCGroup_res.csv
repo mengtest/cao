@@ -604,6 +604,10 @@
 ,60390,Prefab/Effect/Scene/Effect_Scene_caiji.prefab,,,,0,0,,0
 ,60391,Prefab/Effect/Scene/Effect_Scene_caiji.prefab,,,,0,0,,0
 ,60392,Prefab/Effect/Scene/Effect_Scene_caiji.prefab,,,,0,0,,0
+,60427,Prefab/Effect/Scene/Effect_Scene_caiji.prefab,,,,0,0,,0
+,60428,Prefab/Effect/Scene/Effect_Scene_caiji.prefab,,,,0,0,,0
+,60442,Prefab/Effect/Scene/Effect_Scene_caiji.prefab,,,,0,0,,0
+,60444,Prefab/Effect/Scene/Effect_Scene_caiji.prefab,,,,0,0,,0
 ,70002,,,,,0,0,,1
 ,70003,,,,,0,0,,0
 ,70004,,,,,0,0,,0
@@ -623,7 +627,7 @@
 ,90014,Prefab/Effect/Effect_scene_jingyanqiu.prefab,,,,0,0,,0
 ,90015,Prefab/Effect/Effect_scene_jingyanqiu.prefab,,,,0,0,,0
 ,90016,Prefab/Effect/Effect_scene_jingyanqiu.prefab,,,,0,0,,0
-,11000001,Prefab/Effect/Effect_Scene_YWchuansongmen.prefab,,,,0,0,,0
-,12001001,Prefab/Effect/Effect_Scene_YWchuansongmen.prefab,,,,0,0,,0
+,54030,Prefab/Effect/Effect_Scene_YWchuansongmen.prefab,,,,0,0,,0
+,54031,Prefab/Effect/Effect_Scene_YWchuansongmen.prefab,,,,0,0,,0
 ,12001002,,Textures/Atlas/Dyn/CharacterCommonHead/ArmedWolf.png,,,0,0,,0
 ,12001006,,Textures/Atlas/Dyn/CharacterCommonHead/LancyBlack.png,,,0,0,,0

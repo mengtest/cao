@@ -1152,7 +1152,7 @@ rwtTask[tRewardTaskFinish.Task1]["ArrestId"] = tArrestId.Task1
 
 rwtTask[tRewardTaskFinish.Task1]["StartAutoWay"] = {}
 rwtTask[tRewardTaskFinish.Task1]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tRewardTaskFinish.Task1]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tRewardTaskFinish.Task1]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tRewardTaskFinish.Task1]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 rwtTask[tRewardTaskFinish.Task1]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1180,7 +1180,7 @@ rwtTask[tRewardTaskFinish.Task2]["ArrestId"] = tArrestId.Task2
 
 rwtTask[tRewardTaskFinish.Task2]["StartAutoWay"] = {}
 rwtTask[tRewardTaskFinish.Task2]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tRewardTaskFinish.Task2]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tRewardTaskFinish.Task2]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tRewardTaskFinish.Task2]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 rwtTask[tRewardTaskFinish.Task2]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1208,7 +1208,7 @@ rwtTask[tRewardTaskFinish.Task3]["ArrestId"] = tArrestId.Task3
 
 rwtTask[tRewardTaskFinish.Task3]["StartAutoWay"] = {}
 rwtTask[tRewardTaskFinish.Task3]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tRewardTaskFinish.Task3]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tRewardTaskFinish.Task3]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tRewardTaskFinish.Task3]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 rwtTask[tRewardTaskFinish.Task3]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1236,7 +1236,7 @@ rwtTask[tRewardTaskFinish.Task4]["ArrestId"] = tArrestId.Task4
 
 rwtTask[tRewardTaskFinish.Task4]["StartAutoWay"] = {}
 rwtTask[tRewardTaskFinish.Task4]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tRewardTaskFinish.Task4]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tRewardTaskFinish.Task4]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tRewardTaskFinish.Task4]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 rwtTask[tRewardTaskFinish.Task4]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1264,7 +1264,7 @@ rwtTask[tRewardTaskFinish.Task5]["ArrestId"] = tArrestId.Task5
 
 rwtTask[tRewardTaskFinish.Task5]["StartAutoWay"] = {}
 rwtTask[tRewardTaskFinish.Task5]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tRewardTaskFinish.Task5]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tRewardTaskFinish.Task5]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tRewardTaskFinish.Task5]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 rwtTask[tRewardTaskFinish.Task5]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1292,7 +1292,7 @@ rwtTask[tRewardTaskFinish.Task6]["ArrestId"] = tArrestId.Task6
 
 rwtTask[tRewardTaskFinish.Task6]["StartAutoWay"] = {}
 rwtTask[tRewardTaskFinish.Task6]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tRewardTaskFinish.Task6]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tRewardTaskFinish.Task6]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tRewardTaskFinish.Task6]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 rwtTask[tRewardTaskFinish.Task6]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1320,7 +1320,7 @@ rwtTask[tRewardTaskFinish.Task7]["ArrestId"] = tArrestId.Task7
 
 rwtTask[tRewardTaskFinish.Task7]["StartAutoWay"] = {}
 rwtTask[tRewardTaskFinish.Task7]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tRewardTaskFinish.Task7]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tRewardTaskFinish.Task7]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tRewardTaskFinish.Task7]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 rwtTask[tRewardTaskFinish.Task7]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1348,7 +1348,7 @@ rwtTask[tRewardTaskFinish.Task8]["ArrestId"] = tArrestId.Task8
 
 rwtTask[tRewardTaskFinish.Task8]["StartAutoWay"] = {}
 rwtTask[tRewardTaskFinish.Task8]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tRewardTaskFinish.Task8]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tRewardTaskFinish.Task8]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tRewardTaskFinish.Task8]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 rwtTask[tRewardTaskFinish.Task8]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1376,7 +1376,7 @@ rwtTask[tRewardTaskFinish.Task9]["ArrestId"] = tArrestId.Task9
 
 rwtTask[tRewardTaskFinish.Task9]["StartAutoWay"] = {}
 rwtTask[tRewardTaskFinish.Task9]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tRewardTaskFinish.Task9]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tRewardTaskFinish.Task9]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tRewardTaskFinish.Task9]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 rwtTask[tRewardTaskFinish.Task9]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1404,7 +1404,7 @@ rwtTask[tRewardTaskFinish.Task10]["ArrestId"] = tArrestId.Task10
 
 rwtTask[tRewardTaskFinish.Task10]["StartAutoWay"] = {}
 rwtTask[tRewardTaskFinish.Task10]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tRewardTaskFinish.Task10]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tRewardTaskFinish.Task10]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tRewardTaskFinish.Task10]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 rwtTask[tRewardTaskFinish.Task10]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1432,7 +1432,7 @@ rwtTask[tRewardTaskFinish.Task11]["ArrestId"] = tArrestId.Task11
 
 rwtTask[tRewardTaskFinish.Task11]["StartAutoWay"] = {}
 rwtTask[tRewardTaskFinish.Task11]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tRewardTaskFinish.Task11]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tRewardTaskFinish.Task11]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tRewardTaskFinish.Task11]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 rwtTask[tRewardTaskFinish.Task11]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1460,7 +1460,7 @@ rwtTask[tRewardTaskFinish.Task12]["ArrestId"] = tArrestId.Task12
 
 rwtTask[tRewardTaskFinish.Task12]["StartAutoWay"] = {}
 rwtTask[tRewardTaskFinish.Task12]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tRewardTaskFinish.Task12]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tRewardTaskFinish.Task12]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tRewardTaskFinish.Task12]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 rwtTask[tRewardTaskFinish.Task12]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1488,7 +1488,7 @@ rwtTask[tRewardTaskFinish.Task13]["ArrestId"] = tArrestId.Task13
 
 rwtTask[tRewardTaskFinish.Task13]["StartAutoWay"] = {}
 rwtTask[tRewardTaskFinish.Task13]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tRewardTaskFinish.Task13]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tRewardTaskFinish.Task13]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tRewardTaskFinish.Task13]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 rwtTask[tRewardTaskFinish.Task13]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1516,7 +1516,7 @@ rwtTask[tRewardTaskFinish.Task14]["ArrestId"] = tArrestId.Task14
 
 rwtTask[tRewardTaskFinish.Task14]["StartAutoWay"] = {}
 rwtTask[tRewardTaskFinish.Task14]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tRewardTaskFinish.Task14]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tRewardTaskFinish.Task14]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tRewardTaskFinish.Task14]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 rwtTask[tRewardTaskFinish.Task14]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1544,7 +1544,7 @@ rwtTask[tRewardTaskFinish.Task15]["ArrestId"] = tArrestId.Task15
 
 rwtTask[tRewardTaskFinish.Task15]["StartAutoWay"] = {}
 rwtTask[tRewardTaskFinish.Task15]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tRewardTaskFinish.Task15]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tRewardTaskFinish.Task15]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tRewardTaskFinish.Task15]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 rwtTask[tRewardTaskFinish.Task15]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1571,7 +1571,7 @@ rwtTask[tRewardTaskFinish.Task16]["ArrestId"] = tArrestId.Task16
 
 rwtTask[tRewardTaskFinish.Task16]["StartAutoWay"] = {}
 rwtTask[tRewardTaskFinish.Task16]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tRewardTaskFinish.Task16]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tRewardTaskFinish.Task16]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tRewardTaskFinish.Task16]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 rwtTask[tRewardTaskFinish.Task16]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1598,7 +1598,7 @@ rwtTask[tRewardTaskFinish.Task17]["ArrestId"] = tArrestId.Task17
 
 rwtTask[tRewardTaskFinish.Task17]["StartAutoWay"] = {}
 rwtTask[tRewardTaskFinish.Task17]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tRewardTaskFinish.Task17]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tRewardTaskFinish.Task17]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tRewardTaskFinish.Task17]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 rwtTask[tRewardTaskFinish.Task17]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1625,7 +1625,7 @@ rwtTask[tRewardTaskFinish.Task18]["ArrestId"] = tArrestId.Task18
 
 rwtTask[tRewardTaskFinish.Task18]["StartAutoWay"] = {}
 rwtTask[tRewardTaskFinish.Task18]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tRewardTaskFinish.Task18]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tRewardTaskFinish.Task18]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tRewardTaskFinish.Task18]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 rwtTask[tRewardTaskFinish.Task18]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1654,7 +1654,7 @@ rwtTask[tRewardTaskFinish.Task18]["FinalReward"] = 1
 
 --rwtTask[tRewardTaskFinish.Task19]["StartAutoWay"] = {}
 --rwtTask[tRewardTaskFinish.Task19]["StartAutoWay"]["FindWayTypeId"] = 1
---rwtTask[tRewardTaskFinish.Task19]["StartAutoWay"]["FindWayMapId"] = 1001
+--rwtTask[tRewardTaskFinish.Task19]["StartAutoWay"]["FindWayMapId"] = 1000
 --rwtTask[tRewardTaskFinish.Task19]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 --rwtTask[tRewardTaskFinish.Task19]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1681,7 +1681,7 @@ rwtTask[tRewardTaskFinish.Task18]["FinalReward"] = 1
 
 --rwtTask[tRewardTaskFinish.Task20]["StartAutoWay"] = {}
 --rwtTask[tRewardTaskFinish.Task20]["StartAutoWay"]["FindWayTypeId"] = 1
---rwtTask[tRewardTaskFinish.Task20]["StartAutoWay"]["FindWayMapId"] = 1001
+--rwtTask[tRewardTaskFinish.Task20]["StartAutoWay"]["FindWayMapId"] = 1000
 --rwtTask[tRewardTaskFinish.Task20]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 --rwtTask[tRewardTaskFinish.Task20]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1710,7 +1710,7 @@ rwtTask[tRewardTaskFinish.Task18]["FinalReward"] = 1
 
 --rwtTask[tRewardTaskFinish.Task21]["StartAutoWay"] = {}
 --rwtTask[tRewardTaskFinish.Task21]["StartAutoWay"]["FindWayTypeId"] = 1
---rwtTask[tRewardTaskFinish.Task21]["StartAutoWay"]["FindWayMapId"] = 1001
+--rwtTask[tRewardTaskFinish.Task21]["StartAutoWay"]["FindWayMapId"] = 1000
 --rwtTask[tRewardTaskFinish.Task21]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 --rwtTask[tRewardTaskFinish.Task21]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1736,7 +1736,7 @@ rwtTask[tRewardTaskFinish.Task18]["FinalReward"] = 1
 
 --rwtTask[tRewardTaskFinish.Task22]["StartAutoWay"] = {}
 --rwtTask[tRewardTaskFinish.Task22]["StartAutoWay"]["FindWayTypeId"] = 1
---rwtTask[tRewardTaskFinish.Task22]["StartAutoWay"]["FindWayMapId"] = 1001
+--rwtTask[tRewardTaskFinish.Task22]["StartAutoWay"]["FindWayMapId"] = 1000
 --rwtTask[tRewardTaskFinish.Task22]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 --rwtTask[tRewardTaskFinish.Task22]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1762,7 +1762,7 @@ rwtTask[tRewardTaskFinish.Task18]["FinalReward"] = 1
 
 --rwtTask[tRewardTaskFinish.Task23]["StartAutoWay"] = {}
 --rwtTask[tRewardTaskFinish.Task23]["StartAutoWay"]["FindWayTypeId"] = 1
---rwtTask[tRewardTaskFinish.Task23]["StartAutoWay"]["FindWayMapId"] = 1001
+--rwtTask[tRewardTaskFinish.Task23]["StartAutoWay"]["FindWayMapId"] = 1000
 --rwtTask[tRewardTaskFinish.Task23]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 --rwtTask[tRewardTaskFinish.Task23]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1788,7 +1788,7 @@ rwtTask[tRewardTaskFinish.Task18]["FinalReward"] = 1
 
 --rwtTask[tRewardTaskFinish.Task24]["StartAutoWay"] = {}
 --rwtTask[tRewardTaskFinish.Task24]["StartAutoWay"]["FindWayTypeId"] = 1
---rwtTask[tRewardTaskFinish.Task24]["StartAutoWay"]["FindWayMapId"] = 1001
+--rwtTask[tRewardTaskFinish.Task24]["StartAutoWay"]["FindWayMapId"] = 1000
 --rwtTask[tRewardTaskFinish.Task24]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 --rwtTask[tRewardTaskFinish.Task24]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1814,7 +1814,7 @@ rwtTask[tRewardTaskFinish.Task18]["FinalReward"] = 1
 
 --rwtTask[tRewardTaskFinish.Task25]["StartAutoWay"] = {}
 --rwtTask[tRewardTaskFinish.Task25]["StartAutoWay"]["FindWayTypeId"] = 1
---rwtTask[tRewardTaskFinish.Task25]["StartAutoWay"]["FindWayMapId"] = 1001
+--rwtTask[tRewardTaskFinish.Task25]["StartAutoWay"]["FindWayMapId"] = 1000
 --rwtTask[tRewardTaskFinish.Task25]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 --rwtTask[tRewardTaskFinish.Task25]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1840,7 +1840,7 @@ rwtTask[tRewardTaskFinish.Task18]["FinalReward"] = 1
 
 --rwtTask[tRewardTaskFinish.Task26]["StartAutoWay"] = {}
 --rwtTask[tRewardTaskFinish.Task26]["StartAutoWay"]["FindWayTypeId"] = 1
---rwtTask[tRewardTaskFinish.Task26]["StartAutoWay"]["FindWayMapId"] = 1001
+--rwtTask[tRewardTaskFinish.Task26]["StartAutoWay"]["FindWayMapId"] = 1000
 --rwtTask[tRewardTaskFinish.Task26]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 --rwtTask[tRewardTaskFinish.Task26]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1866,7 +1866,7 @@ rwtTask[tRewardTaskFinish.Task18]["FinalReward"] = 1
 
 --rwtTask[tRewardTaskFinish.Task27]["StartAutoWay"] = {}
 --rwtTask[tRewardTaskFinish.Task27]["StartAutoWay"]["FindWayTypeId"] = 1
---rwtTask[tRewardTaskFinish.Task27]["StartAutoWay"]["FindWayMapId"] = 1001
+--rwtTask[tRewardTaskFinish.Task27]["StartAutoWay"]["FindWayMapId"] = 1000
 --rwtTask[tRewardTaskFinish.Task27]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 --rwtTask[tRewardTaskFinish.Task27]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1892,7 +1892,7 @@ rwtTask[tRewardTaskFinish.Task18]["FinalReward"] = 1
 
 --rwtTask[tRewardTaskFinish.Task28]["StartAutoWay"] = {}
 --rwtTask[tRewardTaskFinish.Task28]["StartAutoWay"]["FindWayTypeId"] = 1
---rwtTask[tRewardTaskFinish.Task28]["StartAutoWay"]["FindWayMapId"] = 1001
+--rwtTask[tRewardTaskFinish.Task28]["StartAutoWay"]["FindWayMapId"] = 1000
 --rwtTask[tRewardTaskFinish.Task28]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 --rwtTask[tRewardTaskFinish.Task28]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1918,7 +1918,7 @@ rwtTask[tRewardTaskFinish.Task18]["FinalReward"] = 1
 
 --rwtTask[tRewardTaskFinish.Task29]["StartAutoWay"] = {}
 --rwtTask[tRewardTaskFinish.Task29]["StartAutoWay"]["FindWayTypeId"] = 1
---rwtTask[tRewardTaskFinish.Task29]["StartAutoWay"]["FindWayMapId"] = 1001
+--rwtTask[tRewardTaskFinish.Task29]["StartAutoWay"]["FindWayMapId"] = 1000
 --rwtTask[tRewardTaskFinish.Task29]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 --rwtTask[tRewardTaskFinish.Task29]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 
@@ -1946,7 +1946,7 @@ rwtTask[tRewardTaskFinish.Task18]["FinalReward"] = 1
 
 --rwtTask[tRewardTaskFinish.Task30]["StartAutoWay"] = {}
 --rwtTask[tRewardTaskFinish.Task30]["StartAutoWay"]["FindWayTypeId"] = 1
---rwtTask[tRewardTaskFinish.Task30]["StartAutoWay"]["FindWayMapId"] = 1001
+--rwtTask[tRewardTaskFinish.Task30]["StartAutoWay"]["FindWayMapId"] = 1000
 --rwtTask[tRewardTaskFinish.Task30]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup[1]
 --rwtTask[tRewardTaskFinish.Task30]["StartAutoWay"]["FindWayGenId"] = tNpcGroupGenId[1]
 

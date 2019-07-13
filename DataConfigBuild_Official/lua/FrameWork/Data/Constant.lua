@@ -244,8 +244,7 @@ CONST_NPCGROUP_TYPE={
     SingleNpc = 21,    --单个NPC直接触发NPC功能
     PuzzleNpc = 22,    --解谜NPC
     CheckEvent = 23,   --检测功能从而触发不同事件
-    ManyHeroes = 24,   --多英雄副本中的NPC
-    SurvivalTrap = 25, --生存副本类型陷阱
+    ManyHeroes = 24,   --检测功能从而触发不同事件
 }
 
 --LOG类型
@@ -571,20 +570,4 @@ CONST_MANYHEROS_MAP = {
     MOZUZHIXIN = 1,     --魔族之心地图
 	DYXKSCC = 2,		--多英雄-狂沙虫巢地图
 	DYXHLZJ = 3,		--多英雄-狂沙虫巢地图
-}
-
---生存副本中的陷阱小分类
-CONST_SURVIVAL_TYPE = {
-    Collect = 1,    --采集物
-    Buff = 2,       --buff
-    CaiJiQi = 3,    --采集器
-    ChuFaQi = 4,    --触发器
-}
-
---生存副本buff
-CONST_SURVIVAL_MONSTERBUFF = {
-    Minus_Speed = 1,    --减速
-    HIDE = 2,           --隐身
-    Minus_View = 3,     --减视野
-    Minus_Monster = 4,  --减怪物
 }

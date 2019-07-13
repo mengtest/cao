@@ -34,6 +34,13 @@ tPos.Buff = {
     "-225.869,-21.166,-21.333",
 }
 
+tPos.Posbuff = {
+    [3120058] = "-261.81,-21.166,-33.62",
+    [3120059] = "-240.209,-21.166,1.906",
+    [3120060] = "-229.244,-21.166,-57.5",
+    [3120061] = "-206.264,-21.166,-25.3",
+}
+
 -- "-271.6,-21.166,-25.9"
 -- "-229.71,-21.166,6.56" 
 -- "-240.49,-21.166,-61.97" 
@@ -98,7 +105,7 @@ rwtNpcGroup[tTrap.MinusSpeed]["BuffType"] = CONST_SURVIVAL_MONSTERBUFF.Minus_Spe
 rwtNpcGroup[tTrap.MinusSpeed]["MapId"] = nCopyMapMissId
 rwtNpcGroup[tTrap.MinusSpeed]["MinusValue"] = 20
 rwtNpcGroup[tTrap.MinusSpeed]["MinSpeed"] = 10
-rwtNpcGroup[tTrap.MinusSpeed]["tMonsterGenIds"] = {3120009,3120010,3120011,3120012}
+rwtNpcGroup[tTrap.MinusSpeed]["tMonsterGenIds"] = {3120009,3120010,3120011,3120012,3120062,3120063}
 rwtNpcGroup[tTrap.MinusSpeed]["Title"] = "减速"
 
 rwtNpcGroup[tTrap.MinusView] = rwtNpcGroup[tTrap.MinusView] or {}
@@ -108,7 +115,7 @@ rwtNpcGroup[tTrap.MinusView]["BuffType"] = CONST_SURVIVAL_MONSTERBUFF.Minus_View
 rwtNpcGroup[tTrap.MinusView]["MapId"] = nCopyMapMissId
 rwtNpcGroup[tTrap.MinusView]["MinusValue"] = 150
 rwtNpcGroup[tTrap.MinusView]["MinView"] = 100
-rwtNpcGroup[tTrap.MinusView]["tMonsterGenIds"] = {3120009,3120010,3120011,3120012}
+rwtNpcGroup[tTrap.MinusView]["tMonsterGenIds"] = {3120009,3120010,3120011,3120012,3120062,3120063}
 rwtNpcGroup[tTrap.MinusView]["Title"] = "减视野"
 
 rwtNpcGroup[tTrap.Hide] = rwtNpcGroup[tTrap.Hide] or {}
@@ -125,7 +132,7 @@ rwtNpcGroup[tTrap.MinusMonster]["DetailType"] = CONST_SURVIVAL_TYPE.Buff
 rwtNpcGroup[tTrap.MinusMonster]["MapId"] = nCopyMapMissId
 rwtNpcGroup[tTrap.MinusMonster]["BuffType"] = CONST_SURVIVAL_MONSTERBUFF.Minus_Monster
 rwtNpcGroup[tTrap.MinusMonster]["MinusNum"] = 1
-rwtNpcGroup[tTrap.MinusMonster]["tMonsterGenIds"] = {3120009,3120010,3120011,3120012}
+rwtNpcGroup[tTrap.MinusMonster]["tMonsterGenIds"] = {3120009,3120010}
 rwtNpcGroup[tTrap.MinusMonster]["Title"] = "减少了一只怪物"
 
 rwtNpcGroup[tTrap.CaiJiQi] = rwtNpcGroup[tTrap.CaiJiQi] or {}
@@ -151,18 +158,96 @@ CaiJiQiInfo[1]["Message"] = "采集器出现在左上方"
 CaiJiQiInfo[1]["Func"] = function()
     local genid = rwGetRandInt(1,3)
     local tgenid = {3120059,3120060,3120061}
-    rwAddGenEvent(tgenid[genid])
+    if not rwHasGenEvent(tgenid[genid]) then
+        rwAddGenEvent(tgenid[genid])
+    end
 end
 
 CaiJiQiInfo[2] = {}
 CaiJiQiInfo[2]["GenId"] = 3120044
 CaiJiQiInfo[2]["Message"] = "采集器出现在右上方"
+CaiJiQiInfo[2]["Func"] = function()
+    local genid = rwGetRandInt(1,3)
+    local tgenid = {3120058,3120060,3120061}
+    if not rwHasGenEvent(tgenid[genid]) then
+        rwAddGenEvent(tgenid[genid])
+    end
+end
+
 CaiJiQiInfo[3] = {}
 CaiJiQiInfo[3]["GenId"] = 3120045
 CaiJiQiInfo[3]["Message"] = "采集器出现在左下方"
+CaiJiQiInfo[3]["Func"] = function()
+    local genid = rwGetRandInt(1,3)
+    local tgenid = {3120058,3120059,3120061}
+    if not rwHasGenEvent(tgenid[genid]) then
+        rwAddGenEvent(tgenid[genid])
+    end
+end
 CaiJiQiInfo[4] = {}
 CaiJiQiInfo[4]["GenId"] = 3120046
 CaiJiQiInfo[4]["Message"] = "采集器出现在右下方"
+CaiJiQiInfo[4]["Func"] = function()
+    local genid = rwGetRandInt(1,3)
+    local tgenid = {3120058,3120059,3120060}
+    if not rwHasGenEvent(tgenid[genid]) then
+        rwAddGenEvent(tgenid[genid])
+    end
+end
+
+--======采集器2=====================--
+local CaiJiQiInfo2 = {}
+CaiJiQiInfo2[1] = {}
+CaiJiQiInfo2[1]["GenId"] = 3120043
+CaiJiQiInfo2[1]["Message"] = "采集器出现在左上方"
+CaiJiQiInfo2[1]["Func"] = function()
+    local genid = rwGetRandInt(1,3)
+    local npcindex = rwGetRandInt(1,2)
+    local tgenid = {3120059,3120060,3120061}
+    local tNpcid = {30636,30638}
+    if not rwHasGenEvent(tgenid[genid]) then
+        rwAddGenEvent(tgenid[genid],tPos.Posbuff[tgenid[genid]],tNpcid[npcindex])
+    end
+end
+
+CaiJiQiInfo2[2] = {}
+CaiJiQiInfo2[2]["GenId"] = 3120044
+CaiJiQiInfo2[2]["Message"] = "采集器出现在右上方"
+CaiJiQiInfo2[2]["Func"] = function()
+    local genid = rwGetRandInt(1,3)
+    local npcindex = rwGetRandInt(1,2)
+    local tgenid = {3120059,3120060,3120061}
+    local tNpcid = {30636,30638}
+    if not rwHasGenEvent(tgenid[genid]) then
+        rwAddGenEvent(tgenid[genid],tPos.Posbuff[tgenid[genid]],tNpcid[npcindex])
+    end
+end
+
+CaiJiQiInfo2[3] = {}
+CaiJiQiInfo2[3]["GenId"] = 3120045
+CaiJiQiInfo2[3]["Message"] = "采集器出现在左下方"
+CaiJiQiInfo2[3]["Func"] = function()
+    local genid = rwGetRandInt(1,3)
+    local npcindex = rwGetRandInt(1,2)
+    local tgenid = {3120059,3120060,3120061}
+    local tNpcid = {30636,30638}
+    if not rwHasGenEvent(tgenid[genid]) then
+        rwAddGenEvent(tgenid[genid],tPos.Posbuff[tgenid[genid]],tNpcid[npcindex])
+    end
+end
+CaiJiQiInfo2[4] = {}
+CaiJiQiInfo2[4]["GenId"] = 3120046
+CaiJiQiInfo2[4]["Message"] = "采集器出现在右下方"
+CaiJiQiInfo2[4]["Func"] = function()
+    local genid = rwGetRandInt(1,3)
+    local npcindex = rwGetRandInt(1,2)
+    local tgenid = {3120059,3120060,3120061}
+    local tNpcid = {30636,30638}
+    if not rwHasGenEvent(tgenid[genid]) then
+        rwAddGenEvent(tgenid[genid],tPos.Posbuff[tgenid[genid]],tNpcid[npcindex])
+    end
+end
+--======================================
 
 
 --采集信息
@@ -176,148 +261,166 @@ MonsterInfo["tGenId"] = {3120009,3120010}
 MonsterInfo["tPath"] = {52,53,54,55}
 MonsterInfo["tRotation"] = {90,180,-90,0}
 MonsterInfo["MonsterGroupId"] = 200593
-MonsterInfo["InitSpeedRange"] = {20,30}
+-- MonsterInfo["InitSpeedRange"] = {20,30}
 MonsterInfo["Title"] = "警告：有追击怪进入请小心"
 
+local ManyMonsterInfo = {} --丧尸潮
+ManyMonsterInfo[1] = {} --丧尸潮
+ManyMonsterInfo[1]["Title"] = tTitle
+ManyMonsterInfo[1][1] = {}
+ManyMonsterInfo[1][1]["PathInfo"] = tPath
+ManyMonsterInfo[1][1]["tMonsterGroupId"] = {200650,200651,200652,200653}
+ManyMonsterInfo[1][1]["tGenId"] = {3120013,3120014,3120015,3120016,3120017}--,3120018,3120019,3120020,3120021,3120022}
+-- ManyMonsterInfo[1][1]["InitSpeedRange"] = {100,120}
+ManyMonsterInfo[1][1]["LifeTime"] = 10
+
+ManyMonsterInfo[2] = {} --丧尸潮
+ManyMonsterInfo[2]["Title"] = tTitle
+ManyMonsterInfo[2][1] = {}
+ManyMonsterInfo[2][1]["PathInfo"] = {tPath[1],tPath[3]}
+ManyMonsterInfo[2][1]["tMonsterGroupId"] = {200650,200651,200652,200653}
+ManyMonsterInfo[2][1]["tGenId"] = {3120013,3120014,3120015,3120016,3120017}--,3120018,3120019,3120020,3120021,3120022}
+-- ManyMonsterInfo[2][1]["InitSpeedRange"] = {100,120}
+ManyMonsterInfo[2][1]["LifeTime"] = 10
+ManyMonsterInfo[2][2] = {}
+ManyMonsterInfo[2][2]["PathInfo"] = {tPath[2],tPath[4]}
+ManyMonsterInfo[2][2]["tMonsterGroupId"] = {200650,200651,200652,200653}
+ManyMonsterInfo[2][2]["tGenId"] = {3120023,3120024,3120025,3120026,3120027}--,3120028,3120029,3120030,3120031,3120032}
+-- ManyMonsterInfo[2][2]["InitSpeedRange"] = {100,120}
+ManyMonsterInfo[2][2]["LifeTime"] = 10
+
+--采集物0-10个
+--触发器逻辑：1、丧尸潮；2、刷10个采集物；
 rwtSurivialCopyMapInfo[nCopyMapMissId] = {}
 rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"] = {}
 rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][1] = {}
 rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][1]["CollectNum"] = 0
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][1]["CaiJiQiInfo"] = CaiJiQiInfo
 rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][1]["CollectInfo"] = CollectInfo
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][1]["ManyMonsterInfo"] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][1]["ManyMonsterInfo"]["Title"] = tTitle
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][1]["ManyMonsterInfo"][1] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][1]["ManyMonsterInfo"][1]["PathInfo"] = tPath
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][1]["ManyMonsterInfo"][1]["tMonsterGroupId"] = {200650,200651,200652,200653}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][1]["ManyMonsterInfo"][1]["tGenId"] = {3120013,3120014,3120015,3120016,3120017,3120018,3120019,3120020,3120021,3120022}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][1]["ManyMonsterInfo"][1]["InitSpeedRange"] = {100,120}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][1]["ManyMonsterInfo"][1]["LifeTime"] = 10
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][1]["ManyMonsterInfo"] = ManyMonsterInfo[1]
 
+--采集物第10个，
+--采集物逻辑，生成采集器
+--触发器逻辑：1、生成10个采集物；2、刷丧尸潮；
 rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2] = {}
 rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2]["CollectNum"] = 10
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2]["CaiJiQiInfo"] = CaiJiQiInfo
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2]["CaiJiQiInfo"] = {}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2]["CaiJiQiInfo"][1] = {}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2]["CaiJiQiInfo"][1]["GenId"] = 3120043
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2]["CaiJiQiInfo"][1]["Message"] = "采集器出现在左上方"
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2]["CaiJiQiInfo"][2] = {}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2]["CaiJiQiInfo"][2]["GenId"] = 3120044
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2]["CaiJiQiInfo"][2]["Message"] = "采集器出现在右上方"
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2]["CaiJiQiInfo"][3] = {}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2]["CaiJiQiInfo"][3]["GenId"] = 3120045
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2]["CaiJiQiInfo"][3]["Message"] = "采集器出现在左下方"
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2]["CaiJiQiInfo"][4] = {}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2]["CaiJiQiInfo"][4]["GenId"] = 3120046
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2]["CaiJiQiInfo"][4]["Message"] = "采集器出现在右下方"
 rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2]["CollectInfo"] = CollectInfo
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2]["MonsterInfo"] = MonsterInfo
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2]["ManyMonsterInfo"] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2]["ManyMonsterInfo"]["Title"] = tTitle
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2]["ManyMonsterInfo"][1] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2]["ManyMonsterInfo"][1]["PathInfo"] = tPath
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2]["ManyMonsterInfo"][1]["tMonsterGroupId"] = {200650,200651,200652,200653}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2]["ManyMonsterInfo"][1]["tGenId"] = {3120013,3120014,3120015,3120016,3120017,3120018,3120019,3120020,3120021,3120022}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2]["ManyMonsterInfo"][1]["InitSpeedRange"] = {100,120}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2]["ManyMonsterInfo"][1]["LifeTime"] = 10
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][2]["ManyMonsterInfo"] = ManyMonsterInfo[1]
 
+--采集物15个
+--采集物逻辑：无
+--触发器：1、生成追击怪物2个；
 rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][3] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][3]["CollectNum"] = 30
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][3]["CaiJiQiInfo"] = CaiJiQiInfo
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][3]["CollectInfo"] = CollectInfo
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][3]["tRemoveMonsterGenId"] = {3120009,3120010}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][3]["MonsterInfo"] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][3]["MonsterInfo"]["tGenId"] = {3120005,3120006,3120007,3120008}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][3]["MonsterInfo"]["tPath"] = {56,57,58,59}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][3]["MonsterInfo"]["MonsterGroupId"] = 200594
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][3]["ManyMonsterInfo"] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][3]["ManyMonsterInfo"]["Title"] = tTitle
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][3]["ManyMonsterInfo"][1] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][3]["ManyMonsterInfo"][1]["PathInfo"] = tPath
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][3]["ManyMonsterInfo"][1]["tMonsterGroupId"] = {200650,200651,200652,200653}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][3]["ManyMonsterInfo"][1]["tGenId"] = {3120013,3120014,3120015,3120016,3120017,3120018,3120019,3120020,3120021,3120022}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][3]["ManyMonsterInfo"][1]["InitSpeedRange"] = {100,120}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][3]["ManyMonsterInfo"][1]["LifeTime"] = 10
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][3]["CollectNum"] = 15
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][3]["MonsterInfo"] = MonsterInfo
 
+--采集物20个
+--采集物：生成采集器
+--采集器生成同时，生成1个减怪buff
+--触发器：1、删除现有追击怪；2、删除小房间里的buff（删除怪物）；3、生成10个采集物；4、刷丧尸潮
 rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][4] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][4]["CollectNum"] = 40
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][4]["CollectNum"] = 20
 rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][4]["CaiJiQiInfo"] = CaiJiQiInfo
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][4]["MonsterInfo"] = MonsterInfo
 rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][4]["CollectInfo"] = CollectInfo
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][4]["ManyMonsterInfo"] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][4]["ManyMonsterInfo"]["Title"] = tTitle
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][4]["ManyMonsterInfo"][1] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][4]["ManyMonsterInfo"][1]["PathInfo"] = tPath
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][4]["ManyMonsterInfo"][1]["tMonsterGroupId"] = {200650,200651,200652,200653}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][4]["ManyMonsterInfo"][1]["tGenId"] = {3120013,3120014,3120015,3120016,3120017,3120018,3120019,3120020,3120021,3120022}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][4]["ManyMonsterInfo"][1]["InitSpeedRange"] = {100,120}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][4]["ManyMonsterInfo"][1]["LifeTime"] = 10
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][4]["tRemoveMonsterGenId"] = {3120009,3120010}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][4]["tRemoveBuffGenId"] = {3120058,3120059,3120060,3120061}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][4]["ManyMonsterInfo"] = ManyMonsterInfo[1]
 
+--25个
+--采集物逻辑：生成4只追击怪
 rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][5] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][5]["CollectNum"] = 20
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][5]["CaiJiQiInfo"] = CaiJiQiInfo
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][5]["CollectInfo"] = CollectInfo
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][5]["tRemoveMonsterGenId"] = {3120009,3120010}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][5]["CollectNum"] = 25
 rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][5]["MonsterInfo"] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][5]["MonsterInfo"]["tGenId"] = {3120011}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][5]["MonsterInfo"]["tGenId"] = {3120009,3120010,3120062,3120063}
 rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][5]["MonsterInfo"]["tPath"] = {52,53,54,55}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][5]["MonsterInfo"]["tRotation"] = {90,180,-90,0}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][5]["MonsterInfo"]["MonsterGroupId"] = 200595
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][5]["MonsterInfo"]["Size"] = 1.2
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][5]["MonsterInfo"]["InitSpeedRange"] = 40
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][5]["MonsterInfo"]["MonsterGroupId"] = 200593
+-- rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][5]["MonsterInfo"]["InitSpeedRange"] = {20,30}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][5]["MonsterInfo"]["Title"] = "警告：有追击怪进入请小心"
 
+
+--30ge
+--采集物逻辑；1、刷采集器；2、刷buff(减速减视野)
+--1、刷10个采集物；2、删除减速减视野buff；3、删除追击怪；4、刷2波丧尸潮；5、刷舔食者
 rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["CollectNum"] = 25
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["CollectNum"] = 30
 rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["CaiJiQiInfo"] = CaiJiQiInfo
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["BuffInfo"] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["BuffInfo"]["tGenId"] = 3120049
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["BuffInfo"]["tPos"] = tPos.Buff
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["BuffInfo"]["tNPCGroupId"] = {30636,30638}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["CaiJiBuffInfo"] = {}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["CaiJiBuffInfo"]["tGenId"] = 3120049
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["CaiJiBuffInfo"]["tPos"] = tPos.Buff
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["CaiJiBuffInfo"]["tNPCGroupId"] = {30636,30638}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["ChuFaMonsterInfo"] = {}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["ChuFaMonsterInfo"]["tGenId"] = {3120011}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["ChuFaMonsterInfo"]["tPath"] = {52,53,54,55}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["ChuFaMonsterInfo"]["tRotation"] = {90,180,-90,0}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["ChuFaMonsterInfo"]["MonsterGroupId"] = 200595
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["ChuFaMonsterInfo"]["Size"] = 1.2
+-- rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["ChuFaMonsterInfo"]["InitSpeedRange"] = 40
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["ChuFaMonsterInfo"]["Title"] = "警告：有强大的舔食者进入请小心"
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["tRemoveMonsterGenId"] = {3120009,3120010,3120062,3120063}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["tRemoveBuffGenId"] = {3120049}
 rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["CollectInfo"] = CollectInfo
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["ManyMonsterInfo"] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["ManyMonsterInfo"]["PathInfo"] = tPath
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["ManyMonsterInfo"][1] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["ManyMonsterInfo"][1]["tMonsterGroupId"] = {200650,200651,200652,200653}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["ManyMonsterInfo"][1]["tGenId"] = {3120013,3120014,3120015,3120016,3120017,3120018,3120019,3120020,3120021,3120022}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["ManyMonsterInfo"][1]["InitSpeedRange"] = {100,120}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["ManyMonsterInfo"][1]["LifeTime"] = 15
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][6]["ManyMonsterInfo"] = ManyMonsterInfo[2]
 
+
+--35
+--采集物出现丧尸潮
 rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7]["CollectNum"] = 30
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7]["CaiJiQiInfo"] = CaiJiQiInfo
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7]["BuffInfo"] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7]["BuffInfo"]["tGenId"] = 3120049
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7]["BuffInfo"]["tPos"] = tPos.Buff
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7]["BuffInfo"]["tNPCGroupId"] = {30636,30638}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7]["CollectInfo"] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7]["CollectInfo"]["tGenId"] = tCollectGen
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7]["CollectInfo"]["tPos"] = tPos.Collect
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7]["CollectInfo"]["tNPCGroupId"] = 30635
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7]["ManyMonsterInfo"] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7]["ManyMonsterInfo"]["PathInfo"] = tPath
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7]["ManyMonsterInfo"][1] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7]["ManyMonsterInfo"][1]["tMonsterGroupId"] = {200650,200651,200652,200653}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7]["ManyMonsterInfo"][1]["tGenId"] = {3120013,3120014,3120015,3120016,3120017,3120018,3120019,3120020,3120021,3120022}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7]["ManyMonsterInfo"][1]["InitSpeedRange"] = {100,120}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7]["ManyMonsterInfo"][1]["LifeTime"] = 10
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7]["MonsterInfo"] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7]["MonsterInfo"]["tGenId"] = {3120012}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7]["MonsterInfo"]["tPath"] = {52,53,54,55}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7]["MonsterInfo"]["tRotation"] = {90,180,-90,0}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7]["MonsterInfo"]["MonsterGroupId"] = 200595
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7]["MonsterInfo"]["Size"] = 1.2
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7]["MonsterInfo"]["InitSpeedRange"] = 40
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7]["CollectNum"] = 35
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][7]["CaiJiManyMonsterInfo"] = ManyMonsterInfo[1]
+
+--40
+--1、刷buff；2、刷采集器；3、
 
 rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8] = {}
 rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["CollectNum"] = 40
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["CaiJiQiInfo"] = CaiJiQiInfo
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["CaiJiQiInfo"] = CaiJiQiInfo2
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["CaiJiBuffInfo"] = {}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["CaiJiBuffInfo"]["tGenId"] = 3120049
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["CaiJiBuffInfo"]["tPos"] = tPos.Buff
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["CaiJiBuffInfo"]["tNPCGroupId"] = {30636,30638}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["CollectInfo"] = CollectInfo
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["ManyMonsterInfo"] = ManyMonsterInfo[2]
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["ChuFaMonsterInfo"] = {}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["ChuFaMonsterInfo"]["tGenId"] = {3120012,3120064}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["ChuFaMonsterInfo"]["tPath"] = {52,53,54,55}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["ChuFaMonsterInfo"]["tRotation"] = {90,180,-90,0}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["ChuFaMonsterInfo"]["MonsterGroupId"] = 200595
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["ChuFaMonsterInfo"]["Size"] = 1.2
+-- rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["ChuFaMonsterInfo"]["InitSpeedRange"] = 40
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["ChuFaMonsterInfo"]["Title"] = "警告：有强大的舔食者进入请小心"
 rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["BuffInfo"] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["BuffInfo"]["tGenId"] = {3120051,3120052,3120053,3120054}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["BuffInfo"]["tGenId"] = {3120051}
 rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["BuffInfo"]["tPos"] = tPos.Buff
 rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["BuffInfo"]["tNPCGroupId"] = 30645
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["CollectInfo"] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["CollectInfo"]["tGenId"] = tCollectGen
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["CollectInfo"]["tPos"] = tPos.Collect
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["CollectInfo"]["tNPCGroupId"] = 30635
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["ManyMonsterInfo"] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["ManyMonsterInfo"]["PathInfo"] = tPath
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["ManyMonsterInfo"][1] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["ManyMonsterInfo"][1]["tMonsterGroupId"] = {200650,200651,200652,200653}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["ManyMonsterInfo"][1]["tGenId"] = {3120013,3120014,3120015,3120016,3120017,3120018,3120019,3120020,3120021,3120022}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["ManyMonsterInfo"][1]["InitSpeedRange"] = {100,120}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["ManyMonsterInfo"][1]["LifeTime"] = 10
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["ManyMonsterInfo"][2] = {}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["ManyMonsterInfo"][2]["tMonsterGroupId"] = {200650,200651,200652,200653}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["ManyMonsterInfo"][2]["tGenId"] = {3120023,3120024,3120025,3120026,3120027,3120028,3120029,3120030,3120031,3120032}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["ManyMonsterInfo"][2]["InitSpeedRange"] = {100,120}
-rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][8]["ManyMonsterInfo"][2]["LifeTime"] = 10
+
+--45
+--采集物出现丧尸潮
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][9] = {}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][9]["CollectNum"] = 45
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][9]["CaiJiManyMonsterInfo"] = ManyMonsterInfo[1]
+
+--50
+--采集物出现丧尸潮
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][10] = {}
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][10]["CollectNum"] = 50
+rwtSurivialCopyMapInfo[nCopyMapMissId]["Events"][10]["Award"] = {}
+
+
+
+
+
 
 rwtSurivialCopyMapInfo[nCopyMapMissId]["ChuFaQiInfo"] = {}
 rwtSurivialCopyMapInfo[nCopyMapMissId]["ChuFaQiInfo"]["nGenId"] = 3120048

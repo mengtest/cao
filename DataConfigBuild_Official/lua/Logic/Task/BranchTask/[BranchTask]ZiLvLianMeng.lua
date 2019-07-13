@@ -9,7 +9,7 @@
 --地图ID
 local nMapId_LMDL = 2001
 local nMapId_ZHUC = 1000
-local nMapId_ZLLM = 1001
+local nMapId_ZLLM = 1000
 local nMapId_GJNE = 2003
 
 --任务ID   70105  70194  

@@ -28,64 +28,70 @@ tBox.Normal5 = 40295
 tBox.PassBox = 40296
 
 rwtNpcGroup[tBox.Normal1] = rwtNpcGroup[tBox.Normal1] or {}    
-rwtNpcGroup[tBox.Normal1]["Type"] = CONST_NPCGROUP_TYPE.TreasureBox
+rwtNpcGroup[tBox.Normal1]["Type"] = CONST_NPCGROUP_TYPE.Collect
+rwtNpcGroup[tBox.Normal1]["CollectTime"] = 2
 rwtNpcGroup[tBox.Normal1]["Awards"] = {}
 rwtNpcGroup[tBox.Normal1]["Awards"]["Events"] = {}
 rwtNpcGroup[tBox.Normal1]["Awards"]["Events"][1] = {}
 rwtNpcGroup[tBox.Normal1]["Awards"]["Events"][1]["GetServerAward"] = {}
 rwtNpcGroup[tBox.Normal1]["Awards"]["Events"][1]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
 rwtNpcGroup[tBox.Normal1]["Awards"]["Events"][1]["GetServerAward"]["AwardId"] = tAward.NorMalBox
-rwtNpcGroup[tBox.Normal1]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TREASURE_BOX
+rwtNpcGroup[tBox.Normal1]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TIPS
 rwtNpcGroup[tBox.Normal1]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tBox.Normal1
 
 rwtNpcGroup[tBox.Normal2] = rwtNpcGroup[tBox.Normal2] or {}    
-rwtNpcGroup[tBox.Normal2]["Type"] = CONST_NPCGROUP_TYPE.TreasureBox
+rwtNpcGroup[tBox.Normal2]["Type"] = CONST_NPCGROUP_TYPE.Collect
+rwtNpcGroup[tBox.Normal2]["CollectTime"] = 2
 rwtNpcGroup[tBox.Normal2]["Awards"] = {}
 rwtNpcGroup[tBox.Normal2]["Awards"]["Events"] = {}
 rwtNpcGroup[tBox.Normal2]["Awards"]["Events"][1] = {}
 rwtNpcGroup[tBox.Normal2]["Awards"]["Events"][1]["GetServerAward"] = {}
 rwtNpcGroup[tBox.Normal2]["Awards"]["Events"][1]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
 rwtNpcGroup[tBox.Normal2]["Awards"]["Events"][1]["GetServerAward"]["AwardId"] = tAward.NorMalBox
-rwtNpcGroup[tBox.Normal2]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TREASURE_BOX
+rwtNpcGroup[tBox.Normal2]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TIPS
 rwtNpcGroup[tBox.Normal2]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tBox.Normal2
 
 
 rwtNpcGroup[tBox.Normal3] = rwtNpcGroup[tBox.Normal3] or {}    
-rwtNpcGroup[tBox.Normal3]["Type"] = CONST_NPCGROUP_TYPE.TreasureBox
+rwtNpcGroup[tBox.Normal3]["Type"] = CONST_NPCGROUP_TYPE.Collect
+rwtNpcGroup[tBox.Normal3]["CollectTime"] = 2
 rwtNpcGroup[tBox.Normal3]["Awards"] = {}
 rwtNpcGroup[tBox.Normal3]["Awards"]["Events"] = {}
 rwtNpcGroup[tBox.Normal3]["Awards"]["Events"][1] = {}
 rwtNpcGroup[tBox.Normal3]["Awards"]["Events"][1]["GetServerAward"] = {}
 rwtNpcGroup[tBox.Normal3]["Awards"]["Events"][1]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
 rwtNpcGroup[tBox.Normal3]["Awards"]["Events"][1]["GetServerAward"]["AwardId"] = tAward.NorMalBox
-rwtNpcGroup[tBox.Normal3]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TREASURE_BOX
+rwtNpcGroup[tBox.Normal3]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TIPS
 rwtNpcGroup[tBox.Normal3]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tBox.Normal3
 
 
 rwtNpcGroup[tBox.Normal4] = rwtNpcGroup[tBox.Normal4] or {}    
-rwtNpcGroup[tBox.Normal4]["Type"] = CONST_NPCGROUP_TYPE.TreasureBox
+rwtNpcGroup[tBox.Normal4]["Type"] = CONST_NPCGROUP_TYPE.Collect
+rwtNpcGroup[tBox.Normal4]["CollectTime"] = 2
 rwtNpcGroup[tBox.Normal4]["Awards"] = {}
 rwtNpcGroup[tBox.Normal4]["Awards"]["Events"] = {}
 rwtNpcGroup[tBox.Normal4]["Awards"]["Events"][1] = {}
 rwtNpcGroup[tBox.Normal4]["Awards"]["Events"][1]["GetServerAward"] = {}
 rwtNpcGroup[tBox.Normal4]["Awards"]["Events"][1]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
 rwtNpcGroup[tBox.Normal4]["Awards"]["Events"][1]["GetServerAward"]["AwardId"] = tAward.NorMalBox
-rwtNpcGroup[tBox.Normal4]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TREASURE_BOX
+rwtNpcGroup[tBox.Normal4]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TIPS
 rwtNpcGroup[tBox.Normal4]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tBox.Normal4
 
 rwtNpcGroup[tBox.Normal5] = rwtNpcGroup[tBox.Normal5] or {}    
-rwtNpcGroup[tBox.Normal5]["Type"] = CONST_NPCGROUP_TYPE.TreasureBox
+rwtNpcGroup[tBox.Normal5]["Type"] = CONST_NPCGROUP_TYPE.Collect
+rwtNpcGroup[tBox.Normal5]["CollectTime"] = 2
 rwtNpcGroup[tBox.Normal5]["Awards"] = {}
 rwtNpcGroup[tBox.Normal5]["Awards"]["Events"] = {}
 rwtNpcGroup[tBox.Normal5]["Awards"]["Events"][1] = {}
 rwtNpcGroup[tBox.Normal5]["Awards"]["Events"][1]["GetServerAward"] = {}
 rwtNpcGroup[tBox.Normal5]["Awards"]["Events"][1]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
 rwtNpcGroup[tBox.Normal5]["Awards"]["Events"][1]["GetServerAward"]["AwardId"] = tAward.NorMalBox
-rwtNpcGroup[tBox.Normal5]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TREASURE_BOX
+rwtNpcGroup[tBox.Normal5]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TIPS
 rwtNpcGroup[tBox.Normal5]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tBox.Normal4
 
 rwtNpcGroup[tBox.PassBox] = rwtNpcGroup[tBox.PassBox] or {}    
-rwtNpcGroup[tBox.PassBox]["Type"] = CONST_NPCGROUP_TYPE.TreasureBox
+rwtNpcGroup[tBox.PassBox]["Type"] = CONST_NPCGROUP_TYPE.Collect
+rwtNpcGroup[tBox.PassBox]["CollectTime"] = 3
 rwtNpcGroup[tBox.PassBox]["Awards"] = {}
 rwtNpcGroup[tBox.PassBox]["Awards"]["Events"] = {}
 rwtNpcGroup[tBox.PassBox]["Awards"]["Events"][1] = {}
@@ -94,13 +100,14 @@ rwtNpcGroup[tBox.PassBox]["Awards"]["Events"][1]["GetServerAward"]["AwardType"] 
 rwtNpcGroup[tBox.PassBox]["Awards"]["Events"][1]["GetServerAward"]["AwardId"] = tAward.PassBox
 rwtNpcGroup[tBox.PassBox]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TREASURE_BOX
 rwtNpcGroup[tBox.PassBox]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tBox.PassBox
-rwtNpcGroup[tBox.PassBox]["Awards"]["Events"][1]["OpenDialog"] = {}
-rwtNpcGroup[tBox.PassBox]["Awards"]["Events"][1]["OpenDialog"]["DialogId"] = 6862
+rwtNpcGroup[tBox.PassBox]["Awards"]["Events"][2] = {}
+rwtNpcGroup[tBox.PassBox]["Awards"]["Events"][2]["OpenDialog"] = {}
+rwtNpcGroup[tBox.PassBox]["Awards"]["Events"][2]["OpenDialog"]["DialogId"] = 6862
 
 ----***************************副本配置定义***************************----
 rwtTarget[60306] = {}
 rwtTarget[60306]["Title"] = tLuaText[LANGUAGE_CONFIG][21799]
-rwtTarget[60306]["ReqDialogId"] = 6862
+rwtTarget[60306]["ReqCollectId"] = tBox.PassBox
 rwtTarget[60306]["ReqCount"] = 1
 
 rwtCopyMapMission[nCopyMapId] = rwtCopyMapMission[nCopyMapId] or {}

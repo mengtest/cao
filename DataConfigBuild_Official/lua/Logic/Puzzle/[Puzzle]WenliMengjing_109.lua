@@ -397,6 +397,7 @@ tPuzzleEvent[nPuzzleId] = {}
 local tDialogOption = {}
 tDialogOption[1] = {}
 tDialogOption[1]["Text"] = {}
+tDialogOption[1]["Text"]["DialogId"] = 60892
 tDialogOption[1]["Text"]["Content"] = "这个矮箱需要<color=#bd1011>三个数字</color>才能解开它的魔法封印。"
 tDialogOption[1]["Text"]["TalkId"] = 101
 tDialogOption[1]["Text"]["LeftId"] = 101
@@ -420,6 +421,7 @@ tDialogOption[1]["Option"][5]["Text"] = "没头绪，再去找找线索。"
 tDialogOption[1]["Option"][5]["Func"] = "</F>WenlimengjingPuzzleBoxOption_Giveup"
 tDialogOption[2] = {}
 tDialogOption[2]["Text"] = {}
+tDialogOption[2]["Text"]["DialogId"] = 60893
 tDialogOption[2]["Text"]["Content"] = "这个矮箱需要<color=#bd1011>三个数字</color>才能解开它的魔法封印。"
 tDialogOption[2]["Text"]["TalkId"] = 101
 tDialogOption[2]["Text"]["LeftId"] = 101
@@ -443,6 +445,7 @@ tDialogOption[2]["Option"][5]["Text"] = "没头绪，再去找找线索。"
 tDialogOption[2]["Option"][5]["Func"] = "</F>WenlimengjingPuzzleBoxOption_Giveup"
 tDialogOption[3] = {}
 tDialogOption[3]["Text"] = {}
+tDialogOption[3]["Text"]["DialogId"] = 60894
 tDialogOption[3]["Text"]["Content"] = "这个矮箱需要<color=#bd1011>三个数字</color>才能解开它的魔法封印。"
 tDialogOption[3]["Text"]["TalkId"] = 101
 tDialogOption[3]["Text"]["LeftId"] = 101

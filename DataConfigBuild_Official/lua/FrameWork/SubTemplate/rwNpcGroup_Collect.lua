@@ -20,6 +20,11 @@ function rwNpcGroup_CollectProcess(nNpcGroupType, nNpcGroupId, nGenEventId)
     local nDialogId = tInfo["DialogId"] or 0
     local tRandomDialog = tInfo["tRandomDialog"] or 0
 	local tBeforeCollect = tInfo["BeforeCollect"] or 0
+
+	if not rwBaseAward:create(tInfo["Awards"]):ChkCondition() then
+		--物品判断失败提示
+	    return false
+	end
 	
 	if tBeforeCollect ~= 0 then
 		local bool = rwBaseAward:ChkEventCond(tBeforeCollect)
@@ -35,14 +40,10 @@ function rwNpcGroup_CollectProcess(nNpcGroupType, nNpcGroupId, nGenEventId)
 			local tChkRandomDialog = tBeforeCollect["ChkFightHeroFailDialogList"][nRandom] 
 			rwAddUserCollectFunc(nDelayTime, "</F>rwCollectEnd</N>" .. nNpcGroupType .."</N>" .. nGenEventId.."</N>" .. nRandom, nGenEventId, tChkRandomDialog)
 		else
-			if tBeforeCollect["Func"] then 
-			
-				rwtNpcGroup[nNpcGroupType]["BeforeCollect"]["Func"](nGenEventId,nRandom,nNpcGroupType,nDelayTime)
-			else
-				rwAddUserCollectFunc(nDelayTime, "</F>rwCollectEnd</N>" .. nNpcGroupType .."</N>" .. nGenEventId, nGenEventId, nDialogId)
-			end
-				
-		end		
+		
+			rwAddUserCollectFunc(nDelayTime, "</F>rwCollectEnd</N>" .. nNpcGroupType .."</N>" .. nGenEventId, nGenEventId, nDialogId)
+		end	
+		
 	elseif tRandomDialog ~= 0 then 
 	
 		local nRandom = math.random(1,#tRandomDialog)

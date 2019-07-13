@@ -4,7 +4,7 @@
 ---------------------------------------------------------------------新版-----------------------------------------------------------------------------
 --地图ID
 local nMapId_LMDL = 2001
-local nMapId_ZLLM = 1001
+local nMapId_ZLLM = 1000
 local nMapId_MZGD = 2002
 
 --任务ID
@@ -267,7 +267,7 @@ rwtTask[tTask.nSiTiShen7]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] =
 
 ----地图ID
 --local nMapId_LMDL = 2001
---local nMapId_YBGH = 1001
+--local nMapId_YBGH = 1000
 --local nMapId_MZGD = 2002
 
 ----任务ID

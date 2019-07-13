@@ -317,13 +317,13 @@ rwtTask[tMoZuZhiXinTask[2]]["TaskNpc"] = nNpc_Heli
 rwtTask[tMoZuZhiXinTask[2]]["IsClickComplete"] = 0
 rwtTask[tMoZuZhiXinTask[2]]["StartAutoWay"] = {}
 rwtTask[tMoZuZhiXinTask[2]]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tMoZuZhiXinTask[2]]["StartAutoWay"]["FindWayMapId"] = 1002
+rwtTask[tMoZuZhiXinTask[2]]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tMoZuZhiXinTask[2]]["StartAutoWay"]["FindWayGroupId"] = nNpcgroup_Heli
 rwtTask[tMoZuZhiXinTask[2]]["StartAutoWay"]["FindWayGenId"] = nGenID_Npcgroup_Heli
 rwtTask[tMoZuZhiXinTask[2]]["DynaNpcGroupGen"] = {}
 rwtTask[tMoZuZhiXinTask[2]]["DynaNpcGroupGen"][1] = {}
 rwtTask[tMoZuZhiXinTask[2]]["DynaNpcGroupGen"][1]["GenId"] = nGenID_Npcgroup_Heli
-rwtTask[tMoZuZhiXinTask[2]]["DynaNpcGroupGen"][1]["MapId"] = 1002
+rwtTask[tMoZuZhiXinTask[2]]["DynaNpcGroupGen"][1]["MapId"] = 1000
 rwtTask[tMoZuZhiXinTask[2]]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
 --rwtTask[tMoZuZhiXinTask[2]]["AwardId"] = 2000057
 rwtTask[tMoZuZhiXinTask[2]]["Awards"] = {}
@@ -780,7 +780,7 @@ rwtTask[tMoZuZhiXinTask[19]]["Awards"]["Events"][1]["GetServerAward"]["ActionId"
 rwtTask[tMoZuZhiXinTask[20]] = {}
 rwtTask[tMoZuZhiXinTask[20]]["Title"] = tLuaText[LANGUAGE_CONFIG][20373] --参加神谕会议
 rwtTask[tMoZuZhiXinTask[20]]["PreTaskId"] = tMoZuZhiXinTask[19]
-rwtTask[tMoZuZhiXinTask[20]]["NextTaskId"] = tMoZuZhiXinTask[21]
+rwtTask[tMoZuZhiXinTask[20]]["NextTaskId"] = nNextExploreTaskId
 rwtTask[tMoZuZhiXinTask[20]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tMoZuZhiXinTask[20]]["DialogId"] = 10432
 rwtTask[tMoZuZhiXinTask[20]]["TaskNpc"] = nNpc_Heli
@@ -790,35 +790,36 @@ rwtTask[tMoZuZhiXinTask[20]]["IsClickComplete"] = 0
 rwtTask[tMoZuZhiXinTask[20]]["DynaNpcGroupGen"] = {}
 rwtTask[tMoZuZhiXinTask[20]]["DynaNpcGroupGen"][1] = {}
 rwtTask[tMoZuZhiXinTask[20]]["DynaNpcGroupGen"][1]["GenId"] = nGenID_Npcgroup_Heli
-rwtTask[tMoZuZhiXinTask[20]]["DynaNpcGroupGen"][1]["MapId"] = 1002
+rwtTask[tMoZuZhiXinTask[20]]["DynaNpcGroupGen"][1]["MapId"] = 1000
 rwtTask[tMoZuZhiXinTask[20]]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
 rwtTask[tMoZuZhiXinTask[20]]["DynaNpcGroupGen"][2] = {}
 rwtTask[tMoZuZhiXinTask[20]]["DynaNpcGroupGen"][2]["GenId"] = nGenID_Npcgroup_TeluodeInWanggong
-rwtTask[tMoZuZhiXinTask[20]]["DynaNpcGroupGen"][2]["MapId"] = 1002
+rwtTask[tMoZuZhiXinTask[20]]["DynaNpcGroupGen"][2]["MapId"] = 1000
 rwtTask[tMoZuZhiXinTask[20]]["DynaNpcGroupGen"][2]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
-
-
-rwtTask[tMoZuZhiXinTask[21]] = {}
-rwtTask[tMoZuZhiXinTask[21]]["Title"] = tLuaText[LANGUAGE_CONFIG][21233]
-rwtTask[tMoZuZhiXinTask[21]]["PreTaskId"] = tMoZuZhiXinTask[20]
-rwtTask[tMoZuZhiXinTask[21]]["NextTaskId"] = nNextExploreTaskId
-rwtTask[tMoZuZhiXinTask[21]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.UPLEVEL
-rwtTask[tMoZuZhiXinTask[21]]["NeedLevel"] = 32
-rwtTask[tMoZuZhiXinTask[21]]["LackDialogId"] = 11435
-rwtTask[tMoZuZhiXinTask[21]]["DialogId"] = 11436
-rwtTask[tMoZuZhiXinTask[21]]["Awards"] = {}
-rwtTask[tMoZuZhiXinTask[21]]["Awards"]["Events"] = {}
-rwtTask[tMoZuZhiXinTask[21]]["Awards"]["Events"][1] = {}
-rwtTask[tMoZuZhiXinTask[21]]["Awards"]["Events"][1]["GetServerAward"] = {}
-rwtTask[tMoZuZhiXinTask[21]]["Awards"]["Events"][1]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.AWARD
-rwtTask[tMoZuZhiXinTask[21]]["Awards"]["Events"][1]["GetServerAward"]["AwardId"] = 2000063
-rwtTask[tMoZuZhiXinTask[21]]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TASK
-rwtTask[tMoZuZhiXinTask[21]]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tMoZuZhiXinTask[20]
-rwtTask[tMoZuZhiXinTask[21]]["OpenMercenaryTask"] = {}
-rwtTask[tMoZuZhiXinTask[21]]["OpenMercenaryTask"]["AreaId"] = 2001
-rwtTask[tMoZuZhiXinTask[21]]["OpenMercenaryTask"]["TownId"] = 200106
+rwtTask[tMoZuZhiXinTask[20]]["Awards"] = {}
+rwtTask[tMoZuZhiXinTask[20]]["Awards"]["Events"] = {}
+rwtTask[tMoZuZhiXinTask[20]]["Awards"]["Events"][1] = {}
+rwtTask[tMoZuZhiXinTask[20]]["Awards"]["Events"][1]["GetServerAward"] = {}
+rwtTask[tMoZuZhiXinTask[20]]["Awards"]["Events"][1]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.AWARD
+rwtTask[tMoZuZhiXinTask[20]]["Awards"]["Events"][1]["GetServerAward"]["AwardId"] = 2000063
+rwtTask[tMoZuZhiXinTask[20]]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TASK
+rwtTask[tMoZuZhiXinTask[20]]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tMoZuZhiXinTask[20]
+rwtTask[tMoZuZhiXinTask[20]]["OpenMercenaryTask"] = {}
+rwtTask[tMoZuZhiXinTask[20]]["OpenMercenaryTask"]["AreaId"] = 2001
+rwtTask[tMoZuZhiXinTask[20]]["OpenMercenaryTask"]["TownId"] = 200106
 
 --完成任务后刷新第二片区宝箱
-rwtTask[tMoZuZhiXinTask[21]]["OpenAreaBox"] = 2003
+rwtTask[tMoZuZhiXinTask[20]]["OpenAreaBox"] = 2003
 --完成后接取四蹄神支线任务
-rwtTask[tMoZuZhiXinTask[21]]["AcceptExtraTaskId"] = {70000,70108} --支线任务 四蹄神--阿米达铁律之认真
+rwtTask[tMoZuZhiXinTask[20]]["AcceptExtraTaskId"] = {70000,70108} --支线任务 四蹄神--阿米达铁律之认真
+
+
+--rwtTask[tMoZuZhiXinTask[21]] = {}
+--rwtTask[tMoZuZhiXinTask[21]]["Title"] = tLuaText[LANGUAGE_CONFIG][21233]
+--rwtTask[tMoZuZhiXinTask[21]]["PreTaskId"] = tMoZuZhiXinTask[20]
+--rwtTask[tMoZuZhiXinTask[21]]["NextTaskId"] = nNextExploreTaskId
+--rwtTask[tMoZuZhiXinTask[21]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.UPLEVEL
+--rwtTask[tMoZuZhiXinTask[21]]["NeedLevel"] = 32
+--rwtTask[tMoZuZhiXinTask[21]]["LackDialogId"] = 11435
+--rwtTask[tMoZuZhiXinTask[21]]["DialogId"] = 11436
+

@@ -9,7 +9,7 @@
 --地图ID
 local nMapId = 2004
 local nMapId_WangGong = 2006
-local nMapId_ZlLM = 1001
+local nMapId_ZlLM = 1000
 --任务ID   50317  50336   
 local tTask = {}
 tTask.nTianKongCheng1   = 50317--前往执行巡查工作

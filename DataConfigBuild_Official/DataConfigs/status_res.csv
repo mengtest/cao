@@ -33,6 +33,10 @@ Mark,状态ID(状态来自skill.xlsx表技能状态 id规则为：技能id 后�
 ,103601,103601,1036,Textures/Atlas/Dyn/Buff/Sealhunting3.png,,,,Prefab/EffectUI/Effect_UI_buff_ty_shoulie3.prefab,,0
 ,103701,103701,1037,Textures/Atlas/Dyn/Buff/Sealhunting4.png,,,,Prefab/EffectUI/Effect_UI_buff_ty_shoulie4.prefab,,0
 ,103801,103801,1038,Textures/Atlas/Dyn/Buff/Dark.png,,,,Prefab/EffectUI/Effect_UI_buff_ty_heian.prefab,,0
+,103901,103901,1039,Textures/Atlas/Dyn/Buff/defaultbuff.png,,,,,,0
+,104001,104001,1040,Textures/Atlas/Dyn/Buff/defaultbuff.png,,,,,,0
+,104101,104101,1041,Textures/Atlas/Dyn/Buff/defaultbuff.png,,,,,,0
+,104501,104501,1045,Textures/Atlas/Dyn/Buff/defaultbuff.png,,,,,,0
 ,200101,200101,2001,Textures/Atlas/Dyn/Buff/huoyanyinji.png,,,,Prefab/EffectUI/Effect_UI_buff_ty_huoyanjidian.prefab,,10486
 ,200102,200101,2001,Textures/Atlas/Dyn/Buff/huoyanyinji.png,,,,Prefab/EffectUI/Effect_UI_buff_ty_huoyanjidian.prefab,,10486
 ,200201,200201,2002,Textures/Atlas/Dyn/Buff/xinghongzhihen.png,,Effect_buff_xianxueyingji,,Prefab/EffectUI/Effect_UI_buff_ty_xinghongzhiheng.prefab,,10484

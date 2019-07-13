@@ -64,8 +64,8 @@ rwtNpc[nNpc_GBLShangRen] =rwtNpc[nNpc_GBLShangRen] or {}
 --        end
 --     end   
 -- end
--- rwtSceneLoad_Func[1001] = rwtSceneLoad_Func[1001] or {}
--- table.insert(rwtSceneLoad_Func[1001],Adventure_CreateTrap_MeiJiuJiaNiang)    --插入切图函数
+-- rwtSceneLoad_Func[1000] = rwtSceneLoad_Func[1000] or {}
+-- table.insert(rwtSceneLoad_Func[1000],Adventure_CreateTrap_MeiJiuJiaNiang)    --插入切图函数
 
 -----------------------------------------------任务流程-----------------------------------------------------------
 

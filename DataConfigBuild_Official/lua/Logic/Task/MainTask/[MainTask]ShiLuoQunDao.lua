@@ -1,6 +1,6 @@
 local nMapId_1 = 2001
 local nMapId_2 = 2003
-local nMapId_3 = 1002
+local nMapId_3 = 1000
 local nMapId_4 = 1000
 
 -----------npc群组

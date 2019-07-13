@@ -853,7 +853,7 @@ rwtTask[tTask.nTaskId17]["StartAutoWay"]["FindWayGenId"] = tGenId.Mon_XQZ
 rwtTask[tTask.nTaskId18] = {}
 rwtTask[tTask.nTaskId18]["Title"] = tLuaText[LANGUAGE_CONFIG][tText.nTaskTextId18]
 rwtTask[tTask.nTaskId18]["PreTaskId"] = tTask.nTaskId17
-rwtTask[tTask.nTaskId18]["NextTaskId"] = tTask.nTaskId18_Add1
+rwtTask[tTask.nTaskId18]["NextTaskId"] = tTask.nTaskId19
 rwtTask[tTask.nTaskId18]["TaskType"] = CONST_TASK_TYPE.MAIN
 rwtTask[tTask.nTaskId18]["IsClickComplete"] = 0
 rwtTask[tTask.nTaskId18]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
@@ -873,6 +873,8 @@ rwtTask[tTask.nTaskId18]["Awards"]["Events"][1]["GetServerAward"]["AwardId"] = t
 rwtTask[tTask.nTaskId18]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TASK
 rwtTask[tTask.nTaskId18]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tTask.nTaskId18
 --
+
+--[[
 rwtTask[tTask.nTaskId18_Add1] = {}
 rwtTask[tTask.nTaskId18_Add1]["Title"] = tLuaText[LANGUAGE_CONFIG][tText.nTaskTextId18_Add1]
 rwtTask[tTask.nTaskId18_Add1]["PreTaskId"] = tTask.nTaskId18
@@ -883,16 +885,18 @@ rwtTask[tTask.nTaskId18_Add1]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.UPLEVEL
 rwtTask[tTask.nTaskId18_Add1]["NeedLevel"] = 52
 --rwtTask[tTask.nTaskId18_Add1]["LackTips"] = tLuaText[LANGUAGE_CONFIG][10167]
 rwtTask[tTask.nTaskId18_Add1]["LackDialogId"] = 12106
+--]]
+
 --
 rwtTask[tTask.nTaskId19] = {}
 rwtTask[tTask.nTaskId19]["Title"] = tLuaText[LANGUAGE_CONFIG][tText.nTaskTextId19]
-rwtTask[tTask.nTaskId19]["PreTaskId"] = tTask.nTaskId18_Add1
+rwtTask[tTask.nTaskId19]["PreTaskId"] = tTask.nTaskId18
 rwtTask[tTask.nTaskId19]["NextTaskId"] = tTask.nTaskId20
 rwtTask[tTask.nTaskId19]["TaskType"] = CONST_TASK_TYPE.MAIN
 rwtTask[tTask.nTaskId19]["IsClickComplete"] = 0
 rwtTask[tTask.nTaskId19]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tTask.nTaskId19]["TaskNpc"] = tNpcRes.Npc_LieFu
-rwtTask[tTask.nTaskId19]["AcceptDialogId"] = 12107
+--rwtTask[tTask.nTaskId19]["AcceptDialogId"] = 12107
 rwtTask[tTask.nTaskId19]["DialogId"] = tDialog.Npc_LieFu
 rwtTask[tTask.nTaskId19]["StartAutoWay"] = {}
 rwtTask[tTask.nTaskId19]["StartAutoWay"]["FindWayTypeId"] = 1
@@ -1514,7 +1518,7 @@ rwtTask[tTask.nTaskId49]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = 
 rwtTask[tTask.nTaskId50] = {}
 rwtTask[tTask.nTaskId50]["Title"] = tLuaText[LANGUAGE_CONFIG][tText.nTaskTextId50]
 rwtTask[tTask.nTaskId50]["PreTaskId"] = tTask.nTaskId40
-rwtTask[tTask.nTaskId50]["NextTaskId"] = tTask.nTaskId50_Add1
+rwtTask[tTask.nTaskId50]["NextTaskId"] = tTask.nTaskId51
 rwtTask[tTask.nTaskId50]["TaskType"] = CONST_TASK_TYPE.MAIN
 rwtTask[tTask.nTaskId50]["IsClickComplete"] = 0
 rwtTask[tTask.nTaskId50]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
@@ -1531,6 +1535,8 @@ rwtTask[tTask.nTaskId50]["StartAutoWay"]["FindWayMapId"] = 2005
 rwtTask[tTask.nTaskId50]["StartAutoWay"]["FindWayGroupId"] = tNpcGroup.Npc_MiNaDa
 rwtTask[tTask.nTaskId50]["StartAutoWay"]["FindWayGenId"] = tGenId.Npc_2_MiNaDa
 --
+
+--[[
 rwtTask[tTask.nTaskId50_Add1] = {}
 rwtTask[tTask.nTaskId50_Add1]["Title"] = tLuaText[LANGUAGE_CONFIG][tText.nTaskTextId50_Add1]
 rwtTask[tTask.nTaskId50_Add1]["PreTaskId"] = tTask.nTaskId50
@@ -1541,16 +1547,18 @@ rwtTask[tTask.nTaskId50_Add1]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.UPLEVEL
 rwtTask[tTask.nTaskId50_Add1]["NeedLevel"] = 53
 --rwtTask[tTask.nTaskId50_Add1]["LackTips"] = tLuaText[LANGUAGE_CONFIG][10170]
 rwtTask[tTask.nTaskId50_Add1]["LackDialogId"] = 12108
+--]]
+
 --
 rwtTask[tTask.nTaskId51] = {}
 rwtTask[tTask.nTaskId51]["Title"] = tLuaText[LANGUAGE_CONFIG][tText.nTaskTextId51]
-rwtTask[tTask.nTaskId51]["PreTaskId"] = tTask.nTaskId50_Add1
+rwtTask[tTask.nTaskId51]["PreTaskId"] = tTask.nTaskId50
 rwtTask[tTask.nTaskId51]["NextTaskId"] = tTask.nNextTask
 rwtTask[tTask.nTaskId51]["TaskType"] = CONST_TASK_TYPE.MAIN
 rwtTask[tTask.nTaskId51]["IsClickComplete"] = 0
 rwtTask[tTask.nTaskId51]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tTask.nTaskId51]["TaskNpc"] = tNpcRes.Npc_GaiYin
-rwtTask[tTask.nTaskId51]["AcceptDialogId"] = 12109
+--rwtTask[tTask.nTaskId51]["AcceptDialogId"] = 12109
 rwtTask[tTask.nTaskId51]["DialogId"] = tDialog.Npc_GaiYin
 rwtTask[tTask.nTaskId51]["DynaNpcGroupGen"] = {}
 rwtTask[tTask.nTaskId51]["DynaNpcGroupGen"][1] = {}

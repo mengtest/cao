@@ -65,9 +65,13 @@ function rwTask_CountDown:OnTaskPanelClick()
 		if self._TaskInfo["LackTips"]  then
             rwSendSystemMessage(self._TaskInfo["LackTips"])
             return
+        elseif self._TaskInfo["LackDialogId"]  then
+            rwOpenNpcChatDialog(self._TaskInfo["LackDialogId"],CONST_NPCCHAT_TYPE.TASK,self._TaskId)
         end
         return
-    else
+    elseif self._TaskInfo["DialogId"]  then
+        rwOpenNpcChatDialog(self._TaskInfo["DialogId"],CONST_NPCCHAT_TYPE.TASK,self._TaskId)
+    else    
         self:SetTaskCompleteFlag()
         self:FinishTask()
     end

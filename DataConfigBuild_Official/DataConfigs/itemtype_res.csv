@@ -17,6 +17,7 @@
 ,16,Textures/Atlas/Dyn/Item/16.png,1073741824,0
 ,17,Textures/Atlas/Dyn/Item/17.png,2048,0
 ,18,Textures/Atlas/Dyn/Item/17.png,0,0
+,19,Textures/Atlas/Dyn/Item/17.png,0,0
 老旧宝箱,101,Textures/Atlas/Dyn/Item/101.png,117440512,0
 崭新宝箱,102,Textures/Atlas/Dyn/Item/102.png,117440512,0
 精致宝箱,103,Textures/Atlas/Dyn/Item/103.png,117440512,0
@@ -435,10 +436,12 @@
 ,7000291,Textures/Atlas/Dyn/Item/102.png,0,0
 ,7000292,Textures/Atlas/Dyn/Item/102.png,0,0
 ,7000293,Textures/Atlas/Dyn/Item/102.png,0,0
+,7000311,Textures/Atlas/Dyn/Item/1000212.png,0,0
 ,7000341,Textures/Atlas/Dyn/Item/7000341.png,0,0
 ,7000342,Textures/Atlas/Dyn/Item/434014.png,0,0
 ,7000343,Textures/Atlas/Dyn/Item/7000331.png,0,0
 ,7000345,Textures/Atlas/Dyn/Item/2120013.png,0,0
+,7000361,Textures/Atlas/Dyn/Item/5000210.png,0,0
 ,8000012,Textures/Atlas/Dyn/Item/8000012.png,0,1
 ,8000032,Textures/Atlas/Dyn/Item/8000032.png,0,1
 ,8000042,Textures/Atlas/Dyn/Item/8000042.png,0,1

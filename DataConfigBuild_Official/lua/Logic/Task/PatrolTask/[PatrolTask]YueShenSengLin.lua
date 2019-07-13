@@ -326,7 +326,7 @@ rwtTask[nYueShenSenLin5]["DialogId"] = nDialogNew_8
 rwtTask[nYueShenSenLin5]["PatrolLastTask"] = 1  
 rwtTask[nYueShenSenLin5]["StartAutoWay"] = {}
 rwtTask[nYueShenSenLin5]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[nYueShenSenLin5]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[nYueShenSenLin5]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[nYueShenSenLin5]["StartAutoWay"]["FindWayGroupId"] = 20115
 rwtTask[nYueShenSenLin5]["StartAutoWay"]["FindWayGenId"] = 2001658
 
@@ -405,7 +405,7 @@ rwtTask[nYueShenSenLinNew_9]["DialogId"] = nDialogNew_14
 rwtTask[nYueShenSenLinNew_9]["PatrolLastTask"] = 1  
 rwtTask[nYueShenSenLinNew_9]["StartAutoWay"] = {}
 rwtTask[nYueShenSenLinNew_9]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[nYueShenSenLinNew_9]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[nYueShenSenLinNew_9]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[nYueShenSenLinNew_9]["StartAutoWay"]["FindWayGroupId"] = 20115
 rwtTask[nYueShenSenLinNew_9]["StartAutoWay"]["FindWayGenId"] = 2001658
 
@@ -526,6 +526,6 @@ rwtTask[nYueShenSenLin10]["PatrolLastTask"] = 1
 --rwtTask[nYueShenSenLin10]["AwardId"] = 2000122
 rwtTask[nYueShenSenLin10]["StartAutoWay"] = {}
 rwtTask[nYueShenSenLin10]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[nYueShenSenLin10]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[nYueShenSenLin10]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[nYueShenSenLin10]["StartAutoWay"]["FindWayGroupId"] = 20115
 rwtTask[nYueShenSenLin10]["StartAutoWay"]["FindWayGenId"] = 2001658

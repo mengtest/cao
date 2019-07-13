@@ -43,8 +43,9 @@ tMainTask.Task15 = 10639      --调查线索
 tMainTask.Task16 = 10640      --小心，有伏击
 tMainTask.Task17 = 10641      --调查线索
 --博士的意志  
+tMainTask.Task31 = 10679        --激活浮士德72
+tMainTask.Task30 = 10675      --等待系统更新 12小时
 tMainTask.Task18 = 10642      --激活浮士德72
-tMainTask.Task30 = 10675      --达到54级
 tMainTask.Task19 = 10643      --前往黄金立方
 --说个秘密给你听
 tMainTask.Task28 = 10653      --讨论下一步计划
@@ -84,9 +85,10 @@ tDialogId.Task14 = 12186      --光的背后
 tDialogId.Task16 = 12188      --小心，有伏击
 tDialogId.Task17 = 12189      --调查线索
 --博士的意志
+tDialogId.Task31 = 12670        --激活浮士德72
+tDialogId.LockDialog = 12270       --未到时间对白
+tDialogId.UnLockDialog = 12271     --等待时间结束对白
 tDialogId.Task18 = 12190      --激活浮士德72
-tDialogId.LockLev = 12270       --未达到等级对白
-tDialogId.UnLockLev = 12271     --达成等级对白
 tDialogId.Task19 = 12191      --前往黄金立方
 --说个秘密给你听
 tDialogId.Task28 = 12208      --讨论下一步计划
@@ -412,7 +414,6 @@ rwtNpcGroup[tCollect.Collect2]["Type"] = CONST_NPCGROUP_TYPE.Collect
 --调查线索2
 rwtNpcGroup[tCollect.Collect3] = rwtNpcGroup[tCollect.Collect3] or {} 
 rwtNpcGroup[tCollect.Collect3]["Type"] = CONST_NPCGROUP_TYPE.Collect
---rwtNpcGroup[tCollect.Collect3]["DialogId"] = tDialogId.Task11
 --调查线索3
 rwtNpcGroup[tCollect.Collect4] = rwtNpcGroup[tCollect.Collect4] or {} 
 rwtNpcGroup[tCollect.Collect4]["Type"] = CONST_NPCGROUP_TYPE.Collect
@@ -738,6 +739,18 @@ rwtTask[tMainTask.Task10]["StartAutoWay"]["FindWayMapId"] = 2005
 rwtTask[tMainTask.Task10]["StartAutoWay"]["FindWayGroupId"] = tCollect.Collect2
 rwtTask[tMainTask.Task10]["StartAutoWay"]["FindWayGenId"] = tCollectGenId.Collect2
 
+
+rwtTask[tMainTask.Task10]["Awards"] = {}
+rwtTask[tMainTask.Task10]["Awards"]["Events"] = {}
+rwtTask[tMainTask.Task10]["Awards"]["Events"][1] = {}
+rwtTask[tMainTask.Task10]["Awards"]["Events"][1]["AddEffect"] = {}  
+rwtTask[tMainTask.Task10]["Awards"]["Events"][1]["AddEffect"][1] = {}  
+rwtTask[tMainTask.Task10]["Awards"]["Events"][1]["AddEffect"][1]["TargetType"] = 7
+rwtTask[tMainTask.Task10]["Awards"]["Events"][1]["AddEffect"][1]["TargetId"] = 0 
+rwtTask[tMainTask.Task10]["Awards"]["Events"][1]["AddEffect"][1]["EffectId"] = 2074 
+rwtTask[tMainTask.Task10]["Awards"]["Events"][1]["AddEffect"][1]["Pos"] = "45.5,16.92,-316.92"
+rwtTask[tMainTask.Task10]["Awards"]["Events"][1]["AddEffect"][1]["Angle"] = "-42.818,-162.5,118.7"
+
 --调查线索
 rwtTask[tMainTask.Task11] = {}
 rwtTask[tMainTask.Task11]["Title"] = tLuaText[LANGUAGE_CONFIG][21581]
@@ -759,6 +772,17 @@ rwtTask[tMainTask.Task11]["StartAutoWay"]["FindWayTypeId"] = 1
 rwtTask[tMainTask.Task11]["StartAutoWay"]["FindWayMapId"] = 2005
 rwtTask[tMainTask.Task11]["StartAutoWay"]["FindWayGroupId"] = tCollect.Collect3
 rwtTask[tMainTask.Task11]["StartAutoWay"]["FindWayGenId"] = tCollectGenId.Collect3
+
+rwtTask[tMainTask.Task11]["Awards"] = {}
+rwtTask[tMainTask.Task11]["Awards"]["Events"] = {}
+rwtTask[tMainTask.Task11]["Awards"]["Events"][1] = {}
+rwtTask[tMainTask.Task11]["Awards"]["Events"][1]["AddEffect"] = {}  
+rwtTask[tMainTask.Task11]["Awards"]["Events"][1]["AddEffect"][1] = {}  
+rwtTask[tMainTask.Task11]["Awards"]["Events"][1]["AddEffect"][1]["TargetType"] = 7
+rwtTask[tMainTask.Task11]["Awards"]["Events"][1]["AddEffect"][1]["TargetId"] = 0 
+rwtTask[tMainTask.Task11]["Awards"]["Events"][1]["AddEffect"][1]["EffectId"] = 2074 
+rwtTask[tMainTask.Task11]["Awards"]["Events"][1]["AddEffect"][1]["Pos"] = "32.18,16.3,-303.93"
+rwtTask[tMainTask.Task11]["Awards"]["Events"][1]["AddEffect"][1]["Angle"] = "-102.9,-107.9,83.2"
 
 --跟随光的指引
 rwtTask[tMainTask.Task12] = {}
@@ -886,7 +910,7 @@ rwtTask[tMainTask.Task16]["StartAutoWay"]["FindWayGenId"] = tMonsterGroupGenId.M
 rwtTask[tMainTask.Task17] = {}
 rwtTask[tMainTask.Task17]["Title"] = tLuaText[LANGUAGE_CONFIG][21582]
 rwtTask[tMainTask.Task17]["PreTaskId"] = tMainTask.Task16
-rwtTask[tMainTask.Task17]["NextTaskId"] = tMainTask.Task18
+rwtTask[tMainTask.Task17]["NextTaskId"] = tMainTask.Task31
 rwtTask[tMainTask.Task17]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_COLLECT
 rwtTask[tMainTask.Task17]["DialogId"] = tDialogId.Task17
 rwtTask[tMainTask.Task17]["DynaNpcGroupGen"] = {}
@@ -914,11 +938,37 @@ rwtTask[tMainTask.Task17]["Awards"]["Events"][1]["GetServerAward"]["ActionType"]
 rwtTask[tMainTask.Task17]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tMainTask.Task17
 
 ------------------------博士的意志----------------------
+
+--激活浮士德72
+rwtTask[tMainTask.Task31] = {}
+rwtTask[tMainTask.Task31]["Title"] = tLuaText[LANGUAGE_CONFIG][21583]
+rwtTask[tMainTask.Task31]["PreTaskId"] = tMainTask.Task17
+rwtTask[tMainTask.Task31]["NextTaskId"] = tMainTask.Task30
+rwtTask[tMainTask.Task31]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
+rwtTask[tMainTask.Task31]["DialogId"] = tDialogId.Task31
+rwtTask[tMainTask.Task31]["TaskNpc"] = tNpc.Npc1
+
+rwtTask[tMainTask.Task31]["StartAutoWay"] = {}
+rwtTask[tMainTask.Task31]["StartAutoWay"]["FindWayTypeId"] = 1
+rwtTask[tMainTask.Task31]["StartAutoWay"]["FindWayMapId"] = 2005
+rwtTask[tMainTask.Task31]["StartAutoWay"]["FindWayGroupId"] = tSingleNpc.Npc1
+rwtTask[tMainTask.Task31]["StartAutoWay"]["FindWayGenId"] = tSingleNpcGenId.Npc1
+
+--等待系统更新 12小时
+rwtTask[tMainTask.Task30] = {}
+rwtTask[tMainTask.Task30]["Title"] = tLuaText[LANGUAGE_CONFIG][21583]
+rwtTask[tMainTask.Task30]["PreTaskId"] = tMainTask.Task31
+rwtTask[tMainTask.Task30]["NextTaskId"] = tMainTask.Task18
+rwtTask[tMainTask.Task30]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.COUNTDOWN
+rwtTask[tMainTask.Task30]["TaskFinishTime"] = 43200
+rwtTask[tMainTask.Task30]["LackDialogId"] = tDialogId.LockDialog
+rwtTask[tMainTask.Task30]["DialogId"] = tDialogId.UnLockDialog
+
 --激活浮士德72
 rwtTask[tMainTask.Task18] = {}
 rwtTask[tMainTask.Task18]["Title"] = tLuaText[LANGUAGE_CONFIG][21583]
-rwtTask[tMainTask.Task18]["PreTaskId"] = tMainTask.Task17
-rwtTask[tMainTask.Task18]["NextTaskId"] = tMainTask.Task30
+rwtTask[tMainTask.Task18]["PreTaskId"] = tMainTask.Task30
+rwtTask[tMainTask.Task18]["NextTaskId"] = tMainTask.Task19
 rwtTask[tMainTask.Task18]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tMainTask.Task18]["DialogId"] = tDialogId.Task18
 rwtTask[tMainTask.Task18]["TaskNpc"] = tNpc.Npc1
@@ -931,20 +981,10 @@ rwtTask[tMainTask.Task18]["StartAutoWay"]["FindWayMapId"] = 2005
 rwtTask[tMainTask.Task18]["StartAutoWay"]["FindWayGroupId"] = tSingleNpc.Npc1
 rwtTask[tMainTask.Task18]["StartAutoWay"]["FindWayGenId"] = tSingleNpcGenId.Npc1
 
---达到54级
-rwtTask[tMainTask.Task30] = {}
-rwtTask[tMainTask.Task30]["Title"] = tLuaText[LANGUAGE_CONFIG][21583]
-rwtTask[tMainTask.Task30]["PreTaskId"] = tMainTask.Task18
-rwtTask[tMainTask.Task30]["NextTaskId"] = tMainTask.Task19
-rwtTask[tMainTask.Task30]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.UPLEVEL
-rwtTask[tMainTask.Task30]["NeedLevel"] = 54
-rwtTask[tMainTask.Task30]["LackDialogId"] = tDialogId.LockLev
-rwtTask[tMainTask.Task30]["DialogId"] = tDialogId.UnLockLev
-
 --前往黄金立方
 rwtTask[tMainTask.Task19] = {}
 rwtTask[tMainTask.Task19]["Title"] = tLuaText[LANGUAGE_CONFIG][21583]
-rwtTask[tMainTask.Task19]["PreTaskId"] = tMainTask.Task30
+rwtTask[tMainTask.Task19]["PreTaskId"] = tMainTask.Task18
 rwtTask[tMainTask.Task19]["NextTaskId"] = tMainTask.Task28
 rwtTask[tMainTask.Task19]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.PASS_COPYMAP
 rwtTask[tMainTask.Task19]["OpenCopyMap"] = nCopyMap_HuangJin
@@ -1014,7 +1054,7 @@ rwtTask[tMainTask.Task29]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DEL
 --兰奇的秘密
 rwtTask[tMainTask.Task20] = {}
 rwtTask[tMainTask.Task20]["Title"] = tLuaText[LANGUAGE_CONFIG][21584]
-rwtTask[tMainTask.Task20]["PreTaskId"] = tMainTask.Task19
+rwtTask[tMainTask.Task20]["PreTaskId"] = tMainTask.Task29
 rwtTask[tMainTask.Task20]["NextTaskId"] = tMainTask.Task21
 rwtTask[tMainTask.Task20]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tMainTask.Task20]["DialogId"] = tDialogId.Task20

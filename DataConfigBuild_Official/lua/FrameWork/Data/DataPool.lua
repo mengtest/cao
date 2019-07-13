@@ -144,7 +144,3 @@ rwtManyHeroNPCGenIDInfo = {}
 
 --玩家风迹速递任务记录表
 rwtQuickSendUserTaskInfo = {}
-
---生存副本信息表
-rwtSurivialCopyMapInfo = {}
-rwtSurivialMonsterBuffFunc = {}

@@ -673,6 +673,7 @@ tNpcGroupSaiEng_Config = {}
 tNpcGroupSaiEng_Config[20507] = {}
 tNpcGroupSaiEng_Config[20507][1] = {}
 tNpcGroupSaiEng_Config[20507][1]["Text"] = {}
+tNpcGroupSaiEng_Config[20507][1]["Text"]["DialogId"] = 60890
 tNpcGroupSaiEng_Config[20507][1]["Text"]["Content"] = "真难得，你们怎么突然来找我，是有什么急事吗？"
 tNpcGroupSaiEng_Config[20507][1]["Text"]["TalkId"] = tGoldMonster_Npc
 tNpcGroupSaiEng_Config[20507][1]["Text"]["LeftId"] = tGoldMonster_Npc
@@ -771,7 +772,7 @@ rwtDialog[60422]["DialogEnd"] = function ()
         if tNpcGroupSaiEng_Config[nUserId][1]["Text"]["Count"][3] ~= 0 then
             tNpcGroupSaiEng_Config[nUserId][1]["Text"]["Content"] = tNpcGroupSaiEng_Config[nUserId][1]["Text"]["Content"]..tNpcGroupSaiEng_Config[nUserId][1]["Text"]["Count"][3].."个穹宇星秘匣"
         end
-        
+        tNpcGroupSaiEng_Config[nUserId][1]["Text"]["DialogId"] = 60891
         rwNpcDialogText(tNpcGroupSaiEng_Config[nUserId][1]["Text"])
         tNpcGroupSaiEng_Config[nUserId] = nil
     end

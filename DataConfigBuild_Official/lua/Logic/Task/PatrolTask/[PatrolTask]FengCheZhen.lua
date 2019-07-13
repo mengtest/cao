@@ -443,7 +443,7 @@ rwtTask[tPatrolFengChe.Task_3]["DialogId"] = nDialog_Task2
 rwtTask[tPatrolFengChe.Task_3]["TaskNpc"] = nNPC_BiDuoMao
 rwtTask[tPatrolFengChe.Task_3]["StartAutoWay"] = {}
 rwtTask[tPatrolFengChe.Task_3]["StartAutoWay"]["FindWayTypeId"]=1
-rwtTask[tPatrolFengChe.Task_3]["StartAutoWay"]["FindWayMapId"] =1001
+rwtTask[tPatrolFengChe.Task_3]["StartAutoWay"]["FindWayMapId"] =1000
 rwtTask[tPatrolFengChe.Task_3]["StartAutoWay"]["FindWayGroupId"] =20115
 rwtTask[tPatrolFengChe.Task_3]["StartAutoWay"]["FindWayGenId"] =2001658
 
@@ -498,7 +498,7 @@ rwtTask[tPatrolFengChe.Task_6]["DialogId"] = nDialog_Task4
 rwtTask[tPatrolFengChe.Task_6]["TaskNpc"] = nNPC_BiDuoMao
 rwtTask[tPatrolFengChe.Task_6]["StartAutoWay"] = {}
 rwtTask[tPatrolFengChe.Task_6]["StartAutoWay"]["FindWayTypeId"]=1
-rwtTask[tPatrolFengChe.Task_6]["StartAutoWay"]["FindWayMapId"] =1001
+rwtTask[tPatrolFengChe.Task_6]["StartAutoWay"]["FindWayMapId"] =1000
 rwtTask[tPatrolFengChe.Task_6]["StartAutoWay"]["FindWayGroupId"] =20115
 rwtTask[tPatrolFengChe.Task_6]["StartAutoWay"]["FindWayGenId"] =2001658
 
@@ -565,7 +565,7 @@ rwtTask[tPatrolFengChe.Task_9]["DialogId"] = nDialog_Task6
 rwtTask[tPatrolFengChe.Task_9]["TaskNpc"] = nNPC_BiDuoMao
 rwtTask[tPatrolFengChe.Task_9]["StartAutoWay"] = {}
 rwtTask[tPatrolFengChe.Task_9]["StartAutoWay"]["FindWayTypeId"]=1
-rwtTask[tPatrolFengChe.Task_9]["StartAutoWay"]["FindWayMapId"] =1001
+rwtTask[tPatrolFengChe.Task_9]["StartAutoWay"]["FindWayMapId"] =1000
 rwtTask[tPatrolFengChe.Task_9]["StartAutoWay"]["FindWayGroupId"] =20115
 rwtTask[tPatrolFengChe.Task_9]["StartAutoWay"]["FindWayGenId"] =2001658
 
@@ -631,7 +631,7 @@ rwtTask[tPatrolFengChe.Task_12]["DialogId"] = nDialog_Task8
 rwtTask[tPatrolFengChe.Task_12]["TaskNpc"] = nNPC_BiDuoMao
 rwtTask[tPatrolFengChe.Task_12]["StartAutoWay"] = {}
 rwtTask[tPatrolFengChe.Task_12]["StartAutoWay"]["FindWayTypeId"]=1
-rwtTask[tPatrolFengChe.Task_12]["StartAutoWay"]["FindWayMapId"] =1001
+rwtTask[tPatrolFengChe.Task_12]["StartAutoWay"]["FindWayMapId"] =1000
 rwtTask[tPatrolFengChe.Task_12]["StartAutoWay"]["FindWayGroupId"] =20115
 rwtTask[tPatrolFengChe.Task_12]["StartAutoWay"]["FindWayGenId"] =2001658
 
@@ -780,7 +780,7 @@ rwtTask[tPatrolFengChe.Task_19]["DialogId"] = nDialog_Task12
 rwtTask[tPatrolFengChe.Task_19]["TaskNpc"] = nNPC_BiDuoMao
 rwtTask[tPatrolFengChe.Task_19]["StartAutoWay"] = {}
 rwtTask[tPatrolFengChe.Task_19]["StartAutoWay"]["FindWayTypeId"]=1
-rwtTask[tPatrolFengChe.Task_19]["StartAutoWay"]["FindWayMapId"] =1001
+rwtTask[tPatrolFengChe.Task_19]["StartAutoWay"]["FindWayMapId"] =1000
 rwtTask[tPatrolFengChe.Task_19]["StartAutoWay"]["FindWayGroupId"] =20115
 rwtTask[tPatrolFengChe.Task_19]["StartAutoWay"]["FindWayGenId"] =2001658
 --选项2
@@ -913,7 +913,7 @@ rwtTask[tPatrolFengChe.Task_26]["DialogId"] = nDialog_Task25
 rwtTask[tPatrolFengChe.Task_26]["TaskNpc"] = nNPC_BiDuoMao
 rwtTask[tPatrolFengChe.Task_26]["StartAutoWay"] = {}
 rwtTask[tPatrolFengChe.Task_26]["StartAutoWay"]["FindWayTypeId"]=1
-rwtTask[tPatrolFengChe.Task_26]["StartAutoWay"]["FindWayMapId"] =1001
+rwtTask[tPatrolFengChe.Task_26]["StartAutoWay"]["FindWayMapId"] =1000
 rwtTask[tPatrolFengChe.Task_26]["StartAutoWay"]["FindWayGroupId"] =20115
 rwtTask[tPatrolFengChe.Task_26]["StartAutoWay"]["FindWayGenId"] =2001658
 
@@ -963,7 +963,7 @@ rwtTask[tPatrolFengChe.Task_29]["DialogId"] = nDialog_Task28
 rwtTask[tPatrolFengChe.Task_29]["TaskNpc"] = nNPC_BiDuoMao
 rwtTask[tPatrolFengChe.Task_29]["StartAutoWay"] = {}
 rwtTask[tPatrolFengChe.Task_29]["StartAutoWay"]["FindWayTypeId"]=1
-rwtTask[tPatrolFengChe.Task_29]["StartAutoWay"]["FindWayMapId"] =1001
+rwtTask[tPatrolFengChe.Task_29]["StartAutoWay"]["FindWayMapId"] =1000
 rwtTask[tPatrolFengChe.Task_29]["StartAutoWay"]["FindWayGroupId"] =20115
 rwtTask[tPatrolFengChe.Task_29]["StartAutoWay"]["FindWayGenId"] =2001658
 
@@ -1123,7 +1123,7 @@ rwtTask[tPatrolFengChe.Task_36]["DialogId"] = nDialog_Task16
 rwtTask[tPatrolFengChe.Task_36]["TaskNpc"] = nNPC_BiDuoMao
 rwtTask[tPatrolFengChe.Task_36]["StartAutoWay"] = {}
 rwtTask[tPatrolFengChe.Task_36]["StartAutoWay"]["FindWayTypeId"]=1
-rwtTask[tPatrolFengChe.Task_36]["StartAutoWay"]["FindWayMapId"] =1001
+rwtTask[tPatrolFengChe.Task_36]["StartAutoWay"]["FindWayMapId"] =1000
 rwtTask[tPatrolFengChe.Task_36]["StartAutoWay"]["FindWayGroupId"] =20115
 rwtTask[tPatrolFengChe.Task_36]["StartAutoWay"]["FindWayGenId"] =2001658
 

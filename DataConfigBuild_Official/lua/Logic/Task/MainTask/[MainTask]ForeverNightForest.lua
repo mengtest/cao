@@ -909,10 +909,9 @@ rwtTask[tYongYe.nTask31] = {}
 rwtTask[tYongYe.nTask31]["Title"] = tLuaText[LANGUAGE_CONFIG][20215]
 rwtTask[tYongYe.nTask31]["PreTaskId" ]= tYongYe.nTask30
 rwtTask[tYongYe.nTask31]["NextTaskId" ]= tYongYe.nTask32
-rwtTask[tYongYe.nTask31]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.UPLEVEL
---rwtTask[tYongYe.nTask31]["TaskFinishTime"] = 10
+rwtTask[tYongYe.nTask31]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.COUNTDOWN
+rwtTask[tYongYe.nTask31]["TaskFinishTime"] = 43200
 rwtTask[tYongYe.nTask31]["IsClickComplete"] = 1
-rwtTask[tYongYe.nTask31]["NeedLevel"] = 42
 --rwtTask[tYongYe.nTask31]["LackTips"] = tLuaText[LANGUAGE_CONFIG][10038]
 rwtTask[tYongYe.nTask31]["LackDialogId"] = 11433
 

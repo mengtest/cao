@@ -173,7 +173,7 @@ end
 
 
 --传送阵信息
-local nTransfer_MainCity = 10000001			--主城
+local nTransfer_MainCity = 57018			--主城
 local nTransfer_LuoLan = 57003				--罗兰镇
 local nTransfer_FengChe = 57004				--风车镇
 local nTransfer_AKeLaiSi = 57005			--阿克莱斯

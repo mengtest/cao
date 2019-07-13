@@ -11,7 +11,7 @@
 ----------任务ID------
 
 --前一个镇任务
-local nPreTaskId = 10542
+local nPreTaskId = 10222
 --后一个镇任务
 local nNextTaskId = 10230
 
@@ -55,7 +55,7 @@ tMaoXianZheTaskId[20] = 10286         --击败假费米
 --魔能结晶
 tMaoXianZheTaskId[21] = 10287         --了解假费米的身份
 tMaoXianZheTaskId[22] = 10288         --回到营地休息
-tMaoXianZheTaskId[23] = 10289         --等待魔能结晶充能2:00:00
+tMaoXianZheTaskId[23] = 10289         --等待魔能结晶制作12小时
 
 --温丽的梦
 tMaoXianZheTaskId[24] = 10290         --温丽的梦
@@ -419,7 +419,7 @@ rwtTask[tMaoXianZheTaskId[1]]["DynaNpcGroupGen"][1]["MapId"] = 2003
 rwtTask[tMaoXianZheTaskId[1]]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
 rwtTask[tMaoXianZheTaskId[1]]["DynaNpcGroupGen"][2] = {}
 rwtTask[tMaoXianZheTaskId[1]]["DynaNpcGroupGen"][2]["GenId"] = nGenID_Npcgroup_TeluodeInWanggong
-rwtTask[tMaoXianZheTaskId[1]]["DynaNpcGroupGen"][2]["MapId"] = 1002
+rwtTask[tMaoXianZheTaskId[1]]["DynaNpcGroupGen"][2]["MapId"] = 1000
 rwtTask[tMaoXianZheTaskId[1]]["DynaNpcGroupGen"][2]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
 rwtTask[tMaoXianZheTaskId[1]]["OpenTransfer"] = CONST_TRANSFER_INDEX.MAOXIANZHEYINGDI
 rwtTask[tMaoXianZheTaskId[1]]["OpenTransferTip"] = tLuaText[LANGUAGE_CONFIG][10031]
@@ -1005,8 +1005,9 @@ rwtTask[tMaoXianZheTaskId[23]] = {}
 rwtTask[tMaoXianZheTaskId[23]]["Title"] = tLuaText[LANGUAGE_CONFIG][20308]
 rwtTask[tMaoXianZheTaskId[23]]["PreTaskId"] = tMaoXianZheTaskId[22]
 rwtTask[tMaoXianZheTaskId[23]]["NextTaskId"] = tMaoXianZheTaskId[24]
-rwtTask[tMaoXianZheTaskId[23]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.UPLEVEL
-rwtTask[tMaoXianZheTaskId[23]]["NeedLevel"] = 34
+rwtTask[tMaoXianZheTaskId[23]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.COUNTDOWN
+rwtTask[tMaoXianZheTaskId[23]]["TaskFinishTime"] = 43200
+--rwtTask[tMaoXianZheTaskId[23]]["NeedLevel"] = 34
 rwtTask[tMaoXianZheTaskId[23]]["LackDialogId"] = nDialog_LockLev
 rwtTask[tMaoXianZheTaskId[23]]["DialogId"] = nDialog_UnLockLev
 --rwtTask[tMaoXianZheTaskId[23]]["LackTips"] = tLuaText[LANGUAGE_CONFIG][10039]
@@ -1032,7 +1033,7 @@ rwtTask[tMaoXianZheTaskId[24]]["PreTaskId"] = tMaoXianZheTaskId[23]
 rwtTask[tMaoXianZheTaskId[24]]["NextTaskId"] = tMaoXianZheTaskId[25]
 rwtTask[tMaoXianZheTaskId[24]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_TRAP
 rwtTask[tMaoXianZheTaskId[24]]["DialogId"] = tMaoXianZheDialogId[24]
-rwtTask[tMaoXianZheTaskId[24]]["AutoTaskDialog"] = tMaoXianZheDialogId[24]
+--rwtTask[tMaoXianZheTaskId[24]]["AutoTaskDialog"] = tMaoXianZheDialogId[24]
 rwtTask[tMaoXianZheTaskId[24]]["ReqTrap1"] = tMaoXianZheTrap[7]
 rwtTask[tMaoXianZheTaskId[24]]["DynaNpcGroupGen"] = {}
 rwtTask[tMaoXianZheTaskId[24]]["DynaNpcGroupGen"][1] = {}
@@ -1040,11 +1041,11 @@ rwtTask[tMaoXianZheTaskId[24]]["DynaNpcGroupGen"][1]["GenId"] = tMaoXianZheTrap_
 rwtTask[tMaoXianZheTaskId[24]]["DynaNpcGroupGen"][1]["MapId"] = 2003
 rwtTask[tMaoXianZheTaskId[24]]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
 
---rwtTask[tMaoXianZheTaskId[24]]["StartAutoWay"] = {}
---rwtTask[tMaoXianZheTaskId[24]]["StartAutoWay"]["FindWayTypeId"] = 1
---rwtTask[tMaoXianZheTaskId[24]]["StartAutoWay"]["FindWayMapId"] = 2003
---rwtTask[tMaoXianZheTaskId[24]]["StartAutoWay"]["FindWayGroupId"] = tMaoXianZheTrap[7]
---rwtTask[tMaoXianZheTaskId[24]]["StartAutoWay"]["FindWayGenId"] = tMaoXianZheTrap_GenId[7]
+rwtTask[tMaoXianZheTaskId[24]]["StartAutoWay"] = {}
+rwtTask[tMaoXianZheTaskId[24]]["StartAutoWay"]["FindWayTypeId"] = 1
+rwtTask[tMaoXianZheTaskId[24]]["StartAutoWay"]["FindWayMapId"] = 2003
+rwtTask[tMaoXianZheTaskId[24]]["StartAutoWay"]["FindWayGroupId"] = tMaoXianZheTrap[7]
+rwtTask[tMaoXianZheTaskId[24]]["StartAutoWay"]["FindWayGenId"] = tMaoXianZheTrap_GenId[7]
 
 --去裂谷边
 rwtTask[tMaoXianZheTaskId[25]] = {}

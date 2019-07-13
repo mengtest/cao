@@ -6,7 +6,7 @@
 
 --endregion
 local nMapId = 2005
-local nZilvMapId = 1001
+local nZilvMapId = 1000
 
 local nTownId = 200501
 --任务ID

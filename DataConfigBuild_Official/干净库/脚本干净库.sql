@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50614
 File Encoding         : 65001
 
-Date: 2019-06-11 14:55:49
+Date: 2019-07-05 12:06:13
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -25,7 +25,7 @@ CREATE TABLE `achievement_point` (
   `achievement_need_point` int(11) NOT NULL DEFAULT '0',
   `achievement_award_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for activity_add
@@ -36,7 +36,7 @@ CREATE TABLE `activity_add` (
   `activity_data` int(11) NOT NULL DEFAULT '0',
   `award_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for activity_award
@@ -50,7 +50,7 @@ CREATE TABLE `activity_award` (
   `award_num` int(11) NOT NULL DEFAULT '0',
   `award_show` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11153 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for activity_point
@@ -63,7 +63,7 @@ CREATE TABLE `activity_point` (
   `award_id` int(11) NOT NULL DEFAULT '0',
   `mask` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10006 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for activity_sign_award
@@ -75,7 +75,7 @@ CREATE TABLE `activity_sign_award` (
   `count` int(11) NOT NULL DEFAULT '0',
   `award_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for activity_time
@@ -98,7 +98,7 @@ CREATE TABLE `activity_todo` (
   `activity_max` int(11) NOT NULL DEFAULT '0',
   `award_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for algorithm_type
@@ -112,7 +112,7 @@ CREATE TABLE `algorithm_type` (
   `data1` int(11) NOT NULL DEFAULT '0',
   `data2` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for area
@@ -137,7 +137,7 @@ CREATE TABLE `arrest_task` (
   `monstergroup_id` int(11) NOT NULL DEFAULT '0',
   `award_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for attribute
@@ -175,7 +175,7 @@ CREATE TABLE `attribute` (
   `light_def` int(11) NOT NULL DEFAULT '0',
   `dark_def` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=100000000 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for award_acquire
@@ -191,7 +191,7 @@ CREATE TABLE `award_acquire` (
   `max_get_rate` int(11) NOT NULL DEFAULT '0',
   `min_get_rate` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=70051 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for battle_replay
@@ -204,6 +204,7 @@ CREATE TABLE `battle_replay` (
   `right_id` bigint(20) NOT NULL DEFAULT '0',
   `battle_id` bigint(20) NOT NULL DEFAULT '0',
   `info` mediumblob,
+  `version` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `idx_user_id` (`user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -222,6 +223,21 @@ CREATE TABLE `box` (
   `help_time` int(11) NOT NULL DEFAULT '0',
   `cost_friend_point` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=104 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for broadcast_type
+-- ----------------------------
+DROP TABLE IF EXISTS `broadcast_type`;
+CREATE TABLE `broadcast_type` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `type` int(11) NOT NULL DEFAULT '0',
+  `audience` int(11) NOT NULL DEFAULT '0',
+  `channel` int(11) NOT NULL DEFAULT '0',
+  `monitor_id` int(11) NOT NULL DEFAULT '0',
+  `activity_id` int(11) NOT NULL DEFAULT '0',
+  `data1` bigint(20) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -233,7 +249,7 @@ CREATE TABLE `cd_key` (
   `cd_key` varchar(256) NOT NULL DEFAULT '',
   `user_id` bigint(20) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=17720 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for cd_key_chan
@@ -244,7 +260,7 @@ CREATE TABLE `cd_key_chan` (
   `chan_id` bigint(20) NOT NULL DEFAULT '0',
   `name` varchar(256) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=59 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for config
@@ -264,7 +280,7 @@ CREATE TABLE `config` (
   `param1` varchar(150) NOT NULL DEFAULT '',
   `desc` varchar(150) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=155 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for config_dynamic
@@ -284,7 +300,7 @@ CREATE TABLE `config_dynamic` (
   `param1` varchar(150) NOT NULL DEFAULT '',
   `desc` varchar(150) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for copymap_condition
@@ -303,7 +319,7 @@ CREATE TABLE `copymap_condition` (
   `condition3_type` int(11) NOT NULL DEFAULT '0',
   `condition3_num` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9006 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for cost_emoney
@@ -315,7 +331,7 @@ CREATE TABLE `cost_emoney` (
   `times` int(11) NOT NULL DEFAULT '0',
   `cost` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4911 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for dailyact
@@ -332,7 +348,7 @@ CREATE TABLE `dailyact` (
   `data3` int(11) NOT NULL DEFAULT '0',
   `day` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10026 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for dailyactmap
@@ -346,7 +362,7 @@ CREATE TABLE `dailyactmap` (
   `extece` int(11) NOT NULL DEFAULT '0',
   `lev` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3095 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for daily_sign_award
@@ -358,7 +374,7 @@ CREATE TABLE `daily_sign_award` (
   `count` int(11) NOT NULL DEFAULT '0',
   `award_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1052 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for default_name
@@ -368,7 +384,7 @@ CREATE TABLE `default_name` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `cur_index` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for dream_land
@@ -385,7 +401,7 @@ CREATE TABLE `dream_land` (
   `data3` int(11) NOT NULL DEFAULT '0',
   `first_bounses` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1208 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for dream_star
@@ -400,7 +416,7 @@ CREATE TABLE `dream_star` (
   `star3` int(11) NOT NULL DEFAULT '0',
   `star_bounses3` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for dungeon_hero
@@ -410,7 +426,7 @@ CREATE TABLE `dungeon_hero` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `hero_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for dungeon_level
@@ -423,7 +439,7 @@ CREATE TABLE `dungeon_level` (
   `monster2_id` varchar(128) NOT NULL DEFAULT '',
   `boss_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for equipment_order
@@ -446,7 +462,7 @@ CREATE TABLE `equipment_order` (
   `material_id1` int(11) NOT NULL DEFAULT '0',
   `material_num1` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=401466 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for equipment_star
@@ -469,7 +485,7 @@ CREATE TABLE `equipment_star` (
   `material_id4` int(11) NOT NULL DEFAULT '0',
   `material_num4` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=52 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for equipment_strengthen
@@ -497,7 +513,7 @@ CREATE TABLE `equipment_strengthen` (
   `clear` int(11) NOT NULL DEFAULT '0',
   `max_times` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=325 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for exp_ball
@@ -510,7 +526,7 @@ CREATE TABLE `exp_ball` (
   `type_value` int(11) NOT NULL DEFAULT '0',
   `add_value` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10241 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for fashion_type
@@ -528,7 +544,7 @@ CREATE TABLE `fashion_type` (
   `attr_type2` int(11) NOT NULL DEFAULT '0',
   `attr_data2` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=40102 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for fight_replay
@@ -585,7 +601,7 @@ CREATE TABLE `game_map` (
   `reward_id` int(11) NOT NULL DEFAULT '0',
   `time` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9007 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for gen_event
@@ -608,7 +624,7 @@ CREATE TABLE `gen_event` (
   `rotation_y` float NOT NULL DEFAULT '0',
   `scale` float NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=99990094 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for get_lottery
@@ -638,7 +654,7 @@ CREATE TABLE `get_lottery` (
   `replace_over2` int(11) NOT NULL DEFAULT '0',
   `buy_exp_num` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for gift
@@ -650,7 +666,7 @@ CREATE TABLE `gift` (
   `team_id` int(11) NOT NULL DEFAULT '0',
   `special_value` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3060621 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for goals
@@ -667,7 +683,7 @@ CREATE TABLE `goals` (
   `point` int(11) NOT NULL DEFAULT '0',
   `start_time` bigint(20) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2020013 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for guide_star
@@ -682,7 +698,7 @@ CREATE TABLE `guide_star` (
   `monitor3_id` int(11) NOT NULL DEFAULT '0',
   `monitor4_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for guide_task
@@ -698,7 +714,7 @@ CREATE TABLE `guide_task` (
   `statistics_num` int(11) NOT NULL DEFAULT '0',
   `league_exp` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for hero_class_type
@@ -725,7 +741,7 @@ CREATE TABLE `hero_class_type` (
   `attr_type3` int(11) NOT NULL DEFAULT '0',
   `data3` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=40113 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for hero_equipment
@@ -754,7 +770,7 @@ CREATE TABLE `hero_exp` (
   `need_exp` int(11) NOT NULL DEFAULT '0',
   `lev_req` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=81 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for hero_impression
@@ -765,7 +781,7 @@ CREATE TABLE `hero_impression` (
   `reward_id` int(11) NOT NULL DEFAULT '0',
   `need_value` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=40130 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for hero_levup
@@ -781,7 +797,7 @@ CREATE TABLE `hero_levup` (
   `phy_def` int(11) NOT NULL DEFAULT '0',
   `mgc_def` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=401101 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for hero_skill_unlock
@@ -795,7 +811,7 @@ CREATE TABLE `hero_skill_unlock` (
   `hero_level` int(11) NOT NULL DEFAULT '0',
   `hero_class` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=183 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for hero_team
@@ -806,7 +822,7 @@ CREATE TABLE `hero_team` (
   `team_id` int(11) NOT NULL DEFAULT '0',
   `hero_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for hero_type
@@ -833,7 +849,7 @@ CREATE TABLE `hero_type` (
   `exchange_item` int(11) NOT NULL DEFAULT '0',
   `exchange_num` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=402 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for icon_mask
@@ -845,7 +861,7 @@ CREATE TABLE `icon_mask` (
   `icon_type` int(11) NOT NULL DEFAULT '0',
   `icon_index` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for itemtype
@@ -861,7 +877,7 @@ CREATE TABLE `itemtype` (
   `awardid` int(11) NOT NULL DEFAULT '0',
   `actionid` bigint(20) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=8100002 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for leagues_level
@@ -874,7 +890,7 @@ CREATE TABLE `leagues_level` (
   `title` varchar(150) NOT NULL DEFAULT '',
   `bag_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for level_adapt
@@ -893,7 +909,7 @@ CREATE TABLE `level_adapt` (
   `phy_def` int(11) NOT NULL DEFAULT '0',
   `mgc_def` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3050105 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for loop_activity
@@ -907,7 +923,7 @@ CREATE TABLE `loop_activity` (
   `goals` varchar(128) NOT NULL DEFAULT '',
   `random_num` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for loop_activity_goal
@@ -918,7 +934,7 @@ CREATE TABLE `loop_activity_goal` (
   `once_point` int(11) NOT NULL DEFAULT '0',
   `point_max` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for loop_activity_random
@@ -944,7 +960,7 @@ CREATE TABLE `lottery_gift` (
   `item_num` int(11) NOT NULL DEFAULT '0',
   `weight` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4011748 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for luckymoney_type
@@ -957,9 +973,10 @@ CREATE TABLE `luckymoney_type` (
   `monitor_id` int(11) NOT NULL DEFAULT '0',
   `money_id` int(11) NOT NULL DEFAULT '0',
   `money_num` int(11) NOT NULL DEFAULT '0',
+  `min_num` int(11) NOT NULL DEFAULT '0',
   `times_limit` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1328 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for monitor
@@ -978,7 +995,7 @@ CREATE TABLE `monitor` (
   `mask1` int(11) NOT NULL DEFAULT '0',
   `mask2` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2222 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for monster
@@ -1002,7 +1019,7 @@ CREATE TABLE `monster` (
   `skill_que_vis` int(11) NOT NULL DEFAULT '0',
   `action_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=100000000 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for monster_group
@@ -1025,7 +1042,7 @@ CREATE TABLE `monster_group` (
   `attack_status_id` int(11) NOT NULL DEFAULT '0',
   `fight_type` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=999992 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for npc_group
@@ -1036,7 +1053,7 @@ CREATE TABLE `npc_group` (
   `name` varchar(20) NOT NULL DEFAULT '',
   `req_level` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=30000002 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for offline_user_attr
@@ -1132,7 +1149,7 @@ CREATE TABLE `out_exp_limit` (
   `level` int(11) NOT NULL DEFAULT '0',
   `out_exp_limit` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=81 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for pet
@@ -1158,7 +1175,7 @@ CREATE TABLE `pet` (
   `exclusive_hero` int(11) NOT NULL DEFAULT '0',
   `pet_money` bigint(20) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=401165 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for pet_exp
@@ -1169,7 +1186,7 @@ CREATE TABLE `pet_exp` (
   `pet_level` int(11) NOT NULL DEFAULT '0',
   `need_pet_exp` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=81 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for pet_star
@@ -1193,6 +1210,54 @@ CREATE TABLE `pet_star` (
   `material_id3` int(11) NOT NULL DEFAULT '0',
   `material_num3` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=521 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for poker_adapt_info
+-- ----------------------------
+DROP TABLE IF EXISTS `poker_adapt_info`;
+CREATE TABLE `poker_adapt_info` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `adapt_level` int(11) NOT NULL DEFAULT '0',
+  `poker_id` int(11) NOT NULL DEFAULT '0',
+  `weight` int(11) NOT NULL DEFAULT '0',
+  `boss_id` int(11) NOT NULL DEFAULT '0',
+  `taskgroup_id` int(11) NOT NULL DEFAULT '0',
+  `information` int(11) NOT NULL DEFAULT '0',
+  `point` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for poker_overflow
+-- ----------------------------
+DROP TABLE IF EXISTS `poker_overflow`;
+CREATE TABLE `poker_overflow` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `poker_id` int(11) NOT NULL DEFAULT '0',
+  `overflow` int(11) NOT NULL DEFAULT '0',
+  `weight1` int(11) NOT NULL DEFAULT '0',
+  `weight2` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for poker_task
+-- ----------------------------
+DROP TABLE IF EXISTS `poker_task`;
+CREATE TABLE `poker_task` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `taskgroup_id` int(11) NOT NULL DEFAULT '0',
+  `task_id` int(11) NOT NULL DEFAULT '0',
+  `time` int(11) NOT NULL DEFAULT '0',
+  `get_infomation` int(11) NOT NULL DEFAULT '0',
+  `condition1` int(11) NOT NULL DEFAULT '0',
+  `data1` int(11) NOT NULL DEFAULT '0',
+  `condition2` int(11) NOT NULL DEFAULT '0',
+  `data2` int(11) NOT NULL DEFAULT '0',
+  `condition3` int(11) NOT NULL DEFAULT '0',
+  `data3` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -1207,7 +1272,7 @@ CREATE TABLE `pvp_information` (
   `data3` bigint(20) NOT NULL DEFAULT '0',
   `data4` bigint(20) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=155 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for pvp_reward
@@ -1229,7 +1294,7 @@ CREATE TABLE `pvp_reward` (
   `itemtype_id4` int(11) NOT NULL DEFAULT '0',
   `itemtype_num4` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=60011 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for pvp_user_ranking
@@ -1293,7 +1358,7 @@ CREATE TABLE `questionnaire` (
   `mask` int(11) NOT NULL DEFAULT '0',
   `award_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for raffle_count
@@ -1318,7 +1383,7 @@ CREATE TABLE `rand_name` (
   `type` smallint(6) NOT NULL DEFAULT '0',
   `name` varchar(20) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3970 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for rune
@@ -1336,6 +1401,21 @@ CREATE TABLE `rune` (
   `only_wear` int(11) NOT NULL DEFAULT '0',
   `only_hero` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5052055 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for server_event
+-- ----------------------------
+DROP TABLE IF EXISTS `server_event`;
+CREATE TABLE `server_event` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `data1` int(11) NOT NULL DEFAULT '0',
+  `data2` int(11) NOT NULL DEFAULT '0',
+  `data3` int(11) NOT NULL DEFAULT '0',
+  `data4` int(11) NOT NULL DEFAULT '0',
+  `data5` int(11) NOT NULL DEFAULT '0',
+  `data6` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -1349,7 +1429,7 @@ CREATE TABLE `server_level_limit` (
   `exp_ratio` int(11) NOT NULL DEFAULT '0',
   `out_attenuation` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=366 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for share_boss
@@ -1373,7 +1453,7 @@ CREATE TABLE `share_boss` (
   `reward7_id` int(11) NOT NULL DEFAULT '0',
   `reward8_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=177 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for shop
@@ -1389,7 +1469,7 @@ CREATE TABLE `shop` (
   `refresh_time` int(11) NOT NULL DEFAULT '0',
   `refresh_type` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9030 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for shop_config
@@ -1404,7 +1484,7 @@ CREATE TABLE `shop_config` (
   `times_type` int(11) NOT NULL DEFAULT '0',
   `ticket_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for shop_deblocking
@@ -1415,7 +1495,7 @@ CREATE TABLE `shop_deblocking` (
   `shop_type` int(11) NOT NULL DEFAULT '0',
   `deblocking_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for shop_refresh
@@ -1431,7 +1511,7 @@ CREATE TABLE `shop_refresh` (
   `limit_amount` int(11) NOT NULL DEFAULT '0',
   `weight` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for skill_pos
@@ -1453,7 +1533,7 @@ CREATE TABLE `skill_pos` (
   `ignore_parry` smallint(6) NOT NULL DEFAULT '0',
   `element_type` smallint(6) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=520110303 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for skill_type
@@ -1496,7 +1576,7 @@ CREATE TABLE `skill_type` (
   `level_require` int(11) NOT NULL DEFAULT '0',
   `qte` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=52011032 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for special_effect
@@ -1521,7 +1601,7 @@ CREATE TABLE `special_effect` (
   `respond_arg3` int(11) NOT NULL DEFAULT '0',
   `respond_arg4` varchar(128) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4019303 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for special_luckymoney
@@ -1533,7 +1613,7 @@ CREATE TABLE `special_luckymoney` (
   `data1` int(11) NOT NULL DEFAULT '0',
   `data2` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1138 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for status
@@ -1568,7 +1648,7 @@ CREATE TABLE `status` (
   `attr_class3` int(11) NOT NULL DEFAULT '0',
   `attr_value3` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=800021 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for supply_card
@@ -1583,7 +1663,7 @@ CREATE TABLE `supply_card` (
   `trail_id` int(11) NOT NULL DEFAULT '0',
   `trail_time` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for syndicate
@@ -1602,6 +1682,8 @@ CREATE TABLE `syndicate` (
   `syn_boss_life` bigint(20) NOT NULL DEFAULT '0',
   `syn_boss_start_time` bigint(20) NOT NULL DEFAULT '0',
   `reward_life` bigint(20) NOT NULL DEFAULT '0',
+  `donate_times` int(11) NOT NULL DEFAULT '0',
+  `last_donate_date` bigint(20) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -1615,7 +1697,7 @@ CREATE TABLE `syn_active_reward` (
   `min_syn_active` int(11) NOT NULL DEFAULT '0',
   `award_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for syn_apply
@@ -1650,7 +1732,7 @@ CREATE TABLE `syn_boss` (
   `reward4_id` int(11) NOT NULL DEFAULT '0',
   `reward4_num` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=49 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for syn_boss_life
@@ -1662,18 +1744,6 @@ CREATE TABLE `syn_boss_life` (
   `user_id` bigint(20) NOT NULL DEFAULT '0',
   `syn_boss_id` int(11) NOT NULL DEFAULT '0',
   `attack_life` bigint(20) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Table structure for syn_boss_record
--- ----------------------------
-DROP TABLE IF EXISTS `syn_boss_record`;
-CREATE TABLE `syn_boss_record` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `syn_boss_id` int(11) NOT NULL DEFAULT '0',
-  `syn_id` bigint(20) NOT NULL DEFAULT '0',
-  `time` bigint(20) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -1705,7 +1775,7 @@ CREATE TABLE `syn_building_type` (
   `data3` int(11) NOT NULL DEFAULT '0',
   `data4` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=71 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for syn_building_uplev
@@ -1717,7 +1787,7 @@ CREATE TABLE `syn_building_uplev` (
   `level` int(11) NOT NULL DEFAULT '0',
   `exp` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for syn_limit
@@ -1728,7 +1798,7 @@ CREATE TABLE `syn_limit` (
   `grade` int(11) NOT NULL DEFAULT '0',
   `limit` bigint(20) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for syn_luckymoney
@@ -1877,6 +1947,23 @@ CREATE TABLE `syn_reward` (
   `reward4_id` int(11) NOT NULL DEFAULT '0',
   `reward4_num` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=10008 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for system_broadcast
+-- ----------------------------
+DROP TABLE IF EXISTS `system_broadcast`;
+CREATE TABLE `system_broadcast` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `audience` int(11) NOT NULL DEFAULT '0',
+  `channel` int(11) NOT NULL DEFAULT '0',
+  `activation_time` bigint(20) NOT NULL DEFAULT '0',
+  `invalid_time` bigint(20) NOT NULL DEFAULT '0',
+  `loop_time` int(11) NOT NULL DEFAULT '0',
+  `set_time` varchar(256) NOT NULL DEFAULT '',
+  `text` varchar(256) NOT NULL DEFAULT '',
+  `is_open` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -1887,7 +1974,7 @@ CREATE TABLE `system_deblocking` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `mask` bigint(20) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for system_mail
@@ -1917,7 +2004,7 @@ CREATE TABLE `system_mail` (
   `item5_id` int(11) NOT NULL DEFAULT '0',
   `item5_num` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12003 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for tasklock
@@ -1928,7 +2015,7 @@ CREATE TABLE `tasklock` (
   `area` int(11) NOT NULL DEFAULT '0',
   `town` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for task_index
@@ -1941,7 +2028,7 @@ CREATE TABLE `task_index` (
   `mask_index` int(10) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `taskid` (`taskid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2108 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for times_limit
@@ -1956,7 +2043,7 @@ CREATE TABLE `times_limit` (
   `refresh_time` int(11) NOT NULL DEFAULT '0',
   `type_desc` varchar(128) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1135 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for training_level
@@ -1971,7 +2058,7 @@ CREATE TABLE `training_level` (
   `unlock_training` int(11) NOT NULL DEFAULT '0',
   `reward_id` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=40104 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for unlawful_name
@@ -1981,7 +2068,7 @@ CREATE TABLE `unlawful_name` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `word` varchar(32) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6328 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for user
@@ -2202,7 +2289,7 @@ CREATE TABLE `user_exp` (
   `level` int(11) NOT NULL DEFAULT '0',
   `need_exp` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=81 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for user_fashion
@@ -2496,6 +2583,53 @@ CREATE TABLE `user_pet` (
   `pet_star` int(11) NOT NULL DEFAULT '0',
   `pet_lock` int(11) NOT NULL DEFAULT '0',
   `datel` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `idx_user_id` (`user_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for user_poker
+-- ----------------------------
+DROP TABLE IF EXISTS `user_poker`;
+CREATE TABLE `user_poker` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(20) NOT NULL DEFAULT '0',
+  `point` int(11) NOT NULL DEFAULT '0',
+  `mask` int(11) NOT NULL DEFAULT '0',
+  `pokerid1` int(11) NOT NULL DEFAULT '0',
+  `information` int(11) NOT NULL DEFAULT '0',
+  `pokerid2` int(11) NOT NULL DEFAULT '0',
+  `pokerid3` int(11) NOT NULL DEFAULT '0',
+  `pokerid4` int(11) NOT NULL DEFAULT '0',
+  `data1` int(11) NOT NULL DEFAULT '0',
+  `data2` int(11) NOT NULL DEFAULT '0',
+  `level` int(11) NOT NULL DEFAULT '0',
+  `time` bigint(20) NOT NULL DEFAULT '0',
+  `complete` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `idx_user_id` (`user_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Table structure for user_poker_task
+-- ----------------------------
+DROP TABLE IF EXISTS `user_poker_task`;
+CREATE TABLE `user_poker_task` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(20) NOT NULL DEFAULT '0',
+  `type` int(11) NOT NULL DEFAULT '0',
+  `task_id1` int(11) NOT NULL DEFAULT '0',
+  `time1` bigint(20) NOT NULL DEFAULT '0',
+  `hero1` varchar(128) NOT NULL DEFAULT '',
+  `task_id2` int(11) NOT NULL DEFAULT '0',
+  `time2` bigint(20) NOT NULL DEFAULT '0',
+  `hero2` varchar(128) NOT NULL DEFAULT '',
+  `task_id3` int(11) NOT NULL DEFAULT '0',
+  `time3` bigint(20) NOT NULL DEFAULT '0',
+  `hero3` varchar(128) NOT NULL DEFAULT '',
+  `task_id4` int(11) NOT NULL DEFAULT '0',
+  `time4` bigint(20) NOT NULL DEFAULT '0',
+  `hero4` varchar(128) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`),
   KEY `idx_user_id` (`user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -2800,4 +2934,4 @@ CREATE TABLE `valve` (
   `data1` int(11) NOT NULL DEFAULT '0',
   `data2` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1110 DEFAULT CHARSET=utf8;

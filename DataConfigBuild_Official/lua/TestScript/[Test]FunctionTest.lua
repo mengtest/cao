@@ -127,3 +127,72 @@ function testCopyMapResetTimer2(nTargetType,nTargetId,nTimerId,nTime)
 	nTime = nTime or 8
 	return ResetTimer(nTargetType,nTargetId,nTimerId,nTime)
 end
+
+
+--功能测试
+--对白
+function testNpcDialogTest(sFunc)
+    local tJsonTable = {}       
+	tJsonTable["Text"] =  "测试一下2"   --  对白内容
+	tJsonTable["talkId"] =  3536  --  说话者
+	tJsonTable["Leftid"] =  3536   --  左半身像，填写NPCid
+	tJsonTable["leftFace"] =  0   --  左边表情编号
+	tJsonTable["leftAlpha"] = -1  --  左边透明度
+	tJsonTable["LeftMagicEffect"] = 0  --  左边魔法效果 
+	tJsonTable["EffectClipId"]= 0  --  音效ID
+	tJsonTable["BgmClipId"] = 0  --  背景音乐ID
+	tJsonTable["VoiceId"] = 0  --  配音ID
+	tJsonTable["HideContine"]= 0  --  是否隐藏继续按钮默认显示
+	--rwPrintErrorLog("进入对白了吗")
+	local sStr = rwTable2Json(tJsonTable)
+	local sFunc = sFunc or "</F>rwEnterMap</N>1001"
+    rwAddDlgText(sStr,sFunc) 
+end
+
+
+--全服事件接口测试
+function testGlobalReg(nRegIndex,nDataIndex,nData)
+	nRegIndex = nRegIndex or 1
+	nDataIndex = nDataIndex or 1
+	nData = nData or 1	
+	local ntest2 = rwGetGlobalReg(nRegIndex,nDataIndex)
+	if rwChkInt(ntest2) then
+--		rwPrintErrorLog("单个获取全服事件data = "..ntest2.."nRegIndex = "..nRegIndex.." nDataIndex = "..nDataIndex.." nData = "..nData)	
+	end
+end
+--全服事件接口测试
+function testAllGlobalReg(nRegIndex, nData1, nData2, nData3, nData4, nData5, nData6) 
+	nRegIndex = nRegIndex or 2
+	nData1 = nData1  or 2
+	nData2 = nData2  or 2
+	nData3 = nData3  or 2
+	nData4 = nData4  or 2
+	nData5 = nData5  or 2
+	nData6 = nData6  or 2
+	local ntest4 = rwGetAllGlobalReg(nRegIndex)
+--	rwPrintErrorLog("打印多个全服事件开始")
+	for i = 1,#ntest4 do 
+--		rwPrintErrorLog(ntest4[i])
+	end
+--		rwPrintErrorLog("打印多个全服事件结束")
+end
+
+
+--测试活动玩法（开服天数+玩家角色创建天数+指定活动开始和结束时间戳
+function testDailyact(nDailyactId)
+	nDailyactId = nDailyactId or 10019
+	local test1 = rwGetServerOpenDays()
+	local test2 = rwGetUserRoleCreationDays()
+	local test3,test4 = rwGetDailyactStartAndEndTime(nDailyactId)
+	local test5 = os.date("%Y/%m/%d/%H",test3)
+	local test6 = os.date("%Y/%m/%d/%H",test4)
+
+--	rwPrintErrorLog("开服时间"..test1)
+--	rwPrintErrorLog("账号创建时间"..test2)
+--	rwPrintErrorLog("活动id"..nDailyactId)
+--	rwPrintErrorLog("开始时间戳 "..test3..", 结束时间戳 "..test4)
+--	rwPrintErrorLog("开始日期 "..test5..", 结束日期 "..test6)
+
+end
+
+

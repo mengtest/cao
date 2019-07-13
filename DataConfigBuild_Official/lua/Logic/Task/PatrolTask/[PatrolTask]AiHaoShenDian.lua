@@ -299,7 +299,7 @@ rwtTask[tAiHaoShenDianTask.Task3]["DialogId"] = nDialog_4
 rwtTask[tAiHaoShenDianTask.Task3]["PatrolLastTask"] = 1
 rwtTask[tAiHaoShenDianTask.Task3]["StartAutoWay"] = {}
 rwtTask[tAiHaoShenDianTask.Task3]["StartAutoWay"]["FindWayTypeId"]=1
-rwtTask[tAiHaoShenDianTask.Task3]["StartAutoWay"]["FindWayMapId"] =1001
+rwtTask[tAiHaoShenDianTask.Task3]["StartAutoWay"]["FindWayMapId"] =1000
 rwtTask[tAiHaoShenDianTask.Task3]["StartAutoWay"]["FindWayGroupId"] =nBiDuoMao_Group
 rwtTask[tAiHaoShenDianTask.Task3]["StartAutoWay"]["FindWayGenId"] =nBiDuoMao_Gen
 
@@ -352,7 +352,7 @@ rwtTask[tAiHaoShenDianTask.Task5]["DialogId"] = nDialog_4
 rwtTask[tAiHaoShenDianTask.Task5]["PatrolLastTask"] = 1 
 rwtTask[tAiHaoShenDianTask.Task5]["StartAutoWay"] = {}
 rwtTask[tAiHaoShenDianTask.Task5]["StartAutoWay"]["FindWayTypeId"]=1
-rwtTask[tAiHaoShenDianTask.Task5]["StartAutoWay"]["FindWayMapId"] =1001
+rwtTask[tAiHaoShenDianTask.Task5]["StartAutoWay"]["FindWayMapId"] =1000
 rwtTask[tAiHaoShenDianTask.Task5]["StartAutoWay"]["FindWayGroupId"] =nBiDuoMao_Group
 rwtTask[tAiHaoShenDianTask.Task5]["StartAutoWay"]["FindWayGenId"] =nBiDuoMao_Gen
 
@@ -405,7 +405,7 @@ rwtTask[tAiHaoShenDianTask.Task7]["DialogId"] = nDialog_7
 rwtTask[tAiHaoShenDianTask.Task7]["PatrolLastTask"] = 1  
 rwtTask[tAiHaoShenDianTask.Task7]["StartAutoWay"] = {}
 rwtTask[tAiHaoShenDianTask.Task7]["StartAutoWay"]["FindWayTypeId"]=1
-rwtTask[tAiHaoShenDianTask.Task7]["StartAutoWay"]["FindWayMapId"] =1001
+rwtTask[tAiHaoShenDianTask.Task7]["StartAutoWay"]["FindWayMapId"] =1000
 rwtTask[tAiHaoShenDianTask.Task7]["StartAutoWay"]["FindWayGroupId"] =nBiDuoMao_Group
 rwtTask[tAiHaoShenDianTask.Task7]["StartAutoWay"]["FindWayGenId"] =nBiDuoMao_Gen
 
@@ -461,7 +461,7 @@ rwtTask[tAiHaoShenDianTask.Task9]["DialogId"] = nDialog_7
 rwtTask[tAiHaoShenDianTask.Task9]["PatrolLastTask"] = 1  
 rwtTask[tAiHaoShenDianTask.Task9]["StartAutoWay"] = {}
 rwtTask[tAiHaoShenDianTask.Task9]["StartAutoWay"]["FindWayTypeId"]=1
-rwtTask[tAiHaoShenDianTask.Task9]["StartAutoWay"]["FindWayMapId"] =1001
+rwtTask[tAiHaoShenDianTask.Task9]["StartAutoWay"]["FindWayMapId"] =1000
 rwtTask[tAiHaoShenDianTask.Task9]["StartAutoWay"]["FindWayGroupId"] =nBiDuoMao_Group
 rwtTask[tAiHaoShenDianTask.Task9]["StartAutoWay"]["FindWayGenId"] =nBiDuoMao_Gen
 
@@ -615,7 +615,7 @@ rwtTask[tAiHaoShenDianTask.Task14]["DialogId"] = nDialog_16
 rwtTask[tAiHaoShenDianTask.Task14]["PatrolLastTask"] = 1
 rwtTask[tAiHaoShenDianTask.Task14]["StartAutoWay"] = {}
 rwtTask[tAiHaoShenDianTask.Task14]["StartAutoWay"]["FindWayTypeId"]=1
-rwtTask[tAiHaoShenDianTask.Task14]["StartAutoWay"]["FindWayMapId"] =1001
+rwtTask[tAiHaoShenDianTask.Task14]["StartAutoWay"]["FindWayMapId"] =1000
 rwtTask[tAiHaoShenDianTask.Task14]["StartAutoWay"]["FindWayGroupId"] =nBiDuoMao_Group
 rwtTask[tAiHaoShenDianTask.Task14]["StartAutoWay"]["FindWayGenId"] =nBiDuoMao_Gen  
 
@@ -770,7 +770,7 @@ rwtTask[tAiHaoShenDianTask.Task19]["DialogId"] = nDialog_16
 rwtTask[tAiHaoShenDianTask.Task19]["PatrolLastTask"] = 1 
 rwtTask[tAiHaoShenDianTask.Task19]["StartAutoWay"] = {}
 rwtTask[tAiHaoShenDianTask.Task19]["StartAutoWay"]["FindWayTypeId"]=1
-rwtTask[tAiHaoShenDianTask.Task19]["StartAutoWay"]["FindWayMapId"] =1001
+rwtTask[tAiHaoShenDianTask.Task19]["StartAutoWay"]["FindWayMapId"] =1000
 rwtTask[tAiHaoShenDianTask.Task19]["StartAutoWay"]["FindWayGroupId"] =nBiDuoMao_Group
 rwtTask[tAiHaoShenDianTask.Task19]["StartAutoWay"]["FindWayGenId"] =nBiDuoMao_Gen 
 
@@ -880,6 +880,6 @@ rwtTask[tAiHaoShenDianTask.TaskNew_10]["DialogId"] = nDialog_16
 rwtTask[tAiHaoShenDianTask.TaskNew_10]["PatrolLastTask"] = 1 
 rwtTask[tAiHaoShenDianTask.TaskNew_10]["StartAutoWay"] = {}
 rwtTask[tAiHaoShenDianTask.TaskNew_10]["StartAutoWay"]["FindWayTypeId"]=1
-rwtTask[tAiHaoShenDianTask.TaskNew_10]["StartAutoWay"]["FindWayMapId"] =1001
+rwtTask[tAiHaoShenDianTask.TaskNew_10]["StartAutoWay"]["FindWayMapId"] =1000
 rwtTask[tAiHaoShenDianTask.TaskNew_10]["StartAutoWay"]["FindWayGroupId"] =nBiDuoMao_Group
 rwtTask[tAiHaoShenDianTask.TaskNew_10]["StartAutoWay"]["FindWayGenId"] =nBiDuoMao_Gen 

@@ -12,35 +12,24 @@ t_Lua_StrRes["DefaultOptionTxt"] = "关闭"
 
 --JSON中字段
 local m_Str = "Text"  --文本内容
+
+local m_DialogId = "Id" --对白id
+
 local m_talkId = "talkId"    --  说话者
 
 local m_Leftid = "Leftid"    --  左半身像，填写NPCid
 local m_leftFace = "leftFace"    --  左边表情编号
-local m_leftAlpha = "leftAlpha"    --  左边透明度
-local m_leftMagicEffect = "leftMagicEffect"    --  左边魔法效果
 
 local m_Midid = "Midid"    --  中间半身像
 local m_midFace = "midFace"    --  中间表情
-local m_midAlpha = "midAlpha"    --  中间透明度
-local m_midMagicEffect = "midMagicEffect"    --  中间魔法效果
 
 local m_Rightid = "Rightid"    --  右半身像，填写NPCid
 local m_rightFace = "rightFace"    --  右边表情编号
-local m_rightAlpha = "rightAlpha"    --  右边透明度
-local m_rightMagicEffect = "rightMagicEffect"    --  右边魔法效果
 
-local m_action = "action"    --  点击继续后的动作Id
-local m_data = "data"    --  对应数据
-local m_bgName = "bgName"    --  背景
-local m_bgFadeIn = "bgFadeIn"    --  背景是否淡入
-local m_hideContine = "hideContine"    --  是否不显示继续按钮（默认显示）
-local m_interactBtn = "interactBtn"    --  对白互动按钮
-local m_nextBtns = "nextBtns"    --  下一步选项按钮
-local m_effectClipID = "effectClipID"    --  音效ID
-local m_bgmClipID = "bgmClipID"    --  背景音乐ID
 local m_voiceId = "voiceId"    --  配音ID
-local m_screenShake = "screenShake"    --  屏幕震动
 
+local m_IsSkip = "IsSkip"       --是否能跳过（1：能跳过 0：不能跳过 默认不能跳过）
+local m_hasMore = "hasMore"     --是否还有下一句（0：当前对白为最后一句 1:后续还有对白，不关闭对白界面 默认为最后一句，即当前对白结束后关闭对白界面）
 ---------
 local m_optionText = "optionText"  --选项文字
 local m_optionState = "optionState"  --选项状态
@@ -289,19 +278,18 @@ function rwNpcDialogText(tInfo,sFunc)
 	sFunc = sFunc or ""
     local tJsonTable = {}       
     tJsonTable[m_Str] = tInfo["Content"] or ""   --  对白内容
+    tJsonTable[m_DialogId] = tInfo["DialogId"] or 0   --  对白id
     tJsonTable[m_talkId] = tInfo["TalkId"] or -1   --  说话者
     tJsonTable[m_Leftid] = tInfo["LeftId"] or -1   --  左半身像，填写NPCid
     tJsonTable[m_leftFace] = tInfo["LeftFace"] or 0   --  左边表情编号
-    tJsonTable[m_leftAlpha] = tInfo["LeftAlpha"] or -1  --  左边透明度
-    tJsonTable[m_leftMagicEffect] = tInfo["LeftMagicEffect"] or 0  --  左边魔法效果 
-    tJsonTable[m_effectClipID] = tInfo["EffectClipId"] or 0  --  音效ID
-    tJsonTable[m_bgmClipID] = tInfo["BgmClipId"] or 0  --  背景音乐ID
+    tJsonTable[m_Midid] = tInfo["Midid"] or -1   --  中间半身像，填写NPCid
+    tJsonTable[m_midFace] = tInfo["MidFace"] or 0   --  中间表情编号
+    tJsonTable[m_Rightid] = tInfo["Rightid"] or -1   --  右半身像，填写NPCid
+    tJsonTable[m_rightFace] = tInfo["RightFace"] or 0   --  右边表情编号
     tJsonTable[m_voiceId] = tInfo["VoiceId"] or 0  --  配音ID
-	tJsonTable[m_hideContine] = tInfo["HideContine"] or 0  --  是否隐藏继续按钮默认显示
-	tJsonTable[m_Midid] = tInfo["Midid"] or -1 
-	tJsonTable[m_midFace] = tInfo["midFace"] or 0 
-	tJsonTable[m_midAlpha] = tInfo["midAlpha"] or -1
-	tJsonTable[m_midMagicEffect] = tInfo["midMagicEffect"] or 0 
+    tJsonTable[m_IsSkip] = tInfo["IsSkip"] or 0  --是否可跳过
+    tJsonTable[m_hasMore] = tInfo["HasMore"] or 0  --是否有下一句
+
     local sStr = rwTable2Json(tJsonTable)
     rwAddDlgText(sStr,sFunc)
 end

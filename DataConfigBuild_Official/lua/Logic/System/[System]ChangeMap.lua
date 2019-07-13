@@ -15,13 +15,13 @@
 --rwtNpcGroup[100001]["Type"] = CONST_NPCGROUP_TYPE.ChangeMap
 --rwtNpcGroup[100001]["ChangeMap"] = {1000,"11.19832,0.2086792,-12.23162"}
 
-rwtNpcGroup[11000001] = {} --卡诺萨城-->第一片区
-rwtNpcGroup[11000001]["Type"] = CONST_NPCGROUP_TYPE.ChangeMap
-rwtNpcGroup[11000001]["ChangeMap"] = {2001,"52.49,6.22,21.11"}
+rwtNpcGroup[54030] = {} --卡诺萨城-->第一片区
+rwtNpcGroup[54030]["Type"] = CONST_NPCGROUP_TYPE.ChangeMap
+rwtNpcGroup[54030]["ChangeMap"] = {2001,"52.49,6.22,21.11"}
 
-rwtNpcGroup[12001001] = {} --第一片区-->卡诺萨城
-rwtNpcGroup[12001001]["Type"] = CONST_NPCGROUP_TYPE.ChangeMap
-rwtNpcGroup[12001001]["ChangeMap"] = {1000, "53.33,23.56,68.65"}
+rwtNpcGroup[54031] = {} --第一片区-->卡诺萨城
+rwtNpcGroup[54031]["Type"] = CONST_NPCGROUP_TYPE.ChangeMap
+rwtNpcGroup[54031]["ChangeMap"] = {1000, "53.33,23.56,68.65"}
 
 rwtNpcGroup[57000] = {} --第一片区-->魔族高地
 rwtNpcGroup[57000]["Type"] = CONST_NPCGROUP_TYPE.ChangeMap
@@ -38,14 +38,6 @@ rwtNpcGroup[54000]["ChangeMap"] = {1000,"-27.66,554.03,99.19"}
 rwtNpcGroup[54001] = {} --佣兵公会1楼-->主城
 rwtNpcGroup[54001]["Type"] = CONST_NPCGROUP_TYPE.ChangeMap
 rwtNpcGroup[54001]["ChangeMap"] = {1000,"-27.83,23.12,77.13"}
-
---rwtNpcGroup[54002] = {} --佣兵公会1楼-->佣兵公会2楼
---rwtNpcGroup[54002]["Type"] = CONST_NPCGROUP_TYPE.ChangeMap
---rwtNpcGroup[54002]["ChangeMap"] = {1001,"-13.5,0.1,43"}
-
-rwtNpcGroup[54003] = {} --佣兵公会2楼-->佣兵公会1楼
-rwtNpcGroup[54003]["Type"] = CONST_NPCGROUP_TYPE.ChangeMap
-rwtNpcGroup[54003]["ChangeMap"] = {1001,"-8,-1.8,10"}
 
 
 rwtNpcGroup[54004] = {} --冒险者营地-->三月边陲
@@ -89,13 +81,13 @@ rwtNpcGroup[54013] = rwtNpcGroup[54013] or {} --右相府-主城
 rwtNpcGroup[54013]["Type"] = CONST_NPCGROUP_TYPE.ChangeMap
 rwtNpcGroup[54013]["ChangeMap"] = {1000,"30.76,22.81,76.20"}
 
-rwtNpcGroup[54014] = {} --自律联盟1-->2
-rwtNpcGroup[54014]["Type"] = CONST_NPCGROUP_TYPE.ChangeMap
-rwtNpcGroup[54014]["ChangeMap"] = {1001,"-9.80,8.29,19.22"}
+--rwtNpcGroup[54014] = {} --自律联盟1-->2
+--rwtNpcGroup[54014]["Type"] = CONST_NPCGROUP_TYPE.ChangeMap
+--rwtNpcGroup[54014]["ChangeMap"] = {1000,"-37.92,562.29,116.16"}
 
-rwtNpcGroup[54015] = {} --自律联盟2-->1
-rwtNpcGroup[54015]["Type"] = CONST_NPCGROUP_TYPE.ChangeMap
-rwtNpcGroup[54015]["ChangeMap"] = {1001,"-9.50,1.05,18.79"}
+--rwtNpcGroup[54015] = {} --自律联盟2-->1
+--rwtNpcGroup[54015]["Type"] = CONST_NPCGROUP_TYPE.ChangeMap
+--rwtNpcGroup[54015]["ChangeMap"] = {1000,"-37.94,555.14,115.87"}
 
 rwtNpcGroup[54016] = {} --卡诺萨-->酒馆
 rwtNpcGroup[54016]["Type"] = CONST_NPCGROUP_TYPE.ChangeMap

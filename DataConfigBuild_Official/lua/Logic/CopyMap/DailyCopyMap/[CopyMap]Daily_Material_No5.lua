@@ -91,8 +91,8 @@ tDialog.ChongRuanBaoJi      = 6836
 tDialog.GetOneQuWenShui     = 6837
 tDialog.GetMaoXinZhe        = 6838
 
-tDialog.QuMoRen = {6839,6840,6841,6842,6843}
-tDialog.MaoXianZhe = {6844,6845,6846,6847,6848}
+tDialog.QuMoRen = {6839,6840,6841,6842}
+tDialog.MaoXianZhe = {6844,6845,6846}
 
 --奖励
 local tAward = {}

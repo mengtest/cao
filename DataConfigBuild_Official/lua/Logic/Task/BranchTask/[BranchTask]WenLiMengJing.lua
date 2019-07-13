@@ -24,7 +24,7 @@ tBranchTask.Task7 = 70083	 --开启梦境之门  战胜梦境守卫
 local nTempCordId = 1128
 
 local nMapid_LeiMing = 2001
-local nMapid_Zilv = 1001
+local nMapid_Zilv = 1000
 local nMapid_MainCity = 1000
 --local sPos_Zuoxiangfu = "78.16,0.11,-148.94"
 local sPos_OumuHome = "-96.93,2.19,21.15"

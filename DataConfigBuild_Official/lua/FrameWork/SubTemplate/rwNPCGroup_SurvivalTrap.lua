@@ -28,7 +28,7 @@ function rwNPCGroup_SurvivalTrap:EventProcess()
     local Global = rwtCopyMapUserInitInfo[self._MapId][self._UserId]
 
     --全局表初始化
-    if not rwChkTable(Global["Monster"]) or not rwChkTable(Global["Buff"]) or not rwChkTable(Global["Buff_2"]) then
+    if not rwChkTable(Global["Monster"]) or not rwChkTable(Global["Buff"]) then
         return
     end
 
@@ -47,15 +47,15 @@ function rwNPCGroup_SurvivalTrap:EventProcess()
         end
     end
 
-    if not Global["Buff_2"]["PosIndex"] or not Global["Buff_2"]["GenIdToPos"]then
-        Global["Buff_2"]["PosIndex"] = {}
-        Global["Buff_2"]["GenIdToPos"] = {} 
-        if rwChkTable(rwtSurivialCopyMapInfo[self._MapId]["PositionInfo"]) and rwChkTable(rwtSurivialCopyMapInfo[self._MapId]["PositionInfo"]["Buff_2Pos"]) then
-            for i = 1,#rwtSurivialCopyMapInfo[self._MapId]["PositionInfo"]["Buff_2Pos"] do
-                Global["Buff_2"]["PosIndex"][i] = i
-            end
-        end  
-    end
+    -- if not Global["Buff_2"]["PosIndex"] or not Global["Buff_2"]["GenIdToPos"]then
+    --     Global["Buff_2"]["PosIndex"] = {}
+    --     Global["Buff_2"]["GenIdToPos"] = {} 
+    --     if rwChkTable(rwtSurivialCopyMapInfo[self._MapId]["PositionInfo"]) and rwChkTable(rwtSurivialCopyMapInfo[self._MapId]["PositionInfo"]["Buff_2Pos"]) then
+    --         for i = 1,#rwtSurivialCopyMapInfo[self._MapId]["PositionInfo"]["Buff_2Pos"] do
+    --             Global["Buff_2"]["PosIndex"][i] = i
+    --         end
+    --     end  
+    -- end
 
     -----------------------------
     local nDetailId = self._Info["DetailType"] or CONST_SURVIVAL_TYPE.Collect
@@ -114,6 +114,9 @@ function rwNPCGroup_SurvivalTrap:CollectEventProcess()
     for i,v in ipairs(rwtSurivialCopyMapInfo[self._MapId]["Events"]) do
         if times+1 == v["CollectNum"] then
             self:CreatCaiJiQi(v)
+            self:CreateCaijiBuff(v)
+            self:CreateMonster(v)
+            self:CreateCaiJiManyMonster(v)
         end
     end
 
@@ -174,8 +177,9 @@ function rwNPCGroup_SurvivalTrap:ChuFaQiEventProcess()
         for i,v in ipairs(rwtSurivialCopyMapInfo[self._MapId]["Events"]) do
             if times == v["CollectNum"] then
                 self:CreateCollect(v)
-                self:CreateMonster(v)
+                self:CreateChuFaMonster(v)
                 self:RemoveMonster(v)
+                self:RemoveBuff(v)
                 self:CreateManyMonster(v)
                 self:CreateBuff(v)
             end
@@ -209,8 +213,10 @@ function rwNPCGroup_SurvivalTrap:CreatCaiJiQi(Info)
     if Info.CaiJiQiInfo[Index]["Message"] then
         rwSendSystemMessage(Info.CaiJiQiInfo[Index]["Message"])
     end
-
-
+    --====================
+    if rwChkFunc(Info.CaiJiQiInfo[Index]["Func"]) then
+        Info.CaiJiQiInfo[Index]["Func"]()
+    end
 end
 
 function rwNPCGroup_SurvivalTrap:CreateBuff(Info)
@@ -220,14 +226,14 @@ function rwNPCGroup_SurvivalTrap:CreateBuff(Info)
     if not rwChkTable(Info.BuffInfo["tPos"]) then
         return
     end
-    
+
     local tsRecordKey = rwtCopyMapUserInitInfo[self._MapId][self._UserId]["Buff"]["PosIndex"]
     if #tsRecordKey == 0 then
         for i = 1,#Info.BuffInfo["tPos"] do
             tsRecordKey[i] = i
         end
     end
-    
+
     if #tsRecordKey == 0 then
         return
     end
@@ -279,6 +285,71 @@ function rwNPCGroup_SurvivalTrap:CreateBuff(Info)
 end
 
 
+function rwNPCGroup_SurvivalTrap:CreateCaijiBuff(Info)
+    if not rwChkTable(Info.CaiJiBuffInfo)then
+        return
+    end
+    if not rwChkTable(Info.CaiJiBuffInfo["tPos"]) then
+        return
+    end
+
+    local tsRecordKey = rwtCopyMapUserInitInfo[self._MapId][self._UserId]["Buff"]["PosIndex"]
+    if #tsRecordKey == 0 then
+        for i = 1,#Info.CaiJiBuffInfo["tPos"] do
+            tsRecordKey[i] = i
+        end
+    end
+
+    if #tsRecordKey == 0 then
+        return
+    end
+
+    local nNPCGroup = 0
+    if rwChkInt(Info.CaiJiBuffInfo["tGenId"]) then
+        local nGenId = Info.CaiJiBuffInfo["tGenId"]
+        if rwChkTable(Info.CaiJiBuffInfo["tNPCGroupId"]) then
+            local NpcGroupIndex = rwGetRandInt(1,#Info.CaiJiBuffInfo["tNPCGroupId"])
+            nNPCGroup = Info.CaiJiBuffInfo["tNPCGroupId"][NpcGroupIndex]
+        elseif rwChkInt(Info.CaiJiBuffInfo["tNPCGroupId"]) then
+            nNPCGroup = Info.CaiJiBuffInfo["tNPCGroupId"]
+        end
+        local PosIndex = rwGetRandInt(1,#tsRecordKey)
+
+        rwAddGenEvent(nGenId, Info.CaiJiBuffInfo["tPos"][tsRecordKey[PosIndex]], nNPCGroup)
+        rwtCopyMapUserInitInfo[self._MapId][self._UserId]["Buff"]["GenIdToPos"][nGenId] = tsRecordKey[PosIndex]
+        table.remove(tsRecordKey,PosIndex)
+
+    elseif rwChkTable(Info.CaiJiBuffInfo["tGenId"]) and rwChkTable(Info.CaiJiBuffInfo["tNPCGroupId"]) then
+        for i,v in ipairs(Info.CaiJiBuffInfo["tGenId"]) do
+            local NpcGroupIndex = rwGetRandInt(1,#Info.CaiJiBuffInfo["tNPCGroupId"])
+            nNPCGroup = Info.CaiJiBuffInfo["tNPCGroupId"][NpcGroupIndex]
+            local PosIndex = rwGetRandInt(1,#tsRecordKey)
+
+            rwAddGenEvent(v, Info.CaiJiBuffInfo["tPos"][tsRecordKey[PosIndex]], nNPCGroup)
+            rwtCopyMapUserInitInfo[self._MapId][self._UserId]["Buff"]["GenIdToPos"][v] = tsRecordKey[PosIndex]
+            table.remove(tsRecordKey,PosIndex)
+
+            if #tsRecordKey == 0 then
+                return
+            end
+        end
+
+    elseif rwChkTable(Info.CaiJiBuffInfo["tGenId"]) and rwChkInt(Info.CaiJiBuffInfo["tNPCGroupId"]) then
+        for i,v in ipairs(Info.CaiJiBuffInfo["tGenId"]) do
+            nNPCGroup = Info.CaiJiBuffInfo["tNPCGroupId"]
+            local PosIndex = rwGetRandInt(1,#tsRecordKey)
+
+            rwAddGenEvent(v, Info.CaiJiBuffInfo["tPos"][tsRecordKey[PosIndex]], nNPCGroup)
+            rwtCopyMapUserInitInfo[self._MapId][self._UserId]["Buff"]["GenIdToPos"][v] = tsRecordKey[PosIndex]
+            table.remove(tsRecordKey,PosIndex)
+
+            if #tsRecordKey == 0 then
+                return
+            end
+        end
+    end
+end
+
 function rwNPCGroup_SurvivalTrap:CreateCollect(Info)
     if not rwChkTable(Info.CollectInfo)then
         return
@@ -309,8 +380,8 @@ function rwNPCGroup_SurvivalTrap:CreateMonster(Info)
         return
     end
 
-    if Info.MonsterInfo["tGenId"]["Title"] then
-        rwSendSystemMessage(Info.MonsterInfo["tGenId"]["Title"])
+    if Info.MonsterInfo["Title"] then
+        rwSendSystemMessage(Info.MonsterInfo["Title"])
     end
 
     local Size = Info.MonsterInfo["Size"] or 1
@@ -334,11 +405,58 @@ function rwNPCGroup_SurvivalTrap:CreateMonster(Info)
     end
 end
 
+function rwNPCGroup_SurvivalTrap:CreateChuFaMonster(Info)
+    if not rwChkTable(Info.ChuFaMonsterInfo)then
+        return
+    end
+    if not rwChkTable(Info.ChuFaMonsterInfo["tGenId"]) or not rwChkInt(Info.ChuFaMonsterInfo["MonsterGroupId"]) or not rwChkTable(Info.ChuFaMonsterInfo["tPath"]) then
+        return
+    end
+    if #Info.ChuFaMonsterInfo["tGenId"] > #Info.ChuFaMonsterInfo["tPath"] then
+        return
+    end
+
+    if Info.ChuFaMonsterInfo["Title"] then
+        rwSendSystemMessage(Info.ChuFaMonsterInfo["Title"])
+    end
+
+    local Size = Info.ChuFaMonsterInfo["Size"] or 1
+    local tPath = SysCopyTable(Info.ChuFaMonsterInfo["tPath"])
+    for i, v in pairs(Info.ChuFaMonsterInfo["tGenId"]) do
+        local index = rwGetRandInt(1,#tPath)
+        local nRot = 0
+        if Info.ChuFaMonsterInfo["tRotation"] and rwChkInt(Info.ChuFaMonsterInfo["tRotation"][index]) then
+            nRot = Info.ChuFaMonsterInfo["tRotation"][index]
+        end
+        rwAddGenEvent(v, "", Info.ChuFaMonsterInfo["MonsterGroupId"],nRot,tPath[index],Size)
+        if rwChkTable(Info.ChuFaMonsterInfo["InitSpeedRange"]) then
+            local speed = rwGetRandInt(Info.ChuFaMonsterInfo["InitSpeedRange"][1],Info.ChuFaMonsterInfo["InitSpeedRange"][2])
+            rwChangeMonsterRounds(v,0,speed)
+            rwtCopyMapUserInitInfo[self._MapId][self._UserId]["Monster"]["Speed"][v] = speed
+        elseif rwChkInt(Info.ChuFaMonsterInfo["InitSpeedRange"]) then
+            rwChangeMonsterRounds(v,0,Info.ChuFaMonsterInfo["InitSpeedRange"])
+            rwtCopyMapUserInitInfo[self._MapId][self._UserId]["Monster"]["Speed"][v] = Info.ChuFaMonsterInfo["InitSpeedRange"]
+        end
+        table.remove(tPath,index)
+    end
+end
+
 function rwNPCGroup_SurvivalTrap:RemoveMonster(Info)
     if not rwChkTable(Info.tRemoveMonsterGenId)then
         return
     end
     for i,v in ipairs(Info.tRemoveMonsterGenId) do
+        if rwHasGenEvent(v) then
+            rwDelGenEvent(v)
+        end
+    end
+end
+
+function rwNPCGroup_SurvivalTrap:RemoveBuff(Info)
+    if not rwChkTable(Info.tRemoveBuffGenId)then
+        return
+    end
+    for i,v in ipairs(Info.tRemoveBuffGenId) do
         if rwHasGenEvent(v) then
             rwDelGenEvent(v)
         end
@@ -356,6 +474,53 @@ function rwNPCGroup_SurvivalTrap:CreateManyMonster(Info)
     end
 
     for j,k in ipairs(Info.ManyMonsterInfo) do
+        if not rwChkTable(k["PathInfo"]) then
+            return
+        end
+    
+        local PathInfo = SysCopyTable(k["PathInfo"])
+        local index = rwGetRandInt(1,#PathInfo)
+        local tPath = SysCopyTable(k["PathInfo"][index])
+        table.remove(PathInfo,index)
+        local LifeTime = k["LifeTime"] or 0
+        local Size = k["Size"] or 1
+
+        local nRot = 0
+        if k["tRotation"] and rwChkInt(k["tRotation"][index]) then
+            nRot = k["tRotation"][index]
+        end
+
+        for i, v in pairs(k["tGenId"]) do
+            if #tPath < 1 then
+                tPath = SysCopyTable(k["PathInfo"][index])
+            end
+            local nPath = rwGetRandInt(1,#tPath)
+            local nEvent = rwGetRandInt(1,#k["tMonsterGroupId"])
+            rwAddGenEvent(v, "", k["tMonsterGroupId"][nEvent],nRot,tPath[nPath],Size,false,LifeTime)
+
+            if rwChkTable(k["InitSpeedRange"]) then
+                local speed = rwGetRandInt(k["InitSpeedRange"][1],k["InitSpeedRange"][2])
+                rwChangeMonsterRounds(v,0,speed)
+            elseif rwChkInt(k["InitSpeedRange"]) then
+                rwChangeMonsterRounds(v,0,k["InitSpeedRange"])
+            end
+
+            table.remove(tPath,nPath)
+        end
+    end
+end
+
+function rwNPCGroup_SurvivalTrap:CreateCaiJiManyMonster(Info)
+    if not rwChkTable(Info.CaiJiManyMonsterInfo)then
+        return
+    end
+    if rwChkTable(Info.CaiJiManyMonsterInfo["Title"]) then
+        for i,v in ipairs(Info.CaiJiManyMonsterInfo["Title"]) do
+            rwSendSystemMessage(v)
+        end
+    end
+
+    for j,k in ipairs(Info.CaiJiManyMonsterInfo) do
         if not rwChkTable(k["PathInfo"]) then
             return
         end

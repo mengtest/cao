@@ -59,3 +59,72 @@ rwtTask[nTaskTest3]["StartAutoWay"] = {}
 rwtTask[nTaskTest3]["StartAutoWay"]["MapId"] = 2001
 rwtTask[nTaskTest3]["StartAutoWay"]["Pos"] = "-62.04,0.05,-152.74"
 rwtTask[nTaskTest3]["IsClickComplete"] = 0
+
+----------------------------------
+--服务端下发对白测试
+local tTestServerDialog = {}
+
+--仅一句对白
+tTestServerDialog.Test1 = {}
+tTestServerDialog.Test1["Text"] = {}
+tTestServerDialog.Test1["Text"]["DialogId"] = 60897
+tTestServerDialog.Test1["Text"]["Content"] = "服务端下发对白测试，<br>当前对白仅一句，<br>对白结束后关闭对白界面"
+tTestServerDialog.Test1["Text"]["TalkId"] = 101 
+tTestServerDialog.Test1["Text"]["LeftId"] = 101 
+tTestServerDialog.Test1["Text"]["LeftFace"] = 0
+
+--多句对白
+tTestServerDialog.Test2 = {}
+tTestServerDialog.Test2[1] = {}
+tTestServerDialog.Test2[1]["Text"] = {}
+tTestServerDialog.Test2[1]["Text"]["DialogId"] = 60898
+tTestServerDialog.Test2[1]["Text"]["Content"] = "服务端下发对白测试，<br>该对白共3句，当前为第1句"
+tTestServerDialog.Test2[1]["Text"]["TalkId"] = 101 
+tTestServerDialog.Test2[1]["Text"]["LeftId"] = 101 
+tTestServerDialog.Test2[1]["Text"]["HasMore"] = 1 
+tTestServerDialog.Test2[2] = {}
+tTestServerDialog.Test2[2]["Text"] = {}
+tTestServerDialog.Test2[2]["Text"]["DialogId"] = 60898
+tTestServerDialog.Test2[2]["Text"]["Content"] = "服务端下发对白测试，<br>该对白共3句，当前为第2句"
+tTestServerDialog.Test2[2]["Text"]["TalkId"] = 201 
+tTestServerDialog.Test2[2]["Text"]["Rightid"] = 201 
+tTestServerDialog.Test2[2]["Text"]["HasMore"] = 1 
+tTestServerDialog.Test2[3] = {}
+tTestServerDialog.Test2[3]["Text"] = {}
+tTestServerDialog.Test2[3]["Text"]["DialogId"] = 60898
+tTestServerDialog.Test2[3]["Text"]["Content"] = "服务端下发对白测试，<br>该对白共3句，当前为第3句，<br>当前对白结束后关闭对白界面"
+tTestServerDialog.Test2[3]["Text"]["TalkId"] = 101 
+tTestServerDialog.Test2[3]["Text"]["LeftId"] = 101 
+
+
+--单句对白测试
+function rwTest_DialogTest_ServerDialog_Test1()
+	rwNpcDialogText(tTestServerDialog.Test1["Text"],"</F>rwTest_DialogTest_ServerDialog_Test1_DialogEnd")
+end
+
+function rwTest_DialogTest_ServerDialog_Test1_DialogEnd()
+	rwSendSystemMessage("对白结束")
+end
+
+
+
+function rwTest_DialogTest_ServerDialog_Test4()
+	rwNpcDialogText(tTestServerDialog.Test2[3]["Text"])
+end
+function rwTest_DialogTest_ServerDialog_Test3()
+	rwNpcDialogText(tTestServerDialog.Test2[2]["Text"],"</F>rwTest_DialogTest_ServerDialog_Test4")
+end
+--多句对白测试
+function rwTest_DialogTest_ServerDialog_Test2()
+	rwNpcDialogText(tTestServerDialog.Test2[1]["Text"],"</F>rwTest_DialogTest_ServerDialog_Test3")
+end
+----多句对白测试
+--function rwTest_DialogTest_ServerDialog_Test2()
+--	rwNpcDialogText(tTestServerDialog.Test2[1]["Text"])
+--end
+
+--rwtDialog[60898] = rwtDialog[60898] or {}
+--rwtDialog[60898]["DialogEnd"] = function()
+--    rwNpcDialogText(tTestServerDialog.Test2[3]["Text"])
+--end
+

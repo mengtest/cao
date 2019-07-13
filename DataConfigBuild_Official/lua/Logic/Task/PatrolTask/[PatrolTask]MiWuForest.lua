@@ -1,61 +1,61 @@
 --region *.lua
 --Date
---´ËÎÄ¼şÓÉ[BabeLua]²å¼ş×Ô¶¯Éú³É
---ÃÔÎíÉ­ÁÖÑ²²éÈÎÎñ
+--æ­¤æ–‡ä»¶ç”±[BabeLua]æ’ä»¶è‡ªåŠ¨ç”Ÿæˆ
+--è¿·é›¾æ£®æ—å·¡æŸ¥ä»»åŠ¡
 --HYQ
-----***************************Êı¾İ¶¨Òå***************************
---Ñ²²é½±ÀøÅäÖÃ£º
---ÆÕÍ¨±¦Ïä
+----***************************æ•°æ®å®šä¹‰***************************
+--å·¡æŸ¥å¥–åŠ±é…ç½®ï¼š
+--æ™®é€šå®ç®±
 local nNormal_Box_AwardId = 2000152
 
 ---------MapID
---200301 Ã°ÏÕÕßÓªµØ
---200302 ÈıÔÂ±ßÚï
---200303 ÔÂÉñÉ­ÁÖ
---200304 ÓÀÒ¹É­ÁÖ
---200305 ÃÔÎíÉ­ÁÖ
+--200301 å†’é™©è€…è¥åœ°
+--200302 ä¸‰æœˆè¾¹é™²
+--200303 æœˆç¥æ£®æ—
+--200304 æ°¸å¤œæ£®æ—
+--200305 è¿·é›¾æ£®æ—
 
 local nMapId = 2003
 local nTownId = 200305
 
---ÈÎÎñ ÃÔÎíÉ­ÁÖÑ²²éÈÎÎñ  50114  50125   +      50137  50138 
+--ä»»åŠ¡ è¿·é›¾æ£®æ—å·¡æŸ¥ä»»åŠ¡  50114  50125   +      50137  50138 
 local tTask = {}
-tTask.nMiWuXunChaTask1 = 50114	--Ç°ÍùÖ´ĞĞÑ²²é¹¤×÷
+tTask.nMiWuXunChaTask1 = 50114	--å‰å¾€æ‰§è¡Œå·¡æŸ¥å·¥ä½œ
 
-tTask.nMiWuXunChaTask1_1 = 50137	--Ç°ÍùÖ´ĞĞÑ²²é¹¤×÷¶¯»­1
-tTask.nMiWuXunChaTask2 = 50115	--ºÍ¸ç²¼ÁÖÃ°ÏÕÕß¶Ô»°
-tTask.nMiWuXunChaTask3 = 50116	--Ç°ÍùÑ°ÕÒÇÀ¶áÕß
-tTask.nMiWuXunChaTask4 = 50117	--¼ÌĞøÍùÇ°Ñ²²é
-tTask.nMiWuXunChaTask4_1 = 50272	--¸ç²¼ÁÖÃ°ÏÕÕß³öÏÖ
---Ñ¡Ïî1£º×·¼©¸ç²¼ÁÖÃ°ÏÕÕß
+tTask.nMiWuXunChaTask1_1 = 50137	--å‰å¾€æ‰§è¡Œå·¡æŸ¥å·¥ä½œåŠ¨ç”»1
+tTask.nMiWuXunChaTask2 = 50115	--å’Œå“¥å¸ƒæ—å†’é™©è€…å¯¹è¯
+tTask.nMiWuXunChaTask3 = 50116	--å‰å¾€å¯»æ‰¾æŠ¢å¤ºè€…
+tTask.nMiWuXunChaTask4 = 50117	--ç»§ç»­å¾€å‰å·¡æŸ¥
+tTask.nMiWuXunChaTask4_1 = 50272	--å“¥å¸ƒæ—å†’é™©è€…å‡ºç°
+--é€‰é¡¹1ï¼šè¿½ç¼‰å“¥å¸ƒæ—å†’é™©è€…
 tTask.nMiWuXunChaTask4_2 = 50273
 tTask.nMiWuXunChaTask4_3 = 50274
 tTask.nMiWuXunChaTask4_4 = 50275
---Ñ¡Ïî2£ºÏÈ½«±¦²Ø´ø»ØÁªÃË
-tTask.nMiWuXunChaTask5 = 50118	--¿ªÆôÉñÃØ±¦Ïä
-tTask.nMiWuXunChaTask5_1 = 50125 --Ç°ÍùÊ÷ĞÄ³Ç
-tTask.nMiWuXunChaTask6 = 50119	--·µ»ØÁªÃË½»½ÓÈÎÎñ
+--é€‰é¡¹2ï¼šå…ˆå°†å®è—å¸¦å›è”ç›Ÿ
+tTask.nMiWuXunChaTask5 = 50118	--å¼€å¯ç¥ç§˜å®ç®±
+tTask.nMiWuXunChaTask5_1 = 50125 --å‰å¾€æ ‘å¿ƒåŸ
+tTask.nMiWuXunChaTask6 = 50119	--è¿”å›è”ç›Ÿäº¤æ¥ä»»åŠ¡
 
-tTask.nMiWuXunChaTask1_2 = 50138	--Ç°ÍùÖ´ĞĞÑ²²é¹¤×÷¶¯»­2
-tTask.nMiWuXunChaTask7 = 50120	--ºÍÃ°ÏÕÕßÇàÄê¶Ô»°
-tTask.nMiWuXunChaTask8 = 50121	--ÑØ×Å½ÅÓ¡×·»÷Ä§Îï
-tTask.nMiWuXunChaTask9 = 50122	--½øÈëÓªµØ½øĞĞµ÷²é
-tTask.nMiWuXunChaTask10 =50123	--»÷°ÜÂ¹½ÇÊŞ¶Ó³¤
-tTask.nMiWuXunChaTask11 =50124	--·µ»ØÁªÃË½»½ÓÈÎÎñ
+tTask.nMiWuXunChaTask1_2 = 50138	--å‰å¾€æ‰§è¡Œå·¡æŸ¥å·¥ä½œåŠ¨ç”»2
+tTask.nMiWuXunChaTask7 = 50120	--å’Œå†’é™©è€…é’å¹´å¯¹è¯
+tTask.nMiWuXunChaTask8 = 50121	--æ²¿ç€è„šå°è¿½å‡»é­”ç‰©
+tTask.nMiWuXunChaTask9 = 50122	--è¿›å…¥è¥åœ°è¿›è¡Œè°ƒæŸ¥
+tTask.nMiWuXunChaTask10 =50123	--å‡»è´¥é¹¿è§’å…½é˜Ÿé•¿
+tTask.nMiWuXunChaTask11 =50124	--è¿”å›è”ç›Ÿäº¤æ¥ä»»åŠ¡
 
---¶Ô°× 11003  11018 +   11089  11090 
+--å¯¹ç™½ 11003  11018 +   11089  11090 
 local tDialog = {}
 tDialog.nDialog_Task1 = 11003
 tDialog.nDialog_Task2 = 11004
 tDialog.nDialog_Task3 = 11005
 tDialog.nDialog_Task4 = 11006
 tDialog.nDialog_Task4_1 = 11462
-tDialog.nDialog_Task4_1_1 = 11610    --´òÍê¹ÖÖ®ºóµÄ¶Ô°×
+tDialog.nDialog_Task4_1_1 = 11610    --æ‰“å®Œæ€ªä¹‹åçš„å¯¹ç™½
 tDialog.nDialog_Task4_2 = 11464
 tDialog.nDialog_Task4_3 = 11465
 tDialog.nDialog_Task4_4 = 11466
-tDialog.nDialog_Task5 =  11517  ---11007ËûÏëÀûÓÃÎÒÃÇ»ñµÃÃÔÎí±¦²Ø£¡<br>ÕæÊÇÌ«½Æ»«ÁË£¡
-tDialog.nDialog_Task5_1 = 11611 --½»¸øÊ÷ĞÄ³ÇÊØÎÀ¶Ô°×
+tDialog.nDialog_Task5 =  11517  ---11007ä»–æƒ³åˆ©ç”¨æˆ‘ä»¬è·å¾—è¿·é›¾å®è—ï¼<br>çœŸæ˜¯å¤ªç‹¡çŒ¾äº†ï¼
+tDialog.nDialog_Task5_1 = 11611 --äº¤ç»™æ ‘å¿ƒåŸå®ˆå«å¯¹ç™½
 tDialog.nDialog_Task6 = 11008
 tDialog.nDialog_Task7 = 11009
 tDialog.nDialog_Task8 = 11010
@@ -71,46 +71,46 @@ tDialog.nDialog_cg3 = 11016
 tDialog.nDialog_cg4 = 11017
 tDialog.nDialog_win_Lu  = 11018
 
----11610 ±¦²ØÊØÎÀÕ½ºó¶Ô°×
---11611½»¸øÊ÷ĞÄ³ÇÊØÎÀ¶Ô°×
+---11610 å®è—å®ˆå«æˆ˜åå¯¹ç™½
+--11611äº¤ç»™æ ‘å¿ƒåŸå®ˆå«å¯¹ç™½
 -----
 --genid 
 --NPC 3321  3322 and   3331  3333 
 --NPC Group 20342  20343 
 --GenId 20030367  20030381 
---NPCÏĞÁÄ¶Ô°×   1544  1547 
---±È¶àÃ¨
+--NPCé—²èŠå¯¹ç™½   1544  1547 
+--æ¯”å¤šçŒ«
 local nNpc_BiDuoMao = 3080
---¸ç²¼ÁÖÃ°ÏÕÕß ĞÂÔönpc Ä£ĞÍNPCID: 2012
+--å“¥å¸ƒæ—å†’é™©è€… æ–°å¢npc æ¨¡å‹NPCID: 2012
 local nNpc_GeBuLin = 3321      
 local nNpcGroup_GeBuLin = 20342
 local nNpcGroup_GenId_GeBuLin = 20030367
---Ã°ÏÕÕß²¼»İ ĞÂÔönpc Ä£ĞÍNPCID£º2021
+--å†’é™©è€…å¸ƒæƒ  æ–°å¢npc æ¨¡å‹NPCIDï¼š2021
 local nNpc_NanQingNian = 3322      
 local nNpcGroup_NanQingNian = 20343
 local nNpcGroupId_GenId_NanQingNian = 20030368
---±¦²ØÊØÎÀ  3331
---±»Ä§»¯µÄĞÜÈË  3332
---Ê÷ĞÄ³ÇÊØÎÀ   3543
---Ê÷ĞÄ³ÇÊØÎÀ ĞÂÔönpc Ä£ĞÍNPCID£º
+--å®è—å®ˆå«  3331
+--è¢«é­”åŒ–çš„ç†Šäºº  3332
+--æ ‘å¿ƒåŸå®ˆå«   3543
+--æ ‘å¿ƒåŸå®ˆå« æ–°å¢npc æ¨¡å‹NPCIDï¼š
 local nNpc_ShuXinChengShouWei = 3543      
 local nNpcGroup_ShuXinChengShouWei = 20509
 local nNpcGroupId_GenId_ShuXinChengShouWei = 20030509
 
---npc¡¢npc×é³õÊ¼»¯
---¸ç²¼ÁÖ
+--npcã€npcç»„åˆå§‹åŒ–
+--å“¥å¸ƒæ—
 rwtNpc[nNpc_GeBuLin] = rwtNpc[nNpc_GeBuLin] or {}
 rwtNpc[nNpc_GeBuLin]["DialogId"] = {1544,1545}
 rwtNpcGroup[nNpcGroup_GeBuLin] = rwtNpcGroup[nNpcGroup_GeBuLin] or {}
 rwtNpcGroup[nNpcGroup_GeBuLin]["Type"] = CONST_NPCGROUP_TYPE.SingleNpc
 rwtNpcGroup[nNpcGroup_GeBuLin]["NpcId"]= nNpc_GeBuLin
---Ã°ÏÕÕßÇàÄê
+--å†’é™©è€…é’å¹´
 rwtNpc[nNpc_NanQingNian] = rwtNpc[nNpc_NanQingNian] or {}
 rwtNpc[nNpc_NanQingNian]["DialogId"] = {1546,1547}
 rwtNpcGroup[nNpcGroup_NanQingNian] = rwtNpcGroup[nNpcGroup_NanQingNian] or {}
 rwtNpcGroup[nNpcGroup_NanQingNian]["Type"] = CONST_NPCGROUP_TYPE.SingleNpc
 rwtNpcGroup[nNpcGroup_NanQingNian]["NpcId"]= nNpc_NanQingNian
---Ê÷ĞÄ³ÇÊØÎÀ
+--æ ‘å¿ƒåŸå®ˆå«
 
 rwtNpc[nNpc_ShuXinChengShouWei] = rwtNpc[nNpc_ShuXinChengShouWei] or {}
 --rwtNpc[nNpc_ShuXinChengShouWei]["DialogId"] = {1546,1547}
@@ -118,7 +118,7 @@ rwtNpcGroup[nNpcGroup_ShuXinChengShouWei] = rwtNpcGroup[nNpcGroup_ShuXinChengSho
 rwtNpcGroup[nNpcGroup_ShuXinChengShouWei]["Type"] = CONST_NPCGROUP_TYPE.SingleNpc
 rwtNpcGroup[nNpcGroup_ShuXinChengShouWei]["NpcId"]= nNpc_ShuXinChengShouWei
 
---±¦Ïä 40097  40098 
+--å®ç®± 40097  40098 
 local nTreasureBox_Task5 = 40097
 local nGenId_NpcGroup_TreasureBox_Task5 = 20030369
 rwtNpcGroup[nTreasureBox_Task5] = rwtNpcGroup[nTreasureBox_1] or {} 
@@ -135,36 +135,36 @@ rwtNpcGroup[nTreasureBox_Task5]["Awards"]["Events"][1]["GetServerAward"]["Action
 rwtNpcGroup[nTreasureBox_Task5]["Awards"]["Events"][1]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.AWARD
 rwtNpcGroup[nTreasureBox_Task5]["Awards"]["Events"][1]["GetServerAward"]["AwardId"] = nNormal_Box_AwardId  
 
---¼Ù±¦Ïä 40133
+--å‡å®ç®± 40133
 local nTreasureBox_Task5_1 = 40133
 local nGenId_NpcGroup_TreasureBox_Task5_1 = 20030389
 rwtNpcGroup[nTreasureBox_Task5_1] = rwtNpcGroup[nTreasureBox_Task5_1] or {} 
 rwtNpcGroup[nTreasureBox_Task5_1]["Type"] = CONST_NPCGROUP_TYPE.TreasureBox
 
---¿ÕÏä×Ó   40156 
+--ç©ºç®±å­   40156 
 local nTreasureBox_Task4_3 = 40156
 local nGenId_NpcGroup_TreasureBox_Task4_3 = 20030482 
 
 rwtNpcGroup[nTreasureBox_Task4_3] = rwtNpcGroup[nTreasureBox_Task4_3] or {} 
 rwtNpcGroup[nTreasureBox_Task4_3]["Type"] = CONST_NPCGROUP_TYPE.TreasureBox
 
---¹ÖÎï     9000210  9000212 
---¹ÖÎï×é   900296  900298 
-local nMonster_Task4 = 9000210       --¸ĞÈ¾µÄÃ°ÏÕÕß
+--æ€ªç‰©     9000210  9000212 
+--æ€ªç‰©ç»„   900296  900298 
+local nMonster_Task4 = 9000210       --æ„ŸæŸ“çš„å†’é™©è€…
 local nMonsterGroup_Task4 = 900296
 local nMonster_GenId_Task4 = 20030370
-local nMonster_Task9 = 9000211       --ĞÜÈËÕ½Ê¿
+local nMonster_Task9 = 9000211       --ç†Šäººæˆ˜å£«
 local nMonsterGroup_Task9 = 900297
 local nMonster_GenId_Task9 = 20030371
-local nMonster_Task10 = 9000212      --Â¹½ÇÊŞ¶Ó³¤
+local nMonster_Task10 = 9000212      --é¹¿è§’å…½é˜Ÿé•¿
 local nMonsterGroup_Task10 = 900298
 local nMonster_GenId_Task10 = 20030372
 
---µØÍ¼
+--åœ°å›¾
 local nMapId = 2003
 
---ÏİÚå   30377  30383 
-local nTrap_Task1 = 30377    --´¥·¢³¡¾°¶¯»­Ñ²²éÏİÚå
+--é™·é˜±   30377  30383 
+local nTrap_Task1 = 30377    --è§¦å‘åœºæ™¯åŠ¨ç”»å·¡æŸ¥é™·é˜±
 local nTrap_Task3 = 30378
 local nTrap_Task4 = 30379
 local nTrap_Task4_2 = 30492
@@ -177,7 +177,7 @@ local nGenId_Trap_Task4 = 20030375
 local nGenId_Trap_Task4_2 = 20030481
 local nGenId_Trap_Task8 = 20030376
 local nGenId_Trap_Task9 = 20030377
-local nGenId_Trap_Task10 = 20030377 --¸úÉÏÒ»¸öÈÎÎñÓÃÍ¬Ò»¸öÏİÚå
+local nGenId_Trap_Task10 = 20030377 --è·Ÿä¸Šä¸€ä¸ªä»»åŠ¡ç”¨åŒä¸€ä¸ªé™·é˜±
 rwtNpcGroup[nTrap_Task1] = rwtNpcGroup[nTrap_Task1] or {} 
 rwtNpcGroup[nTrap_Task1]["Type"] = CONST_NPCGROUP_TYPE.Trap
 rwtNpcGroup[nTrap_Task3] = rwtNpcGroup[nTrap_Task3] or {} 
@@ -194,10 +194,10 @@ rwtNpcGroup[nTrap_Task10] = rwtNpcGroup[nTrap_Task10] or {}
 rwtNpcGroup[nTrap_Task10]["Type"] = CONST_NPCGROUP_TYPE.Trap
 
 --AwardId
-local nAwardId_Task6 = 1000027 --ÔİÊ±Ëæ±ãÓÃ£¬ĞèÒªÉêÇë
+local nAwardId_Task6 = 1000027 --æš‚æ—¶éšä¾¿ç”¨ï¼Œéœ€è¦ç”³è¯·
 local nAwardId_Task11 =1000027 --
 
---¶¯»­
+--åŠ¨ç”»
 local nCg_01 = 3415
 local nCg_02 = 3416
 
@@ -327,12 +327,12 @@ rwtTask[tTask.nMiWuXunChaTask4]["StartAutoWay"]["FindWayGroupId"] = nTrap_Task4
 rwtTask[tTask.nMiWuXunChaTask4]["StartAutoWay"]["FindWayGenId"] = nGenId_Trap_Task4
 
 rwtTask[tTask.nMiWuXunChaTask4_1] = {}
-rwtTask[tTask.nMiWuXunChaTask4_1]["Title"] = tLuaText[LANGUAGE_CONFIG][20935]--[nil]ÁÙÊ±Ê¹ÓÃ£¬µÈ¶Ô°×ÎÄµµÔÙÅäÖÃ
+rwtTask[tTask.nMiWuXunChaTask4_1]["Title"] = tLuaText[LANGUAGE_CONFIG][20935]--[nil]ä¸´æ—¶ä½¿ç”¨ï¼Œç­‰å¯¹ç™½æ–‡æ¡£å†é…ç½®
 rwtTask[tTask.nMiWuXunChaTask4_1]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.CHOOSE_OPTION
 rwtTask[tTask.nMiWuXunChaTask4_1]["IsClickComplete"] = 0
 rwtTask[tTask.nMiWuXunChaTask4_1]["OptionTask1"] = tTask.nMiWuXunChaTask4_2
 rwtTask[tTask.nMiWuXunChaTask4_1]["OptionTask2"] = tTask.nMiWuXunChaTask5
-rwtTask[tTask.nMiWuXunChaTask4_1]["AcceptDialogId"] = tDialog.nDialog_Task4_1_1 --´òÍê¹ÖÖ®ºó³öµÄ¶Ô°×
+rwtTask[tTask.nMiWuXunChaTask4_1]["AcceptDialogId"] = tDialog.nDialog_Task4_1_1 --æ‰“å®Œæ€ªä¹‹åå‡ºçš„å¯¹ç™½
 rwtTask[tTask.nMiWuXunChaTask4_1]["DialogId"] = tDialog.nDialog_Task4_1
 rwtTask[tTask.nMiWuXunChaTask4_1]["ReqTrap1"] = nTrap_Task4
 rwtTask[tTask.nMiWuXunChaTask4_1]["DynaNpcGroupGen"] = {}
@@ -341,7 +341,7 @@ rwtTask[tTask.nMiWuXunChaTask4_1]["DynaNpcGroupGen"][1]["GenId"] = nGenId_Trap_T
 rwtTask[tTask.nMiWuXunChaTask4_1]["DynaNpcGroupGen"][1]["MapId"] = nMapId
 rwtTask[tTask.nMiWuXunChaTask4_1]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
 rwtTask[tTask.nMiWuXunChaTask4_1]["DynaNpcGroupGen"][2] = {}
-rwtTask[tTask.nMiWuXunChaTask4_1]["DynaNpcGroupGen"][2]["GenId"] = nGenId_NpcGroup_TreasureBox_Task5_1 --¼ÙÏä×Ó
+rwtTask[tTask.nMiWuXunChaTask4_1]["DynaNpcGroupGen"][2]["GenId"] = nGenId_NpcGroup_TreasureBox_Task5_1 --å‡ç®±å­
 rwtTask[tTask.nMiWuXunChaTask4_1]["DynaNpcGroupGen"][2]["MapId"] = nMapId
 rwtTask[tTask.nMiWuXunChaTask4_1]["DynaNpcGroupGen"][2]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
 rwtTask[tTask.nMiWuXunChaTask4_1]["StartAutoWay"] = {}
@@ -351,7 +351,7 @@ rwtTask[tTask.nMiWuXunChaTask4_1]["StartAutoWay"]["FindWayGroupId"] = nTrap_Task
 rwtTask[tTask.nMiWuXunChaTask4_1]["StartAutoWay"]["FindWayGenId"] = nGenId_Trap_Task4
 
 
---Ö§Ïß1£º×·¼©¸ç²¼ÁÖÃ°ÏÕÕß
+--æ”¯çº¿1ï¼šè¿½ç¼‰å“¥å¸ƒæ—å†’é™©è€…
 rwtTask[tTask.nMiWuXunChaTask4_2] = {}
 rwtTask[tTask.nMiWuXunChaTask4_2]["Title"] = tLuaText[LANGUAGE_CONFIG][20935]--[nil]
 rwtTask[tTask.nMiWuXunChaTask4_2]["NextTaskId"] = tTask.nMiWuXunChaTask4_3
@@ -403,11 +403,11 @@ rwtTask[tTask.nMiWuXunChaTask4_4]["PatrolLastTask"] = 1
 rwtTask[tTask.nMiWuXunChaTask4_4]["IsClickComplete"] = 0
 rwtTask[tTask.nMiWuXunChaTask4_4]["StartAutoWay"] = {}
 rwtTask[tTask.nMiWuXunChaTask4_4]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tTask.nMiWuXunChaTask4_4]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tTask.nMiWuXunChaTask4_4]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tTask.nMiWuXunChaTask4_4]["StartAutoWay"]["FindWayGroupId"] = 20115
 rwtTask[tTask.nMiWuXunChaTask4_4]["StartAutoWay"]["FindWayGenId"] = 2001658
 
---Ö§Ïß2£º±¦Ïä½»¸øÁªÃË
+--æ”¯çº¿2ï¼šå®ç®±äº¤ç»™è”ç›Ÿ
 rwtTask[tTask.nMiWuXunChaTask5] = {}
 rwtTask[tTask.nMiWuXunChaTask5]["Title"] = tLuaText[LANGUAGE_CONFIG][20936]
 rwtTask[tTask.nMiWuXunChaTask5]["NextTaskId" ]= tTask.nMiWuXunChaTask5_1
@@ -462,7 +462,7 @@ rwtTask[tTask.nMiWuXunChaTask6]["PatrolLastTask"] = 1
 rwtTask[tTask.nMiWuXunChaTask6]["IsClickComplete"] = 0
 rwtTask[tTask.nMiWuXunChaTask6]["StartAutoWay"] = {}
 rwtTask[tTask.nMiWuXunChaTask6]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tTask.nMiWuXunChaTask6]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tTask.nMiWuXunChaTask6]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tTask.nMiWuXunChaTask6]["StartAutoWay"]["FindWayGroupId"] = 20115
 rwtTask[tTask.nMiWuXunChaTask6]["StartAutoWay"]["FindWayGenId"] = 2001658
 
@@ -600,6 +600,6 @@ rwtTask[tTask.nMiWuXunChaTask11]["PatrolLastTask"] = 1
 rwtTask[tTask.nMiWuXunChaTask11]["IsClickComplete"] = 0
 rwtTask[tTask.nMiWuXunChaTask11]["StartAutoWay"] = {}
 rwtTask[tTask.nMiWuXunChaTask11]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[tTask.nMiWuXunChaTask11]["StartAutoWay"]["FindWayMapId"] = 1001
+rwtTask[tTask.nMiWuXunChaTask11]["StartAutoWay"]["FindWayMapId"] = 1000
 rwtTask[tTask.nMiWuXunChaTask11]["StartAutoWay"]["FindWayGroupId"] = 20115
 rwtTask[tTask.nMiWuXunChaTask11]["StartAutoWay"]["FindWayGenId"] = 2001658

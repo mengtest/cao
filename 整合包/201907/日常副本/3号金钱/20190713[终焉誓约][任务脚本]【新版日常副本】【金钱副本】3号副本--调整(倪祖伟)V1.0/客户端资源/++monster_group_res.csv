@@ -1,0 +1,11 @@
+﻿,required,required,required,optional,required,required,required,required,required,required,required,required,required,required,required,required,required,required,required,optional,repeated,required,optional
+,uint32,float,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,int32,int32,float,string
+,id,scale,fight_scene_id,magic_circle_path,coer_monster,normal_talk,special_talk,attack_talk,time,intervaltime,regionSize,latent_range,follow_range,insight,no_insight_id,corpse_vis,drop1,drop2,drop3,BGM_Star,BGM_Loop,magicScale,defaultAnim
+备注,组ID,外形信息,战斗场景,魔法阵路径,核心怪物ID,正常气泡内容id,特殊气泡id,战斗气泡id,显示时长,显示间隔,区域大小,潜伏解除距离,追击距离,洞察力,洞察对象,显示尸体,掉落奖励1,奖励2,奖励3,战斗开始音乐,战斗循环音乐,光环大小,默认动作
+,200675,1,53,Prefab/Effect/Scene/Effect_Scene_monster_bai.prefab,0,100322,0,0,5,3,,0,0,0,0,0,0,0,0,0,,1,
+,200676,1,53,Prefab/Effect/Scene/Effect_Scene_monster_bai.prefab,0,100324,0,0,5,3,,0,0,0,0,0,0,0,0,0,,1,
+,200677,1,53,Prefab/Effect/Scene/Effect_Scene_monster_bai.prefab,0,100323,0,0,5,3,,0,0,0,0,0,0,0,0,0,,1,
+,200678,1,53,Prefab/Effect/Scene/Effect_Scene_monster_bai.prefab,0,100322,0,0,5,3,,0,0,0,0,0,0,0,0,0,,1,
+,200679,1,53,Prefab/Effect/Scene/Effect_Scene_monster_bai.prefab,0,100324,0,0,5,3,,0,0,0,0,0,0,0,0,0,,1,
+,200680,1,53,Prefab/Effect/Scene/Effect_Scene_monster_bai.prefab,0,100322,0,0,5,3,,0,0,0,0,0,0,0,0,0,,1,
+,200681,1,53,Prefab/Effect/Scene/Effect_Scene_monster_bai.prefab,0,100324,0,0,5,3,,0,0,0,0,0,0,0,0,0,,1,
