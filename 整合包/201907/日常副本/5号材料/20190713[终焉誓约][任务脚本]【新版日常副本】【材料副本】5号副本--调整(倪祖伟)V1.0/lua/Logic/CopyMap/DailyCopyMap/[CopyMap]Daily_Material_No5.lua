@@ -19,11 +19,6 @@ local nTempdata = 1228
 -- data4 = 获得冒险者宝物
 
 local nTarget_1 = 60304
-local RandomBaoJi = 100
-local RandomGetQuWenShui = 100
-local RandomGetMaoXianZhe = 100
-local TimesBaoji = 3
-
 local nItem_QuWenShui = 7000312
 
 local tPos = {}
@@ -98,10 +93,15 @@ tDialog.MaoXianZhe = {6844,6845,6846}
 local tAward = {}
 tAward.FiveQuWenShui = 1000585
 tAward.OneQuWenShui = 1000586
-tAward.OneQuWenShui2 = 1000588
+
 tAward.GetMaoXinZhe = 1000587
-tAward.Dang = {1000579,1000580,1000581}
-tAward.BaijiDang = {1000582,1000583,1000584}
+
+tAward.Dang = 1000579
+tAward.Dang2 = 1000581
+tAward.BaijiDang = 1000580
+
+
+
 -------------------------------------------- 配置 ----------------------------------------------
 --和驱魔人对话
 rwtNpcGroup[tNpcGroup.QuMoShi] = rwtNpcGroup[tNpcGroup.QuMoShi] or {}    
@@ -116,253 +116,178 @@ rwtNpcGroup[tNpcGroup.QuMoShi]["Awards"]["Events"][1]["OpenDialog"]["tDialog"] =
 rwtNpcGroup[tCollect.ChongRuan] = rwtNpcGroup[tCollect.ChongRuan] or {}    
 rwtNpcGroup[tCollect.ChongRuan]["Type"] = CONST_NPCGROUP_TYPE.Collect
 rwtNpcGroup[tCollect.ChongRuan]["CollectTime"] = 2
-rwtNpcGroup[tCollect.ChongRuan]["NotDel"] = 1
-rwtNpcGroup[tCollect.ChongRuan]["BeforeCollect"] = {}
-rwtNpcGroup[tCollect.ChongRuan]["BeforeCollect"]["Func"] = function(nGenEventId,nRandom,nNpcGroupType,nDelayTime)
-	local nUserId = rwUserGetId()
-	if rwUserGetItemCount(nItem_QuWenShui) >= 1 then	
-		rwAddUserCollectFunc(nDelayTime, "</F>rwCollectEnd</N>" .. nNpcGroupType .."</N>" .. nGenEventId, nGenEventId, 0)
-	else
-		rwOpenNpcChatDialog(tDialog.NoQuWenShui)
+rwtNpcGroup[tCollect.ChongRuan]["Func"] = function(nGenEventId,nRandom)
+	if rwUserGetItemCount(nItem_QuWenShui) <= 0 then
+		rwOpenNpcChatDialog(tDialog.CleanUpQuWenShui)
 	end
 end
+rwtNpcGroup[tCollect.ChongRuan]["Awards"] = {}  
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["CostItems"] = {}
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["CostItems"][1] = {}
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["CostItems"][1]["id"] = nItem_QuWenShui
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["CostItems"][1]["num"] = 1
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["ErrorMsg"] = {}
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["ErrorMsg"][CONST_CODE.Error_ChkItemNum] = {}
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["ErrorMsg"][CONST_CODE.Error_ChkItemNum]["MsgType"] = CONST_MSG_SHOW.Msg_ShowLocalDialog
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["ErrorMsg"][CONST_CODE.Error_ChkItemNum]["Param"] = tDialog.NoQuWenShui
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"] = {}   
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1] = {}
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"] = {}
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1] = {}
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["MinRate"] = 0
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["MaxRate"] = 8000
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"] = {}
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"] = {}          
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["AwardId"] = tAward.Dang
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TIPS
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["ActionId"] = tCollect.ChongRuan
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2] = {}
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["MinRate"] = 8001
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["MaxRate"] = 10000
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"] = {}
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"] = {}
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1] = {}
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1]["Record"] = nTempdata
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1]["DataValue"] = CONST_TEMP_DATA.Data2
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1]["Value"] = {0,1,2}
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["SetUserTempData"] = {}
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["SetUserTempData"][1] = {}
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["SetUserTempData"][1]["TempDataID"] = nTempdata
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["SetUserTempData"][1]["AddValue"] = 1
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["SetUserTempData"][1]["DataIndex"] = CONST_TEMP_DATA.Data2
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"] = {}
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["AwardId"] = tAward.BaijiDang
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.GIFT
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["ActionId"] = tCollect.ChongRuan
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["OpenDialog"] = {}
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["OpenDialog"]["DialogId"] = tDialog.ChongRuanBaoJi
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["FailEvents"] = {}
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["FailEvents"]["GetServerAward"] = {}
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["FailEvents"]["GetServerAward"]["AwardId"] = tAward.Dang
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["FailEvents"]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["FailEvents"]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TIPS
+rwtNpcGroup[tCollect.ChongRuan]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["FailEvents"]["GetServerAward"]["ActionId"] = tCollect.ChongRuan
 
-rwtNpcGroup[tCollect.ChongRuan]["Func"] = function(nGenEventId,nRandom)
-    -- 固定删除物品，删除采集物
-    rwItemDel(nItem_QuWenShui,1)
-    rwDelGenEvent(nGenEventId)
-    
-    local times = rwTempDataGetValue(nTempdata,CONST_TEMP_DATA.Data2,rwUserGetId())
-    if times <= 3 and rwGetRandInt(1,100) < RandomBaoJi then
-        --出现暴击
-        rwOpenNpcChatDialog(tDialog.ChongRuanBaoJi)
-        rwTempDataSet(nTempdata,times + 1,CONST_TEMP_DATA.Data2,rwUserGetId())
-    else
-		local tAwardInfo = {}
-        tAwardInfo["Awards"] = {}
-        tAwardInfo["Awards"]["RandomEvents"] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["MinRate"] = 0
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["MaxRate"] = 5000
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["AwardId"] = tAward.Dang[1]
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TIPS
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["ActionId"] = tCollect.ChongRuan
-		tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["MinRate"] = 5001
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["MaxRate"] = 8000
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["AwardId"] = tAward.Dang[2]
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TIPS
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["ActionId"] = tCollect.ChongRuan
-		tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][3] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][3]["MinRate"] = 8001
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][3]["MaxRate"] = 10000
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][3]["Events"] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][3]["Events"]["GetServerAward"] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][3]["Events"]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][3]["Events"]["GetServerAward"]["AwardId"] = tAward.Dang[3]
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][3]["Events"]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TIPS
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][3]["Events"]["GetServerAward"]["ActionId"] = tCollect.ChongRuan	
-        rwBaseAward:create(tAwardInfo["Awards"]):Process()
-        if rwUserGetItemCount(nItem_QuWenShui) == 0 then
-            rwOpenNpcChatDialog(tDialog.CleanUpQuWenShui)
-        end
-    end
-end
-
-rwtDialog[tDialog.ChongRuanBaoJi] = rwtDialog[tDialog.ChongRuanBaoJi] or {}
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"] = {}
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"] = {}
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1] = {}
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"] = {}
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][1] = {}
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][1]["MinRate"] = 0
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][1]["MaxRate"] = 5000
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"] = {}
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"] = {}
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["AwardId"] = tAward.BaijiDang[1]
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TREASURE_BOX
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["ActionId"] = tCollect.ChongRuan
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][2] = {}
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][2]["MinRate"] = 5001
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][2]["MaxRate"] = 8000
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"] = {}
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"] = {}
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["AwardId"] = tAward.BaijiDang[2]
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TREASURE_BOX
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["ActionId"] = tCollect.ChongRuan
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][3] = {}
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][3]["MinRate"] = 8001
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][3]["MaxRate"] = 10000
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][3]["Events"] = {}
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][3]["Events"]["GetServerAward"] = {}
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][3]["Events"]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][3]["Events"]["GetServerAward"]["AwardId"] = tAward.BaijiDang[3]
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][3]["Events"]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TREASURE_BOX
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][3]["Events"]["GetServerAward"]["ActionId"] = tCollect.ChongRuan
-rwtDialog[tDialog.ChongRuanBaoJi]["DialogEnd"] = function(nId)
-    if rwUserGetItemCount(nItem_QuWenShui) == 0 then
-        rwOpenNpcChatDialog(tDialog.CleanUpQuWenShui)
-    end
-end
 
 
 --箱子
 rwtNpcGroup[tCollect.Box] = rwtNpcGroup[tCollect.Box] or {}    
 rwtNpcGroup[tCollect.Box]["Type"] = CONST_NPCGROUP_TYPE.Collect
-rwtNpcGroup[tCollect.Box]["NotDel"] = 1
 rwtNpcGroup[tCollect.Box]["CollectTime"] = 1
-rwtNpcGroup[tCollect.Box]["BeforeCollect"] = {}
-rwtNpcGroup[tCollect.Box]["BeforeCollect"]["Func"] = function(nGenEventId,nRandom,nNpcGroupType,nDelayTime)
-	if rwUserGetItemCount(nItem_QuWenShui) >= 1 then
-		rwAddUserCollectFunc(nDelayTime, "</F>rwCollectEnd</N>" .. nNpcGroupType .."</N>" .. nGenEventId, nGenEventId, 0)
-	else
-		rwOpenNpcChatDialog(tDialog.NoQuWenShui)
+rwtNpcGroup[tCollect.Box]["Func"] = function(nGenEventId,nRandom)
+	if rwUserGetItemCount(nItem_QuWenShui) <= 0 then
+		rwOpenNpcChatDialog(tDialog.CleanUpQuWenShui)
 	end
 end
-rwtNpcGroup[tCollect.Box]["Func"] = function(nGenEventId,nRandom)
-	rwItemDel(nItem_QuWenShui,1)
-    rwDelGenEvent(nGenEventId)
-    if rwTempDataGetValue(nTempdata,CONST_TEMP_DATA.Data3,rwUserGetId()) <= 2 and rwGetRandInt(1,100) < RandomGetQuWenShui then
-        --出现暴击
-        rwOpenNpcChatDialog(tDialog.GetOneQuWenShui)
-        rwTempDataSet(nTempdata,1,CONST_TEMP_DATA.Data3,rwUserGetId())
-    else
-	    local tAwardInfo = {}
-        tAwardInfo["Awards"] = {}
-        tAwardInfo["Awards"]["RandomEvents"] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["MinRate"] = 0
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["MaxRate"] = 7000
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["AwardId"] = tAward.Dang[1]
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TIPS
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["ActionId"] = tCollect.Box
-	    tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["MinRate"] = 7001
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["MaxRate"] = 10000
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["AwardId"] = tAward.Dang[2]
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TIPS
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["ActionId"] = tCollect.Box
-        rwBaseAward:create(tAwardInfo["Awards"]):Process()		
-	    if rwUserGetItemCount(nItem_QuWenShui) == 0 then
-	    	rwOpenNpcChatDialog(tDialog.CleanUpQuWenShui)
-	    end
-    end	
-end
-
-rwtDialog[tDialog.GetOneQuWenShui] = rwtDialog[tDialog.GetOneQuWenShui] or {}
-rwtDialog[tDialog.GetOneQuWenShui]["DialogEndInit"] = {}
-rwtDialog[tDialog.GetOneQuWenShui]["DialogEndInit"]["RandomEvents"] = {}
-rwtDialog[tDialog.GetOneQuWenShui]["DialogEndInit"]["RandomEvents"][1] = {}
-rwtDialog[tDialog.GetOneQuWenShui]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"] = {}
-rwtDialog[tDialog.GetOneQuWenShui]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][1] = {}
-rwtDialog[tDialog.GetOneQuWenShui]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][1]["MinRate"] = 0
-rwtDialog[tDialog.GetOneQuWenShui]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][1]["MaxRate"] = 7000
-rwtDialog[tDialog.GetOneQuWenShui]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"] = {}
-rwtDialog[tDialog.GetOneQuWenShui]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"] = {}
-rwtDialog[tDialog.GetOneQuWenShui]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
-rwtDialog[tDialog.GetOneQuWenShui]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["AwardId"] = tAward.OneQuWenShui
-rwtDialog[tDialog.GetOneQuWenShui]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TREASURE_BOX
-rwtDialog[tDialog.GetOneQuWenShui]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["ActionId"] = tCollect.Box
-rwtDialog[tDialog.GetOneQuWenShui]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][2] = {}
-rwtDialog[tDialog.GetOneQuWenShui]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][2]["MinRate"] = 7001
-rwtDialog[tDialog.GetOneQuWenShui]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][2]["MaxRate"] = 10000
-rwtDialog[tDialog.GetOneQuWenShui]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"] = {}
-rwtDialog[tDialog.GetOneQuWenShui]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"] = {}
-rwtDialog[tDialog.GetOneQuWenShui]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
-rwtDialog[tDialog.GetOneQuWenShui]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["AwardId"] = tAward.OneQuWenShui2
-rwtDialog[tDialog.GetOneQuWenShui]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TREASURE_BOX
-rwtDialog[tDialog.GetOneQuWenShui]["DialogEndInit"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["ActionId"] = tCollect.Box
-rwtDialog[tDialog.GetOneQuWenShui]["DialogEnd"] = function(nId)
-    if rwUserGetItemCount(nItem_QuWenShui) == 0 then
-        rwOpenNpcChatDialog(tDialog.CleanUpQuWenShui)
-    end
-end
-
+rwtNpcGroup[tCollect.Box]["Awards"] = {}  
+rwtNpcGroup[tCollect.Box]["Awards"]["CostItems"] = {}
+rwtNpcGroup[tCollect.Box]["Awards"]["CostItems"][1] = {}
+rwtNpcGroup[tCollect.Box]["Awards"]["CostItems"][1]["id"] = nItem_QuWenShui
+rwtNpcGroup[tCollect.Box]["Awards"]["CostItems"][1]["num"] = 1
+rwtNpcGroup[tCollect.Box]["Awards"]["ErrorMsg"] = {}
+rwtNpcGroup[tCollect.Box]["Awards"]["ErrorMsg"][CONST_CODE.Error_ChkItemNum] = {}
+rwtNpcGroup[tCollect.Box]["Awards"]["ErrorMsg"][CONST_CODE.Error_ChkItemNum]["MsgType"] = CONST_MSG_SHOW.Msg_ShowLocalDialog
+rwtNpcGroup[tCollect.Box]["Awards"]["ErrorMsg"][CONST_CODE.Error_ChkItemNum]["Param"] = tDialog.NoQuWenShui
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"] = {}   
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1] = {}
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"] = {}
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1] = {}
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["MinRate"] = 0
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["MaxRate"] = 8000
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"] = {}
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"] = {}          
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["AwardId"] = tAward.Dang2
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TIPS
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["ActionId"] = tCollect.Box
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2] = {}
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["MinRate"] = 8001
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["MaxRate"] = 10000
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"] = {}
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"] = {}
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1] = {}
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1]["Record"] = nTempdata
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1]["DataValue"] = CONST_TEMP_DATA.Data3
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1]["Value"] = {0,1}
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["SetUserTempData"] = {}
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["SetUserTempData"][1] = {}
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["SetUserTempData"][1]["TempDataID"] = nTempdata
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["SetUserTempData"][1]["AddValue"] = 1
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["SetUserTempData"][1]["DataIndex"] = CONST_TEMP_DATA.Data3
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"] = {}
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["AwardId"] = tAward.OneQuWenShui
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.GIFT
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["ActionId"] = tCollect.Box
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["OpenDialog"] = {}
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["OpenDialog"]["DialogId"] = tDialog.GetOneQuWenShui
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["FailEvents"] = {}
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["FailEvents"]["GetServerAward"] = {}
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["FailEvents"]["GetServerAward"]["AwardId"] = tAward.Dang2
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["FailEvents"]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["FailEvents"]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TIPS
+rwtNpcGroup[tCollect.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["FailEvents"]["GetServerAward"]["ActionId"] = tCollect.Box
 
 
 --石头
 rwtNpcGroup[tCollect.ShiTou] = rwtNpcGroup[tCollect.ShiTou] or {}    
 rwtNpcGroup[tCollect.ShiTou]["Type"] = CONST_NPCGROUP_TYPE.Collect
-rwtNpcGroup[tCollect.ShiTou]["NotDel"] = 1
 rwtNpcGroup[tCollect.ShiTou]["CollectTime"] = 3
-rwtNpcGroup[tCollect.ShiTou]["BeforeCollect"] = {}
-rwtNpcGroup[tCollect.ShiTou]["BeforeCollect"]["Func"] = function(nGenEventId,nRandom,nNpcGroupType,nDelayTime)
-	if rwUserGetItemCount(nItem_QuWenShui) >= 1 then
-		rwAddUserCollectFunc(nDelayTime, "</F>rwCollectEnd</N>" .. nNpcGroupType .."</N>" .. nGenEventId, nGenEventId, 0)
-	else
-		rwOpenNpcChatDialog(tDialog.NoQuWenShui)
+rwtNpcGroup[tCollect.ShiTou]["Func"] = function(nGenEventId,nRandom)
+	if rwUserGetItemCount(nItem_QuWenShui) <= 0 then
+		rwOpenNpcChatDialog(tDialog.CleanUpQuWenShui)
 	end
 end
-rwtNpcGroup[tCollect.ShiTou]["Func"] = function(nGenEventId,nRandom)
-	rwItemDel(nItem_QuWenShui,1)
-    rwDelGenEvent(nGenEventId)
-    if rwTempDataGetValue(nTempdata,CONST_TEMP_DATA.Data4,rwUserGetId()) == 0 and rwGetRandInt(1,100) < RandomGetMaoXianZhe then
-        --出现暴击
-        rwOpenNpcChatDialog(tDialog.GetMaoXinZhe)
-        rwTempDataSet(nTempdata,1,CONST_TEMP_DATA.Data4,rwUserGetId())
-    else
-	    local tAwardInfo = {}
-        tAwardInfo["Awards"] = {}
-        tAwardInfo["Awards"]["RandomEvents"] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["MinRate"] = 0
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["MaxRate"] = 7000
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["AwardId"] = tAward.Dang[1]
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TIPS
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["ActionId"] = tCollect.Box
-	    tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["MinRate"] = 7001
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["MaxRate"] = 10000
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"] = {}
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["AwardId"] = tAward.Dang[2]
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TIPS
-        tAwardInfo["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["ActionId"] = tCollect.Box
-        rwBaseAward:create(tAwardInfo["Awards"]):Process()		
-	    if rwUserGetItemCount(nItem_QuWenShui) == 0 then
-	    	rwOpenNpcChatDialog(tDialog.CleanUpQuWenShui)
-	    end
-    end	
-end
-
-rwtDialog[tDialog.GetMaoXinZhe] = rwtDialog[tDialog.GetMaoXinZhe] or {}
-rwtDialog[tDialog.GetMaoXinZhe]["DialogEndInit"] = {}
-rwtDialog[tDialog.GetMaoXinZhe]["DialogEndInit"]["Events"] = {}
-rwtDialog[tDialog.GetMaoXinZhe]["DialogEndInit"]["Events"][1] = {}
-rwtDialog[tDialog.GetMaoXinZhe]["DialogEndInit"]["Events"][1]["GetServerAward"] = {}
-rwtDialog[tDialog.GetMaoXinZhe]["DialogEndInit"]["Events"][1]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
-rwtDialog[tDialog.GetMaoXinZhe]["DialogEndInit"]["Events"][1]["GetServerAward"]["AwardId"] = tAward.GetMaoXinZhe
-rwtDialog[tDialog.GetMaoXinZhe]["DialogEndInit"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TREASURE_BOX
-rwtDialog[tDialog.GetMaoXinZhe]["DialogEndInit"]["Events"][1]["GetServerAward"]["ActionId"] = tCollect.Box
-rwtDialog[tDialog.GetMaoXinZhe]["DialogEnd"] = function(nId)
-    if rwUserGetItemCount(nItem_QuWenShui) == 0 then
-        rwOpenNpcChatDialog(tDialog.CleanUpQuWenShui)
-    end
-end
+rwtNpcGroup[tCollect.ShiTou]["Awards"] = {}  
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["CostItems"] = {}
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["CostItems"][1] = {}
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["CostItems"][1]["id"] = nItem_QuWenShui
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["CostItems"][1]["num"] = 1
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["ErrorMsg"] = {}
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["ErrorMsg"][CONST_CODE.Error_ChkItemNum] = {}
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["ErrorMsg"][CONST_CODE.Error_ChkItemNum]["MsgType"] = CONST_MSG_SHOW.Msg_ShowLocalDialog
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["ErrorMsg"][CONST_CODE.Error_ChkItemNum]["Param"] = tDialog.NoQuWenShui
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"] = {}   
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1] = {}
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"] = {}
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1] = {}
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["MinRate"] = 0
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["MaxRate"] = 9000
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"] = {}
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"] = {}          
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["AwardId"] = tAward.Dang2
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TIPS
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][1]["Events"]["GetServerAward"]["ActionId"] = tCollect.ShiTou
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2] = {}
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["MinRate"] = 9001
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["MaxRate"] = 10000
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"] = {}
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"] = {}
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1] = {}
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1]["Record"] = nTempdata
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1]["DataValue"] = CONST_TEMP_DATA.Data4
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1]["Value"] = 0
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["SetUserTempData"] = {}
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["SetUserTempData"][1] = {}
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["SetUserTempData"][1]["TempDataID"] = nTempdata
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["SetUserTempData"][1]["SetValue"] = 1
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["SetUserTempData"][1]["DataIndex"] = CONST_TEMP_DATA.Data4
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"] = {}
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["AwardId"] = tAward.GetMaoXinZhe
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.GIFT
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"]["ActionId"] = tCollect.ShiTou
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["OpenDialog"] = {}
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["OpenDialog"]["DialogId"] = tDialog.GetMaoXinZhe
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["FailEvents"] = {}
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["FailEvents"]["GetServerAward"] = {}
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["FailEvents"]["GetServerAward"]["AwardId"] = tAward.Dang2
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["FailEvents"]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["FailEvents"]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TIPS
+rwtNpcGroup[tCollect.ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["FailEvents"]["GetServerAward"]["ActionId"] = tCollect.ShiTou
 
 
 rwtNpcGroup[tNpcGroup.MaoXianZhe1] = rwtNpcGroup[tNpcGroup.MaoXianZhe1] or {} 
