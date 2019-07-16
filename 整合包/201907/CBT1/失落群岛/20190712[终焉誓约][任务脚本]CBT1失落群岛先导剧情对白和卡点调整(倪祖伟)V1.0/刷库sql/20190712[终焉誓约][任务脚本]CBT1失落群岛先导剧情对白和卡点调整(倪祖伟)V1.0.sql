@@ -5,7 +5,10 @@
 #论坛链接:http://forum.nderp.99.com/Forum/TopicList-340213.aspx
 ###################################################
 #注释部分
-
+#DELETE FROM `task_index` WHERE `taskid` in (10678,10680);
 #打开注释部分
 
 ###################################################
+INSERT INTO `task_index` (`taskid`, `data_index`, `mask_index`) VALUES 
+(10678, 22, 9),
+(10680, 22, 10);

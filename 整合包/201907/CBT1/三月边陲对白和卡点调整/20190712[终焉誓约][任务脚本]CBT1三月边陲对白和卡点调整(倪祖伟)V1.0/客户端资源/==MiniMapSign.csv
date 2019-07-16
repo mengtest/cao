@@ -1,8 +1,0 @@
-﻿,required,required,required,required,required
-,uint32,float,float,uint32,string
-,signId,signWidth,signHeight,useDirection,res
-备注,标记id,标记宽度（占小地图UI宽的比）,标记高度（占小地图UI高的比）,是否使用方向（指向形小地图标记）,资源名
-,0,0.2754,0.325,1,Player
-,1,0.2203,0.1487,0,Mission
-,3,0.0661,0.0661,0,AiPlayer
-,7,0.2754,0.2809,0,Transfer
