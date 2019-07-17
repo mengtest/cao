@@ -1,5 +1,0 @@
-﻿,required,required,required,required,required
-,uint32,uint32,uint32,uint32,uint32
-,id,valve_status,type,data1,data2
-备注,机关id,状态0未开启/1开启中/2关闭,类型 1门类/2幻阵,参数1,参数2
-,1116,0,3,0,0
