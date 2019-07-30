@@ -1,0 +1,8 @@
+﻿,required,required,required,required,required,required,required,required,required,required,required,required,required,required,required
+,uint32,uint32,uint32,string,string,string,float,float,float,uint32,uint32,float,uint32,uint32,string
+,id,levelId,pathId,position,rotation,safePos,patrolSpeed,fightDistance,triggerDistance,triggerAngle,noColor,attack_radius,patrolMinStayTime,patrolMaxStayTime,paths
+备注,id,场景ID,路径ID,坐标,角度,英雄安全点,巡逻速度,战斗距离,触发距离,触发角度,视野颜色0可见1不可见,偷袭距离,巡逻最小停留时间,巡逻最大停留时间,路径
+,3030002,3030,2,"-49.92,0.104,21.73","0,232.983,0","-34.726,0.03,14.9578",0.5,7,7,80,0,2,500,2000,"-57.789,-0.082,22.947;-45.16,0.03,20.228;"
+,3030003,3030,3,"-58.9,0.104,19.31","0,142.983,0","-34.726,0.03,14.9578",0.5,7,7,80,0,2,500,2000,"-49.05,0.035,26.656;-56.38,0.03,20.7409;"
+,3030004,3030,4,"-73.93,0.02473831,15.02","0,99.48998,0","-64.326,0.03,17.575",0,7,7,360,0,0,500,2000,
+,3030005,3030,5,"-65.41,0.08,40.32","0,220.7,0","-74.18047,0.07999998,33.42044",0,7,7,360,0,0,500,2000,

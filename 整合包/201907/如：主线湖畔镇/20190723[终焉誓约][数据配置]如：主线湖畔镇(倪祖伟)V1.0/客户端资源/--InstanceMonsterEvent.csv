@@ -1,0 +1,3 @@
+,required,required,required,required,required,required,required,required,required,required,required
+,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32
+,id,levelId,groupId,playWay,battleResult,action,actionId,triggerType,data1,data2,loop
