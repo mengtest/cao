@@ -95,7 +95,6 @@ local nSceneDialogId_8 = 5179 -- 触发场景动画对白2_3
 --local nSceneDialogId_9 = 6309 -- 开陷阱宝箱对白
 
 local nSceneDialogId_Yb = 5223 -- 未接到主线任务时对白
-local nSceneDialogId_1_Yb = 5224 -- 已经完成主线未接到佣兵任务时对白
 
 --场景动画
 local nStoryId_1 = 15901
@@ -186,7 +185,6 @@ rwtNpcGroup[nCopyMapEnterGroupId] = {}
 rwtNpcGroup[nCopyMapEnterGroupId]["Type"] = CONST_NPCGROUP_TYPE.CopyMap
 rwtNpcGroup[nCopyMapEnterGroupId]["CopyMapList"] = {nCopyMapId}
 rwtNpcGroup[nCopyMapEnterGroupId]["UnlockDialog"] = nSceneDialogId_Yb
-rwtNpcGroup[nCopyMapEnterGroupId]["Dialog"] = nSceneDialogId_1_Yb
 
 
 --副本信息(简单难度)

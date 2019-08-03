@@ -72,6 +72,10 @@ rwtNpcGroup[30390]["Type"] = CONST_NPCGROUP_TYPE.Adventure
 rwtNpcGroup[30390]["TrapAcceptTask"] = 35000
 rwtNpcGroup[30390]["AdventureJudgeType"] = {}
 rwtNpcGroup[30390]["AdventureJudgeType"][1] = {}
+rwtNpcGroup[30390]["AdventureJudgeType"][1]["Type"] = CONST_ADVENTURE_TYPE.PROBABILITY
+rwtNpcGroup[30390]["AdventureJudgeType"][1]["Value"] = -1
+--[[
+rwtNpcGroup[30390]["AdventureJudgeType"][1] = {}
 rwtNpcGroup[30390]["AdventureJudgeType"][1]["Type"] = CONST_ADVENTURE_TYPE.USER
 rwtNpcGroup[30390]["AdventureJudgeType"][1]["USER_INT_LEVEL"] = function(nLevel)
 	if nLevel >= 10 then
@@ -83,6 +87,7 @@ end
 rwtNpcGroup[30390]["AdventureJudgeType"][2] = {}
 rwtNpcGroup[30390]["AdventureJudgeType"][2]["Type"] = CONST_ADVENTURE_TYPE.HEROOTHER
 rwtNpcGroup[30390]["AdventureJudgeType"][2]["AllFightHero"] = {201}
+--]]
 
 
 ------------------------------------------rwtNpcGroup

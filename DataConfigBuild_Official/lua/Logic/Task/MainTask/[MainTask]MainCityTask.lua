@@ -372,7 +372,11 @@ rwtDialog[1398] = {}
 rwtDialog[1398]["CloseDialog"] = 2
 rwtDialog[1398]["DialogAdventureTaskID"] = 35011
 rwtDialog[1398]["DialogAdventureOption"] = 1
-rwtDialog[1398]["AdventureJudgeType"] ={}
+rwtDialog[1398]["AdventureJudgeType"] = {}
+rwtDialog[1398]["AdventureJudgeType"][1] = {}
+rwtDialog[1398]["AdventureJudgeType"][1]["Type"] = CONST_ADVENTURE_TYPE.PROBABILITY
+rwtDialog[1398]["AdventureJudgeType"][1]["Value"] = -1
+--[[
 rwtDialog[1398]["AdventureJudgeType"][1] = {}
 rwtDialog[1398]["AdventureJudgeType"][1]["Type"] = CONST_ADVENTURE_TYPE.TIMERANGE
 rwtDialog[1398]["AdventureJudgeType"][1]["MaxTime"] = {}
@@ -383,6 +387,7 @@ rwtDialog[1398]["AdventureJudgeType"][1]["MinTime"] = {}
 rwtDialog[1398]["AdventureJudgeType"][1]["MinTime"]["sec"] = 0
 rwtDialog[1398]["AdventureJudgeType"][1]["MinTime"]["min"] = 0
 rwtDialog[1398]["AdventureJudgeType"][1]["MinTime"]["hour"] = 14
+--]]
 
 
 rwtDialog[1398]["DialogEnd"] = function ()
@@ -466,9 +471,9 @@ local nNpcCharge_Dialog1 = {1007,1008,1009,1010}    --未开启自律联盟
 local nNpcCharge_Dialog2 = {1462,1463,1464}    --已开启，悬赏任务中
 local nNpcCharge_Dialog3 = {1013,1014}    --悬赏任务全部完成
 --伦纳德
-local nNpcPiEr_Dialog1 = {1015,1016,1017}    --未开启自律联盟
-local nNpcPiEr_Dialog2 = {1018,1019}    --已开启，日常任务中
-local nNpcPiEr_Dialog3 = {1020,1021}    --今日任务全部完成
+local tNpcPiEr_Dialog1 = {1015,1016,1017}    --未开启自律联盟
+--local tNpcPiEr_Dialog2 = {1018,1019}    --已开启，日常任务中
+--local tNpcPiEr_Dialog3 = {1020,1021}    --今日任务全部完成
 --吉拉
 local nNpcJiLa_Dialog1 = {1022,1023,1024}    --未开启自律联盟
 --local nNpcJiLa_Dialog2 = {1025,1026}    --已开启，委托任务中
@@ -604,10 +609,10 @@ end
 
 --日常任务NPC  伦纳德
 rwtNpc[tNpc_Mercenary[3]] = rwtNpc[tNpc_Mercenary[3]] or {}
-rwtNpc[tNpc_Mercenary[3]]["ChkOpen"] = true
-rwtNpc[tNpc_Mercenary[3]]["DialogId"] = {nZilvlianmengTask_Dialog_Lunnade} 
-rwtNpc[tNpc_Mercenary[3]]["NotOpenDialogId"] = {1015,1016,1017}
-rwtNpc[tNpc_Mercenary[3]]["TaskIngDialogId"] = {1018,1019}
+rwtNpc[tNpc_Mercenary[3]]["DialogId"] = tNpcPiEr_Dialog1 
+--rwtNpc[tNpc_Mercenary[3]]["ChkOpen"] = true
+--rwtNpc[tNpc_Mercenary[3]]["NotOpenDialogId"] = {1015,1016,1017}
+--rwtNpc[tNpc_Mercenary[3]]["TaskIngDialogId"] = {1018,1019}
 --rwtNpc[tNpc_Mercenary[3]]["Option"] = {}
 --rwtNpc[tNpc_Mercenary[3]]["Option"][1] = {}
 --rwtNpc[tNpc_Mercenary[3]]["Option"][1]["Title"]= tLuaText[LANGUAGE_CONFIG][40001]
@@ -735,80 +740,72 @@ rwtNpc[nNpc_Pub] = {}
 
 rwtNpc[tNpc_QuickSend.ZongGuan] = rwtNpc[tNpc_QuickSend.ZongGuan] or {}
 rwtNpc[tNpc_QuickSend.ZongGuan]["ChkOpen"] = true
-rwtNpc[tNpc_QuickSend.ZongGuan]["DialogId"] = {12448} 
+rwtNpc[tNpc_QuickSend.ZongGuan]["DialogId"] = {12448,12449} 
 rwtNpc[tNpc_QuickSend.ZongGuan]["NotOpenDialogId"] = {12445}
 --rwtNpc[tNpc_QuickSend.ZongGuan]["TaskIngDialogId"] = {12450,12451}
 rwtNpc[tNpc_QuickSend.ZongGuan]["Option"] = {}
 rwtNpc[tNpc_QuickSend.ZongGuan]["Option"][1] = {}
-rwtNpc[tNpc_QuickSend.ZongGuan]["Option"][1]["Title"]= "领取风迹速递"
+rwtNpc[tNpc_QuickSend.ZongGuan]["Option"][1]["Title"]= "领取速递"
 rwtNpc[tNpc_QuickSend.ZongGuan]["Option"][1]["State"] = 0
 rwtNpc[tNpc_QuickSend.ZongGuan]["Option"][1]["Chk"] = function(nNpcId)
     if not rwTaskIsSuccess(nTaskId_LMDL_Final) then
         return false
     end	
---	if rwTaskGetListByType(CONST_TASK_TYPE.QUICKSEND) ~= nil and #rwTaskGetListByType(CONST_TASK_TYPE.QUICKSEND) > 0 then
---        return false
---    end
     return true
 end
---rwtNpc[tNpc_QuickSend.ZongGuan]["Option"][1]["TaskChk"] = function(nNpcId) --判断是否显示TaskIngDialogId
---    if rwTaskGetListByType(CONST_TASK_TYPE.QUICKSEND) ~= nil and #rwTaskGetListByType(CONST_TASK_TYPE.QUICKSEND) > 0 then
---        return true
---    end
---    return false
---end
-rwtNpc[tNpc_QuickSend.ZongGuan]["Option"][1]["Func"] = function(nNpcTypeId) --点击按钮触发
-	QuickSendTask_CleanTempData()
-    local nData2 = rwTempDataGetValue(1210,CONST_TEMP_DATA.Data2)   --掩码data2 记录当日共做多少轮次数（共50次，周六周日不计次数）
-    local nData3 = rwTempDataGetValue(1210,CONST_TEMP_DATA.Data3)   --掩码data3 记录每周共做多少次（共200环）
-	local nData7 = rwTempDataGetValue(1210,CONST_TEMP_DATA.Data7)   --掩码data7
 
-    local nCurWeekDay = tonumber(os.date("%w",os.time())) 
-    if nData3 >= 200 then
-		local nData8 = rwTempDataGetValue(1210,CONST_TEMP_DATA.Data8)
-		if nData8 == 0 then
-			if not (rwTaskGetListByType(CONST_TASK_TYPE.QUICKSEND) ~= nil and #rwTaskGetListByType(CONST_TASK_TYPE.QUICKSEND) > 0) then
-				QuickSendAcceptTaskFromNpc()
-			end			
-		else
-			rwOpenNpcChatDialog(12452,CONST_NPCCHAT_TYPE.NPC,nNpcTypeId)
-			return
-		end				 
-	end
---	if nCurWeekDay > 0 and nCurWeekDay < 6 then
-	if nData2 >= 50 then
-		rwOpenNpcChatDialog(12452,CONST_NPCCHAT_TYPE.NPC,nNpcTypeId)
-		return 
-	end
---  end	
+rwtNpc[tNpc_QuickSend.ZongGuan]["Option"][1]["Func"] = function(nNpcTypeId) --点击按钮触发
+	if not rwTempDataIsExist(1210,0) then
+        rwTempDataAdd(nTempDataId, 0)
+    end
 	if rwTaskGetListByType(CONST_TASK_TYPE.QUICKSEND) ~= nil and #rwTaskGetListByType(CONST_TASK_TYPE.QUICKSEND) > 0 then
-        local tDialogEnd = {12450,12451}
-		local nRandom = math.random(1,#tDialogEnd)
-		rwOpenNpcChatDialog(tDialogEnd[nRandom],CONST_NPCCHAT_TYPE.NPC)
+		local nRemainTaskNum = QuickSendGetRemainTaksNum()
+		if nRemainTaskNum < 10 then
+			local nDataTime = rwTempDataGetValue(1210,CONST_TEMP_DATA.RecordTime)
+			local nCurTime = os.time()
+			local nDistanceTime = 10 * 1800 - math.abs(nCurTime - nDataTime)
+			local nMin = math.floor(nDistanceTime/60) + 1
+			local nHour = math.floor(nMin/60)
+			local sMessage = ""
+			sMessage = sMessage..tLuaText[LANGUAGE_CONFIG][10217]
+			if nHour >0 then
+				sMessage = sMessage .. nHour .. tLuaText[LANGUAGE_CONFIG][10218]
+				nMin = nMin - 60 * nHour
+			end 
+			if nMin > 0 then
+				sMessage = sMessage.. nMin
+			end
+			sMessage = sMessage.. tLuaText[LANGUAGE_CONFIG][10219]
+			local tDialogOption = {}
+			tDialogOption["Text"] = {}
+			tDialogOption["Text"]["DialogId"] = 12450
+			tDialogOption["Text"]["Content"] = sMessage
+			tDialogOption["Text"]["TalkId"] = 3774
+			tDialogOption["Text"]["Midid"] = 3774
+			tDialogOption["Text"]["midFace"] = 0
+			tDialogOption["Text"]["HideContine"] = 0
+			rwNpcDialogText(tDialogOption["Text"])
+		else
+			rwOpenNpcChatDialog(12451,CONST_NPCCHAT_TYPE.NPC)
+		end
 	else
 		QuickSendAcceptTaskFromNpc()			
-    end    
-    
+    end        
 end
-rwtNpc[tNpc_QuickSend.ZongGuan]["Option"][2] = {}
-rwtNpc[tNpc_QuickSend.ZongGuan]["Option"][2]["Title"]= "速递任务说明"
-rwtNpc[tNpc_QuickSend.ZongGuan]["Option"][2]["State"] = 0
-rwtNpc[tNpc_QuickSend.ZongGuan]["Option"][2]["Chk"] = function(nNpcId)
-    if not rwTaskIsSuccess(nTaskId_LMDL_Final) then
-        return false
-    end
-    return true
-end
-rwtNpc[tNpc_QuickSend.ZongGuan]["Option"][2]["Func"] = function(nNpcTypeId) --点击按钮触发
-	rwOpenNpcChatDialog(12492,CONST_NPCCHAT_TYPE.NPC,nNpcTypeId)
-end
+--rwtNpc[tNpc_QuickSend.ZongGuan]["Option"][2] = {}
+--rwtNpc[tNpc_QuickSend.ZongGuan]["Option"][2]["Title"]= "速递任务说明"
+--rwtNpc[tNpc_QuickSend.ZongGuan]["Option"][2]["State"] = 0
+--rwtNpc[tNpc_QuickSend.ZongGuan]["Option"][2]["Chk"] = function(nNpcId)
+--    if not rwTaskIsSuccess(nTaskId_LMDL_Final) then
+--        return false
+--    end
+--    return true
+--end
+--rwtNpc[tNpc_QuickSend.ZongGuan]["Option"][2]["Func"] = function(nNpcTypeId) --点击按钮触发
+--	rwOpenNpcChatDialog(12492,CONST_NPCCHAT_TYPE.NPC,nNpcTypeId)
+--end
 
-rwtDialog[12449] = rwtDialog[12449] or {}
-rwtDialog[12449]["DialogEnd"] = function ()
-	QuickSendAcceptQuick()
-	rwSpecialStatus_ChangeLookFace(1,0,1200,90801)
-	rwUserTempDataSet(1222,1,CONST_TEMP_DATA.Data1,0,true);
-end 
+
 
 --rwtNpc[tNpc_QuickSend.GuYuan] = rwtNpc[tNpc_QuickSend.GuYuan] or {}
 --rwtNpc[tNpc_QuickSend.GuYuan]["DialogId"] = {12442,12443,12444} 

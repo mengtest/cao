@@ -17,15 +17,14 @@ local nHuPanZhenXunChaTask4 = 50069    --开箱2
 local nHuPanZhenXunChaTask5 = 50070    --回报联盟2
 local nHuPanZhenXunChaTask6 = 50071    --开箱3
 local nHuPanZhenXunChaTask7 = 50072    --回报联盟3
-local nHuPanZhenXunChaTask8 = 50073    --查看探测器的信息 (6.25新增)
+local nHuPanZhenXunChaTask8 = 50073    --了解情况
 --新增支线任务1-------Start
-local nHuPanZhenXunChaTask8_1 = 50190    --和吟游诗人了解情况
+local nHuPanZhenXunChaTask8_1 = 50190    --到湖边调查情况
 local nHuPanZhenXunChaTask8_2 = 50191    --去储物室寻找鱼网
 local nHuPanZhenXunChaTask8_3 = 50192    --向湖中撒出鱼网
 --新增支线任务1-------End
 local nHuPanZhenXunChaTask9 = 50074    --湖边调查(战胜鱼妖)
-local nHuPanZhenXunChaTask10 = 50075    --（6.25新增）封印本命
---local nHuPanZhenXunChaTask10 = 50075    --回复捷报 （6.25替换）
+local nHuPanZhenXunChaTask10 = 50075    --回复捷报
 local nHuPanZhenXunChaTask11 = 50076    --回报联盟4
 local nHuPanZhenXunChaTask12 = 50077    --镇民的愿望
 --新增支线任务2-------Start
@@ -62,10 +61,10 @@ local nDialog_1 = 10820  --那个闪闪发光的东西是什么？
 local nDialog_2 = 10821  --巡查任务的意外收获！
 local nDialog_3 = 10822  --看起来这是一次开心的巡查，
 local nDialog_4 = 10823  --巡查员的工作就是帮助解决镇上的困难。
-local nDialog_5 = 10824  --哇，那是什么，好酷呀
-local nDialog_6 = 10825  --探测到有附近有异常能量反应，本命出现的概率为93%。
-local nDialog_7 = 10826  --找到你了！ 该死，是谁把我抓上来了？！
-local nDialog_8 = 10827  --封印成功了！
+local nDialog_5 = 10824  --不不不……<br>这一定不是真的……一定不是真的……,,,
+local nDialog_6 = 10825  --海……海……莉大妈？<br>你的脸色看起来很不好，发生了什么吗？,,
+local nDialog_7 = 10826  --该死，是谁在吵？！ 就是你这家伙霸占了白瑙湖！
+local nDialog_8 = 10827  --海莉大妈，抓走镇民的凶手其实是鱼妖。<br>不过，它已经被我打败了，告诉大家现在可以放心了！,
 local nDialog_9 = 10828  --做得不错！真正的勇者就是需要不断地历练。<br>年轻人，快领取你的任务奖励吧！,,
 local nDialog_10 = 10829 --要是今天再不去，就真的要忍受不了了！！！,,,
 local nDialog_11 = 10830 --我是联盟巡查员，请问，有什么需要帮助的吗？,,,
@@ -73,8 +72,8 @@ local nDialog_12 = 10831 --这是你要的青湖贝，这下你可以吃到美�
 local nDialog_13 = 10832 --这次的巡查地点是湖畔镇，,,,
 
 --对白补充   11171  11190 
-local nDialog_14 =  11171    --你看起来很慌张，发生了什么事情？
-local nDialog_15 =  11172 --拿到渔网了，<br>现在我们可以回去把鱼妖捞出来了！（找渔网）
+local nDialog_14 =  11171    --湖边完全看不到怪物的踪迹，<br>至于水里的情况，我该怎么调查呢？
+local nDialog_15 =  11172 --就是它了！（找渔网）
 local nDialog_16 =  11173 -- 一只狐克斯迅速地抢走了青湖贝。
 local nDialog_17 =  11174 --快把青湖贝还给我！
 local nDialog_18 =  11175 --现在知道我的厉害了吧。  镇民最近加强了警卫，害得我不敢出来找东西吃……<br>我已经好几天没吃饭了……我饿……
@@ -106,16 +105,6 @@ local nNpcGroupGenId_XiaoFan  = 1000112   --小贩
 local nNpc_BanShiYuan = 3052   -- 联盟办事员
 local nNpcGroupId_BanShiYuan  = 20066   --联盟办事员
 local nNpcGroupGenId_BanShiYuan  = 2001441   --联盟办事员
-
---临时npc
-local nNpc_TanCeCi = 3801   -- 探测器
-local nNpcGroupId_TanCeCi  =   20926    --探测器
-local nNpcGroupGenId_TanCeCi  = 20010250   --探测器
-
-rwtNpc[nNpc_TanCeCi] = rwtNpc[nNpc_TanCeCi] or {}
-rwtNpcGroup[nNpcGroupId_TanCeCi] = rwtNpcGroup[nNpcGroupId_TanCeCi] or {}    --杰基
-rwtNpcGroup[nNpcGroupId_TanCeCi]["Type"] = CONST_NPCGROUP_TYPE.SingleNpc
-rwtNpcGroup[nNpcGroupId_TanCeCi]["NpcId"]= nNpc_TanCeCi
 
 --宝箱	40075	40077
 local nTreasureBox_1 = 40075
@@ -181,27 +170,6 @@ local nCollect_GenId_SaWang = 2001970
 rwtNpcGroup[nCollect_SaWang] = rwtNpcGroup[nCollect_SaWang] or {}    
 rwtNpcGroup[nCollect_SaWang]["Type"] = CONST_NPCGROUP_TYPE.Collect 
 
---(6.25新增)半鱼人采集物 封印本命
-local nCollect_BenMing = 60441
-local nCollect_GenId_BenMing = 20010249
---GenId 20010249  20010250 
-rwtNpcGroup[nCollect_BenMing] = rwtNpcGroup[nCollect_BenMing] or {}    
-rwtNpcGroup[nCollect_BenMing]["Type"] = CONST_NPCGROUP_TYPE.Collect 
-rwtNpcGroup[nCollect_BenMing]["Awards"] = {}
-rwtNpcGroup[nCollect_BenMing]["Awards"]["Events"] = {}
-rwtNpcGroup[nCollect_BenMing]["Awards"]["Events"][1] = {}
-rwtNpcGroup[nCollect_BenMing]["Awards"]["Events"][1]["AddEffect"] = {}
-rwtNpcGroup[nCollect_BenMing]["Awards"]["Events"][1]["AddEffect"][1] = {}
-rwtNpcGroup[nCollect_BenMing]["Awards"]["Events"][1]["AddEffect"][1]["TargetType"] = 7
-rwtNpcGroup[nCollect_BenMing]["Awards"]["Events"][1]["AddEffect"][1]["TargetId"] = 0
-rwtNpcGroup[nCollect_BenMing]["Awards"]["Events"][1]["AddEffect"][1]["EffectId"] = 2063
-rwtNpcGroup[nCollect_BenMing]["Awards"]["Events"][1]["AddEffect"][1]["Pos"] = "32.65,0.10,-25.69"
-rwtNpcGroup[nCollect_BenMing]["Awards"]["Events"][1]["AddEffect"][1]["Angle"] = 0
---rwtNpcGroup[nCollect_BenMing]["Awards"]["Events"][1]["AddEffect"]["Scale"] = {}
-
-
-
-
 --货蓝
 local nCollect_HuoLan = 60196
 local nCollect_GenId_HuoLan  = 2001971
@@ -243,7 +211,6 @@ local nMapId = 2001
 local nMapZhuChengId = 1000
 
 local ZaWuWu_Wai       = "-7.79,0.05,-15.66"   --杂物屋外
-
 --怪物掉落奖励
 local nTaskMonAward_1 = 6000056
 --陷阱	30335	30336 + 30415 30419
@@ -476,57 +443,39 @@ rwtTask[nHuPanZhenXunChaTask1_4]["StartAutoWay"]["FindWayTypeId"]=0
 rwtTask[nHuPanZhenXunChaTask1_4]["StartAutoWay"]["FindWayMapId"] =2001
 rwtTask[nHuPanZhenXunChaTask1_4]["StartAutoWay"]["FindWayPos"] = "12.46,0.10,15.54"
 
---查看探测器情况
+
 rwtTask[nHuPanZhenXunChaTask8] = {}
 rwtTask[nHuPanZhenXunChaTask8]["Title"] = tLuaText[LANGUAGE_CONFIG][20854]
 rwtTask[nHuPanZhenXunChaTask8]["NextTaskId" ]= nHuPanZhenXunChaTask8_1
 rwtTask[nHuPanZhenXunChaTask8]["TaskType"] = CONST_TASK_TYPE.PATROL
 rwtTask[nHuPanZhenXunChaTask8]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
-rwtTask[nHuPanZhenXunChaTask8]["TaskNpc"] = nNpc_TanCeCi 
-rwtTask[nHuPanZhenXunChaTask8]["DialogId"] = nDialog_6
-rwtTask[nHuPanZhenXunChaTask8]["DynaNpcGroupGen"] = {}
-rwtTask[nHuPanZhenXunChaTask8]["DynaNpcGroupGen"][1] = {}
-rwtTask[nHuPanZhenXunChaTask8]["DynaNpcGroupGen"][1]["GenId"] = nNpcGroupGenId_TanCeCi
-rwtTask[nHuPanZhenXunChaTask8]["DynaNpcGroupGen"][1]["MapId"] = nMapId
-rwtTask[nHuPanZhenXunChaTask8]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+--rwtTask[nHuPanZhenXunChaTask8]["PatrolCg"] = 2103
+rwtTask[nHuPanZhenXunChaTask8]["TaskNpc"] = nNpc_HaiLi 
+rwtTask[nHuPanZhenXunChaTask8]["DialogId"] = 10825
 rwtTask[nHuPanZhenXunChaTask8]["StartAutoWay"] = {}
 rwtTask[nHuPanZhenXunChaTask8]["StartAutoWay"]["FindWayTypeId"]=1
 rwtTask[nHuPanZhenXunChaTask8]["StartAutoWay"]["FindWayMapId"] =2001
-rwtTask[nHuPanZhenXunChaTask8]["StartAutoWay"]["FindWayGroupId"] =nNpcGroupId_TanCeCi  
-rwtTask[nHuPanZhenXunChaTask8]["StartAutoWay"]["FindWayGenId"] =nNpcGroupGenId_TanCeCi
+rwtTask[nHuPanZhenXunChaTask8]["StartAutoWay"]["FindWayGroupId"] =20047  --海莉大妈
+rwtTask[nHuPanZhenXunChaTask8]["StartAutoWay"]["FindWayGenId"] =2001104
 rwtTask[nHuPanZhenXunChaTask8]["IsClickComplete"] = 0
 
---rwtTask[nHuPanZhenXunChaTask8_1] = {}
---rwtTask[nHuPanZhenXunChaTask8_1]["Title"] = tLuaText[LANGUAGE_CONFIG][20854]
---rwtTask[nHuPanZhenXunChaTask8_1]["TaskType"] = CONST_TASK_TYPE.PATROL
---rwtTask[nHuPanZhenXunChaTask8_1]["NextTaskId"] = nHuPanZhenXunChaTask8_2
---rwtTask[nHuPanZhenXunChaTask8_1]["DialogId"] = nDialog_14
---rwtTask[nHuPanZhenXunChaTask8_1]["ReqTrap1"] = nTrap_2
---rwtTask[nHuPanZhenXunChaTask8_1]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_TRAP
---rwtTask[nHuPanZhenXunChaTask8_1]["DynaNpcGroupGen"] = {}
---rwtTask[nHuPanZhenXunChaTask8_1]["DynaNpcGroupGen"][1] = {}
---rwtTask[nHuPanZhenXunChaTask8_1]["DynaNpcGroupGen"][1]["GenId"] = nTrap_GenId_2
---rwtTask[nHuPanZhenXunChaTask8_1]["DynaNpcGroupGen"][1]["MapId"] = nMapId
---rwtTask[nHuPanZhenXunChaTask8_1]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
---rwtTask[nHuPanZhenXunChaTask8_1]["StartAutoWay"] = {}
---rwtTask[nHuPanZhenXunChaTask8_1]["StartAutoWay"]["FindWayTypeId"] = 1
---rwtTask[nHuPanZhenXunChaTask8_1]["StartAutoWay"]["FindWayMapId"] = nMapId
---rwtTask[nHuPanZhenXunChaTask8_1]["StartAutoWay"]["FindWayGroupId"] = nTrap_2
---rwtTask[nHuPanZhenXunChaTask8_1]["StartAutoWay"]["FindWayGenId"] = nTrap_GenId_2
---rwtTask[nHuPanZhenXunChaTask8_1]["IsClickComplete"] = 0
---和吟游诗人了解情况
 rwtTask[nHuPanZhenXunChaTask8_1] = {}
 rwtTask[nHuPanZhenXunChaTask8_1]["Title"] = tLuaText[LANGUAGE_CONFIG][20854]
-rwtTask[nHuPanZhenXunChaTask8_1]["NextTaskId" ]= nHuPanZhenXunChaTask8_2
 rwtTask[nHuPanZhenXunChaTask8_1]["TaskType"] = CONST_TASK_TYPE.PATROL
-rwtTask[nHuPanZhenXunChaTask8_1]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
-rwtTask[nHuPanZhenXunChaTask8_1]["TaskNpc"] = 3448 --吟游诗人达达 
+rwtTask[nHuPanZhenXunChaTask8_1]["NextTaskId"] = nHuPanZhenXunChaTask8_2
 rwtTask[nHuPanZhenXunChaTask8_1]["DialogId"] = nDialog_14
+rwtTask[nHuPanZhenXunChaTask8_1]["ReqTrap1"] = nTrap_2
+rwtTask[nHuPanZhenXunChaTask8_1]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_TRAP
+rwtTask[nHuPanZhenXunChaTask8_1]["DynaNpcGroupGen"] = {}
+rwtTask[nHuPanZhenXunChaTask8_1]["DynaNpcGroupGen"][1] = {}
+rwtTask[nHuPanZhenXunChaTask8_1]["DynaNpcGroupGen"][1]["GenId"] = nTrap_GenId_2
+rwtTask[nHuPanZhenXunChaTask8_1]["DynaNpcGroupGen"][1]["MapId"] = nMapId
+rwtTask[nHuPanZhenXunChaTask8_1]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
 rwtTask[nHuPanZhenXunChaTask8_1]["StartAutoWay"] = {}
-rwtTask[nHuPanZhenXunChaTask8_1]["StartAutoWay"]["FindWayTypeId"]=1
-rwtTask[nHuPanZhenXunChaTask8_1]["StartAutoWay"]["FindWayMapId"] = 2001
-rwtTask[nHuPanZhenXunChaTask8_1]["StartAutoWay"]["FindWayGroupId"] = 20449  
-rwtTask[nHuPanZhenXunChaTask8_1]["StartAutoWay"]["FindWayGenId"] =20010131
+rwtTask[nHuPanZhenXunChaTask8_1]["StartAutoWay"]["FindWayTypeId"] = 1
+rwtTask[nHuPanZhenXunChaTask8_1]["StartAutoWay"]["FindWayMapId"] = nMapId
+rwtTask[nHuPanZhenXunChaTask8_1]["StartAutoWay"]["FindWayGroupId"] = nTrap_2
+rwtTask[nHuPanZhenXunChaTask8_1]["StartAutoWay"]["FindWayGenId"] = nTrap_GenId_2
 rwtTask[nHuPanZhenXunChaTask8_1]["IsClickComplete"] = 0
 
 
@@ -536,8 +485,8 @@ rwtTask[nHuPanZhenXunChaTask8_1]["IsClickComplete"] = 0
 --rwtTask[tTask_HuPanZhen[9]]["NextTaskId"] = tTask_HuPanZhen[10]
 --rwtTask[tTask_HuPanZhen[9]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.PUZZLE
 rwtTask[nHuPanZhenXunChaTask8_2] = {}
-rwtTask[nHuPanZhenXunChaTask8_2]["Title"] = tLuaText[LANGUAGE_CONFIG][20868]
---rwtTask[nHuPanZhenXunChaTask8_2]["PuzzleTitle"] = tLuaText[LANGUAGE_CONFIG][20854]
+rwtTask[nHuPanZhenXunChaTask8_2]["Title"] = tLuaText[LANGUAGE_CONFIG][20854]
+--rwtTask[nHuPanZhenXunChaTask8_2]["PuzzleTitle"] = tLuaText[LANGUAGE_CONFIG][40014]
 rwtTask[nHuPanZhenXunChaTask8_2]["TaskType"] = CONST_TASK_TYPE.PATROL
 rwtTask[nHuPanZhenXunChaTask8_2]["NextTaskId"] = nHuPanZhenXunChaTask8_3
 rwtTask[nHuPanZhenXunChaTask8_2]["ReqPuzzleId"] = 101
@@ -604,39 +553,18 @@ rwtTask[nHuPanZhenXunChaTask9]["KillMonsterGroup1" ]= nMonsterGroup_Yu
 rwtTask[nHuPanZhenXunChaTask9]["MonsterGroupGenId"] = nMonster_GenId_Yu
 rwtTask[nHuPanZhenXunChaTask9]["IsClickComplete"] = 0
 
---rwtTask[nHuPanZhenXunChaTask10] = {}
---rwtTask[nHuPanZhenXunChaTask10]["Title"] = tLuaText[LANGUAGE_CONFIG][20854]
---rwtTask[nHuPanZhenXunChaTask10]["NextTaskId" ]= nHuPanZhenXunChaTask11
---rwtTask[nHuPanZhenXunChaTask10]["TaskType"] = CONST_TASK_TYPE.PATROL
---rwtTask[nHuPanZhenXunChaTask10]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
---rwtTask[nHuPanZhenXunChaTask10]["TaskNpc"] = nNpc_HaiLi 
---rwtTask[nHuPanZhenXunChaTask10]["DialogId"] = nDialog_8
---rwtTask[nHuPanZhenXunChaTask10]["StartAutoWay"] = {}
---rwtTask[nHuPanZhenXunChaTask10]["StartAutoWay"]["FindWayTypeId"]=1
---rwtTask[nHuPanZhenXunChaTask10]["StartAutoWay"]["FindWayMapId"] =2001
---rwtTask[nHuPanZhenXunChaTask10]["StartAutoWay"]["FindWayGroupId"] =20047
---rwtTask[nHuPanZhenXunChaTask10]["StartAutoWay"]["FindWayGenId"] =2001104
---rwtTask[nHuPanZhenXunChaTask10]["IsClickComplete"] = 0
-
 rwtTask[nHuPanZhenXunChaTask10] = {}
-rwtTask[nHuPanZhenXunChaTask10]["Title"] = tLuaText[LANGUAGE_CONFIG][20854] 
-rwtTask[nHuPanZhenXunChaTask10]["NextTaskId"] = nHuPanZhenXunChaTask11
-rwtTask[nHuPanZhenXunChaTask10]["AutoTaskDialog"] = 12642
-rwtTask[nHuPanZhenXunChaTask10]["DialogId"] = nDialog_8
-rwtTask[nHuPanZhenXunChaTask10]["ReqCollectId1"] = nCollect_BenMing
-rwtTask[nHuPanZhenXunChaTask10]["ReqCollectCount1"] = 1 
+rwtTask[nHuPanZhenXunChaTask10]["Title"] = tLuaText[LANGUAGE_CONFIG][20854]
+rwtTask[nHuPanZhenXunChaTask10]["NextTaskId" ]= nHuPanZhenXunChaTask11
 rwtTask[nHuPanZhenXunChaTask10]["TaskType"] = CONST_TASK_TYPE.PATROL
-rwtTask[nHuPanZhenXunChaTask10]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_COLLECT
-rwtTask[nHuPanZhenXunChaTask10]["DynaNpcGroupGen"] = {}
-rwtTask[nHuPanZhenXunChaTask10]["DynaNpcGroupGen"][1] = {}
-rwtTask[nHuPanZhenXunChaTask10]["DynaNpcGroupGen"][1]["GenId"] = nCollect_GenId_BenMing
-rwtTask[nHuPanZhenXunChaTask10]["DynaNpcGroupGen"][1]["MapId"] = nMapId
-rwtTask[nHuPanZhenXunChaTask10]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
+rwtTask[nHuPanZhenXunChaTask10]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
+rwtTask[nHuPanZhenXunChaTask10]["TaskNpc"] = nNpc_HaiLi 
+rwtTask[nHuPanZhenXunChaTask10]["DialogId"] = nDialog_8
 rwtTask[nHuPanZhenXunChaTask10]["StartAutoWay"] = {}
-rwtTask[nHuPanZhenXunChaTask10]["StartAutoWay"]["FindWayTypeId"] = 1
-rwtTask[nHuPanZhenXunChaTask10]["StartAutoWay"]["FindWayMapId"] = nMapId
-rwtTask[nHuPanZhenXunChaTask10]["StartAutoWay"]["FindWayGroupId"] = nCollect_BenMing
-rwtTask[nHuPanZhenXunChaTask10]["StartAutoWay"]["FindWayGenId"] = nCollect_GenId_BenMing
+rwtTask[nHuPanZhenXunChaTask10]["StartAutoWay"]["FindWayTypeId"]=1
+rwtTask[nHuPanZhenXunChaTask10]["StartAutoWay"]["FindWayMapId"] =2001
+rwtTask[nHuPanZhenXunChaTask10]["StartAutoWay"]["FindWayGroupId"] =20047
+rwtTask[nHuPanZhenXunChaTask10]["StartAutoWay"]["FindWayGenId"] =2001104
 rwtTask[nHuPanZhenXunChaTask10]["IsClickComplete"] = 0
 
 rwtTask[nHuPanZhenXunChaTask11] = {}
@@ -644,7 +572,7 @@ rwtTask[nHuPanZhenXunChaTask11]["Title"] = tLuaText[LANGUAGE_CONFIG][20854]
 rwtTask[nHuPanZhenXunChaTask11]["TaskType"] = CONST_TASK_TYPE.PATROL
 rwtTask[nHuPanZhenXunChaTask11]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[nHuPanZhenXunChaTask11]["TaskNpc"] = nNpc_BiDuoMao 
-rwtTask[nHuPanZhenXunChaTask11]["DialogId"] =  12643 
+rwtTask[nHuPanZhenXunChaTask11]["DialogId"] = nDialog_9
 rwtTask[nHuPanZhenXunChaTask11]["PatrolLastTask"] = 1
 rwtTask[nHuPanZhenXunChaTask11]["IsClickComplete"] = 0
 rwtTask[nHuPanZhenXunChaTask11]["StartAutoWay"] = {}

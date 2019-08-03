@@ -35,7 +35,7 @@ local nChangeNpcTask = 10163
 rwtNpcGroup[50002] = {}
 rwtNpcGroup[50002]["Type"] = CONST_NPCGROUP_TYPE.CopyMap
 rwtNpcGroup[50002]["UnlockDialog"] = 5212
-rwtNpcGroup[50002]["Dialog"] = 5206
+-- rwtNpcGroup[50002]["Dialog"] = 5206
 rwtNpcGroup[50002]["CopyMapList"] = {nCopyMapMissId_1}
 
 --任务目标配置

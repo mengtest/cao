@@ -277,7 +277,7 @@ function rwLinkCopyMapCreateEnterNpc(nMapId)
     for i,v in pairs(rwtCopyMapEnterNpcInfo[nMapId]) do 
         local tInfo = rwtCopyMapMission[v]
         if tInfo["ChangeNpcTask"] and rwChkInt(tInfo["ChangeNpcTask"]) then
-            if rwTaskGetFinishMask(tInfo["ChangeNpcTask"]) == 1 then
+            if rwTaskIsComplete(tInfo["ChangeNpcTask"]) or rwTaskIsSuccess(tInfo["ChangeNpcTask"]) then
                if tInfo["CopyNpcType"] == CONST_COPYMAP_TASK_TYPE.PLOT and tInfo["EnterNpcGen"] ~= 0 then
                    if  rwHasGenEvent(tInfo["EnterNpcGen"]) then  
                        rwDelGenEvent(tInfo["EnterNpcGen"])

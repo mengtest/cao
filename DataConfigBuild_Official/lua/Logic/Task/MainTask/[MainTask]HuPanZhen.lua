@@ -788,6 +788,7 @@ rwtTask[tTask_HuPanZhen[16]]["NextTaskId"] = tTask_HuPanZhen[17]
 rwtTask[tTask_HuPanZhen[16]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.PASS_COPYMAP
 rwtTask[tTask_HuPanZhen[16]]["PassCopyMap1"] = {3011}
 rwtTask[tTask_HuPanZhen[16]]["OpenCopyMap"] = 3011
+rwtTask[tTask_HuPanZhen[16]]["ClickEnterMap"] = 3011
 rwtTask[tTask_HuPanZhen[16]]["IsClickComplete"] = 1
 --rwtTask[tTask_HuPanZhen[16]]["Awards"] = {}
 --rwtTask[tTask_HuPanZhen[16]]["Awards"]["AwardType"] = CONST_AWARD_TYPE.AWARD

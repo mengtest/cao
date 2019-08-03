@@ -66,6 +66,7 @@ rwtTimeCopyMap_CopymapId_Info = {}  -- 限时副本的副本ID集合 如rwtTimeC
 rwtQuickSendTaskListInfo = {} --风迹快递任务集合 如rwtQuickSendTaskListInfo[MapId] = {TaskId1,TaskId2....}
 rwtQuickSendMapTownInfo = {} --风机快递地区城镇集合 如rwtQuickSendMapTownInfo[Area] = {townId1,townId2...}
 rwtPuzzleInitInfo = {} --需要初始化解密屋映射信息 如rwtPuzzleInitInfo = {nPuzzleId1，nPuzzleId2...}
+rwtBubbleGenInfo = {} --需要触发冒泡的怪物或NPC的gen_eventid 如rwtBubbleGenInfo = {nGenId1,nGenId2....}
 
 --目标映射
 rwtTargetMonsterGroupInfo = {} --击杀怪物组类的目标集合,如rwtTargetMonsterGroupInfo[nMonsterGroupId]={TaskId1,TaskId2....}

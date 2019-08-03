@@ -10,7 +10,7 @@ local tJingJiDaoTask = {}
 
 --任务
 --向上吧！少年
-tJingJiDaoTask.nJingJiDao1 = 10615
+--tJingJiDaoTask.nJingJiDao1 = 10615
 tJingJiDaoTask.nJingJiDao1_1 = 10509
 --编号2154事件·一
 tJingJiDaoTask.nJingJiDao2_1 = 10510
@@ -34,7 +34,7 @@ tJingJiDaoTask.nJingJiDao4_2 = 10525
 --凯旋而归                        
 tJingJiDaoTask.nJingJiDao5_1 = 10526
 tJingJiDaoTask.nJingJiDao5_2 = 10527
-tJingJiDaoTask.nJingJiDao5 = 10616  --卡等级
+tJingJiDaoTask.nJingJiDao5 = 10616  --卡时间
 tJingJiDaoTask.nJingJiDao5_3 = 10528
 --特殊的跟踪技巧           
 tJingJiDaoTask.nJingJiDao6_1 = 10529
@@ -102,8 +102,8 @@ tDialog.nDialog8_4 = 11421
 --tDialog.nDialog8_5 = 1
 tDialog.nDialog8_6 = 11422
 
-tDialog.nDialog_KaDengJi_1 = 12098
-tDialog.nDialog_KaDengJi_2 = 12099
+--tDialog.nDialog_KaDengJi_1 = 12098
+--tDialog.nDialog_KaDengJi_2 = 12099
 tDialog.nDialog_KaDengJi_3 = 12100
 tDialog.nDialog_KaDengJi_4 = 12101
 
@@ -160,7 +160,7 @@ local nNpcBuild_GenId_GuiZhang = 20050063
 
 --[CopyMap]
 local nCopyMap_ShenHaiShiYanShi = 3073
---local nCopyMap_ShenHaiShiYanShi_NorMal = 1
+local nCopyMap_ShenHaiShiYanShi_NorMal = 3144
 local nGenId_CopyMapPlot = 3073013       --剧情
 
 --[Trap] 30471  30482 
@@ -350,18 +350,18 @@ tAwardId.Award8 = 2000297
 ----[向上吧！少年]
 --卡等级
 --到达XX级   卡等级
-rwtTask[tJingJiDaoTask.nJingJiDao1] = {}
-rwtTask[tJingJiDaoTask.nJingJiDao1]["Title"] = tLuaText[LANGUAGE_CONFIG][21220]
-rwtTask[tJingJiDaoTask.nJingJiDao1]["PreTaskId"] = 10496 --上一主线最后一个任务
-rwtTask[tJingJiDaoTask.nJingJiDao1]["NextTaskId"] = tJingJiDaoTask.nJingJiDao1_1
-rwtTask[tJingJiDaoTask.nJingJiDao1]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.UPLEVEL
-rwtTask[tJingJiDaoTask.nJingJiDao1]["NeedLevel"] = 50
-rwtTask[tJingJiDaoTask.nJingJiDao1]["LackDialogId"] = tDialog.nDialog_KaDengJi_1
-rwtTask[tJingJiDaoTask.nJingJiDao1]["DialogId"] = tDialog.nDialog_KaDengJi_2
+--rwtTask[tJingJiDaoTask.nJingJiDao1] = {}
+--rwtTask[tJingJiDaoTask.nJingJiDao1]["Title"] = tLuaText[LANGUAGE_CONFIG][21220]
+--rwtTask[tJingJiDaoTask.nJingJiDao1]["PreTaskId"] = 10496 --上一主线最后一个任务
+--rwtTask[tJingJiDaoTask.nJingJiDao1]["NextTaskId"] = tJingJiDaoTask.nJingJiDao1_1
+--rwtTask[tJingJiDaoTask.nJingJiDao1]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.UPLEVEL
+--rwtTask[tJingJiDaoTask.nJingJiDao1]["NeedLevel"] = 50
+--rwtTask[tJingJiDaoTask.nJingJiDao1]["LackDialogId"] = tDialog.nDialog_KaDengJi_1
+--rwtTask[tJingJiDaoTask.nJingJiDao1]["DialogId"] = tDialog.nDialog_KaDengJi_2
 
 rwtTask[tJingJiDaoTask.nJingJiDao1_1] = {}
 rwtTask[tJingJiDaoTask.nJingJiDao1_1]["Title"] = tLuaText[LANGUAGE_CONFIG][21220]
-rwtTask[tJingJiDaoTask.nJingJiDao1_1]["PreTaskId"] = tJingJiDaoTask.nJingJiDao1
+rwtTask[tJingJiDaoTask.nJingJiDao1_1]["PreTaskId"] = 10496 --上一主线最后一个任务
 rwtTask[tJingJiDaoTask.nJingJiDao1_1]["NextTaskId"] = tJingJiDaoTask.nJingJiDao2_1
 rwtTask[tJingJiDaoTask.nJingJiDao1_1]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tJingJiDaoTask.nJingJiDao1_1]["TaskNpc"] =   nNpc_YangBoShi
@@ -686,7 +686,7 @@ rwtTask[tJingJiDaoTask.nJingJiDao4_1]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE
 rwtTask[tJingJiDaoTask.nJingJiDao4_1]["TaskNpc"] =   nNpc_LuoXi
 rwtTask[tJingJiDaoTask.nJingJiDao4_1]["DialogId"] = tDialog.nDialog4_1
 rwtTask[tJingJiDaoTask.nJingJiDao4_1]["UnlockCopyMap1"] = nCopyMap_ShenHaiShiYanShi
---rwtTask[tJingJiDaoTask.nJingJiDao4_1]["UnlockCopyMap2"] = nCopyMap_ShenHaiShiYanShi_NorMal
+rwtTask[tJingJiDaoTask.nJingJiDao4_1]["UnlockCopyMap2"] = nCopyMap_ShenHaiShiYanShi_NorMal
 rwtTask[tJingJiDaoTask.nJingJiDao4_1]["IsClickComplete"] = 0
 rwtTask[tJingJiDaoTask.nJingJiDao4_1]["StartAutoWay"] = {}
 rwtTask[tJingJiDaoTask.nJingJiDao4_1]["StartAutoWay"]["FindWayTypeId"] = 1
@@ -763,16 +763,29 @@ rwtTask[tJingJiDaoTask.nJingJiDao5_2]["Awards"]["Events"][1]["GetServerAward"]["
 rwtTask[tJingJiDaoTask.nJingJiDao5_2]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TASK
 rwtTask[tJingJiDaoTask.nJingJiDao5_2]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tJingJiDaoTask.nJingJiDao5_2
 
---卡等级
+----卡等级
+----到达XX级   卡等级
+--rwtTask[tJingJiDaoTask.nJingJiDao5] = {}
+--rwtTask[tJingJiDaoTask.nJingJiDao5]["Title"] = tLuaText[LANGUAGE_CONFIG][21224]
+--rwtTask[tJingJiDaoTask.nJingJiDao5]["PreTaskId"] = tJingJiDaoTask.nJingJiDao5_2 
+--rwtTask[tJingJiDaoTask.nJingJiDao5]["NextTaskId"] = tJingJiDaoTask.nJingJiDao5_3
+--rwtTask[tJingJiDaoTask.nJingJiDao5]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.UPLEVEL
+--rwtTask[tJingJiDaoTask.nJingJiDao5]["NeedLevel"] = 51
+--rwtTask[tJingJiDaoTask.nJingJiDao5]["LackDialogId"] = tDialog.nDialog_KaDengJi_3
+--rwtTask[tJingJiDaoTask.nJingJiDao5]["DialogId"] = tDialog.nDialog_KaDengJi_4
+
+--卡时间
 --到达XX级   卡等级
 rwtTask[tJingJiDaoTask.nJingJiDao5] = {}
 rwtTask[tJingJiDaoTask.nJingJiDao5]["Title"] = tLuaText[LANGUAGE_CONFIG][21224]
 rwtTask[tJingJiDaoTask.nJingJiDao5]["PreTaskId"] = tJingJiDaoTask.nJingJiDao5_2 
 rwtTask[tJingJiDaoTask.nJingJiDao5]["NextTaskId"] = tJingJiDaoTask.nJingJiDao5_3
-rwtTask[tJingJiDaoTask.nJingJiDao5]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.UPLEVEL
-rwtTask[tJingJiDaoTask.nJingJiDao5]["NeedLevel"] = 51
+rwtTask[tJingJiDaoTask.nJingJiDao5]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.COUNTDOWN
+rwtTask[tJingJiDaoTask.nJingJiDao5]["TaskFinishTime"]  = 28800
+--rwtTask[tJingJiDaoTask.nJingJiDao5]["IsClickComplete"] = 1
 rwtTask[tJingJiDaoTask.nJingJiDao5]["LackDialogId"] = tDialog.nDialog_KaDengJi_3
 rwtTask[tJingJiDaoTask.nJingJiDao5]["DialogId"] = tDialog.nDialog_KaDengJi_4
+
 
 
 --休息很重要

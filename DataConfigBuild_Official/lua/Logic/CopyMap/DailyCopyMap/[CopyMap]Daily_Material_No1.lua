@@ -151,7 +151,7 @@ rwtNpcGroup[nBox]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Event
 rwtNpcGroup[nBox]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1] = {}
 rwtNpcGroup[nBox]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1]["Record"] = nTempDataId
 rwtNpcGroup[nBox]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1]["DataValue"] = CONST_TEMP_DATA.Data1
-rwtNpcGroup[nBox]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1]["Value"] = {0,1}
+rwtNpcGroup[nBox]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1]["Value"] = {0}
 rwtNpcGroup[nBox]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["OpenDialog"] = {}
 rwtNpcGroup[nBox]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["OpenDialog"]["tDialog"] = {tDialog[12]}	
 rwtNpcGroup[nBox]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"] = {}
@@ -210,7 +210,7 @@ rwtNpcGroup[nCollect_Kuang]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"]
 rwtNpcGroup[nCollect_Kuang]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1] = {}
 rwtNpcGroup[nCollect_Kuang]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1]["Record"] = nTempDataId
 rwtNpcGroup[nCollect_Kuang]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1]["DataValue"] = CONST_TEMP_DATA.Data2
-rwtNpcGroup[nCollect_Kuang]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1]["Value"] = {0,1,2}
+rwtNpcGroup[nCollect_Kuang]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1]["Value"] = {0}
 rwtNpcGroup[nCollect_Kuang]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["OpenDialog"] = {}
 rwtNpcGroup[nCollect_Kuang]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["OpenDialog"]["tDialog"] = {tDialog[11]}	
 rwtNpcGroup[nCollect_Kuang]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["GetServerAward"] = {}
@@ -265,7 +265,7 @@ rwtNpcGroup[nCollect_ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"
 
 
 rwtNpcGroup[nCollect_ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2] = {}
-rwtNpcGroup[nCollect_ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["MinRate"] = 9000   --9001
+rwtNpcGroup[nCollect_ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["MinRate"] = 9001   --9001
 rwtNpcGroup[nCollect_ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["MaxRate"] = 10000   --10%
 rwtNpcGroup[nCollect_ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"] = {}
 rwtNpcGroup[nCollect_ShiTou]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkEventCond"] = {}
@@ -316,6 +316,13 @@ rwtCopyMapMission[nCopyMapId]["TargetStepNum"] = 1
 rwtCopyMapMission[nCopyMapId]["Target1"] = {nTarget1}
 rwtCopyMapMission[nCopyMapId]["Target99"] = {60072}
 
+--首次通关后置掩码
+rwtCopyMapMission[nCopyMapId]["PassSetTempGroup"] = {}
+rwtCopyMapMission[nCopyMapId]["PassSetTempGroup"][1] = {}
+rwtCopyMapMission[nCopyMapId]["PassSetTempGroup"][1]["TempDataId"] = nTempDataId_Public
+rwtCopyMapMission[nCopyMapId]["PassSetTempGroup"][1]["SetValue"] = 1
+rwtCopyMapMission[nCopyMapId]["PassSetTempGroup"][1]["DataIndex"] = CONST_TEMP_DATA.Data1
+
 --进副本给对白+5锄头
 rwtCopyMapMission[nCopyMapId]["CopyMapInit"] = {}
 rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"] = {}
@@ -332,11 +339,11 @@ rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][1]["FailEvents"]["OpenDia
 rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][1]["FailEvents"]["OpenDialog"]["DialogId"] =  tDialog[2]
 rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][1]["OpenDialog"] = {}					--成功对白
 rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][1]["OpenDialog"]["DialogId"] = tDialog[1]
-rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][1]["SetUserTempData"] = {}
-rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][1]["SetUserTempData"][1] = {}
-rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][1]["SetUserTempData"][1]["TempDataID"] = nTempDataId_Public
-rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][1]["SetUserTempData"][1]["SetValue"] = 1
-rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][1]["SetUserTempData"][1]["DataIndex"] = CONST_TEMP_DATA.Data1
+--rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][1]["SetUserTempData"] = {}
+--rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][1]["SetUserTempData"][1] = {}
+--rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][1]["SetUserTempData"][1]["TempDataID"] = nTempDataId_Public
+--rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][1]["SetUserTempData"][1]["SetValue"] = 1
+--rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][1]["SetUserTempData"][1]["DataIndex"] = CONST_TEMP_DATA.Data1
 
 rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][2] = {}
 rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][2]["GetServerAward"] = {}

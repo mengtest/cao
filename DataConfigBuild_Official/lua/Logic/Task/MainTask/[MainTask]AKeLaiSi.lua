@@ -62,6 +62,7 @@ tAKeLaiSi.nBranchTask_2 = 70209   --讨伐领主支线引导
 --副本ID
 local nCopyMap_LuXiMuDi = 3035
 local nCopyMap_CangShu = 3084
+local nCopyMap_CangShu_NorMal = 3139
 -----------npc----------
 --管家约瑞克
 local nNpcId_Butler = 3021
@@ -645,6 +646,10 @@ rwtTask[tAKeLaiSi.nAKeLaiSiTask_13]["Awards"]["Events"][1]["GetServerAward"]["Ac
 rwtTask[tAKeLaiSi.nAKeLaiSiTask_13]["UnLockSysId"] = {CONST_SYSTEM_FUNCTION.SHARE_BOSS} --讨伐领主
 rwtTask[tAKeLaiSi.nAKeLaiSiTask_13]["AcceptExtraTaskId"] = 70209
 
+
+rwtTask[tAKeLaiSi.nAKeLaiSiTask_13]["UnlockCopyMap1"] = nCopyMap_CangShu
+
+---------------------------------------------------------------------------------------------
 rwtTask[tAKeLaiSi.nBranchTask_2] = {} 
 rwtTask[tAKeLaiSi.nBranchTask_2]["Title"]= tLuaText[LANGUAGE_CONFIG][21458]
 rwtTask[tAKeLaiSi.nBranchTask_2]["TaskType"] = CONST_TASK_TYPE.SIDE
@@ -666,7 +671,8 @@ rwtTask[tAKeLaiSi.nAKeLaiSiTask_38]["Title"] = tLuaText[LANGUAGE_CONFIG][20168]
 rwtTask[tAKeLaiSi.nAKeLaiSiTask_38]["PreTaskId"] = tAKeLaiSi.nAKeLaiSiTask_13
 rwtTask[tAKeLaiSi.nAKeLaiSiTask_38]["NextTaskId"]= tAKeLaiSi.nAKeLaiSiTask_31
 rwtTask[tAKeLaiSi.nAKeLaiSiTask_38]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.PASS_COPYMAP
-rwtTask[tAKeLaiSi.nAKeLaiSiTask_38]["PassCopyMap1"] = {3084}
+rwtTask[tAKeLaiSi.nAKeLaiSiTask_38]["OpenCopyMap"] = nCopyMap_CangShu
+rwtTask[tAKeLaiSi.nAKeLaiSiTask_38]["PassCopyMap1"] = {nCopyMap_CangShu}
 rwtTask[tAKeLaiSi.nAKeLaiSiTask_38]["PassCopyMapCount1"] = 1
 rwtTask[tAKeLaiSi.nAKeLaiSiTask_38]["IsClickComplete"] = 1
 rwtTask[tAKeLaiSi.nAKeLaiSiTask_38]["DynaNpcGroupGen"] = {}
@@ -686,7 +692,7 @@ rwtTask[tAKeLaiSi.nAKeLaiSiTask_38]["Awards"]["Events"][1]["GetServerAward"]["Aw
 rwtTask[tAKeLaiSi.nAKeLaiSiTask_38]["Awards"]["Events"][1]["GetServerAward"]["AwardId"] = 2000009
 rwtTask[tAKeLaiSi.nAKeLaiSiTask_38]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TASK
 rwtTask[tAKeLaiSi.nAKeLaiSiTask_38]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tAKeLaiSi.nAKeLaiSiTask_38
-
+rwtTask[tAKeLaiSi.nAKeLaiSiTask_38]["UnlockCopyMap1"] = nCopyMap_CangShu_NorMal
 rwtTask[tAKeLaiSi.nAKeLaiSiTask_38]["UnLockSysId"] = {CONST_SYSTEM_FUNCTION.UP_ORDER_EQUIP} -- 装备进阶
 rwtTask[tAKeLaiSi.nAKeLaiSiTask_38]["AcceptExtraTaskId"] = 70216  --引导支线
 
@@ -734,6 +740,7 @@ rwtTask[tAKeLaiSi.nAKeLaiSiTask_31]["Awards"]["Events"][1]["GetServerAward"]["Aw
 rwtTask[tAKeLaiSi.nAKeLaiSiTask_31]["Awards"]["Events"][1]["GetServerAward"]["AwardId"] = 2000010
 rwtTask[tAKeLaiSi.nAKeLaiSiTask_31]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TASK
 rwtTask[tAKeLaiSi.nAKeLaiSiTask_31]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tAKeLaiSi.nAKeLaiSiTask_31
+
 
 -------------露西蒂尼之墓------------
 --查清真相

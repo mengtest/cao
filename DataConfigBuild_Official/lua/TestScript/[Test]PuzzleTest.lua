@@ -163,75 +163,27 @@ rwtNpcGroup[90004]["PuzzleId"] = 101
 rwtNpcGroup[90004]["DialogId"] = 1680
 
 rwtNpcGroup[90005] = rwtNpcGroup[90005] or {}   
-rwtNpcGroup[90005]["Type"] = CONST_NPCGROUP_TYPE.PuzzleNpc
-rwtNpcGroup[90005]["PuzzleId"] = {108}
-rwtNpcGroup[90005]["DialogPuzzleNpc"] = true
+rwtNpcGroup[90005]["Type"] = CONST_NPCGROUP_TYPE.Npc
 rwtNpcGroup[90005]["DialogId"] = 1680
-
-
 
 
 rwtTask[nTestTask_Puzzle1] = {}
 rwtTask[nTestTask_Puzzle1]["Title"] = "测试任务1"
 rwtTask[nTestTask_Puzzle1]["NextTaskId"] = 0
 rwtTask[nTestTask_Puzzle1]["TaskType"] = CONST_TASK_TYPE.SIDE
-rwtTask[nTestTask_Puzzle1]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.PUZZLE
---rwtTask[nTestTask_Puzzle1]["IsClickComplete"] = 1
-rwtTask[nTestTask_Puzzle1]["ReqPuzzleId"] = 101
-rwtTask[nTestTask_Puzzle1]["ReqPuzzleObj"] = 101001
-rwtTask[nTestTask_Puzzle1]["ReqPuzzleEnterDialog"] = 1686
-rwtTask[nTestTask_Puzzle1]["DynaNpcGroupGen"] = {}
-rwtTask[nTestTask_Puzzle1]["DynaNpcGroupGen"][1] = {}
-rwtTask[nTestTask_Puzzle1]["DynaNpcGroupGen"][1]["GenId"] = 9001018
-rwtTask[nTestTask_Puzzle1]["DynaNpcGroupGen"][1]["MapId"] = 9001
-rwtTask[nTestTask_Puzzle1]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[nTestTask_Puzzle1]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_PANEL
+rwtTask[nTestTask_Puzzle1]["IsClickComplete"] = 1
+rwtTask[nTestTask_Puzzle1]["DialogId"] = 1680
 
 rwtTask[nTestTask_Puzzle2] = {}
 rwtTask[nTestTask_Puzzle2]["Title"] = "测试任务2"
 rwtTask[nTestTask_Puzzle2]["NextTaskId"] = 0
 rwtTask[nTestTask_Puzzle2]["TaskType"] = CONST_TASK_TYPE.SIDE
-rwtTask[nTestTask_Puzzle2]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.PUZZLE
---rwtTask[nTestTask_Puzzle2]["IsClickComplete"] = 1
-rwtTask[nTestTask_Puzzle2]["ReqPuzzleId"] = 101
-rwtTask[nTestTask_Puzzle2]["ReqPuzzleObj"] = 101002
---rwtTask[nTestTask_Puzzle2]["ReqPuzzleEnterDialog"] = 1687
-rwtTask[nTestTask_Puzzle2]["DynaNpcGroupGen"] = {}
-rwtTask[nTestTask_Puzzle2]["DynaNpcGroupGen"][1] = {}
-rwtTask[nTestTask_Puzzle2]["DynaNpcGroupGen"][1]["GenId"] = 9001018
-rwtTask[nTestTask_Puzzle2]["DynaNpcGroupGen"][1]["MapId"] = 9001
-rwtTask[nTestTask_Puzzle2]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[nTestTask_Puzzle2]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_PANEL
+rwtTask[nTestTask_Puzzle2]["IsClickComplete"] = 1
+rwtTask[nTestTask_Puzzle2]["DialogId"] = 1680
 
-rwtTask[nTestTask_Puzzle3] = {}
-rwtTask[nTestTask_Puzzle3]["Title"] = "测试任务3"
-rwtTask[nTestTask_Puzzle3]["NextTaskId"] = 0
-rwtTask[nTestTask_Puzzle3]["TaskType"] = CONST_TASK_TYPE.SIDE
-rwtTask[nTestTask_Puzzle3]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.PUZZLE
-rwtTask[nTestTask_Puzzle3]["IsClickComplete"] = 1
-rwtTask[nTestTask_Puzzle3]["ReqPuzzleId"] = 101
-rwtTask[nTestTask_Puzzle3]["ReqPuzzleObj"] = 101003
-rwtTask[nTestTask_Puzzle3]["ReqPuzzleEnterDialog"] = 1688
-rwtTask[nTestTask_Puzzle3]["ReqPuzzleEndDialog"] = nTestTask_Puzzle_Dialog
-rwtTask[nTestTask_Puzzle3]["DynaNpcGroupGen"] = {}
-rwtTask[nTestTask_Puzzle3]["DynaNpcGroupGen"][1] = {}
-rwtTask[nTestTask_Puzzle3]["DynaNpcGroupGen"][1]["GenId"] = 9001018
-rwtTask[nTestTask_Puzzle3]["DynaNpcGroupGen"][1]["MapId"] = 9001
-rwtTask[nTestTask_Puzzle3]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
 
-rwtTask[nTestTask_Puzzle4] = {}
-rwtTask[nTestTask_Puzzle4]["Title"] = "测试任务4"
-rwtTask[nTestTask_Puzzle4]["NextTaskId"] = 0
-rwtTask[nTestTask_Puzzle4]["TaskType"] = CONST_TASK_TYPE.SIDE
-rwtTask[nTestTask_Puzzle4]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.PUZZLE
-rwtTask[nTestTask_Puzzle4]["IsClickComplete"] = 1
-rwtTask[nTestTask_Puzzle4]["ReqPuzzleId"] = 108
-rwtTask[nTestTask_Puzzle4]["ReqPuzzleObj"] = 108003
-rwtTask[nTestTask_Puzzle4]["ReqPuzzleDialogOpen"] = true
-rwtTask[nTestTask_Puzzle4]["ReqPuzzleEnterDialog"] = nTestTask_Puzzle_Dialog
-rwtTask[nTestTask_Puzzle4]["DynaNpcGroupGen"] = {}
-rwtTask[nTestTask_Puzzle4]["DynaNpcGroupGen"][1] = {}
-rwtTask[nTestTask_Puzzle4]["DynaNpcGroupGen"][1]["GenId"] = 9001019
-rwtTask[nTestTask_Puzzle4]["DynaNpcGroupGen"][1]["MapId"] = 9001
-rwtTask[nTestTask_Puzzle4]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
 
 
 

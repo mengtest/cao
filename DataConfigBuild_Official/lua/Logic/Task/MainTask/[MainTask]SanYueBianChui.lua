@@ -8,7 +8,7 @@
 
 ----***************************数据定义***************************----
 -------------------任务ID--第一个任务：10230；最后一个任务10255---------------
-nLastTownTask = 10291
+local nLastTownTask = 10291
 
 local tTask_SanYueBianChui={}
 tTask_SanYueBianChui[1] =  10230			-- 抵达三月边陲-解读信件
@@ -29,8 +29,8 @@ tTask_SanYueBianChui[15] = 10245			-- 解药在哪里-找阿比旦
 tTask_SanYueBianChui[16] = 10246			-- 沙海虫巢-通过沙海虫巢
 tTask_SanYueBianChui[17] = 10247			-- 平复童稚事件-回酒馆
 tTask_SanYueBianChui[18] = 10248			-- 平复童稚事件-解药辨认
+tTask_SanYueBianChui["KaDengJi"] = 10545    -- 平复童稚事件-达到37级
 tTask_SanYueBianChui[19] = 10249			-- 平复童稚事件-给镇长解药--解毒
-tTask_SanYueBianChui["KaDengJi"] = 10545    -- 泰坦之魂-达到37级
 tTask_SanYueBianChui[20] = 10250			-- 泰坦之魂-解读邀请函
 tTask_SanYueBianChui[21] = 10410			-- 泰坦之魂-清除亡魂首领
 tTask_SanYueBianChui[22] = 10411			-- 泰坦之魂-清除巨熊首领
@@ -349,7 +349,7 @@ rwtNpcGroup[tBuild.build32Hao]["ChkTempdata"]["FailDialogId"] = 10719
 
 rwtNpcGroup[tBuild.build32Hao]["NpcId1"] = 3131
 rwtNpcGroup[tBuild.build32Hao]["NpcChkFuc1"] = function(nNpcId)
-    if rwTaskIsSuccess(tTask_SanYueBianChui["KaDengJi"]) then
+    if rwTaskIsSuccess(tTask_SanYueBianChui[19]) then
         return false
     else
         return true
@@ -358,7 +358,7 @@ end
 rwtNpcGroup[tBuild.build32Hao]["NpcId2"] = 3132
 rwtNpcGroup[tBuild.build32Hao]["SetFirst2"] = 1
 rwtNpcGroup[tBuild.build32Hao]["NpcChkFuc2"] = function(nNpcId)
-    if rwTaskIsSuccess(tTask_SanYueBianChui["KaDengJi"]) then
+    if rwTaskIsSuccess(tTask_SanYueBianChui[19]) then
         return true
     else
         return false
@@ -776,7 +776,7 @@ rwtTask[tTask_SanYueBianChui[17]]["IsClickComplete"] = 0
 rwtTask[tTask_SanYueBianChui[18]] = {}
 rwtTask[tTask_SanYueBianChui[18]]["Title"] = tLuaText[LANGUAGE_CONFIG][20393]
 rwtTask[tTask_SanYueBianChui[18]]["PreTaskId"] = tTask_SanYueBianChui[17]
-rwtTask[tTask_SanYueBianChui[18]]["NextTaskId"] = tTask_SanYueBianChui[19]
+rwtTask[tTask_SanYueBianChui[18]]["NextTaskId"] = tTask_SanYueBianChui["KaDengJi"]
 rwtTask[tTask_SanYueBianChui[18]]["DialogId"] = 10514
 rwtTask[tTask_SanYueBianChui[18]]["TaskNpc"] = 3121
 rwtTask[tTask_SanYueBianChui[18]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
@@ -785,10 +785,21 @@ rwtTask[tTask_SanYueBianChui[18]]["StartAutoWay"]["FindWayTypeId"] = 0
 rwtTask[tTask_SanYueBianChui[18]]["StartAutoWay"]["FindWayMapId"] = 2003
 rwtTask[tTask_SanYueBianChui[18]]["StartAutoWay"]["FindWayPos"] = tPos.HuangHuZi
 
+--卡时间
+rwtTask[tTask_SanYueBianChui["KaDengJi"]] = {}
+rwtTask[tTask_SanYueBianChui["KaDengJi"]]["Title"] = tLuaText[LANGUAGE_CONFIG][20393]
+rwtTask[tTask_SanYueBianChui["KaDengJi"]]["PreTaskId"] = tTask_SanYueBianChui[18]
+rwtTask[tTask_SanYueBianChui["KaDengJi"]]["NextTaskId"] = tTask_SanYueBianChui[19]
+rwtTask[tTask_SanYueBianChui["KaDengJi"]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.COUNTDOWN
+rwtTask[tTask_SanYueBianChui["KaDengJi"]]["TaskFinishTime"] = 21600     --6H
+rwtTask[tTask_SanYueBianChui["KaDengJi"]]["LackDialogId"] = 11450
+rwtTask[tTask_SanYueBianChui["KaDengJi"]]["DialogId"] = 11451
+
+
 rwtTask[tTask_SanYueBianChui[19]] = {}
 rwtTask[tTask_SanYueBianChui[19]]["Title"] = tLuaText[LANGUAGE_CONFIG][20394]
-rwtTask[tTask_SanYueBianChui[19]]["PreTaskId"] = tTask_SanYueBianChui[18]
-rwtTask[tTask_SanYueBianChui[19]]["NextTaskId"] = tTask_SanYueBianChui["KaDengJi"]
+rwtTask[tTask_SanYueBianChui[19]]["PreTaskId"] = tTask_SanYueBianChui["KaDengJi"]
+rwtTask[tTask_SanYueBianChui[19]]["NextTaskId"] = tTask_SanYueBianChui[20]
 rwtTask[tTask_SanYueBianChui[19]]["DialogId"] = 10515
 rwtTask[tTask_SanYueBianChui[19]]["TaskNpc"] = 3129
 rwtTask[tTask_SanYueBianChui[19]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
@@ -807,21 +818,10 @@ rwtTask[tTask_SanYueBianChui[19]]["StartAutoWay"]["FindWayMapId"] = 2003
 rwtTask[tTask_SanYueBianChui[19]]["StartAutoWay"]["FindWayGroupId"] = tNPC.YiNuoKe
 rwtTask[tTask_SanYueBianChui[19]]["StartAutoWay"]["FindWayGenId"] = tGenId.NPC_YiNuoKe
 
---卡等级
-rwtTask[tTask_SanYueBianChui["KaDengJi"]] = {}
-rwtTask[tTask_SanYueBianChui["KaDengJi"]]["Title"] = tLuaText[LANGUAGE_CONFIG][21276]
-rwtTask[tTask_SanYueBianChui["KaDengJi"]]["PreTaskId"] = tTask_SanYueBianChui[19]
-rwtTask[tTask_SanYueBianChui["KaDengJi"]]["NextTaskId"] = tTask_SanYueBianChui[20]
-rwtTask[tTask_SanYueBianChui["KaDengJi"]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.UPLEVEL
-rwtTask[tTask_SanYueBianChui["KaDengJi"]]["NeedLevel"] = 36
-rwtTask[tTask_SanYueBianChui["KaDengJi"]]["LackDialogId"] = 11450
-rwtTask[tTask_SanYueBianChui["KaDengJi"]]["DialogId"] = 11451
-rwtTask[tTask_SanYueBianChui["KaDengJi"]]["CloseDialog"] = 0
-
 
 rwtTask[tTask_SanYueBianChui[20]] = {}
 rwtTask[tTask_SanYueBianChui[20]]["Title"] = tLuaText[LANGUAGE_CONFIG][20395]
-rwtTask[tTask_SanYueBianChui[20]]["PreTaskId"] = tTask_SanYueBianChui["KaDengJi"]
+rwtTask[tTask_SanYueBianChui[20]]["PreTaskId"] = tTask_SanYueBianChui[19]
 rwtTask[tTask_SanYueBianChui[20]]["NextTaskId"] = tTask_SanYueBianChui[21]
 rwtTask[tTask_SanYueBianChui[20]]["DialogId"] = 10516
 rwtTask[tTask_SanYueBianChui[20]]["TaskNpc"] = 3132
@@ -1111,7 +1111,7 @@ rwtTask[tTask_SanYueBianChui[34]]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_
 rwtTask[tTask_SanYueBianChui[31]] = {}
 rwtTask[tTask_SanYueBianChui[31]]["Title"] = tLuaText[LANGUAGE_CONFIG][20406]
 rwtTask[tTask_SanYueBianChui[31]]["PreTaskId"] = tTask_SanYueBianChui[34]
-rwtTask[tTask_SanYueBianChui[31]]["NextTaskId"] = 10324
+rwtTask[tTask_SanYueBianChui[31]]["NextTaskId"] = 10323
 rwtTask[tTask_SanYueBianChui[31]]["DialogId"] = 10518
 -- rwtTask[tTask_SanYueBianChui[31]]["AutoTaskDialog"] = 10518
 rwtTask[tTask_SanYueBianChui[31]]["ReqTrap1"] = tTrap.ShengJieQiJu

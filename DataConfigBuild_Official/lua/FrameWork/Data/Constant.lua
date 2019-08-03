@@ -318,6 +318,20 @@ CONST_ADVENTURE_TYPE = {
 	USERDATA = 10, -- 用户数据
 }
 
+----风迹速递判定类型
+--CONST_QUICKSEND_JUDGE_TYPE = {
+--	TASK = 1, -- 任务情况
+--	USER = 2,  -- 玩家
+--	HERO = 3,  -- 英雄
+--	PROBABILITY = 4, -- 概率
+--	TIMERANGE = 5, -- 时间范围
+--	TIME = 6,  -- 时间
+--	USEROTHER = 7, -- 玩家其他
+--	HEROOTHER = 8, -- 英雄其他
+--	TASKFINISH = 9, -- 任务完成
+--	USERDATA = 10, -- 用户数据
+--}
+
 --时间标志位表
 CONST_TIME_TYPE = {
 	[1] = "day",
@@ -509,11 +523,16 @@ CONST_SYSTEM_FUNCTION = {
 CONST_MONSTERGROUP_TYPE = {
     BASE = 1,   --基础通用模板
 }
-
+--gen的事件类型
+CONST_GEN_EVENTTYPE = {
+	NPCGROUP = 1,
+	MONSTERGROUP = 2,
+}
 
 --***************************界面相关常量***************************--
 --打开界面类型ID
 CONST_MENUTYPE = {
+    ---1到10是为了做兼容，客户端索引到另外一个枚举-----
     NpcTalk = 1,        --NPC对话
     Hero = 2,           --英雄
     Equipment = 3,      --装备
@@ -524,11 +543,53 @@ CONST_MENUTYPE = {
     Pet = 8,            --本命界面
     Arena = 9,          --竞技场
     ShareBoss = 10,     --分享BOSS（讨伐领主）
-    HeroLottery = 710,  --英雄占卜
-    PetLottery = 720,   --本命占卜
-    Formation = 1700,   --多英雄副本-编队界面
+    ---后续界面ID同客户端界面ID
+    --NpcTalk = 100, --Npc对话    --1
+    --Hero = 200, --英雄          --2
+    Hero_Level1 = 201, --英雄升级
+    Hero_Level2 = 202, --英雄升阶
+    --Hero_Equipment1 = 203, --装备强化  --3
+    Hero_Equipment2 = 204, --装备升星
+    Hero_Equipment3 = 205, --装备进阶
+    Hero_Skill = 206, --技能升级
+    Hero_Rune = 207, --符文镶嵌
+    Hero_impression = 208, -- 英雄礼物
+    Hero_pet = 209, -- 本命助力
+    --Mercenary = 400, --佣兵   --4
     Reward = 410,   --悬赏界面
     UNION = 420,   --自律联盟界面（4个NPC头像）
+    --Arrest = 410, --悬赏界面
+    --DayTask = 420, -- 自律联盟
+    --Bag = 500, --背包  --5
+    --TransferTarget = 600, --传送目标  --6
+    --Lottery = 700, --占卜  --7
+    HeroLottery = 710,  --英雄占卜
+    PetLottery = 720,   --本命占卜
+    --Pet = 800, --本命  --8
+    Hero_Pet1 = 801, --本命升级
+    Hero_Pet2 = 802, --本命升星
+    --Arena = 900, --竞技场  --9
+    --ShareBoss = 1000, --分享BOSS  --10
+    Knight = 1100, -- 骑士考核
+    Dailyact = 1200, -- 每日必做
+    Syndicate = 1300, -- 公会主界面
+    Syndicate_activity = 1310, -- 公会活动界面
+    WenlyDream = 1400, -- 温丽梦境
+    DailyInstance = 1500, -- 每日副本
+    Shop_Dimensity = 1600, -- 魔石商店
+    Shop_Legion = 1610, -- 公会商店
+    Shop_Pet = 1620, -- 本命商店
+    Shop_Hero = 1630, -- 英雄场商店
+    Shop_Arena = 1640, -- 竞技商店
+    Shop_Knight = 1650, -- 骑士商店
+    Shop_WenlyDream = 1660, -- 梦境商店
+    Shop_First = 1670, --第一个商店
+    Formation = 1700,   --多英雄副本-编队界面
+    FriendBox = 1800, --好友宝箱
+    Friend = 1900,          --好友
+    LimitActivity = 2000,   --限时活动
+    FourteenLoop = 2010,    --14日活跃循环活动
+    SupplyCard = 2100,      --充值月卡
 } 
 --对话框NPC表情
 CONST_NPC_FACE={

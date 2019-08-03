@@ -68,8 +68,13 @@ rwtNpcGroup[30395]["Type"] = CONST_NPCGROUP_TYPE.Adventure
 rwtNpcGroup[30395]["TrapAcceptTask"] = 35015
 rwtNpcGroup[30395]["AdventureJudgeType"] = {}
 rwtNpcGroup[30395]["AdventureJudgeType"][1] = {}
+rwtNpcGroup[30395]["AdventureJudgeType"][1]["Type"] = CONST_ADVENTURE_TYPE.PROBABILITY
+rwtNpcGroup[30395]["AdventureJudgeType"][1]["Value"] = -1
+--[[
+rwtNpcGroup[30395]["AdventureJudgeType"][1] = {}
 rwtNpcGroup[30395]["AdventureJudgeType"][1]["Type"] = CONST_ADVENTURE_TYPE.TASKFINISH
 rwtNpcGroup[30395]["AdventureJudgeType"][1]["TaskFinish"] = {10148}
+--]]
 
 
 ----********************************* 任务 *************************************----

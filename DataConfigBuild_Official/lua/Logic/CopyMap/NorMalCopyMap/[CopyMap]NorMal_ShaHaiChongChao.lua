@@ -10,8 +10,8 @@ local nTarget = 60035
 rwtNpcGroup[nChangeMapNpc] = rwtNpcGroup[nChangeMapNpc] or {}
 rwtNpcGroup[nChangeMapNpc]["Type"] = CONST_NPCGROUP_TYPE.CopyMap
 rwtNpcGroup[nChangeMapNpc]["CopyMapList"] = {nCopyMapMissId}
-rwtNpcGroup[nChangeMapNpc]["UnlockDialog"] = 5227
-rwtNpcGroup[nChangeMapNpc]["Dialog"] = 5228
+--rwtNpcGroup[nChangeMapNpc]["UnlockDialog"] = 5227
+--rwtNpcGroup[nChangeMapNpc]["Dialog"] = 5228
 
 -------------------数据-----------------------------------------------------
 --怪物组
@@ -21,21 +21,19 @@ local nMonster_3 =200244
 local nMonster_4 =200245  
 local nMonster_Boss = 200246  --BOSS
 --宝箱
-local nBox_Shahaichongchao_Normal =40089
-local nBoxAwardId = 1000105
+--local nBox_Shahaichongchao_Normal =40089
+--local nBoxAwardId = 1000105
 
-rwtNpcGroup[nBox_Shahaichongchao_Normal] = rwtNpcGroup[nBox_Shahaichongchao_Normal] or {}
-rwtNpcGroup[nBox_Shahaichongchao_Normal]["Type"] = CONST_NPCGROUP_TYPE.TreasureBox
-rwtNpcGroup[nBox_Shahaichongchao_Normal]["Awards"] = {}
---rwtNpcGroup[nBox_Shahaichongchao_Normal]["Awards"]["AwardId"] = nBoxAwardId
---rwtNpcGroup[nBox_Shahaichongchao_Normal]["Awards"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
-rwtNpcGroup[nBox_Shahaichongchao_Normal]["Awards"]["Events"] = {}
-rwtNpcGroup[nBox_Shahaichongchao_Normal]["Awards"]["Events"][1] = {}
-rwtNpcGroup[nBox_Shahaichongchao_Normal]["Awards"]["Events"][1]["GetServerAward"] = {}
-rwtNpcGroup[nBox_Shahaichongchao_Normal]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TREASURE_BOX
-rwtNpcGroup[nBox_Shahaichongchao_Normal]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = nBox_Shahaichongchao_Normal
-rwtNpcGroup[nBox_Shahaichongchao_Normal]["Awards"]["Events"][1]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
-rwtNpcGroup[nBox_Shahaichongchao_Normal]["Awards"]["Events"][1]["GetServerAward"]["AwardId"] = nBoxAwardId   
+--rwtNpcGroup[nBox_Shahaichongchao_Normal] = rwtNpcGroup[nBox_Shahaichongchao_Normal] or {}
+--rwtNpcGroup[nBox_Shahaichongchao_Normal]["Type"] = CONST_NPCGROUP_TYPE.TreasureBox
+--rwtNpcGroup[nBox_Shahaichongchao_Normal]["Awards"] = {}
+--rwtNpcGroup[nBox_Shahaichongchao_Normal]["Awards"]["Events"] = {}
+--rwtNpcGroup[nBox_Shahaichongchao_Normal]["Awards"]["Events"][1] = {}
+--rwtNpcGroup[nBox_Shahaichongchao_Normal]["Awards"]["Events"][1]["GetServerAward"] = {}
+--rwtNpcGroup[nBox_Shahaichongchao_Normal]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TREASURE_BOX
+--rwtNpcGroup[nBox_Shahaichongchao_Normal]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = nBox_Shahaichongchao_Normal
+--rwtNpcGroup[nBox_Shahaichongchao_Normal]["Awards"]["Events"][1]["GetServerAward"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
+--rwtNpcGroup[nBox_Shahaichongchao_Normal]["Awards"]["Events"][1]["GetServerAward"]["AwardId"] = nBoxAwardId   
 --Gen
 local nGenId_ChangeMapNpc =3040001      --入口NPC
 
@@ -70,11 +68,11 @@ rwtCopyMapMission[nCopyMapMissId]["EnterNpcMap"] = 2003 --传送NPC所在地图
 rwtCopyMapMission[nCopyMapMissId]["ChangeNpcTask"] = nChangeNpcTask  --完成该任务切换剧情、普通副本NPC
 rwtCopyMapMission[nCopyMapMissId]["CopyNpcType"] = CONST_COPYMAP_TASK_TYPE.NORMAL --副本类型 （PLOT剧情，NORMAL普通）
 rwtCopyMapMission[nCopyMapMissId]["EnterNpcGen"] = 3040001 --副本传送NPC的GENID
-rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"] = {}
-rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"] = {}
-rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1] = {}
-rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["OpenDialog"] = {}
-rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["OpenDialog"]["DialogId"] = 5225
+--rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"] = {}
+--rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"] = {}
+--rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1] = {}
+--rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["OpenDialog"] = {}
+--rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["OpenDialog"]["DialogId"] = 5225
 --rwtCopyMapMission[nCopyMapMissId]["MapInitFunc"] = function(nCopyMapMissId)
 --    rwOpenNpcChatDialog(5225,CONST_NPCCHAT_TYPE.COPYMAP)
 --end
@@ -86,7 +84,9 @@ rwtTarget[nTarget]["KillMonsterGroup"] = nMonster_Boss
 rwtTarget[nTarget]["ReqCount"] = 1
 
 function CopyMap_ShaHaiChongChao_BOSS_Dead()
-    rwOpenNpcChatDialog(5226,CONST_NPCCHAT_TYPE.COPYMAP)
+--    rwOpenNpcChatDialog(5226,CONST_NPCCHAT_TYPE.COPYMAP)
+    rwOpenNpcChatDialog(6891,CONST_NPCCHAT_TYPE.COPYMAP)
+
 --    rwLinkPassCopyMap(3040)
 end
 --BOSS死亡触发

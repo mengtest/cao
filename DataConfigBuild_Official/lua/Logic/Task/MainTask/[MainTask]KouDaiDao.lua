@@ -336,6 +336,8 @@ local nCopyMap_BoShi = 3090
 local nCopyMap_BoShi_GenId = 3090011
 --黄金立方
 local nCopyMap_HuangJin = 3085
+--黄金立方普通本
+local nCopyMap_HuangJin_Normal = 3145
 --*****************************逻辑****************************
 --陷阱
 rwtNpcGroup[tTrap.Trap1] = rwtNpcGroup[tTrap.Trap1] or {}
@@ -974,6 +976,8 @@ rwtTask[tMainTask.Task18]["DialogId"] = tDialogId.Task18
 rwtTask[tMainTask.Task18]["TaskNpc"] = tNpc.Npc1
 
 rwtTask[tMainTask.Task18]["UnlockCopyMap1"] = nCopyMap_HuangJin
+rwtTask[tMainTask.Task18]["UnlockCopyMap2"] = nCopyMap_HuangJin_Normal
+
                       
 rwtTask[tMainTask.Task18]["StartAutoWay"] = {}
 rwtTask[tMainTask.Task18]["StartAutoWay"]["FindWayTypeId"] = 1
@@ -1294,5 +1298,7 @@ rwtTask[tMainTask.Task24]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] =
 rwtTask[tMainTask.Task24]["OpenMercenaryTask"] = {}
 rwtTask[tMainTask.Task24]["OpenMercenaryTask"]["AreaId"] = 2005
 rwtTask[tMainTask.Task24]["OpenMercenaryTask"]["TownId"] = 200505--解锁口袋岛佣兵
+rwtTask[tMainTask.Task24]["UnlockCopyMap1"] = 3086
+rwtTask[tMainTask.Task24]["UnlockCopyMap2"] = 3141
 
 

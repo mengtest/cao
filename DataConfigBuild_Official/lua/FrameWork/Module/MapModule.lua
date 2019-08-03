@@ -201,14 +201,29 @@ function rwLinkLoadMapComplete(nMapId)
             end
         end
     end
-	QuickSendTask_CleanDailyTempData()
+--	QuickSendTask_CleanDailyTempData()
 	if rwTaskGetListByType(CONST_TASK_TYPE.QUICKSEND) ~= nil and #rwTaskGetListByType(CONST_TASK_TYPE.QUICKSEND) > 0 then
-		local nCurrent = os.time()
-		local nDataTime = rwTempDataGetValue(1222,CONST_TEMP_DATA.RecordTime)
-		local nChaneTime = nDataTime +1200 - nCurrent		
-		if nChaneTime > 0 then
-			rwSpecialStatus_ChangeLookFace(1,0,nChaneTime,90801)
-		end
+--		local nCurrent = os.time()
+--		local nDataTime = rwTempDataGetValue(1222,CONST_TEMP_DATA.RecordTime)
+--		local nChaneTime = nDataTime +1200 - nCurrent		
+--		if nChaneTime > 0 then
+--			rwSpecialStatus_ChangeLookFace(1,0,nChaneTime,90801)
+--		end
+	else 
+		if rwTaskIsSuccess(10270) then
+			local nData2 = rwTempDataGetValue(1210,CONST_TEMP_DATA.Data2)
+			if nData2 >0 then
+				local nData3 = rwTempDataGetValue(1210,CONST_TEMP_DATA.Data3)
+				if nData2 < nData3 then
+					local nTaskId = QuickSendTask_GetTask()
+					rwTaskAdd(nTaskId)
+					local nTaskDetailType = rwtTask[nTaskId]["TaskDetailType"]
+					if nTaskDetailType and ENUM_TASK_TEMPLATE[nTaskDetailType] then
+						ENUM_TASK_TEMPLATE[nTaskDetailType]:create(nTaskId):CreateDynaObj()
+					end
+				end	
+			end	
+		end			
 	end
 end
 

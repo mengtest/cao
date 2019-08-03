@@ -1,5 +1,5 @@
 
---不冬岛铁矿任务剧情副本
+--枭鹰矿洞任务剧情副本
 
 
 
@@ -107,7 +107,7 @@ tCollectBuild[3] = 3055003
 --local nSceneDialogId_5 = 5316 -- 采集铁矿触发对白2
 
 local nSceneDialogId_Yb1 = 6213 -- 未接到主线任务时对白
-local nSceneDialogId_Yb2 = 6214 -- 已经完成主线未接到佣兵任务时对白
+--local nSceneDialogId_Yb2 = 6214 -- 已经完成主线未接到佣兵任务时对白
 
 --场景动画
 
@@ -315,7 +315,7 @@ rwtNpcGroup[nCopyMapEnterGroupId] = {}
 rwtNpcGroup[nCopyMapEnterGroupId]["Type"] = CONST_NPCGROUP_TYPE.CopyMap
 rwtNpcGroup[nCopyMapEnterGroupId]["CopyMapList"] = {tCopyMap_TieKuang["nCopyMapId"]}
 rwtNpcGroup[nCopyMapEnterGroupId]["UnlockDialog"] = nSceneDialogId_Yb1
-rwtNpcGroup[nCopyMapEnterGroupId]["Dialog"] = nSceneDialogId_Yb2
+--rwtNpcGroup[nCopyMapEnterGroupId]["Dialog"] = nSceneDialogId_Yb2
 
 
 --副本目标

@@ -70,7 +70,7 @@ tMiWuTask.nMiWuSenLinTask20 = 10388
 --奇怪的留言	对白
 tMiWuTask.nMiWuSenLinTask21 = 10389
 --卡等级	
-tMiWuTask.nMiWuSenLinTask21_1 = 10407
+--tMiWuTask.nMiWuSenLinTask21_1 = 10407
 
 
 --意外再次降临	
@@ -137,8 +137,8 @@ local nDialog_Task18 = 10654
 local nDialog_Task19 = 10656
 local nDialog_Task20 = 10657
 local nDialog_Task21 = 10658
-local nDialog_Task21_1 = 11439
-local nDialog_Task21_2 = 11440
+--local nDialog_Task21_1 = 11439 --卡等级任务删除
+--local nDialog_Task21_2 = 11440 --卡等级任务删除
 
 local nDialog_Task22 = 10659
 local nDialog_Task23 = 10660
@@ -1015,7 +1015,7 @@ rwtTask[tMiWuTask.nMiWuSenLinTask20]["StartAutoWay"]["FindWayGenId"] = nTrap_gen
 rwtTask[tMiWuTask.nMiWuSenLinTask21] = {}
 rwtTask[tMiWuTask.nMiWuSenLinTask21]["Title"] = tLuaText[LANGUAGE_CONFIG][20333]
 rwtTask[tMiWuTask.nMiWuSenLinTask21]["PreTaskId"] = tMiWuTask.nMiWuSenLinTask20
-rwtTask[tMiWuTask.nMiWuSenLinTask21]["NextTaskId"] = tMiWuTask.nMiWuSenLinTask21_1
+rwtTask[tMiWuTask.nMiWuSenLinTask21]["NextTaskId"] = tMiWuTask.nMiWuSenLinTask22
 rwtTask[tMiWuTask.nMiWuSenLinTask21]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_TRAP
 rwtTask[tMiWuTask.nMiWuSenLinTask21]["ReqTrap1"] = nTrap_Task20
 rwtTask[tMiWuTask.nMiWuSenLinTask21]["DialogId"] = nDialog_Task21
@@ -1041,23 +1041,23 @@ rwtTask[tMiWuTask.nMiWuSenLinTask21]["Awards"]["Events"][1]["GetServerAward"]["A
 rwtTask[tMiWuTask.nMiWuSenLinTask21]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tMiWuTask.nMiWuSenLinTask21
 
 
---到达XX级   卡等级
-rwtTask[tMiWuTask.nMiWuSenLinTask21_1] = {}
-rwtTask[tMiWuTask.nMiWuSenLinTask21_1]["Title"] = tLuaText[LANGUAGE_CONFIG][20340]
-rwtTask[tMiWuTask.nMiWuSenLinTask21_1]["PreTaskId"] = tMiWuTask.nMiWuSenLinTask21
-rwtTask[tMiWuTask.nMiWuSenLinTask21_1]["NextTaskId"] = tMiWuTask.nMiWuSenLinTask22
-rwtTask[tMiWuTask.nMiWuSenLinTask21_1]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.UPLEVEL
-rwtTask[tMiWuTask.nMiWuSenLinTask21_1]["NeedLevel"] = 44
-rwtTask[tMiWuTask.nMiWuSenLinTask21_1]["LackDialogId"] = nDialog_Task21_1
+----到达XX级   卡等级
+--rwtTask[tMiWuTask.nMiWuSenLinTask21_1] = {}
+--rwtTask[tMiWuTask.nMiWuSenLinTask21_1]["Title"] = tLuaText[LANGUAGE_CONFIG][20340]
+--rwtTask[tMiWuTask.nMiWuSenLinTask21_1]["PreTaskId"] = tMiWuTask.nMiWuSenLinTask21
+--rwtTask[tMiWuTask.nMiWuSenLinTask21_1]["NextTaskId"] = tMiWuTask.nMiWuSenLinTask22
+--rwtTask[tMiWuTask.nMiWuSenLinTask21_1]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.UPLEVEL
+--rwtTask[tMiWuTask.nMiWuSenLinTask21_1]["NeedLevel"] = 44
+--rwtTask[tMiWuTask.nMiWuSenLinTask21_1]["LackDialogId"] = nDialog_Task21_1
 
 --意外再次降临
 rwtTask[tMiWuTask.nMiWuSenLinTask22] = {}
 rwtTask[tMiWuTask.nMiWuSenLinTask22]["Title"] = tLuaText[LANGUAGE_CONFIG][20334]
-rwtTask[tMiWuTask.nMiWuSenLinTask22]["PreTaskId"] = tMiWuTask.nMiWuSenLinTask21_1
+rwtTask[tMiWuTask.nMiWuSenLinTask22]["PreTaskId"] = tMiWuTask.nMiWuSenLinTask21
 rwtTask[tMiWuTask.nMiWuSenLinTask22]["NextTaskId"] = tMiWuTask.nMiWuSenLinTask23
 rwtTask[tMiWuTask.nMiWuSenLinTask22]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_TRAP
 rwtTask[tMiWuTask.nMiWuSenLinTask22]["ReqTrap1"] = nTrap_Task20
-rwtTask[tMiWuTask.nMiWuSenLinTask22]["AcceptDialogId"] = nDialog_Task21_2
+--rwtTask[tMiWuTask.nMiWuSenLinTask22]["AcceptDialogId"] = nDialog_Task21_2
 rwtTask[tMiWuTask.nMiWuSenLinTask22]["DialogId"] = nDialog_Task22
 rwtTask[tMiWuTask.nMiWuSenLinTask22]["DynaNpcGroupGen"] = {}
 rwtTask[tMiWuTask.nMiWuSenLinTask22]["DynaNpcGroupGen"][1] = {}

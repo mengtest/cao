@@ -232,7 +232,7 @@ rwtNpcGroup[50045]["CopyMapList"] = {3069}
 rwtNpcGroup[50046] = rwtNpcGroup[50046] or {}
 rwtNpcGroup[50046]["Type"] = CONST_NPCGROUP_TYPE.CopyMap
 rwtNpcGroup[50046]["UnlockDialog"] = 6216
-rwtNpcGroup[50046]["Dialog"] = 6217
+-- rwtNpcGroup[50046]["Dialog"] = 6217
 rwtNpcGroup[50046]["CopyMapList"] = {3071}
 
 
@@ -359,7 +359,7 @@ local sPos_Task23 = '45.43,0.71,69.33'
 
 rwtTask[tTianKong.taskCg1] = {}
 rwtTask[tTianKong.taskCg1]["Title"]= tLuaText[LANGUAGE_CONFIG][21210]
-rwtTask[tTianKong.taskCg1]["PreTaskId"] = 10620
+rwtTask[tTianKong.taskCg1]["PreTaskId"] = 10508
 rwtTask[tTianKong.taskCg1]["NextTaskId"]= tTianKong.task2
 rwtTask[tTianKong.taskCg1]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_TRAP
 rwtTask[tTianKong.taskCg1]["DialogId"]= 11843
@@ -809,6 +809,7 @@ rwtTask[tTianKong.task21]["DynaNpcGroupGen"][1]["GenId"] = nTrap_8_gen
 rwtTask[tTianKong.task21]["DynaNpcGroupGen"][1]["MapId"] = 2004
 rwtTask[tTianKong.task21]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
 rwtTask[tTianKong.task21]["UnlockCopyMap1"] = 3071
+rwtTask[tTianKong.task21]["UnlockCopyMap2"] = 3146
 rwtTask[tTianKong.task21]["StartAutoWay"] = {}
 rwtTask[tTianKong.task21]["StartAutoWay"]["FindWayTypeId"] = 0
 rwtTask[tTianKong.task21]["StartAutoWay"]["FindWayMapId"] = 2004
@@ -911,7 +912,7 @@ rwtTask[tTianKong.task25]["StartAutoWay"]["FindWayGenId"] = nNpcGroup_7_gen
 rwtTask[tTianKong.task26] = {}
 rwtTask[tTianKong.task26]["Title"]= tLuaText[LANGUAGE_CONFIG][21216]
 rwtTask[tTianKong.task26]["PreTaskId"] = tTianKong.task25
-rwtTask[tTianKong.task26]["NextTaskId"]= 10615 -------------------
+rwtTask[tTianKong.task26]["NextTaskId"]= 10509 -------------------
 rwtTask[tTianKong.task26]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tTianKong.task26]["DialogId"]= 11284
 rwtTask[tTianKong.task26]["TaskNpc"] = nNpc_1

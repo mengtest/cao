@@ -1,5 +1,5 @@
 
---黑锤堡垒单人普通副本
+--风沙堡单人普通副本
 
 
 
@@ -8,49 +8,53 @@
 ----------------------------------------------------------------------------------
 
 --副本ID
-local nCopyMapId_Yb = 3039
+local nCopyMapId = 3039
 
---用户数据
-local nUserRecordId = 1020 --(原剧情本的用户记录 已使用：Data2)
 
 --位置点
 
 --相关任务
-local nHeiChuiOpenTaskId_Yb = 10253
+local nHeiChuiOpenTaskId = 10253
 
 --目标任务
 local nHeiChuiYbTaskId_1 = 60027
 
 --副本位置NPC组
-local nCopyMapEnterGroupId_Yb = 50023
-local nCopyMapEnterGenId_Yb = 20030269
+local nCopyMapEnterGroupId = 50023
+local nCopyMapEnterGenId = 20030269
 
 --场景加载
-local tLoadGenId_Yb = {}
+local tLoadGenId = {}
 
 --怪物
-local nMonsterId_ChuiZi_Yb = 1000232
-local nMonsterId_ShouWei_Yb = 1000233
+local nMonsterId_ChuiZi = 1000232
+local nMonsterId_ShouWei = 1000233
+local nMonsterId_MoXiYa = 1001173
 
 --怪物组
 --(1)
-local nMonsterGroupId_ChuiZi_Yb1 = 200237
-local nMonsterGroupId_ChuiZi_Yb1_GenId = 20030264
-table.insert(tLoadGenId_Yb,nMonsterGroupId_ChuiZi_Yb1_GenId)
+local nMonsterGroupId_ChuiZi_1 = 200237
+local nMonsterGroupId_ChuiZi_1_GenId = 3039001
+local nMonsterGroupId_ChuiZi_2 = 200238
+local nMonsterGroupId_ChuiZi_2_GenId = 3039002
+table.insert(tLoadGenId,nMonsterGroupId_ChuiZi_1_GenId)
+table.insert(tLoadGenId,nMonsterGroupId_ChuiZi_2_GenId)
 
---(4)
-local nMonsterGroupId_ShouWei_Yb1 = 200238
-local nMonsterGroupId_ShouWei_Yb2 = 200239
-local nMonsterGroupId_ShouWei_Yb3 = 200240
-local nMonsterGroupId_ShouWei_Yb4 = 200241
-local nMonsterGroupId_ShouWei_Yb1_GenId = 20030265
-local nMonsterGroupId_ShouWei_Yb2_GenId = 20030266
-local nMonsterGroupId_ShouWei_Yb3_GenId = 20030267
-local nMonsterGroupId_ShouWei_Yb4_GenId = 20030268
-table.insert(tLoadGenId_Yb,nMonsterGroupId_ShouWei_Yb1_GenId)
-table.insert(tLoadGenId_Yb,nMonsterGroupId_ShouWei_Yb2_GenId)
-table.insert(tLoadGenId_Yb,nMonsterGroupId_ShouWei_Yb3_GenId)
-table.insert(tLoadGenId_Yb,nMonsterGroupId_ShouWei_Yb4_GenId)
+--(2)
+local nMonsterGroupId_ShouWei_1 = 200239
+local nMonsterGroupId_ShouWei_2 = 200240
+local nMonsterGroupId_ShouWei_1_GenId = 3039003
+local nMonsterGroupId_ShouWei_2_GenId = 3039004
+table.insert(tLoadGenId,nMonsterGroupId_ShouWei_1_GenId)
+table.insert(tLoadGenId,nMonsterGroupId_ShouWei_2_GenId)
+
+
+local nMonsterGroupId_MoXiYa_1 = 200241
+local nMonsterGroupId_MoXiYa_1_GenId = 3039005
+table.insert(tLoadGenId,nMonsterGroupId_MoXiYa_1_GenId)
+
+--废弃GenId
+--(20030264 - 20030268)
 
 --宝箱
 
@@ -59,13 +63,10 @@ table.insert(tLoadGenId_Yb,nMonsterGroupId_ShouWei_Yb4_GenId)
 --陷阱
 
 --场景对话
-local nSceneDialogId_1_Yb = 5221 -- 进入副本触发对白
-local nSceneDialogId_2_Yb = 5222 -- 战斗胜利触发对白
-local nSceneDialogId_3_Yb = 5224 -- 已经完成主线未接到佣兵任务时对白
+--废弃对白Id(5221 5222 5224)
 
 --场景动画
 
---物品ID
 
 ----------------------------------------------------------------------------------
 ------------------------------------逻辑------------------------------------------
@@ -74,55 +75,31 @@ local nSceneDialogId_3_Yb = 5224 -- 已经完成主线未接到佣兵任务时�
 --副本目标
 rwtTarget[nHeiChuiYbTaskId_1] = {}
 rwtTarget[nHeiChuiYbTaskId_1]["Title"] = tLuaText[LANGUAGE_CONFIG][20029]
-rwtTarget[nHeiChuiYbTaskId_1]["KillMonsterGroup"] = nMonsterGroupId_ChuiZi_Yb1
+rwtTarget[nHeiChuiYbTaskId_1]["KillMonsterGroup"] = nMonsterGroupId_MoXiYa_1
 rwtTarget[nHeiChuiYbTaskId_1]["ReqCount"] = 1
 
 
---BOSS逻辑
-function CopyMap_Normal_HeiChuiBaoLeiBossDead()
-	rwOpenNpcChatDialog(nSceneDialogId_2_Yb,CONST_NPCCHAT_TYPE.COPYMAP)
-	--rwLinkPassCopyMap(nCopyMapId_Yb)
-end
-
-
-rwtMonsterGroup_Func[nMonsterGroupId_ChuiZi_Yb1] = rwtMonsterGroup_Func[nMonsterGroupId_ChuiZi_Yb1] or {}
-table.insert(rwtMonsterGroup_Func[nMonsterGroupId_ChuiZi_Yb1],CopyMap_Normal_HeiChuiBaoLeiBossDead)
-
 
 --进入副本
-rwtNpcGroup[nCopyMapEnterGroupId_Yb] = {}
-rwtNpcGroup[nCopyMapEnterGroupId_Yb]["Type"] = CONST_NPCGROUP_TYPE.CopyMap
-rwtNpcGroup[nCopyMapEnterGroupId_Yb]["CopyMapList"] = {nCopyMapId_Yb}
-rwtNpcGroup[nCopyMapEnterGroupId_Yb]["UnlockDialog"] = nSceneDialogId_3_Yb
-rwtNpcGroup[nCopyMapEnterGroupId_Yb]["Dialog"] = nSceneDialogId_3_Yb
+rwtNpcGroup[nCopyMapEnterGroupId] = {}
+rwtNpcGroup[nCopyMapEnterGroupId]["Type"] = CONST_NPCGROUP_TYPE.CopyMap
+rwtNpcGroup[nCopyMapEnterGroupId]["CopyMapList"] = {nCopyMapId}
 
 
 --副本信息(简单难度)
-rwtCopyMapMission[nCopyMapId_Yb] = rwtCopyMapMission[nCopyMapId_Yb] or {}
-rwtCopyMapMission[nCopyMapId_Yb]["ReqLev"] = 1
-rwtCopyMapMission[nCopyMapId_Yb]["Difficulty"] = 1
-rwtCopyMapMission[nCopyMapId_Yb]["EnterNpcMap"] = 2003
-rwtCopyMapMission[nCopyMapId_Yb]["ChangeNpcTask"] = nHeiChuiOpenTaskId_Yb
-rwtCopyMapMission[nCopyMapId_Yb]["CopyNpcType"] = CONST_COPYMAP_TASK_TYPE.NORMAL
-rwtCopyMapMission[nCopyMapId_Yb]["EnterNpcGen"] = nCopyMapEnterGenId_Yb
-rwtCopyMapMission[nCopyMapId_Yb]["TargetStepNum"] = 1 
-rwtCopyMapMission[nCopyMapId_Yb]["Target1"] = {nHeiChuiYbTaskId_1}
-rwtCopyMapMission[nCopyMapId_Yb]["Target99"] = {60072}
-rwtCopyMapMission[nCopyMapId_Yb]["CopyMapInit"] = {}
-rwtCopyMapMission[nCopyMapId_Yb]["CopyMapInit"]["Events"] = {}
-rwtCopyMapMission[nCopyMapId_Yb]["CopyMapInit"]["Events"][1] = {}
-rwtCopyMapMission[nCopyMapId_Yb]["CopyMapInit"]["Events"][1]["OpenDialog"] = {}
-rwtCopyMapMission[nCopyMapId_Yb]["CopyMapInit"]["Events"][1]["OpenDialog"]["DialogId"] = nSceneDialogId_1_Yb
-rwtCopyMapMission[nCopyMapId_Yb]["CopyMapInit"]["Events"][1]["DynCreate"] = tLoadGenId_Yb
---rwtCopyMapMission[nCopyMapId_Yb]["MapInitFunc"] = function()
---	rwOpenNpcChatDialog(nSceneDialogId_1_Yb,CONST_NPCCHAT_TYPE.COPYMAP)
---	for i,v in pairs(tLoadGenId_Yb) do
---		if not rwHasGenEvent(v) then
---			rwAddGenEvent(v)
---		end
---	end
---end
+rwtCopyMapMission[nCopyMapId] = rwtCopyMapMission[nCopyMapId] or {}
+rwtCopyMapMission[nCopyMapId]["ReqLev"] = 1
+rwtCopyMapMission[nCopyMapId]["Difficulty"] = 1
+rwtCopyMapMission[nCopyMapId]["EnterNpcMap"] = 2003
+rwtCopyMapMission[nCopyMapId]["ChangeNpcTask"] = nHeiChuiOpenTaskId
+rwtCopyMapMission[nCopyMapId]["CopyNpcType"] = CONST_COPYMAP_TASK_TYPE.NORMAL
+rwtCopyMapMission[nCopyMapId]["EnterNpcGen"] = nCopyMapEnterGenId
+rwtCopyMapMission[nCopyMapId]["TargetStepNum"] = 1 
+rwtCopyMapMission[nCopyMapId]["Target1"] = {nHeiChuiYbTaskId_1}
+rwtCopyMapMission[nCopyMapId]["Target99"] = {60072}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][1] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][1]["DynCreate"] = tLoadGenId
 
---rwtTaskUnlockCopyMapInfo[nCopyMapId_Yb] = rwtTaskUnlockCopyMapInfo[nCopyMapId_Yb] or {}
---rwtTaskUnlockCopyMapInfo[nCopyMapId_Yb]["TaskId"] = nHeiChuiOpenTaskId_Yb
 

@@ -14,7 +14,7 @@ local nCopyMapId = 3054   --副本ID
 rwtNpcGroup[50044] = rwtNpcGroup[50044] or{}   --副本入口NPC组
 rwtNpcGroup[50044]["Type"] = CONST_NPCGROUP_TYPE.CopyMap
 rwtNpcGroup[50044]["UnlockDialog"] = 11794
-rwtNpcGroup[50044]["Dialog"] = 11795
+--rwtNpcGroup[50044]["Dialog"] = 11795
 rwtNpcGroup[50044]["CopyMapList"] = {nCopyMapId}
 
 --剧情

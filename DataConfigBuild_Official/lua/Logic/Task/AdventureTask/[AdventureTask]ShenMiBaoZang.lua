@@ -38,12 +38,17 @@ rwtNpcGroup[30392] = rwtNpcGroup[30392] or {}
 rwtNpcGroup[30392]["Type"] = CONST_NPCGROUP_TYPE.Adventure
 rwtNpcGroup[30392]["TrapAcceptTask"] = 35007
 rwtNpcGroup[30392]["AdventureJudgeType"] = {}
+rwtNpcGroup[30392]["AdventureJudgeType"][1] = {}
+rwtNpcGroup[30392]["AdventureJudgeType"][1]["Type"] = CONST_ADVENTURE_TYPE.PROBABILITY
+rwtNpcGroup[30392]["AdventureJudgeType"][1]["Value"] = -1
+--[[
 -- rwtNpcGroup[30392]["AdventureJudgeType"][1] = {}
 -- rwtNpcGroup[30392]["AdventureJudgeType"][1]["Type"] = CONST_ADVENTURE_TYPE.HEROOTHER
 -- rwtNpcGroup[30392]["AdventureJudgeType"][1]["AllFightHero"] = {101,201,301}
 rwtNpcGroup[30392]["AdventureJudgeType"][1] = {}
 rwtNpcGroup[30392]["AdventureJudgeType"][1]["Type"] = CONST_ADVENTURE_TYPE.PROBABILITY
 rwtNpcGroup[30392]["AdventureJudgeType"][1]["Value"] = 0.5
+--]]
 
 rwtNpcGroup[nTrap_SMBZ] = rwtNpcGroup[nTrap_SMBZ] or {}  
 rwtNpcGroup[nTrap_SMBZ]["Type"] = CONST_NPCGROUP_TYPE.Trap

@@ -304,20 +304,20 @@ local nCopyMap_YingMu = 3023
 --任务 
 
 --新的伙伴/卡等级
-rwtTask[tYueShenSengLinTask[1]] = {}
-rwtTask[tYueShenSengLinTask[1]]["Title"] = tLuaText[LANGUAGE_CONFIG][20417]
-rwtTask[tYueShenSengLinTask[1]]["PreTaskId"] = 10254
-rwtTask[tYueShenSengLinTask[1]]["NextTaskId"] = tYueShenSengLinTask[2]
-rwtTask[tYueShenSengLinTask[1]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.UPLEVEL
-rwtTask[tYueShenSengLinTask[1]]["NeedLevel"] = 38
-rwtTask[tYueShenSengLinTask[1]]["LackDialogId"] = 12198
-rwtTask[tYueShenSengLinTask[1]]["DialogId"] = 12199
+-- rwtTask[tYueShenSengLinTask[1]] = {}
+-- rwtTask[tYueShenSengLinTask[1]]["Title"] = tLuaText[LANGUAGE_CONFIG][20417]
+-- rwtTask[tYueShenSengLinTask[1]]["PreTaskId"] = 10254
+-- rwtTask[tYueShenSengLinTask[1]]["NextTaskId"] = tYueShenSengLinTask[2]
+-- rwtTask[tYueShenSengLinTask[1]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.UPLEVEL
+-- rwtTask[tYueShenSengLinTask[1]]["NeedLevel"] = 38
+-- rwtTask[tYueShenSengLinTask[1]]["LackDialogId"] = 12198
+-- rwtTask[tYueShenSengLinTask[1]]["DialogId"] = 12199
 --rwtTask[tYueShenSengLinTask[1]]["LackTips"] = tLuaText[LANGUAGE_CONFIG][10041]
 
 --森之住民
 rwtTask[tYueShenSengLinTask[2]] = {}
 rwtTask[tYueShenSengLinTask[2]]["Title"] = tLuaText[LANGUAGE_CONFIG][20418]
-rwtTask[tYueShenSengLinTask[2]]["PreTaskId"] = tYueShenSengLinTask[1]
+rwtTask[tYueShenSengLinTask[2]]["PreTaskId"] = 10254
 rwtTask[tYueShenSengLinTask[2]]["NextTaskId"] = tYueShenSengLinTask[3]
 rwtTask[tYueShenSengLinTask[2]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_TRAP
 rwtTask[tYueShenSengLinTask[2]]["DialogId"] = nDialog_Task1
@@ -806,13 +806,13 @@ rwtTask[tYueShenSengLinTask[21]]["Awards"]["Events"][1]["GetServerAward"]["Award
 rwtTask[tYueShenSengLinTask[21]]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TASK
 rwtTask[tYueShenSengLinTask[21]]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tYueShenSengLinTask[21]
 
---新的伙伴/卡等级
+--新的伙伴/等待木禅养伤
 rwtTask[tYueShenSengLinTask[22]] = {}
 rwtTask[tYueShenSengLinTask[22]]["Title"] = tLuaText[LANGUAGE_CONFIG][20438]
 rwtTask[tYueShenSengLinTask[22]]["PreTaskId"] = tYueShenSengLinTask[21]
 rwtTask[tYueShenSengLinTask[22]]["NextTaskId"] = tYueShenSengLinTask[23]
-rwtTask[tYueShenSengLinTask[22]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.UPLEVEL
-rwtTask[tYueShenSengLinTask[22]]["NeedLevel"] = 40
+rwtTask[tYueShenSengLinTask[22]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.COUNTDOWN
+rwtTask[tYueShenSengLinTask[22]]["TaskFinishTime"] = 43200
 rwtTask[tYueShenSengLinTask[22]]["LackDialogId"] = 11431
 rwtTask[tYueShenSengLinTask[22]]["DialogId"] = 11432
 

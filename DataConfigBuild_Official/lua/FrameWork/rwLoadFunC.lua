@@ -309,7 +309,23 @@ function rwLoadFunC()
 				rwtManyHeroNPCGenIDInfo[v.GenIdNPCGroup]["NPCGroupId"] = i
             end
         end
+		if rwChkTable(v["BubbleGen"]) then
+			for j,k in pairs(v["BubbleGen"]) do
+				rwtBubbleGenInfo[k] = rwtBubbleGenInfo[k] or {}
+				rwtBubbleGenInfo[k]["EventId"] = i
+				rwtBubbleGenInfo[k]["Type"] = CONST_GEN_EVENTTYPE.NPCGROUP
+			end			
+		end
     end
+	for i,v in pairs (rwtMonsterGroup) do
+		if rwChkTable(v["BubbleGen"]) then
+			for j,k in pairs(v["BubbleGen"]) do
+				rwtBubbleGenInfo[k] = rwtBubbleGenInfo[k] or {}
+				rwtBubbleGenInfo[k]["EventId"] = i
+				rwtBubbleGenInfo[k]["Type"] = CONST_GEN_EVENTTYPE.MONSTERGROUP
+			end			
+		end
+	end
 	for i,v in pairs(tPuzzleEvent) do
 		for j,k in pairs(v) do
 			if j == "PuzzleInit" then

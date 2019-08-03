@@ -34,8 +34,13 @@ rwtNpcGroup[30393]["Type"] = CONST_NPCGROUP_TYPE.Adventure
 rwtNpcGroup[30393]["TrapAcceptTask"] = 10431
 rwtNpcGroup[30393]["AdventureJudgeType"] = {}
 rwtNpcGroup[30393]["AdventureJudgeType"][1] = {}
+rwtNpcGroup[30393]["AdventureJudgeType"][1]["Type"] = CONST_ADVENTURE_TYPE.PROBABILITY
+rwtNpcGroup[30393]["AdventureJudgeType"][1]["Value"] = -1
+--[[
+rwtNpcGroup[30393]["AdventureJudgeType"][1] = {}
 rwtNpcGroup[30393]["AdventureJudgeType"][1]["Type"] = CONST_ADVENTURE_TYPE.TASKFINISH
 rwtNpcGroup[30393]["AdventureJudgeType"][1]["TaskFinish"] = {10187}
+--]]
 
 rwtNpcGroup[nCollect_HuiZhang] = rwtNpcGroup[nCollect_HuiZhang] or {}  
 rwtNpcGroup[nCollect_HuiZhang]["Type"] = CONST_NPCGROUP_TYPE.Collect

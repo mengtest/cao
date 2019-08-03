@@ -63,7 +63,6 @@ tDialog.AbiDan_4 = 6876
 rwtNpcGroup[tNpcGroup.Egg] = rwtNpcGroup[tNpcGroup.Egg] or {}    
 rwtNpcGroup[tNpcGroup.Egg]["Type"] = CONST_NPCGROUP_TYPE.Collect
 rwtNpcGroup[tNpcGroup.Egg]["CollectTime"] = 2
-rwtNpcGroup[tNpcGroup.Egg]["NotDel"] = 1
 rwtNpcGroup[tNpcGroup.Egg]["Func"] = function(nGenEventId,nRandom)
 	if rwUserGetItemCount(nItemId) <= 0 then
 		rwOpenNpcChatDialog(tDialog.NoItem_CollectEnd)
@@ -98,7 +97,7 @@ rwtNpcGroup[tNpcGroup.Egg]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][
 rwtNpcGroup[tNpcGroup.Egg]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1] = {}
 rwtNpcGroup[tNpcGroup.Egg]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1]["Record"] = nTempDataId
 rwtNpcGroup[tNpcGroup.Egg]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1]["DataValue"] = CONST_TEMP_DATA.Data1
-rwtNpcGroup[tNpcGroup.Egg]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1]["Value"] = {0,1,2}
+rwtNpcGroup[tNpcGroup.Egg]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1]["Value"] = {0}
 rwtNpcGroup[tNpcGroup.Egg]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["SetUserTempData"] = {}
 rwtNpcGroup[tNpcGroup.Egg]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["SetUserTempData"][1] = {}
 rwtNpcGroup[tNpcGroup.Egg]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["SetUserTempData"][1]["TempDataID"] = nTempDataId
@@ -120,7 +119,6 @@ rwtNpcGroup[tNpcGroup.Egg]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][
 rwtNpcGroup[tNpcGroup.Box] = rwtNpcGroup[tNpcGroup.Box] or {}    
 rwtNpcGroup[tNpcGroup.Box]["Type"] = CONST_NPCGROUP_TYPE.Collect
 rwtNpcGroup[tNpcGroup.Box]["CollectTime"] = 1
-rwtNpcGroup[tNpcGroup.Box]["NotDel"] = 1
 rwtNpcGroup[tNpcGroup.Box]["Func"] = function(nGenEventId,nRandom)
 	if rwUserGetItemCount(nItemId) <= 0 then
 		rwOpenNpcChatDialog(tDialog.NoItem_CollectEnd)
@@ -155,7 +153,7 @@ rwtNpcGroup[tNpcGroup.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][
 rwtNpcGroup[tNpcGroup.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1] = {}
 rwtNpcGroup[tNpcGroup.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1]["Record"] = nTempDataId
 rwtNpcGroup[tNpcGroup.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1]["DataValue"] = CONST_TEMP_DATA.Data2
-rwtNpcGroup[tNpcGroup.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1]["Value"] = {0,1}
+rwtNpcGroup[tNpcGroup.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["ChkUserTempData"][1]["Value"] = {0}
 rwtNpcGroup[tNpcGroup.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["SetUserTempData"] = {}
 rwtNpcGroup[tNpcGroup.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["SetUserTempData"][1] = {}
 rwtNpcGroup[tNpcGroup.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][2]["Events"]["SetUserTempData"][1]["TempDataID"] = nTempDataId
@@ -177,7 +175,6 @@ rwtNpcGroup[tNpcGroup.Box]["Awards"]["RandomEvents"][1]["RandomToNormalEvents"][
 rwtNpcGroup[tNpcGroup.Stone] = rwtNpcGroup[tNpcGroup.Stone] or {}    
 rwtNpcGroup[tNpcGroup.Stone]["Type"] = CONST_NPCGROUP_TYPE.Collect
 rwtNpcGroup[tNpcGroup.Stone]["CollectTime"] = 3
-rwtNpcGroup[tNpcGroup.Stone]["NotDel"] = 1
 rwtNpcGroup[tNpcGroup.Stone]["Func"] = function(nGenEventId,nRandom)
 	if rwUserGetItemCount(nItemId) <= 0 then
 		rwOpenNpcChatDialog(tDialog.NoItem_CollectEnd)

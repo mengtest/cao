@@ -40,9 +40,42 @@ function rwTask_Talk_ByPanel:OnTaskPanelClick()
 --        end
 
 --    end
+	if self._TaskInfo["LockTask"] then
+		if not rwTaskIsSuccess(self._TaskInfo["LockTask"]) then
+			if self._TaskInfo["LackDialogId"] then
+				rwOpenNpcChatDialog(self._TaskInfo["LackDialogId"])
+			end
+			return
+		end
+	end
+
     if self._TaskInfo["DialogId"] and not self:TaskIsComplete() then
         rwOpenNpcChatDialog(self._TaskInfo["DialogId"], CONST_NPCCHAT_TYPE.TASK, self._TaskId)
     else
         self:FinishTask()
+    end
+end
+
+
+--对白回调
+function rwTask_Talk_ByPanel:DialogEndCallBack(nDialogId)
+    if self._TaskInfo["CloseDialog"] and self._TaskInfo["CloseDialog"] == 0 then
+        --配置0不关闭
+    else
+        --不配置默认关闭对话框
+        rwCloseLocalDialog(CONST_MENUTYPE.NpcTalk,nDialogId)
+    end
+    if self:UserIsInTask() then
+		if self._TaskInfo["PanelChooseEnd"] then
+			if rwChkFunc(self._TaskInfo["DialogueEndFunc"]) then
+				self._TaskInfo["DialogueEndFunc"]()            
+			end
+			return
+		end
+        self:UpdateTaskData(CONST_TASK_INFO_INDEX.TASK_DATA1,1)    
+        if rwChkFunc(self._TaskInfo["DialogueEndFunc"]) then
+            self._TaskInfo["DialogueEndFunc"]()            
+        end 
+        self:CompleteTask()
     end
 end

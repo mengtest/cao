@@ -36,7 +36,7 @@ function rwTask_CountDown:AcceptTask_CommonProcess()
             rwTaskAdd(self._TaskId,self._TaskType,1,nTaskFinishTime)
         end
 		if self._TaskType == CONST_TASK_TYPE.QUICKSEND then  
-			local nQuickSendFinishTime = rwTempDataGetValue(1210,CONST_TEMP_DATA.RecordTime) + 300  --掩码recordtime 记录掩码时的时间戳 +5分钟
+			local nQuickSendFinishTime = rwTempDataGetValue(1210,CONST_TEMP_DATA.RecordTime) + 180  --掩码recordtime 记录掩码时的时间戳 +3分钟
 			local nData3 = rwTempDataGetValue(1210,CONST_TEMP_DATA.Data3)
 			self:UpdateTaskData(CONST_TASK_INFO_INDEX.TASK_FINISH_TIME,nQuickSendFinishTime)
 			rwTaskAdd(self._TaskId,self._TaskType,1,nQuickSendFinishTime)
@@ -49,6 +49,9 @@ end
 --判断任务是否已达成条件
 function rwTask_CountDown:TaskIsComplete()
     --rwPrintWarnLog("rwTask_CountDown:TaskIsComplete" .. self._TaskId)
+    if rwTaskGetData(self._TaskId, CONST_TASK_INFO_INDEX.TASK_FINISH_FLAG) == 2 then
+        return true
+    end
     local nTaskFinishTime = rwTaskGetData(self._TaskId, CONST_TASK_INFO_INDEX.TASK_FINISH_TIME)
     local nCurrentTime = os.time()
     local nRestTime = nTaskFinishTime - nCurrentTime

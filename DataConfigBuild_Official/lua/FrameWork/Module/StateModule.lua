@@ -230,10 +230,13 @@ end
 ---
 -- 播放光效
 -- @param sEffectId 特效名字
+-- @param bDirectly 是否即时播放特效表现(默认加入播放队列)
 -- @return 布尔值
-function rwPlayLocalEffect(sEffectId)
-	rwPrintNormalLog({Func = "rwPlayLocalEffect",sEffectId = sEffectId})
-	return PlayLocalEffect(sEffectId)
+function rwPlayLocalEffect(sEffectId, bDirectly)
+	rwPrintNormalLog({Func = "rwPlayLocalEffect",sEffectId = sEffectId,bDirectly = bDirectly})
+	sEffectId = sEffectId or ""
+	bDirectly = bDirectly or false
+	return PlayLocalEffect(sEffectId, bDirectly)
 end
 
 --===================================================================

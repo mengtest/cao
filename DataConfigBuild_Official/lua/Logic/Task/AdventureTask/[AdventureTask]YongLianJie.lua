@@ -34,12 +34,16 @@ rwtNpcGroup[30391]["Type"] = CONST_NPCGROUP_TYPE.Adventure
 rwtNpcGroup[30391]["TrapAcceptTask"] = 35004
 rwtNpcGroup[30391]["AdventureJudgeType"] = {}
 rwtNpcGroup[30391]["AdventureJudgeType"][1] = {}
+rwtNpcGroup[30391]["AdventureJudgeType"][1]["Type"] = CONST_ADVENTURE_TYPE.PROBABILITY
+rwtNpcGroup[30391]["AdventureJudgeType"][1]["Value"] = -1
+--[[
+rwtNpcGroup[30391]["AdventureJudgeType"][1] = {}
 rwtNpcGroup[30391]["AdventureJudgeType"][1]["Type"] = CONST_ADVENTURE_TYPE.TIME
 rwtNpcGroup[30391]["AdventureJudgeType"][1]["wday"] = 2
 rwtNpcGroup[30391]["AdventureJudgeType"][2] = {}
 rwtNpcGroup[30391]["AdventureJudgeType"][2]["Type"] = CONST_ADVENTURE_TYPE.PROBABILITY
 rwtNpcGroup[30391]["AdventureJudgeType"][2]["Value"] = 0.2
-
+--]]
 
 rwtTask[nYongLianJie_1] = {}
 rwtTask[nYongLianJie_1]["Title"]= tLuaText[LANGUAGE_CONFIG][20106]

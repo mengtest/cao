@@ -65,7 +65,7 @@ local nNpc_TeLuoDe = 3028      -- 特罗德    （已有）
 local tShiLuoQunDaoTask   = {}                
 tShiLuoQunDaoTask[1]  = 10437        --与葛莱蒂丝告别
 tShiLuoQunDaoTask[2]  = 10438        --向赫丽复命
-tShiLuoQunDaoTask[3]  = 10439        --达到46级
+-- tShiLuoQunDaoTask[3]  = 10439        --达到46级
 tShiLuoQunDaoTask[4]  = 10440        --接听意外来电
 tShiLuoQunDaoTask[5]  = 10441        --调查震动原因
 tShiLuoQunDaoTask[6]  = 10442        --调查坠落的船只
@@ -75,9 +75,11 @@ tShiLuoQunDaoTask[9]  = 10445        --寻找特罗德求助
 tShiLuoQunDaoTask[10] = 10446        --登上飞船
 tShiLuoQunDaoTask[11] = 10541        --寻找特罗德求助
 tShiLuoQunDaoTask[12] = 10609        --前往纳雅天空城
-tShiLuoQunDaoTask[13] = 10618        --达到47级
+-- tShiLuoQunDaoTask[13] = 10618        --达到47级
 tShiLuoQunDaoTask[14] = 10623        --前往飞船停靠点
 
+tShiLuoQunDaoTask[15]  = 10678        --卡时间
+tShiLuoQunDaoTask[16]  = 10680        --卡时间
 --奖励
 local nRewardId_1 = 2000305
 local nRewardId_2 = 2000306
@@ -106,17 +108,17 @@ rwtNpcGroup[nCollect_1]["DialogId"] = nDialog_5      --采集前的对白
 rwtNpcGroup[nCollect_2] = rwtNpcGroup[nCollect_2] or {}  
 rwtNpcGroup[nCollect_2]["Type"] = CONST_NPCGROUP_TYPE.Collect
  
---动态生成副本入口 
-function MainTask_ShiLuoQunDao_CreatCopyMapNpc() --第一片区探索层创建NPC判断
-    if rwTaskGetFinishMask(tShiLuoQunDaoTask[7]) == 1 then      
-        if not rwHasGenEvent(nCopyNpc_ShiShiFeiChuan_GenId) then 
-            --创建副本入口NPC
-            rwAddGenEvent(nCopyNpc_ShiShiFeiChuan_GenId) 
-        end
-    end
-end
-rwtSceneLoad_Func[2001] = rwtSceneLoad_Func[2001] or {}
-table.insert(rwtSceneLoad_Func[2001],MainTask_ShiLuoQunDao_CreatCopyMapNpc)
+----动态生成副本入口 
+--function MainTask_ShiLuoQunDao_CreatCopyMapNpc() --第一片区探索层创建NPC判断
+--    if rwTaskGetFinishMask(tShiLuoQunDaoTask[7]) == 1 then      
+--        if not rwHasGenEvent(nCopyNpc_ShiShiFeiChuan_GenId) then 
+--            --创建副本入口NPC
+--            rwAddGenEvent(nCopyNpc_ShiShiFeiChuan_GenId) 
+--        end
+--    end
+--end
+--rwtSceneLoad_Func[2001] = rwtSceneLoad_Func[2001] or {}
+--table.insert(rwtSceneLoad_Func[2001],MainTask_ShiLuoQunDao_CreatCopyMapNpc)
 
 ------------------
 
@@ -137,7 +139,7 @@ rwtTask[tShiLuoQunDaoTask[1]]["IsClickComplete"] = 0
 rwtTask[tShiLuoQunDaoTask[2]] = {}
 rwtTask[tShiLuoQunDaoTask[2]]["Title"] = tLuaText[LANGUAGE_CONFIG][20408]
 rwtTask[tShiLuoQunDaoTask[2]]["PreTaskId"] = tShiLuoQunDaoTask[1]
-rwtTask[tShiLuoQunDaoTask[2]]["NextTaskId"] = tShiLuoQunDaoTask[3]
+rwtTask[tShiLuoQunDaoTask[2]]["NextTaskId"] = tShiLuoQunDaoTask[15]
 rwtTask[tShiLuoQunDaoTask[2]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tShiLuoQunDaoTask[2]]["DialogId"] = nDialog_2
 rwtTask[tShiLuoQunDaoTask[2]]["TaskNpc"] = nNpc_HeLi              
@@ -161,20 +163,18 @@ rwtTask[tShiLuoQunDaoTask[2]]["Awards"]["Events"][1]["GetServerAward"]["ActionTy
 rwtTask[tShiLuoQunDaoTask[2]]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tShiLuoQunDaoTask[2]
 rwtTask[tShiLuoQunDaoTask[2]]["IsClickComplete"] = 0
 
-rwtTask[tShiLuoQunDaoTask[3]] = {}
-rwtTask[tShiLuoQunDaoTask[3]]["Title"] = tLuaText[LANGUAGE_CONFIG][20409]
-rwtTask[tShiLuoQunDaoTask[3]]["PreTaskId"] = tShiLuoQunDaoTask[2]
-rwtTask[tShiLuoQunDaoTask[3]]["NextTaskId"] = tShiLuoQunDaoTask[4]
-rwtTask[tShiLuoQunDaoTask[3]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.UPLEVEL
-rwtTask[tShiLuoQunDaoTask[3]]["NeedLevel"] = 46
-rwtTask[tShiLuoQunDaoTask[3]]["LackDialogId"] = 12110
-rwtTask[tShiLuoQunDaoTask[3]]["DialogId"] = 12111
---rwtTask[tShiLuoQunDaoTask[3]]["LackTips"] = tLuaText[LANGUAGE_CONFIG][10040]
-rwtTask[tShiLuoQunDaoTask[3]]["IsClickComplete"] = 0
+rwtTask[tShiLuoQunDaoTask[15]] = {}
+rwtTask[tShiLuoQunDaoTask[15]]["Title"] = tLuaText[LANGUAGE_CONFIG][20409]
+rwtTask[tShiLuoQunDaoTask[15]]["PreTaskId"] = tShiLuoQunDaoTask[2]
+rwtTask[tShiLuoQunDaoTask[15]]["NextTaskId"] = tShiLuoQunDaoTask[4]
+rwtTask[tShiLuoQunDaoTask[15]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.COUNTDOWN
+rwtTask[tShiLuoQunDaoTask[15]]["TaskFinishTime"] = 86400
+rwtTask[tShiLuoQunDaoTask[15]]["LackDialogId"] = 12110
+rwtTask[tShiLuoQunDaoTask[15]]["DialogId"] = 12111
 
 rwtTask[tShiLuoQunDaoTask[4]] = {}
 rwtTask[tShiLuoQunDaoTask[4]]["Title"] = tLuaText[LANGUAGE_CONFIG][20410]
-rwtTask[tShiLuoQunDaoTask[4]]["PreTaskId"] = tShiLuoQunDaoTask[3]               
+rwtTask[tShiLuoQunDaoTask[4]]["PreTaskId"] = tShiLuoQunDaoTask[15]               
 rwtTask[tShiLuoQunDaoTask[4]]["NextTaskId"] = tShiLuoQunDaoTask[5]
 rwtTask[tShiLuoQunDaoTask[4]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_PANEL
 rwtTask[tShiLuoQunDaoTask[4]]["AutoTaskDialog"] = nDialog_3
@@ -234,6 +234,7 @@ rwtTask[tShiLuoQunDaoTask[6]]["StartAutoWay"]["FindWayGroupId"] = nCollect_1
 rwtTask[tShiLuoQunDaoTask[6]]["StartAutoWay"]["FindWayGenId"] = nCollect_GenId_1
 rwtTask[tShiLuoQunDaoTask[6]]["IsClickComplete"] = 0
 rwtTask[tShiLuoQunDaoTask[6]]["UnlockCopyMap1"] = 3087
+rwtTask[tShiLuoQunDaoTask[6]]["UnlockCopyMap2"] = 3143
 
 rwtTask[tShiLuoQunDaoTask[7]] = {}
 rwtTask[tShiLuoQunDaoTask[7]]["Title"] = tLuaText[LANGUAGE_CONFIG][20413]
@@ -253,7 +254,7 @@ rwtTask[tShiLuoQunDaoTask[7]]["DynaNpcGroupGen"] = {}
 rwtTask[tShiLuoQunDaoTask[7]]["DynaNpcGroupGen"][1] = {}
 rwtTask[tShiLuoQunDaoTask[7]]["DynaNpcGroupGen"][1]["GenId"] = nCopyNpc_ShiShiFeiChuan_GenId 
 rwtTask[tShiLuoQunDaoTask[7]]["DynaNpcGroupGen"][1]["MapId"] = 2001
-rwtTask[tShiLuoQunDaoTask[7]]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.NotDel
+rwtTask[tShiLuoQunDaoTask[7]]["DynaNpcGroupGen"][1]["DelType"] = CONST_TASK_INFO_DELTYPE.Complete
 
 
 rwtTask[tShiLuoQunDaoTask[7]]["StartAutoWay"] = {}
@@ -289,7 +290,7 @@ rwtTask[tShiLuoQunDaoTask[8]]["IsClickComplete"] = 0
 rwtTask[tShiLuoQunDaoTask[9]] = {}
 rwtTask[tShiLuoQunDaoTask[9]]["Title"] = tLuaText[LANGUAGE_CONFIG][20415]
 rwtTask[tShiLuoQunDaoTask[9]]["PreTaskId"] = tShiLuoQunDaoTask[8]
-rwtTask[tShiLuoQunDaoTask[9]]["NextTaskId"] = tShiLuoQunDaoTask[13]
+rwtTask[tShiLuoQunDaoTask[9]]["NextTaskId"] = tShiLuoQunDaoTask[16]
 rwtTask[tShiLuoQunDaoTask[9]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tShiLuoQunDaoTask[9]]["TaskNpc"] = nNpc_TeLuoDe 
 rwtTask[tShiLuoQunDaoTask[9]]["DialogId"] = nDialog_7
@@ -313,23 +314,22 @@ rwtTask[tShiLuoQunDaoTask[9]]["Awards"]["Events"][1]["GetServerAward"]["AwardId"
 rwtTask[tShiLuoQunDaoTask[9]]["Awards"]["Events"][1]["GetServerAward"]["ActionType"] = CONST_ACTION_TYPE.TASK
 rwtTask[tShiLuoQunDaoTask[9]]["Awards"]["Events"][1]["GetServerAward"]["ActionId"] = tShiLuoQunDaoTask[9]
 
-rwtTask[tShiLuoQunDaoTask[13]] = {}
-rwtTask[tShiLuoQunDaoTask[13]]["Title"] = tLuaText[LANGUAGE_CONFIG][21539]
-rwtTask[tShiLuoQunDaoTask[13]]["PreTaskId"] = tShiLuoQunDaoTask[9]
-rwtTask[tShiLuoQunDaoTask[13]]["NextTaskId"] = tShiLuoQunDaoTask[14]
-rwtTask[tShiLuoQunDaoTask[13]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.UPLEVEL
-rwtTask[tShiLuoQunDaoTask[13]]["NeedLevel"] = 47
---rwtTask[tShiLuoQunDaoTask[13]]["LackTips"] = tLuaText[LANGUAGE_CONFIG][10180]
-rwtTask[tShiLuoQunDaoTask[13]]["LackDialogId"] = 12112
-rwtTask[tShiLuoQunDaoTask[13]]["DialogId"] = 12113
+rwtTask[tShiLuoQunDaoTask[16]] = {}
+rwtTask[tShiLuoQunDaoTask[16]]["Title"] = tLuaText[LANGUAGE_CONFIG][21539]
+rwtTask[tShiLuoQunDaoTask[16]]["PreTaskId"] = tShiLuoQunDaoTask[9]
+rwtTask[tShiLuoQunDaoTask[16]]["NextTaskId"] = tShiLuoQunDaoTask[14]
+rwtTask[tShiLuoQunDaoTask[16]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.COUNTDOWN
+rwtTask[tShiLuoQunDaoTask[16]]["TaskFinishTime"] = 86400
+rwtTask[tShiLuoQunDaoTask[16]]["LackDialogId"] = 12112
+rwtTask[tShiLuoQunDaoTask[16]]["DialogId"] = 12113
 
 rwtTask[tShiLuoQunDaoTask[14]] = {}
 rwtTask[tShiLuoQunDaoTask[14]]["Title"] = tLuaText[LANGUAGE_CONFIG][21539]
-rwtTask[tShiLuoQunDaoTask[14]]["PreTaskId"] = tShiLuoQunDaoTask[13]
+rwtTask[tShiLuoQunDaoTask[14]]["PreTaskId"] = tShiLuoQunDaoTask[16]
 rwtTask[tShiLuoQunDaoTask[14]]["NextTaskId"] = tShiLuoQunDaoTask[10]
 rwtTask[tShiLuoQunDaoTask[14]]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_PANEL
-rwtTask[tShiLuoQunDaoTask[14]]["AcceptDialogId"] = nDialog_12
-rwtTask[tShiLuoQunDaoTask[14]]["DialogId"] = nDialog_12
+rwtTask[tShiLuoQunDaoTask[14]]["AcceptDialogId"] = 12748
+rwtTask[tShiLuoQunDaoTask[14]]["DialogId"] = 12748
 
 
 

@@ -30,7 +30,7 @@ function rwNpcGroup_AdventureProcess(nNpcGroupType,nNpcGroupId,nGenEventId)
 					return
 				end
 				if nTaskDetailType and ENUM_TASK_TEMPLATE[nTaskDetailType] then
-					rwPlayLocalEffect("qiyutexiao")
+					rwPlayLocalEffect("Effect_UI_qiyu",true)
 					ENUM_TASK_TEMPLATE[nTaskDetailType]:create(rwtNpcGroup[nNpcGroupType]["TrapAcceptTask"]):AcceptTask()
 				end
 			end
@@ -55,7 +55,7 @@ end
 		if not rwAdventureTemplate:create():Adventure_Judge_Dialog(nDialogId) then
 			return
 		end
-		rwPlayLocalEffect("qiyutexiao")
+		rwPlayLocalEffect("Effect_UI_qiyu",true)
 		ENUM_TASK_TEMPLATE[CONST_TASK_TYPE.ADVENTURE]:create(nTaskId):AcceptTask()
 				
 	end

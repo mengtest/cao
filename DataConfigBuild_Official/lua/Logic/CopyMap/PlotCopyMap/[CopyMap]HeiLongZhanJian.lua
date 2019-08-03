@@ -45,8 +45,8 @@ local nDialogId_9 =  6302    --打败机械石像鬼后  -- 输给你们这些�
 local nDialogId_10=  6298    --触发对白 西蒙带亚兹莫去公审
 
 --入口NPC对白
-local nDialogId_10 =  6303    --这里面情况不明，我们不要轻举妄动。如果不小心搞砸了<br>米兰达她们的计划，那就糟糕了。
-local nDialogId_11 =  6304    --走走走，我们去看看这黑龙战舰里究竟还藏着多少小秘密。
+local nDialogId_11 =  6303    --这里面情况不明，我们不要轻举妄动。如果不小心搞砸了<br>米兰达她们的计划，那就糟糕了。
+local nDialogId_12 =  6304    --走走走，我们去看看这黑龙战舰里究竟还藏着多少小秘密。
 
 
 --场景动画
@@ -82,6 +82,9 @@ local nMonster_GenId_JiXieShiXiangGui = 3086005
 local nMonster_XiaoYing = 200458
 local nMonster_GenId_XiaoYing  = 3086018
 
+--亚兹莫
+--楼上 3086008
+--楼下 3086020
 ------------陷阱-----------------
 
 --电梯前陷阱
@@ -155,7 +158,7 @@ tValve[nValve_2]["ValveEnterFunc"] = tValve[nValve_1]["ValveEnterFunc"]
 rwtNpcGroup[50061] = {}
 rwtNpcGroup[50061]["Type"] = CONST_NPCGROUP_TYPE.CopyMap
 rwtNpcGroup[50061]["UnlockDialog"] = 6303
-rwtNpcGroup[50061]["Dialog"] = 6304
+--rwtNpcGroup[50061]["Dialog"] = 6304
 rwtNpcGroup[50061]["CopyMapList"] = {nCopyMapId}
 --宝箱1   枭鹰宝箱
 local nNpcGroup_Box_1 = 40180
@@ -251,8 +254,8 @@ rwtCopyMapMission[nCopyMapId]["Target4"] = {nTarget4}
 rwtCopyMapMission[nCopyMapId]["Target5"] = {nTarget5}
 rwtCopyMapMission[nCopyMapId]["Target99"] = {60072}
 
---rwtCopyMapMission[nCopyMapId]["EnterNpcMap"] = 2005 --传送NPC所在地图
---rwtCopyMapMission[nCopyMapId]["ChangeNpcTask"] = nChangeNpcTaskID  --完成该任务切换剧情、普通副本NPC
+rwtCopyMapMission[nCopyMapId]["EnterNpcMap"] = 2005 --传送NPC所在地图
+rwtCopyMapMission[nCopyMapId]["ChangeNpcTask"] = 10655  --完成该任务切换剧情、普通副本NPC
 rwtCopyMapMission[nCopyMapId]["CopyNpcType"] = CONST_COPYMAP_TASK_TYPE.PLOT --副本类型 （PLOT剧情，NORMAL普通）
 rwtCopyMapMission[nCopyMapId]["EnterNpcGen"] = nNpcGroup_GenId_CopyMap --副本传送NPC的GENID
 rwtCopyMapMission[nCopyMapId]["CopyMapInit"] = {}
@@ -265,6 +268,8 @@ rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][1]["CopyMapTableSetValue"
 rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][1]["CopyMapTableSetValue"][1] = {}
 rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][1]["CopyMapTableSetValue"][1]["SetValue"] = true
 rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][1]["CopyMapTableSetValue"][1]["ValueRes"] = "xiaoying"
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][2] = {}
+rwtCopyMapMission[nCopyMapId]["CopyMapInit"]["Events"][2]["DynCreate"] = {3086008}
 
 --副本任务目标 
 rwtTarget[nTarget1] = {}
@@ -303,6 +308,19 @@ function CopyMap_Patrol_HeiLongZhanJian_JiXie_MonsterDeath()
 end
 rwtMonsterGroup_Func[nMonster_JiXieShiXiangGui] = rwtMonsterGroup_Func[nMonster_JiXieShiXiangGui] or {}
 table.insert(rwtMonsterGroup_Func[nMonster_JiXieShiXiangGui],CopyMap_Patrol_HeiLongZhanJian_JiXie_MonsterDeath)
+
+--动画结束刷出亚兹莫
+function CopyMap_Patrol_HeiLongZhanJian_YaZiMo()
+    if rwHasGenEvent(3086008) then
+        rwDelGenEvent(3086008)
+    end
+    --生成楼下亚兹莫
+    if not rwHasGenEvent(3086020) then
+        rwAddGenEvent(3086020)
+    end
+end
+rwtCGFinish[nStory3] = rwtCGFinish[nStory3] or {}
+table.insert(rwtCGFinish[nStory3],CopyMap_Patrol_HeiLongZhanJian_YaZiMo)
 
 --枭鹰死亡
 function CopyMap_Patrol_HeiLongZhanJian_XiaoYing_MonsterDeath()

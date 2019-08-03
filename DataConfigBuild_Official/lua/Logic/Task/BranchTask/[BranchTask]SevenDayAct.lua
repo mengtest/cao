@@ -6,23 +6,23 @@
 
 --endregion
 ------------------------------------------------------------------------------------------------------------------------
---第一天任务
-----切屏，检查七日任务是否完成，判断是否刷出七日任务NPC赛罗
-function BranchTask_SevenDayAct()
-	local nTimeData = 1146 --七日任务掩码
+----第一天任务
+------切屏，检查七日任务是否完成，判断是否刷出七日任务NPC赛罗
+--function BranchTask_SevenDayAct()
+--	local nTimeData = 1146 --七日任务掩码
 
---	if not rwTempDataIsExist(nTimeData) then --没有接受过七日任务
+----	if not rwTempDataIsExist(nTimeData) then --没有接受过七日任务
+----		return
+----	end
+--	if rwTempDataGetValue(nTimeData,CONST_TEMP_DATA.Data7) == 1 then   --七日任务全部完成，不刷出赛罗
 --		return
 --	end
-	if rwTempDataGetValue(nTimeData,CONST_TEMP_DATA.Data7) == 1 then   --七日任务全部完成，不刷出赛罗
-		return
-	end
-	
-	rwAddGenEvent(1000169)
 
-end
-rwtSceneLoad_Func[1000] = rwtSceneLoad_Func[1000]or {}
-table.insert(rwtSceneLoad_Func[1000],BranchTask_SevenDayAct)
+--	rwAddGenEvent(1000169)
+
+--end
+--rwtSceneLoad_Func[1000] = rwtSceneLoad_Func[1000]or {}
+--table.insert(rwtSceneLoad_Func[1000],BranchTask_SevenDayAct)
 
 
 local nTimeData = 1146 --七日任务掩码

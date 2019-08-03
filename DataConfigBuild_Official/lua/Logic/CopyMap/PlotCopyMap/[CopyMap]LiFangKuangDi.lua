@@ -13,6 +13,9 @@ local nCopyMapId = 3085        --副本ID
 local nNpcGroup_CopyMap = 50058
 local nNpcGroup_GenId_CopyMap = 3085012
 
+--切换剧情、普通本任务
+local nChangeNpcTaskID = 10643
+
 --副本目标
 local nTarget_1 = 60156     --搜索队，出动	
 local nTarget_2 = 60157     --拦路者	
@@ -74,7 +77,9 @@ rwtCopyMapMission[nCopyMapId] = rwtCopyMapMission[nCopyMapId] or {}
 rwtCopyMapMission[nCopyMapId]["ReqLev"] = 1
 rwtCopyMapMission[nCopyMapId]["Difficulty"] = 1
 rwtCopyMapMission[nCopyMapId]["EnterNpcMap"] = 2005 
+rwtCopyMapMission[nCopyMapId]["ChangeNpcTask"] = nChangeNpcTaskID  --完成该任务切换剧情、普通副本NPC
 rwtCopyMapMission[nCopyMapId]["CopyNpcType"] = CONST_COPYMAP_TASK_TYPE.PLOT 
+rwtCopyMapMission[nCopyMapId]["EnterNpcGen"] = nNpcGroup_GenId_CopyMap --副本传送NPC的GENID
 rwtCopyMapMission[nCopyMapId]["TargetStepNum"] = 4 
 rwtCopyMapMission[nCopyMapId]["Target1"] = {nTarget_1}
 rwtCopyMapMission[nCopyMapId]["Target2"] = {nTarget_2}

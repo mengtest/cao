@@ -196,3 +196,40 @@ function testDailyact(nDailyactId)
 end
 
 
+--function view_field_trigger (nGenId)
+--	local sTextInfo = "" 
+--	sTextInfo = sTextInfo .. "view_field_trigger收到了"..nGenId .."的回调信息"
+--	testSynBubbleInfo(nGenId,sTextInfo,0,3)
+--end
+
+----进入怪物视野时
+--function view_field_trigger (nGenId)
+--	rwLinkFieldViewTrigger(nGenId)
+--end
+--function rwLinkFieldViewTrigger(nGenId)
+
+--end
+
+
+function testSynBubbleInfo (nGenId,sTextInfo,nMode,nShowTime)
+	nGenId = nGenId or 0
+	sTextInfo = sTextInfo or ""
+	nMode = nMode or 0 
+	nShowTime = nShowTime or 0
+	SynBubbleInfo(nGenId,sTextInfo,nMode,nShowTime)
+end
+
+function testOpenBubbleView (nTime)
+	nTime = nTime or 0
+	OpenBubbleView (nTime)
+end
+
+
+--播放特效封装PM测试
+function test_PlayLocalEffect(sEffectId, nDirectly)
+	if nDirectly == 0 then
+		rwPlayLocalEffect(sEffectId, false)
+	elseif nDirectly == 1 then
+		rwPlayLocalEffect(sEffectId, true)
+	end
+end

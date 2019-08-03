@@ -55,36 +55,28 @@ function rwNpcGroup_ShowCopyMap(nNpcGroupType)
                         end
                     elseif rwtTaskEnterCopyMapInfo[nMissionId] and rwtTaskEnterCopyMapInfo[nMissionId] ~= 0 then
                         for i,v in pairs (rwtTaskEnterCopyMapInfo[nMissionId]) do
-                            if rwTaskChkUserInTask (v) then
-                                if rwTaskGetFinishMask(v) == 1 then
-                                else
-                                    bEnterCopymap = true
-                                    break
-                                end
-                            end
-                        end
-                        if not bEnterCopymap then
-                            if tInfo["Dialog"] and tInfo["Dialog"] ~= 0 then
-                                rwOpenNpcChatDialog(tInfo["Dialog"],CONST_NPCCHAT_TYPE.NPC)
-                                return
+                            if not rwTaskChkUserInTask(v) then
+								return
                             end
                         end
                     end
                 end
-            end
-            local bJudge = false
-            for i,v in pairs(rwtTaskEnterCopyMapInfo) do
-                if nMissionId == i then
-                    bJudge = true
-                    break
+			else
+				local bJudge = false
+				for i,v in pairs(rwtTaskEnterCopyMapInfo[nMissionId]) do
+                    if rwTaskChkUserInTask(v) then
+						bJudge = true
+						break
+                    end
                 end
+				if not bJudge then
+					if tInfo["Dialog"] and tInfo["Dialog"] ~= 0 then
+						rwOpenNpcChatDialog(tInfo["Dialog"],CONST_NPCCHAT_TYPE.NPC)
+					end
+					return
+				end
             end
-            if not bJudge then
-                if tInfo["Dialog"] and tInfo["Dialog"] ~= 0 then
-                    rwOpenNpcChatDialog(tInfo["Dialog"],CONST_NPCCHAT_TYPE.NPC)
-                    return
-                end
-            end
+            
             if rwtCopyMapMission[nMissionId] then
                 local nDifficulty = rwtCopyMapMission[nMissionId]["Difficulty"] or 1
                 table.insert(tJsonTable[m_data],{[m_difficulty] = nDifficulty, [m_missionId] = nMissionId,[m_enterFunc] = "</F>rwLinkCopyMapMissionEnter</N>" .. nMissionId})

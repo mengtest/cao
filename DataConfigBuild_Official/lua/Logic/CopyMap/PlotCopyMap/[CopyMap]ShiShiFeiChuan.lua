@@ -137,7 +137,7 @@ tTarget[2] = 60160          --击退黑龙头目
 rwtNpcGroup[nNpcGroup_CopyMap] = {}
 rwtNpcGroup[nNpcGroup_CopyMap]["Type"] = CONST_NPCGROUP_TYPE.CopyMap
 rwtNpcGroup[nNpcGroup_CopyMap]["UnlockDialog"] = tDialog["UnlockCopyMap"]
-rwtNpcGroup[nNpcGroup_CopyMap]["Dialog"] = tDialog["AlreadyPass"]
+--rwtNpcGroup[nNpcGroup_CopyMap]["Dialog"] = tDialog["AlreadyPass"]
 rwtNpcGroup[nNpcGroup_CopyMap]["CopyMapList"] = {nCopyMapId}
 
 --副本
@@ -157,11 +157,11 @@ rwtCopyMapMission[nCopyMapId]["NotCreate"] = 1
 
 rwtCopyMapMission[nCopyMapId]["ReqLev"] = 1
 rwtCopyMapMission[nCopyMapId]["Difficulty"] = 1
-                  
---rwtCopyMapMission[nCopyMapId]["EnterNpcMap"] = 2005 
---rwtCopyMapMission[nCopyMapId]["ChangeNpcTask"] = nMainTask_Copy  
---rwtCopyMapMission[nCopyMapId]["CopyNpcType"] = CONST_COPYMAP_TASK_TYPE.PLOT 
---rwtCopyMapMission[nCopyMapId]["EnterNpcGen"] = nNpcGroup_GenId_CopyMap 
+
+--rwtCopyMapMission[nCopyMapId]["EnterNpcMap"] = 2001
+--rwtCopyMapMission[nCopyMapId]["ChangeNpcTask"] = 10443--nMainTask_Copy  
+rwtCopyMapMission[nCopyMapId]["CopyNpcType"] = CONST_COPYMAP_TASK_TYPE.PLOT 
+--rwtCopyMapMission[nCopyMapId]["EnterNpcGen"] = 3087001 
 
 rwtCopyMapMission[nCopyMapId]["TargetStepNum"] = 2 
 rwtCopyMapMission[nCopyMapId]["Target1"] = {tTarget[1]}

@@ -144,16 +144,21 @@ tFinishDialog.Task30 = 12435        --武装熊人战士
 ----------------NPCid----------------------
 local tNpcId = {}
 
---铁臂安道夫(已有NPC)
-tNpcId[1] = 3005
+----铁臂安道夫(已有NPC)
+--tNpcId[1] = 3005
+--吉拉(已有NPC)
+tNpcId[1] = 3042
 
 --NPC
 local tNpcGroup = {}
 local tNpcGroupGenId = {}
 
---铁臂安道夫(已有NPC)
-tNpcGroup[1] = 20112
-tNpcGroupGenId[1] = 2001655
+----铁臂安道夫(已有NPC)
+--tNpcGroup[1] = 20112
+--tNpcGroupGenId[1] = 2001655
+--吉拉(已有NPC)
+tNpcGroup[1] = 20114
+tNpcGroupGenId[1] = 2001657
 ----------------monsterGroup----------------------
 local tMonsterGroup = {}
 local tMonsterGroupGenId = {}
@@ -263,6 +268,9 @@ tTaskTitle.Task28 = tLuaText[LANGUAGE_CONFIG][21727]
 tTaskTitle.Task29 = tLuaText[LANGUAGE_CONFIG][21728]
 tTaskTitle.Task30 = tLuaText[LANGUAGE_CONFIG][21729]
 
+
+--提交任务通用标题
+tTaskTitle.Submit = tLuaText[LANGUAGE_CONFIG][21815]
 --------悬赏id------------
 local tArrestId = {}
 tArrestId.Task1  = 111
@@ -898,7 +906,7 @@ rwtTask[tRewardTask.Task30]["StartAutoWay"]["FindWayGenId"] = tMonsterGroupGenId
 
 ------***************************回复NPC任务***************************----
 rwtTask[tRewardTaskFinish.Task1] = {}
-rwtTask[tRewardTaskFinish.Task1]["Title"] = tTaskTitle.Task1
+rwtTask[tRewardTaskFinish.Task1]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task1]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task1]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task1]["PreTaskId"] = tRewardTask.Task1
@@ -923,7 +931,7 @@ rwtTask[tRewardTaskFinish.Task1]["Awards"]["Events"][1]["GetServerAward"]["Actio
 
 
 rwtTask[tRewardTaskFinish.Task2] = {}
-rwtTask[tRewardTaskFinish.Task2]["Title"] = tTaskTitle.Task2
+rwtTask[tRewardTaskFinish.Task2]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task2]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task2]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task2]["PreTaskId"] = tRewardTask.Task2
@@ -948,7 +956,7 @@ rwtTask[tRewardTaskFinish.Task2]["Awards"]["Events"][1]["GetServerAward"]["Actio
 
 
 rwtTask[tRewardTaskFinish.Task3] = {}
-rwtTask[tRewardTaskFinish.Task3]["Title"] = tTaskTitle.Task3
+rwtTask[tRewardTaskFinish.Task3]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task3]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task3]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task3]["PreTaskId"] = tRewardTask.Task3
@@ -973,7 +981,7 @@ rwtTask[tRewardTaskFinish.Task3]["Awards"]["Events"][1]["GetServerAward"]["Actio
 
 
 rwtTask[tRewardTaskFinish.Task4] = {}
-rwtTask[tRewardTaskFinish.Task4]["Title"] = tTaskTitle.Task4
+rwtTask[tRewardTaskFinish.Task4]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task4]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task4]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task4]["PreTaskId"] = tRewardTask.Task4
@@ -998,7 +1006,7 @@ rwtTask[tRewardTaskFinish.Task4]["Awards"]["Events"][1]["GetServerAward"]["Actio
 
 
 rwtTask[tRewardTaskFinish.Task5] = {}
-rwtTask[tRewardTaskFinish.Task5]["Title"] = tTaskTitle.Task5
+rwtTask[tRewardTaskFinish.Task5]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task5]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task5]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task5]["PreTaskId"] = tRewardTask.Task5
@@ -1023,7 +1031,7 @@ rwtTask[tRewardTaskFinish.Task5]["Awards"]["Events"][1]["GetServerAward"]["Actio
 
 
 rwtTask[tRewardTaskFinish.Task6] = {}
-rwtTask[tRewardTaskFinish.Task6]["Title"] = tTaskTitle.Task6
+rwtTask[tRewardTaskFinish.Task6]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task6]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task6]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task6]["PreTaskId"] = tRewardTask.Task6
@@ -1048,7 +1056,7 @@ rwtTask[tRewardTaskFinish.Task6]["Awards"]["Events"][1]["GetServerAward"]["Actio
 
 
 rwtTask[tRewardTaskFinish.Task7] = {}
-rwtTask[tRewardTaskFinish.Task7]["Title"] = tTaskTitle.Task7
+rwtTask[tRewardTaskFinish.Task7]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task7]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task7]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task7]["PreTaskId"] = tRewardTask.Task7
@@ -1073,7 +1081,7 @@ rwtTask[tRewardTaskFinish.Task7]["Awards"]["Events"][1]["GetServerAward"]["Actio
 
 
 rwtTask[tRewardTaskFinish.Task8] = {}
-rwtTask[tRewardTaskFinish.Task8]["Title"] = tTaskTitle.Task8
+rwtTask[tRewardTaskFinish.Task8]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task8]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task8]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task8]["PreTaskId"] = tRewardTask.Task8
@@ -1098,7 +1106,7 @@ rwtTask[tRewardTaskFinish.Task8]["Awards"]["Events"][1]["GetServerAward"]["Actio
 
 
 rwtTask[tRewardTaskFinish.Task9] = {}
-rwtTask[tRewardTaskFinish.Task9]["Title"] = tTaskTitle.Task9
+rwtTask[tRewardTaskFinish.Task9]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task9]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task9]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task9]["PreTaskId"] = tRewardTask.Task9
@@ -1123,7 +1131,7 @@ rwtTask[tRewardTaskFinish.Task9]["Awards"]["Events"][1]["GetServerAward"]["Actio
 
 
 rwtTask[tRewardTaskFinish.Task10] = {}
-rwtTask[tRewardTaskFinish.Task10]["Title"] = tTaskTitle.Task10
+rwtTask[tRewardTaskFinish.Task10]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task10]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task10]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task10]["PreTaskId"] = tRewardTask.Task10
@@ -1148,7 +1156,7 @@ rwtTask[tRewardTaskFinish.Task10]["Awards"]["Events"][1]["GetServerAward"]["Acti
 
 
 rwtTask[tRewardTaskFinish.Task11] = {}
-rwtTask[tRewardTaskFinish.Task11]["Title"] = tTaskTitle.Task11
+rwtTask[tRewardTaskFinish.Task11]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task11]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task11]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task11]["PreTaskId"] = tRewardTask.Task11
@@ -1173,7 +1181,7 @@ rwtTask[tRewardTaskFinish.Task11]["Awards"]["Events"][1]["GetServerAward"]["Acti
 
 
 rwtTask[tRewardTaskFinish.Task12] = {}
-rwtTask[tRewardTaskFinish.Task12]["Title"] = tTaskTitle.Task12
+rwtTask[tRewardTaskFinish.Task12]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task12]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task12]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task12]["PreTaskId"] = tRewardTask.Task12
@@ -1198,7 +1206,7 @@ rwtTask[tRewardTaskFinish.Task12]["Awards"]["Events"][1]["GetServerAward"]["Acti
 
 
 rwtTask[tRewardTaskFinish.Task13] = {}
-rwtTask[tRewardTaskFinish.Task13]["Title"] = tTaskTitle.Task13
+rwtTask[tRewardTaskFinish.Task13]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task13]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task13]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task13]["PreTaskId"] = tRewardTask.Task13
@@ -1223,7 +1231,7 @@ rwtTask[tRewardTaskFinish.Task13]["Awards"]["Events"][1]["GetServerAward"]["Acti
 
 
 rwtTask[tRewardTaskFinish.Task14] = {}
-rwtTask[tRewardTaskFinish.Task14]["Title"] = tTaskTitle.Task14
+rwtTask[tRewardTaskFinish.Task14]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task14]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task14]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task14]["PreTaskId"] = tRewardTask.Task14
@@ -1248,7 +1256,7 @@ rwtTask[tRewardTaskFinish.Task14]["Awards"]["Events"][1]["GetServerAward"]["Acti
 
 
 rwtTask[tRewardTaskFinish.Task15] = {}
-rwtTask[tRewardTaskFinish.Task15]["Title"] = tTaskTitle.Task15
+rwtTask[tRewardTaskFinish.Task15]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task15]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task15]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task15]["PreTaskId"] = tRewardTask.Task15
@@ -1272,7 +1280,7 @@ rwtTask[tRewardTaskFinish.Task15]["Awards"]["Events"][1]["GetServerAward"]["Acti
 
 
 rwtTask[tRewardTaskFinish.Task16] = {}
-rwtTask[tRewardTaskFinish.Task16]["Title"] = tTaskTitle.Task16
+rwtTask[tRewardTaskFinish.Task16]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task16]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task16]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task16]["PreTaskId"] = tRewardTask.Task16
@@ -1296,7 +1304,7 @@ rwtTask[tRewardTaskFinish.Task16]["Awards"]["Events"][1]["GetServerAward"]["Acti
 
 
 rwtTask[tRewardTaskFinish.Task17] = {}
-rwtTask[tRewardTaskFinish.Task17]["Title"] = tTaskTitle.Task17
+rwtTask[tRewardTaskFinish.Task17]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task17]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task17]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task17]["PreTaskId"] = tRewardTask.Task17
@@ -1320,7 +1328,7 @@ rwtTask[tRewardTaskFinish.Task17]["Awards"]["Events"][1]["GetServerAward"]["Acti
 
 
 rwtTask[tRewardTaskFinish.Task18] = {}
-rwtTask[tRewardTaskFinish.Task18]["Title"] = tTaskTitle.Task18
+rwtTask[tRewardTaskFinish.Task18]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task18]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task18]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task18]["PreTaskId"] = tRewardTask.Task18
@@ -1344,7 +1352,7 @@ rwtTask[tRewardTaskFinish.Task18]["Awards"]["Events"][1]["GetServerAward"]["Acti
 
 
 rwtTask[tRewardTaskFinish.Task19] = {}
-rwtTask[tRewardTaskFinish.Task19]["Title"] = tTaskTitle.Task19
+rwtTask[tRewardTaskFinish.Task19]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task19]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task19]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task19]["PreTaskId"] = tRewardTask.Task19
@@ -1368,7 +1376,7 @@ rwtTask[tRewardTaskFinish.Task19]["Awards"]["Events"][1]["GetServerAward"]["Acti
 
 
 rwtTask[tRewardTaskFinish.Task20] = {}
-rwtTask[tRewardTaskFinish.Task20]["Title"] = tTaskTitle.Task20
+rwtTask[tRewardTaskFinish.Task20]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task20]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task20]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task20]["PreTaskId"] = tRewardTask.Task20
@@ -1392,7 +1400,7 @@ rwtTask[tRewardTaskFinish.Task20]["Awards"]["Events"][1]["GetServerAward"]["Acti
 
 
 rwtTask[tRewardTaskFinish.Task21] = {}
-rwtTask[tRewardTaskFinish.Task21]["Title"] = tTaskTitle.Task21
+rwtTask[tRewardTaskFinish.Task21]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task21]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task21]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task21]["PreTaskId"] = tRewardTask.Task21
@@ -1415,7 +1423,7 @@ rwtTask[tRewardTaskFinish.Task21]["Awards"]["Events"][1]["GetServerAward"]["Acti
 
 
 rwtTask[tRewardTaskFinish.Task22] = {}
-rwtTask[tRewardTaskFinish.Task22]["Title"] = tTaskTitle.Task22
+rwtTask[tRewardTaskFinish.Task22]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task22]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task22]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task22]["PreTaskId"] = tRewardTask.Task22
@@ -1438,7 +1446,7 @@ rwtTask[tRewardTaskFinish.Task22]["Awards"]["Events"][1]["GetServerAward"]["Acti
 
 
 rwtTask[tRewardTaskFinish.Task23] = {}
-rwtTask[tRewardTaskFinish.Task23]["Title"] = tTaskTitle.Task23
+rwtTask[tRewardTaskFinish.Task23]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task23]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task23]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task23]["PreTaskId"] = tRewardTask.Task23
@@ -1461,7 +1469,7 @@ rwtTask[tRewardTaskFinish.Task23]["Awards"]["Events"][1]["GetServerAward"]["Acti
 
 
 rwtTask[tRewardTaskFinish.Task24] = {}
-rwtTask[tRewardTaskFinish.Task24]["Title"] = tTaskTitle.Task24
+rwtTask[tRewardTaskFinish.Task24]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task24]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task24]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task24]["PreTaskId"] = tRewardTask.Task24
@@ -1484,7 +1492,7 @@ rwtTask[tRewardTaskFinish.Task24]["Awards"]["Events"][1]["GetServerAward"]["Acti
 
 
 rwtTask[tRewardTaskFinish.Task25] = {}
-rwtTask[tRewardTaskFinish.Task25]["Title"] = tTaskTitle.Task25
+rwtTask[tRewardTaskFinish.Task25]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task25]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task25]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task25]["PreTaskId"] = tRewardTask.Task25
@@ -1507,7 +1515,7 @@ rwtTask[tRewardTaskFinish.Task25]["Awards"]["Events"][1]["GetServerAward"]["Acti
 
 
 rwtTask[tRewardTaskFinish.Task26] = {}
-rwtTask[tRewardTaskFinish.Task26]["Title"] = tTaskTitle.Task26
+rwtTask[tRewardTaskFinish.Task26]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task26]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task26]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task26]["PreTaskId"] = tRewardTask.Task26
@@ -1530,7 +1538,7 @@ rwtTask[tRewardTaskFinish.Task26]["Awards"]["Events"][1]["GetServerAward"]["Acti
 
 
 rwtTask[tRewardTaskFinish.Task27] = {}
-rwtTask[tRewardTaskFinish.Task27]["Title"] = tTaskTitle.Task27
+rwtTask[tRewardTaskFinish.Task27]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task27]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task27]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task27]["PreTaskId"] = tRewardTask.Task27
@@ -1553,7 +1561,7 @@ rwtTask[tRewardTaskFinish.Task27]["Awards"]["Events"][1]["GetServerAward"]["Acti
 
 
 rwtTask[tRewardTaskFinish.Task28] = {}
-rwtTask[tRewardTaskFinish.Task28]["Title"] = tTaskTitle.Task28
+rwtTask[tRewardTaskFinish.Task28]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task28]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task28]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task28]["PreTaskId"] = tRewardTask.Task28
@@ -1576,7 +1584,7 @@ rwtTask[tRewardTaskFinish.Task28]["Awards"]["Events"][1]["GetServerAward"]["Acti
 
 
 rwtTask[tRewardTaskFinish.Task29] = {}
-rwtTask[tRewardTaskFinish.Task29]["Title"] = tTaskTitle.Task29
+rwtTask[tRewardTaskFinish.Task29]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task29]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task29]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task29]["PreTaskId"] = tRewardTask.Task29
@@ -1599,7 +1607,7 @@ rwtTask[tRewardTaskFinish.Task29]["Awards"]["Events"][1]["GetServerAward"]["Acti
 
 
 rwtTask[tRewardTaskFinish.Task30] = {}
-rwtTask[tRewardTaskFinish.Task30]["Title"] = tTaskTitle.Task30
+rwtTask[tRewardTaskFinish.Task30]["Title"] = tTaskTitle.Submit
 rwtTask[tRewardTaskFinish.Task30]["TaskType"] = CONST_TASK_TYPE.REWARD
 rwtTask[tRewardTaskFinish.Task30]["TaskDetailType"] = CONST_TASK_DETAIL_TYPE.TALK_BY_NPC
 rwtTask[tRewardTaskFinish.Task30]["PreTaskId"] = tRewardTask.Task30

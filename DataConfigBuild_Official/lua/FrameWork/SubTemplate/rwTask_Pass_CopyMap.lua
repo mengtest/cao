@@ -41,3 +41,10 @@ function rwTask_Pass_CopyMap:FinishTask_Interface()
     end
 
 end
+
+--点击面板调用
+function rwBaseTask:OnTaskPanelClick()
+    if rwChkInt(self._TaskInfo["ClickEnterMap"]) then
+        rwEnterMap(self._TaskInfo["ClickEnterMap"])
+    end
+end

@@ -14,17 +14,17 @@ local nCopyMapMissId = 3026
 local nCopyMap_EnterNPC = 50015
 --对话ID 
 local nDialogId_EnterMap = 5193
-local nDialogId_MonsterDead = 5194 
+local nDialogId_MonsterDead =  6891 --5194 
 
 local nChangeNpcTask = 10221 
 
 local nTarget = 60033
 -------------------NPC群组ID-----------------
-local nTrapId_1 = 30286  --剧情陷阱1
-local nTrapId_2 = 30287  --剧情陷阱2
+--local nTrapId_1 = 30286  --剧情陷阱1
+--local nTrapId_2 = 30287  --剧情陷阱2
 
 --宝箱ID
-local nNpc_Group_Box = 40048
+--local nNpc_Group_Box = 40048
 --机关ID
 local nValve_Left = 1021
 local nValve_Up = 1022
@@ -60,20 +60,6 @@ table.insert(tInitInfo,nGenId_Valve_Left)
 table.insert(tInitInfo,nGenId_Valve_Up)
 table.insert(tInitInfo,nGenId_Valve_Door)
 
---------------------------------------------------NPC声明-----------------------------------------------------------
---rwtNpcGroup[nNpc_Group_Box] = rwtNpcGroup[nNpc_Group_Box] or {}
---rwtNpcGroup[nNpc_Group_Box]["Type"] = CONST_NPCGROUP_TYPE.TreasureBox
---rwtNpcGroup[nNpc_Group_Box]["Awards"] = {}
---rwtNpcGroup[nNpc_Group_Box]["Awards"]["AwardType"] = CONST_AWARD_TYPE.MEMORY_AWARD
---rwtNpcGroup[nNpc_Group_Box]["Awards"]["AwardId"] = 1000042
---------------------------------------------------陷阱声明-----------------------------------------------------------
---剧情陷阱1
-rwtNpcGroup[nTrapId_1] = rwtNpcGroup[nTrapId_1] or {}
-rwtNpcGroup[nTrapId_1]["Type"] = CONST_NPCGROUP_TYPE.Trap
-
---剧情陷阱2
-rwtNpcGroup[nTrapId_2] = rwtNpcGroup[nTrapId_2] or {}
-rwtNpcGroup[nTrapId_2]["Type"] = CONST_NPCGROUP_TYPE.Trap
 --------------------------------------------------机关声明-----------------------------------------------------------
 --机关 
 tValve[nValve_Left] = tValve[nValve_Left] or {}
@@ -89,8 +75,8 @@ tValve[nValve_Door]["Type"] = CONST_VALVE_TYPE.MAGICARRAY
 rwtNpcGroup[nCopyMap_EnterNPC] = rwtNpcGroup[nCopyMap_EnterNPC] or {}
 rwtNpcGroup[nCopyMap_EnterNPC]["Type"] = CONST_NPCGROUP_TYPE.CopyMap
 rwtNpcGroup[nCopyMap_EnterNPC]["CopyMapList"] = {nCopyMapMissId}
-rwtNpcGroup[nCopyMap_EnterNPC]["UnlockDialog"] = 1231
-rwtNpcGroup[nCopyMap_EnterNPC]["Dialog"] = 1230
+--rwtNpcGroup[nCopyMap_EnterNPC]["UnlockDialog"] = 1231
+--rwtNpcGroup[nCopyMap_EnterNPC]["Dialog"] = 1230
 
 --简单难度副本
 rwtCopyMapMission[nCopyMapMissId] = rwtCopyMapMission[nCopyMapMissId] or {}
@@ -107,8 +93,8 @@ rwtCopyMapMission[nCopyMapMissId]["EnterNpcGen"] = 3026001 --副本传送NPC的G
 rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"] = {}
 rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"] = {}
 rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1] = {}
-rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["OpenDialog"] = {}
-rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["OpenDialog"]["DialogId"] = nDialogId_EnterMap
+--rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["OpenDialog"] = {}
+--rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["OpenDialog"]["DialogId"] = nDialogId_EnterMap
 rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["DynCreate"] = tInitInfo
 --rwtCopyMapMission[nCopyMapMissId]["MapInitFunc"] = function()
 --    rwOpenNpcChatDialog(nDialogId_EnterMap,CONST_NPCCHAT_TYPE.COPYMAP)   

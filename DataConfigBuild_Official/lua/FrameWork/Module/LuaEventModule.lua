@@ -111,6 +111,28 @@ function rwRecordLoopActivityEvent(nType,nNum)
     rwPrintNormalLog({Func = "rwRecordLoopActivityEvent"})
     return RecordLoopActivityEvent(nType,nNum)
 end
+---
+-- 冒泡信息接口
+-- @param nGenId  怪物、npc的geneventid
+-- @param sTextInfo 冒泡文字 （最好chinese文字申请id配置）
+-- @param nMode 与客户端配置功能一直 0代表正常 1代表紧张 2代表思考...
+-- @param nShowTime 气泡显示的持续时间 默认0秒
+function rwSynBubbleInfo (nGenId,sTextInfo,nMode,nShowTime)
+	nGenId = nGenId or 0
+	sTextInfo = sTextInfo or ""
+	nMode = nMode or 0 
+	nShowTime = nShowTime or 0
+	SynBubbleInfo(nGenId,sTextInfo,nMode,nShowTime)
+end
+
+---
+-- 冒泡视野开启接口 
+-- 需要使用到冒泡信息接口功能时 需要在该玩法触发时（如隐身变身）同时下发该接口，身上有冒泡视野状态时才会触发冒泡信息接口
+-- @param nTime 冒泡视野的持续时间 默认0秒
+function rwOpenBubbleView (nTime)
+	nTime = nTime or 0
+	OpenBubbleView (nTime)
+end
 
 --===================================================================
 --===============================回调================================
@@ -138,9 +160,39 @@ function finish_guide(nType,nIdGuide)
     rwLinkFinishGuide(nType,nIdGuide)
 end
 
+---
+--[回调进入怪物视野时
+-- @param nGenId 怪物或NPC的geneventid
+function view_field_trigger (nGenId)
+	rwLinkFieldViewTrigger(nGenId)
+end
+
 --===================================================================
 --==============================回调封装=============================
 --===================================================================
+
+function rwLinkFieldViewTrigger(nGenId)
+	rwPrintNormalLog({Func = "rwLinkFieldViewTrigger",nGenId = nGenId})
+	local sTextInfo
+	local nMode
+	local nShowTime
+	for i,v in pairs(rwtBubbleGenInfo) do
+		if i == nGenId then
+			local nGroupId = v["EventId"]
+			if  v["Type"] == CONST_GEN_EVENTTYPE.NPCGROUP then
+				sTextInfo = rwtNpcGroup[nGroupId]["BubbleText"] or ""
+				nMode = rwtNpcGroup[nGroupId]["BubbleMode"] or 0
+				nShowTime = rwtNpcGroup[nGroupId]["BubbleTime"] or 0
+			elseif v["Type"] == CONST_GEN_EVENTTYPE.MONSTERGROUP then
+				sTextInfo = rwtMonsterGroup[nGroupId]["BubbleText"] or ""
+				nMode = rwtMonsterGroup[nGroupId]["BubbleMode"] or 0
+				nShowTime = rwtMonsterGroup[nGroupId]["BubbleTime"] or 0
+			end
+			break
+		end
+	end
+	rwSynBubbleInfo (nGenId,sTextInfo,nMode,nShowTime)
+end
 
 --解谜事件触发  --目前接口返回的是6位的
 function rwLinkPuzzleTrigger(nId)
@@ -180,3 +232,14 @@ function rwLinkFinishGuide(nType, nIdGuide)
 		end
 	end
 end
+
+
+----进入怪物视野时
+--function view_field_trigger (nGenId)
+--	rwLinkFieldViewTrigger(nGenId)
+--end
+--function rwLinkFieldViewTrigger(nGenId)
+
+--end
+
+

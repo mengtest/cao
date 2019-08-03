@@ -11,7 +11,7 @@
 
 
 --===========================副本基础配置====================================--
-local tLuJiaoShowEnterCreateGen = {3011008,3011003,3011021,3011010,3011025,3011026}
+local tLuJiaoShowEnterCreateGen = {3011008,3011003,3011021,3011010,3011025,3011026,3011001,3011007}
 
 local nCopyMapMissId_1 = 3011    
 local nCopyMapMissId_2 = 3012    
@@ -26,14 +26,14 @@ local nlangdeath = 0
 rwtNpcGroup[12001002] = {}
 rwtNpcGroup[12001002]["Type"] = CONST_NPCGROUP_TYPE.CopyMap
 rwtNpcGroup[12001002]["UnlockDialog"] = 5210
-rwtNpcGroup[12001002]["Dialog"] = 5204
+-- rwtNpcGroup[12001002]["Dialog"] = 5204
 rwtNpcGroup[12001002]["CopyMapList"] = {nCopyMapMissId_1}
 
---任务目标配置
--- rwtTarget[60036] = {}
--- rwtTarget[60036]["Title"] = tLuaText[LANGUAGE_CONFIG][20059]
--- rwtTarget[60036]["ReqDialogId"] = 5041
--- rwtTarget[60036]["ReqCount"] = 1
+-- 任务目标配置
+rwtTarget[60036] = {}
+rwtTarget[60036]["Title"] = tLuaText[LANGUAGE_CONFIG][20059]
+rwtTarget[60036]["ReqDialogId"] = 5041
+rwtTarget[60036]["ReqCount"] = 1
 
 rwtTarget[60037] = {}
 rwtTarget[60037]["Title"] = tLuaText[LANGUAGE_CONFIG][20060]
@@ -51,10 +51,10 @@ rwtCopyMapMission[nCopyMapMissId_1] = rwtCopyMapMission[nCopyMapMissId_1] or {}
 rwtCopyMapMission[nCopyMapMissId_1]["ReqLev"] = 1
 rwtCopyMapMission[nCopyMapMissId_1]["HiddenCopyMapID"] = nCopyMapMissId_4
 rwtCopyMapMission[nCopyMapMissId_1]["Difficulty"] = 1
-rwtCopyMapMission[nCopyMapMissId_1]["TargetStepNum"] = 2
--- rwtCopyMapMission[nCopyMapMissId_1]["Target1"] = {60036}
-rwtCopyMapMission[nCopyMapMissId_1]["Target1"] = {60037}
-rwtCopyMapMission[nCopyMapMissId_1]["Target2"] = {60038}
+rwtCopyMapMission[nCopyMapMissId_1]["TargetStepNum"] = 3
+rwtCopyMapMission[nCopyMapMissId_1]["Target1"] = {60036}
+rwtCopyMapMission[nCopyMapMissId_1]["Target2"] = {60037}
+rwtCopyMapMission[nCopyMapMissId_1]["Target3"] = {60038}
 rwtCopyMapMission[nCopyMapMissId_1]["Target99"] = {60072}
 --rwtCopyMapMission[nCopyMapMissId_1]["MapInitFunc"] = function(nCopyMapMissId)
 --    CopyMap_LuJiaoShou_Enter(nCopyMapMissId)
@@ -108,28 +108,28 @@ local tMonsterTalk = {}
     tMonsterTalk[200153] = "狐侍卫被击杀，怒气扩散，碎魂狼王狂暴形态被激发。"
     tMonsterTalk[200154] = "赤瞳战狼被击杀，怒气扩散，碎魂狼王狂暴形态被激发。"
 
--- --第一只小怪前陷阱
--- rwtNpcGroup[30076] = {}
--- rwtNpcGroup[30076]["Type"] = CONST_NPCGROUP_TYPE.Trap
--- -- rwtNpcGroup[30076]["DelTrap"] = 1
--- rwtNpcGroup[30076]["Awards"] = {}  
--- rwtNpcGroup[30076]["Awards"]["Events"] = {}   
--- rwtNpcGroup[30076]["Awards"]["Events"][1] = {}
--- rwtNpcGroup[30076]["Awards"]["Events"][1]["OpenDialog"] = {}          
--- rwtNpcGroup[30076]["Awards"]["Events"][1]["OpenDialog"]["DialogId"] = 5041
+--第一只小怪前陷阱
+rwtNpcGroup[30076] = {}
+rwtNpcGroup[30076]["Type"] = CONST_NPCGROUP_TYPE.Trap
+-- rwtNpcGroup[30076]["DelTrap"] = 1
+rwtNpcGroup[30076]["Awards"] = {}  
+rwtNpcGroup[30076]["Awards"]["Events"] = {}   
+rwtNpcGroup[30076]["Awards"]["Events"][1] = {}
+rwtNpcGroup[30076]["Awards"]["Events"][1]["OpenDialog"] = {}          
+rwtNpcGroup[30076]["Awards"]["Events"][1]["OpenDialog"]["DialogId"] = 5041
 
--- rwtDialog[5041] = rwtDialog[5041] or {}
--- rwtDialog[5041]["DialogEndInit"] = {}
--- rwtDialog[5041]["DialogEndInit"]["Events"] = {}
--- rwtDialog[5041]["DialogEndInit"]["Events"][1] = {}
--- rwtDialog[5041]["DialogEndInit"]["Events"][1]["DynDelete"] = {}
--- rwtDialog[5041]["DialogEndInit"]["Events"][1]["DynDelete"][1] = 3011001 --门口白狼
--- rwtDialog[5041]["DialogEndInit"]["Events"][1]["DynDelete"][2] = 3011007 --门口陷阱
--- rwtDialog[5041]["DialogEndInit"]["Events"][1]["OpenDialog"] = {}
--- rwtDialog[5041]["DialogEndInit"]["Events"][1]["OpenDialog"]["DialogId"] = 5153
+rwtDialog[5041] = rwtDialog[5041] or {}
+rwtDialog[5041]["DialogEndInit"] = {}
+rwtDialog[5041]["DialogEndInit"]["Events"] = {}
+rwtDialog[5041]["DialogEndInit"]["Events"][1] = {}
+rwtDialog[5041]["DialogEndInit"]["Events"][1]["DynDelete"] = {}
+rwtDialog[5041]["DialogEndInit"]["Events"][1]["DynDelete"][1] = 3011001 --门口白狼
+rwtDialog[5041]["DialogEndInit"]["Events"][1]["DynDelete"][2] = 3011007 --门口陷阱
+rwtDialog[5041]["DialogEndInit"]["Events"][1]["OpenDialog"] = {}
+rwtDialog[5041]["DialogEndInit"]["Events"][1]["OpenDialog"]["DialogId"] = 5153
 
-rwtDialog[5043] = rwtDialog[5043] or {}
-rwtDialog[5043]["DialogEnd"] = function(nId)
+rwtDialog[5153] = rwtDialog[5153] or {}
+rwtDialog[5153]["DialogEnd"] = function(nId)
     rwAddUserRecordData_System_Unlock(16)
 end
 
