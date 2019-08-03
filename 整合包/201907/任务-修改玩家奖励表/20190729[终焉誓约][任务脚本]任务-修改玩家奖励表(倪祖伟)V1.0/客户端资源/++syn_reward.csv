@@ -1,5 +1,0 @@
-﻿,required,required,required,required,required,required,required,required,required,required,required,required,required
-,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32
-,id,type,data1,data2,data3,itemtype_ID1,itemtype_num1,itemtype_ID2,itemtype_num2,itemtype_ID3,itemtype_num3,itemtype_ID4,itemtype_num4
-备注,流水ID,活动类型,表示奖励的参数,表示奖励的参数,表示奖励的参数,奖励物品1ID,奖励物品1数量,奖励物品2ID,奖励物品2数量,奖励物品3ID,奖励物品3数量,奖励物品4ID,奖励物品4数量
-,10014,2,2,1,10,1,100,0,0,0,0,0,0

@@ -1,7 +1,0 @@
-﻿,required,required,required,required,required,required,required
-,uint32,uint32,uint32,string,string,string,string
-,id,subType,type,iconPath,collectingName,collected,time
-备注,采集npcGroupId（999999为默认）,采集类型（是否有对白）,采集类型（1默认，2宝箱，3喂药，4砍树）,采集图标,采集过程文字,采集完成文字,采集时间(默认为1秒)
-,40284,2,4,Textures/Atlas/Dyn/Item/5000210.png,,,
-,60445,2,4,Textures/Atlas/Dyn/Item/5000210.png,,,
-,60446,2,4,Textures/Atlas/Dyn/Item/5000210.png,,,

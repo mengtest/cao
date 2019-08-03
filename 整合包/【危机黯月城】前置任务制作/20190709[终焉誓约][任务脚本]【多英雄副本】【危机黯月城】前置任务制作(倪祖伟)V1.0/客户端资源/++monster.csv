@@ -1,9 +1,0 @@
-﻿,required,required,optional,required,required,required,required,optional,required,repeated,repeated,required,repeated,required,repeated,required
-,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,string,uint32,string,uint32,uint32
-,id,name,attr_type,type,sex,family,profession,level,attr_id,special_effects,own_skills,skill_que,skill_vis,skill_loop_que,skill_que_vis,action_id
-备注,怪物ID,注释,属性适配类型,怪物类型,性别,家族,职业类型,等级,怪物属性ID,特殊效果ID,拥有技能列表,技能序列,技能序列可见性,循环技能序列,循环技能序列可见性,效果ID
-,9000654,武装狼人,0,1,1,1,1,0,10026,1111;1151,1002601;1002602;1002603,"0,1,0,2;1,0,1,2",0,"0,1,2;1,0,1,0,2;0,1,1;1,0,1,2",0,0
-,9000655,武装熊人战士,0,1,1,1,1,0,10015,1111,1001501;1001502;1001503,"2,0,1",0,"0,1;0,1,2;0,1;2,0,1",0,0
-,9000656,鹿角兽队长,0,1,1,1,1,0,10024,,1002401;1002402,"0,1,0;1,0,1,0",0,"1,0,1,0,1;0,1,1;0,1,0,1;1,0,1",0,0
-,9000657,暗黑战魂,0,1,1,3,1,0,52008,1131,5200801;5200802;5200803,"0,1;0,0,2",0,"0,1;0,0,2;0,1;0,1,2,2;0",0,0
-,9000658,狂化阿噗,0,1,1,6,1,0,10033,1021,1003301;1003302;1003303,"0,1,2;0,0,2",0,"0,1,2;1,0,1,0,2",0,0

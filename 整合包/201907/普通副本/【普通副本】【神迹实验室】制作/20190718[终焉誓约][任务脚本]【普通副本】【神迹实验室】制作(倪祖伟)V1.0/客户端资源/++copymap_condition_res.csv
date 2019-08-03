@@ -1,5 +1,0 @@
-﻿,required,required,required,required,required,required,required,required,required,required,required,required,required,required
-,uint32,string,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32
-,map_id,name,fight,lookface,map_times,team_min,team_max,boss1_id,boss2_id,boss3_id,drop1_id,drop2_id,drop3_id,order
-备注,副本id,注释,推荐战力,副本图片,进入次数上限类型,最少组队人数,最大组队人数,BOSSID,BOSSID,BOSSID,掉落ID,掉落ID,掉落ID,排序
-,3146,神迹实验室,40000,Textures/Atlas/Dyn/InstanceLogo/Laboratory.png,1,0,0,0,0,0,0,0,0,0

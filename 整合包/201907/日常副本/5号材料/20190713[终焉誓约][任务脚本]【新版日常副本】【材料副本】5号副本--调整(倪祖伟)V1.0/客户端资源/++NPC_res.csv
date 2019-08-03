@@ -1,8 +1,0 @@
-﻿,required,optional,optional
-,uint32,string,string
-,id,headPath,normalHalfPath
-备注,id,标准头像,标准半身像
-,3828,Textures\Atlas\Dyn\CharacterCommonHead\Abbey.png,Textures\Atlas\Dyn\CharacterHalfBody\Abbey.png
-,3829,Textures\Atlas\Dyn\CharacterCommonHead\EliteWarrio.png,Textures\Atlas\Dyn\CharacterHalfBody\TribaleliteWarrior.png
-,3830,Textures\Atlas\Dyn\CharacterCommonHead\EliteWarrio.png,Textures\Atlas\Dyn\CharacterHalfBody\TribaleliteWarrior.png
-,3831,Textures\Atlas\Dyn\CharacterCommonHead\EliteWarrio.png,Textures\Atlas\Dyn\CharacterHalfBody\TribaleliteWarrior.png

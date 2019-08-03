@@ -1,5 +1,0 @@
-﻿,required,required,required
-,uint32,uint32,string
-,type,sort,path
-备注,任务类型,优先级,图标路径
-,1,1,Textures\Atlas\GUI\[CommonBase]\icon_zhuxian.png
