@@ -1,0 +1,9 @@
+﻿,required,required,required,required,required,required,required,required,required,required
+,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32
+,id,difficulty,monstergroup_id,conditions1,data1,conditions2,data2,conditions3,data3,first_bounses
+备注,关卡ID,难度1普通2困难,怪物组ID,星级条件,数据,星级条件,数据,星级条件,数据,首杀奖励
+,10101,0,800080,1,0,9,0,10,1,0
+,10201,0,800081,1,0,9,0,11,1,1000262
+,10202,0,800082,1,0,9,0,12,0,1000263
+,20201,1,800083,1,0,9,0,11,1,1000264
+,20202,1,800084,1,0,9,0,12,0,1000265

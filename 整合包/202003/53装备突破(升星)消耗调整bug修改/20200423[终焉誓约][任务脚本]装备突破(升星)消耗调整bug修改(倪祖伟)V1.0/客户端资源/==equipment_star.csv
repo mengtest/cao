@@ -1,0 +1,5 @@
+﻿,required,optional,required,required,required,required,required,required,optional,optional,optional,optional,optional,optional,optional,optional
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32
+,id,name,part,star,limit_level,need_order,bonus_percentage,money,material_id1,material_num1,material_id2,material_num2,material_id3,material_num3,material_id4,material_num4
+备注,ID,name,部位,星级,英雄等级需求,品阶需求,属性加成百分比,所需金币数量,材料1,材料1数量,材料2ID,材料2数量,材料3ID,材料3数量,材料4ID,材料4数量
+,35,,3,5,50,0,3000,80000,2120013,10,2120014,2,2120302,10,2120303,3

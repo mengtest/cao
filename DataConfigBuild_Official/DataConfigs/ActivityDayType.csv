@@ -1,5 +1,0 @@
-﻿,required,required,required,required
-,uint32,uint32,string,string
-,id,type,name,activebg
-备注,流水id,活动类型,活动名称,活动背景图路径
-,1,1,自律联盟,Textures/Atlas/Dyn/BG/renwuhuodong.png

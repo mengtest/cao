@@ -1,0 +1,9 @@
+﻿,required,required,required,required,required,required,required,required,required,required,required,required,required
+,uint32,uint32,uint32,uint32,uint32,uint32,string,uint32,uint32,float,float,float,int32
+,id,levelId,pathId,nodeIndex,npcChatId,action,rotation,stayTime,modify,speedRate,fightDistance,triggerDistance,triggerAngle
+备注,id,关卡id,路径ID,巡逻点,冒泡id,事件,角度,停留时间（毫秒）,是否修改巡逻参数0不修改1修改,移动速率,战斗距离,触发距离,触发角度
+,30380301,3038,3,1,0,0,"0,-140,0",2000,0,-1,-1,-1,-1
+,30380302,3038,3,2,0,0,"0,-50,0",2000,0,-1,-1,-1,-1
+,30380303,3038,3,3,0,0,"0,40,0",2000,0,-1,-1,-1,-1
+,30380304,3038,3,4,0,0,"0,130,0",2000,0,-1,-1,-1,-1
+,30380305,3038,3,5,0,0,"0,-140,0",2000,0,-1,-1,-1,-1

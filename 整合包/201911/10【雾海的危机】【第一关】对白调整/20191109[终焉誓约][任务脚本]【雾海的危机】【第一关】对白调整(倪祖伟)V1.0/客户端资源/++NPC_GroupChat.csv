@@ -1,0 +1,7 @@
+﻿,required,repeated,repeated,required
+,uint32,uint32,uint32,uint32
+,id,dialog_ids,chat_ids,replay
+备注,地图刷新表id,对话 id组,冒泡聊天id组,触发冒泡间隔
+,3097003,,1201,10
+,3097004,,1202,10
+,3097005,,1203,10

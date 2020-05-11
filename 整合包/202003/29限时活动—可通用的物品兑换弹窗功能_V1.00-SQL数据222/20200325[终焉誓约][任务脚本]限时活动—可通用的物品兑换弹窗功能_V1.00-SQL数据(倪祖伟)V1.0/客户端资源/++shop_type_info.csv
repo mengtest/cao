@@ -1,0 +1,5 @@
+﻿,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional
+,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,string,string
+,id,shop_type,deblocking_id,refresh_time,times_type,refresh_money,money_id,ticket_id,limit_time_type,time_min,time_max
+备注,ID,商城类型,功能解锁ID,自然刷新时间,刷新次数类型,正常货币id,物品货币id,刷新券id,时间类型,时间上限,时间下线
+物品兑换,9,100,23,0,0,0,0,0,1,20200226000000,20200326000000

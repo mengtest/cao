@@ -1,0 +1,6 @@
+﻿,required,required,required,repeated
+,uint32,uint32,uint32,uint32
+,id,lookface,hint_vis,hint_skillId
+备注,怪物ID,模型ID,0不可见1可,大招队列
+,1000760,10016,1,1001603
+浮士德72,9000432,10016,1,1001603

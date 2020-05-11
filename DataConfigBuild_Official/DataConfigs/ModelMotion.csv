@@ -1,6 +1,0 @@
-﻿,required,required,optional
-,uint32,string,string
-,id,param,des
-备注,索引id,动作参数,注释
-,1000,idle,默认动作
-,1001,die,死亡动作

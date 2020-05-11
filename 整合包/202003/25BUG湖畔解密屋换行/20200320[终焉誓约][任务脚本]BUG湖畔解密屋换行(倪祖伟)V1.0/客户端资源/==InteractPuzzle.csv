@@ -1,0 +1,5 @@
+﻿,required,optional,optional,optional,optional,optional,optional
+,uint32,uint32,uint32,string,string,uint32,uint32
+,id,type,resId,resName,resPos,resArg,soundId
+备注,解谜事件Id,事件类型,资源ID,资源名称,资源位置,资源参数,音效ID
+,101105,11,124,钥匙：一把有轻微锈迹的<br>钥匙，应该能用来<br>打开什么东西吧。,"0,0,0",0,0

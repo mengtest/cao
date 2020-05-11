@@ -1,0 +1,7 @@
+﻿,required,optional,required,required,required,optional,optional,optional
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32
+,id,name,sort,amount_limit,flag,price,awardid,actionid
+备注,物品id,名称,物品类型,叠加上限,物品flag,售出金币,奖励id,Action id
+体力药水初级,204010,菌菇鲜蔬汉堡,3,9999,16,100,0,0
+体力药水中级,204020,芝士培根双层堡,3,9999,16,100,0,0
+体力药水高级,204030,霸王牛排三层堡,3,9999,16,100,0,0

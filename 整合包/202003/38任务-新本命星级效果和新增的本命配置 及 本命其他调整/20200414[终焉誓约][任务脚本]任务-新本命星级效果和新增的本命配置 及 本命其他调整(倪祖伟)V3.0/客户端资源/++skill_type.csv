@@ -1,0 +1,16 @@
+﻿,required,optional,optional,optional,optional,optional,optional,repeated,optional,optional,optional,repeated,optional,optional,optional,optional,optional,repeated,optional,repeated,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32
+,id,name,skillmain_id,level,type,skill0_type,skill0_unicity,next_type,cd,affect_faction,target_rule,combos,cost_type,cost_data,use_time,count_type,count_data,status,status_start,special_effects,hp_cost,xp_cost,xp_revert,level_up,gold_require,item_require1,item_require1_num,item_require2,item_require2_num,item_require3,item_require3_num,item_require4,item_require4_num,level_require,qte
+备注,流水号,name,主技能ID,技能等级,技能类型0普通技能1奥义技能,本命天赋技能类型,本命天赋技能唯一性,技能可连招类型,技能CD时间（毫秒）,"技能作用阵营0敌方,1我方,2全体不分敌我",技能目标规则0单体，1全体,技能连招队列,释放此技能需要消耗的能量类型,消耗的数量,此技能每回合可以使用的次数,需要计数的能量类型，对应status表的type_id字段,当计数达到多少时满足条件,选定技能所触发的状态,"状态生效的时机,默认0选定技能时立即起效，1技能结束时起效",特殊效果,hp需求,xp需求,xp回复,该等级技能是否可以通过升级来达到 0不可以 1可以,金币需求数量,材料需求,材料需求数量,材料需求,材料需求数量,材料需求,材料需求数量,材料需求,材料需求数量,升级所需英雄等级,表示该技能是否为qte技能
+,4791,,479,1,91,317,0,0,0,0,0,,0,0,0,0,0,,0,4791,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,4792,,479,2,91,317,0,0,0,0,0,,0,0,0,0,0,,0,4792,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,4793,,479,3,91,317,0,0,0,0,0,,0,0,0,0,0,,0,4793,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,4801,,480,1,91,318,0,0,0,0,0,,0,0,0,0,0,,0,4801,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,4802,,480,2,91,318,0,0,0,0,0,,0,0,0,0,0,,0,4802,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,4803,,480,3,91,318,0,0,0,0,0,,0,0,0,0,0,,0,4803,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,4811,,481,1,91,319,0,0,0,0,0,,0,0,0,0,0,,0,4811,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,4812,,481,2,91,319,0,0,0,0,0,,0,0,0,0,0,,0,4812,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,4813,,481,3,91,319,0,0,0,0,0,,0,0,0,0,0,,0,4813,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,4831,,483,1,91,320,0,0,0,0,0,,0,0,0,0,0,,0,4831,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,4832,,483,2,91,320,0,0,0,0,0,,0,0,0,0,0,,0,4832,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,4833,,483,3,91,320,0,0,0,0,0,,0,0,0,0,0,,0,4833,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

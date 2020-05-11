@@ -1,0 +1,5 @@
+﻿,required,required,required,required,required,required,required,required,required,required
+,uint32,string,uint32,string,string,uint32,string,string,string,string
+,id,regionSize,shapeType,size,des,triggerType,prefabPath,idleEffect,startEffect,endEffect
+备注,机关id,区域大小,区域形状,机关大小,描述,触发方式 0区域触发/1点击,预制路径,默认特效,开始特效,完成特效
+,1141,,1,"1.6,1,1",机关门,2,Prefab/BattleInstance/FB_JianYuDao_LaMen.prefab,,,

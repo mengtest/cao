@@ -1,0 +1,8 @@
+﻿,required,required,required,required
+,uint32,uint32,uint32,uint32
+,id,tab_type,deblocking_id,interface_id
+备注,ID,页签类型,解锁ID,界面ID
+,1,1,23,3700
+,2,2,23,1670
+,3,3,23,3600
+,4,4,23,4000

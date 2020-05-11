@@ -1,0 +1,8 @@
+﻿,required,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,string,float,float
+,id,name,mapid,event_type,event_id,path_id,flag,intask,story_id,life_time,level_id,battle_scene,position,rotation_y,scale
+备注,分段id,名字,关卡id,事件类型,事件id,路径id,number,怪物是否显示,怪物是否喊话,存在时间,子关卡id,战斗场景id,坐标,Y轴旋转角度,模型缩放比例
+,3097006,混沌魔魂,3097,2,200775,1,1,1,0,0,0,56,,0,1
+,3097007,觉醒魔魂,3097,2,200776,2,1,1,0,0,0,56,,0,1
+,3097012,障碍墙,3097,4,1094,0,1,0,0,0,0,0,"-16.47282,0.09567789,16.9677",-38,1
+,3097015,觉醒魔魂,3097,1,21022,0,1,0,0,0,0,0,"-8.75,0.09567789,14.07",155,1

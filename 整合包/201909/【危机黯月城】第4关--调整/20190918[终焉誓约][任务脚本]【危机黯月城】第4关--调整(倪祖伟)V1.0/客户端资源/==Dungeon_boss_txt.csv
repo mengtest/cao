@@ -1,0 +1,8 @@
+﻿,required,required,required,required
+,uint32,uint32,uint32,uint32
+,id,monster_id,status_id,team
+备注,任务id,核心怪物id,特性id,分组
+,60180,1000761,1604,1
+,60181,1000762,1621,1
+,60182,1000763,1607,2
+,60183,1000764,1618,2

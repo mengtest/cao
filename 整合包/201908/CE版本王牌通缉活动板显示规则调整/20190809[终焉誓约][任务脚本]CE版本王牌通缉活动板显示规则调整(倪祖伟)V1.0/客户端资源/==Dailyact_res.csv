@@ -1,0 +1,28 @@
+﻿,required,required,required,required,required,required,required,required,required,required
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,string
+,id,bgpath,sortid,rankid,discondition,data,data1,data2,show_type,show_time
+备注,表示序列号,背景图片索引,活动类型Id,序列号,显示条件,data值,data1值,预显示天数,时间限时类型,时间文字
+王牌通缉,10026,Textures/Atlas/GUI/DailyActivityMainPanel/Poker.png,20,7,1,20,0,0,0,
+
+
+
+【终焉誓约】ERP326827终焉誓约】【剧情副本】【神迹实验室】数值调整
+http://forum.nderp.99.com/Forum/TopicList-368742.aspx
+【终焉誓约】修改物品相关文字内容
+http://forum.nderp.99.com/Forum/TopicList-368774.aspx
+【终焉誓约】ERP326835【终焉誓约】【奥兹家族任务】奥兹家族任务怪物数据修改
+http://forum.nderp.99.com/Forum/TopicList-368749.aspx
+【终焉誓约】物品文字修改（物品调整需文字调整）
+http://forum.nderp.99.com/Forum/TopicList-368978.aspx
+【终焉誓约】物品获取途径 调整配置(新增途径id 需要文字包装)
+http://forum.nderp.99.com/Forum/TopicList-368985.aspx
+【终焉誓约】ERP327155【终焉誓约】【自律联盟】自律联盟前置任务一阶段奖励修改
+http://forum.nderp.99.com/Forum/TopicList-369158.aspx
+【终焉誓约】ERP327580【终焉誓约】5.9bug修改单
+http://forum.nderp.99.com/Forum/TopicList-369663.aspx
+【终焉誓约】ERP327631【终焉誓约】【5.9.1版本】【BUG修改单】任务制作--兰奇友好
+http://forum.nderp.99.com/Forum/TopicList-369741.aspx
+【终焉誓约】3个本命的文字、图片核对修改
+http://forum.nderp.99.com/Forum/TopicList-369974.aspx
+【终焉誓约】5.9.1版本 直购礼包 本命图标显示的配置方案
+http://forum.nderp.99.com/Forum/TopicList-369977.aspx

@@ -1,0 +1,5 @@
+﻿,required,required,required,required,required,required,required,required,required,required,required,required,required,required
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,string,uint32,uint32,string,uint32
+,id,bgpath,sortid,group,rankid,audio,discondition,data,type,data1,data2,show_type,show_time,disappear
+备注,表示序列号,背景图片索引,活动类型Id,分组,序列号,音频,显示条件,data值,指引类型,data1值,预显示天数,时间限时类型,时间文字,根据任务完成情况显示
+王牌通缉,10026,Textures/Atlas/GUI/DailyActivityMainPanel/Poker_iso_zh-chs.png,20,2,3,0,3,39,3,0,4,0,,0

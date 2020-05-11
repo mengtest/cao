@@ -1,0 +1,6 @@
+﻿,required,required,required
+,uint32,uint32,uint32
+,id,lookface,hint_vis
+备注,怪物ID,模型ID,0不可见1可
+,1001247,10023,1
+,1001248,10049,1

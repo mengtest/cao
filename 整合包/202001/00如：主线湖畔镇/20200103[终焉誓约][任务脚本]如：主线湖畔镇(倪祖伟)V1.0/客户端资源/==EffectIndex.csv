@@ -1,0 +1,5 @@
+﻿,required,required,optional
+,uint32,string,string
+,id,effect_name,des
+备注,索引id,特效名称,注释
+,2006,Effect_Scene_tanlanjiejie222,魔族之心单人本结界特效

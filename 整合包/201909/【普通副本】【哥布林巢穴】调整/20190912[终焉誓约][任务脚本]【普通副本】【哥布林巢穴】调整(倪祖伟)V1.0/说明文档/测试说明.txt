@@ -1,0 +1,38 @@
+------------------------------------------
+任务名称：【普通副本】【哥布林巢穴】调整
+By：倪祖伟
+Date：2019-09-12
+ERP链接：http://forum.nderp.99.com/Forum/TopicList-341016.aspx
+------------------------------------------
+需求：
+修改普通哥布林巢穴
+1、移除哈扎特
+2、修改怪物数值，通过奖励
+3、修改任务目标
+------------------------------------------
+测试PM：
+@luacall </F>rwEnterMap</N>3030
+@awardrandom 1000834 100000
+------------------------------------------
+测试重点：
+
+------------------------------------------
+自测：
+
+I0924 14:54:44.825012	userid:3000000028, PM CMD:awardrandom 1000834 100000	- mysj/SceneModule/RegHandle_debug.go:45
+I0924 14:54:45.306845	award random result awardId:1000834 total times:100000	- mysj/SceneModule/RegHandle_debug.go:725
+I0924 14:54:45.306923	awardGroup:2	 awardType:1	 awardId:2064021	 itemNum:1	 times:24954	 pecent:24.95%	- mysj/SceneModule/RegHandle_debug.go:727
+I0924 14:54:45.306992	awardGroup:1	 awardType:1	 awardId:2011021	 itemNum:1	 times:25101	 pecent:25.10%	- mysj/SceneModule/RegHandle_debug.go:727
+I0924 14:54:45.307011	awardGroup:2	 awardType:1	 awardId:2063021	 itemNum:1	 times:24857	 pecent:24.86%	- mysj/SceneModule/RegHandle_debug.go:727
+I0924 14:54:45.307029	awardGroup:1	 awardType:1	 awardId:2012021	 itemNum:1	 times:25081	 pecent:25.08%	- mysj/SceneModule/RegHandle_debug.go:727
+I0924 14:54:45.307046	awardGroup:4	 awardType:1	 awardId:3030013	 itemNum:1	 times:779	 pecent:0.78%	- mysj/SceneModule/RegHandle_debug.go:727
+I0924 14:54:45.307073	awardGroup:3	 awardType:1	 awardId:3	 itemNum:1000	 times:100000	 pecent:100.00%	- mysj/SceneModule/RegHandle_debug.go:727
+I0924 14:54:45.307092	awardGroup:3	 awardType:1	 awardId:8	 itemNum:5000	 times:100000	 pecent:100.00%	- mysj/SceneModule/RegHandle_debug.go:727
+I0924 14:54:45.307109	awardGroup:1	 awardType:1	 awardId:2064021	 itemNum:1	 times:24850	 pecent:24.85%	- mysj/SceneModule/RegHandle_debug.go:727
+I0924 14:54:45.307136	awardGroup:2	 awardType:1	 awardId:2011021	 itemNum:1	 times:25297	 pecent:25.30%	- mysj/SceneModule/RegHandle_debug.go:727
+I0924 14:54:45.307164	awardGroup:3	 awardType:1	 awardId:5	 itemNum:120	 times:100000	 pecent:100.00%	- mysj/SceneModule/RegHandle_debug.go:727
+I0924 14:54:45.307194	awardGroup:3	 awardType:1	 awardId:4	 itemNum:5000	 times:100000	 pecent:100.00%	- mysj/SceneModule/RegHandle_debug.go:727
+I0924 14:54:45.307222	awardGroup:2	 awardType:1	 awardId:2012021	 itemNum:1	 times:24892	 pecent:24.89%	- mysj/SceneModule/RegHandle_debug.go:727
+I0924 14:54:45.307251	awardGroup:1	 awardType:1	 awardId:2063021	 itemNum:1	 times:24968	 pecent:24.97%	- mysj/SceneModule/RegHandle_debug.go:727
+I0924 14:54:45.307281	awardGroup:4	 awardType:1	 awardId:3060030	 itemNum:1	 times:2379	 pecent:2.38%	- mysj/SceneModule/RegHandle_debug.go:727
+T0924 14:54:45.307306	data trans from 0xf00000e to 0xf000013, sessionId:4 *csmsg.MsgPmCmdS2C:result:OK 	- nd/sparklet/servicelib/service_call.go:434

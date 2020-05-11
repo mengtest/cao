@@ -1,0 +1,7 @@
+,required,required,required,required,required,required,required,required,required,required,required,required,required,required,required
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,string,float,float
+,id,name,mapid,event_type,event_id,path_id,flag,intask,story_id,life_time,level_id,battle_scene,position,rotation_y,scale
+备注,分段id,名字,关卡id,事件类型,事件id,路径id,number,怪物是否显示,怪物是否喊话,存在时间,子关卡id,战斗场景id,坐标,Y轴旋转角度,模型缩放比例
+,3146006,生物实验箱,3146,1,40326,0,1,0,0,0,0,0,"-17.858,0.03,-4.14",49.085,1
+,3146007,生物实验箱,3146,1,40327,0,1,0,0,0,0,0,"-59.199,0.03,25.38",139.08,1
+,3146008,生物实验箱,3146,1,40328,0,1,0,0,0,0,0,"-85.739,0.03,11.62",139.08,1

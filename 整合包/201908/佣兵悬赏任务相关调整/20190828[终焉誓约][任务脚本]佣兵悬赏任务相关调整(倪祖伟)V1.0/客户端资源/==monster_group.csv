@@ -1,0 +1,6 @@
+﻿,required,required,required,required,repeated,required,required,required,required,required,required,required,required,required,required
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32
+,id,name,fight,multi_boss,monster,money,user_exp,hero_exp,exp_ball,reward_id,action_id,max_battle_time,battle_check,attack_status_id,fight_type
+备注,ID,备注,战力,多人boss,怪物id,掉落金币,战队经验,英雄经验,经验球经验,奖励id,事件id,战斗限时,战斗检测,偷袭状态,战斗力压制算法类型
+,900501,荒漠战神肖恩,20000,0,9000517,0,0,0,0,2000420,0,600000,0,0,2
+,900506,月夜诡蝠桑德拉,22500,0,9000525,0,0,0,0,2000425,0,600000,0,0,2

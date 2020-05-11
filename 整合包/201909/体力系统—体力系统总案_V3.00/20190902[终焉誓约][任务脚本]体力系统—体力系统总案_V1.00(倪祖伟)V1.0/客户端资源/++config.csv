@@ -1,0 +1,10 @@
+﻿,required,required,required,optional,optional,optional,optional,optional,optional,optional,optional,optional
+,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,string,string
+,id,type,type_id,data1,data2,data3,data4,data5,data6,data7,param1,desc
+"备注,",id,类型,子类型,参数1,参数2,参数3,参数4,参数5,参数6,参数7,字符参数,描述
+,160,29,1,300,0,0,0,0,0,0,,自然恢复体力单位时间
+,161,29,2,5,204010,0,0,0,0,0,,道具点数回复体力
+,162,29,3,50,204020,0,0,0,0,0,,道具点数回复体力
+,163,29,3,100,204030,0,0,0,0,0,,道具百分比回复体力
+,164,29,4,100,60,0,0,0,0,0,,代币百分比回复体力
+,165,29,5,999,0,0,0,0,0,0,,回复体力上限

@@ -1,0 +1,17 @@
+﻿,required,required,required,required
+,uint32,uint32,string,string
+,type,sort,path_normal,path_complete
+备注,任务类型,优先级,普通图标路径,完成图标路径
+,1,1,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_principal line_def_35px .png,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_principal line_def_35px_02.png
+,2,2,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_Feeder line_def_35px _01.png,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_Feeder line_def_35px _02.png
+,3,3,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_Feeder line_def_35px _01.png,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_Feeder line_def_35px _02.png
+,4,4,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_Feeder line_def_35px _01.png,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_Feeder line_def_35px _02.png
+,5,5,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_Feeder line_def_35px _01.png,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_Feeder line_def_35px _02.png
+,6,6,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_Feeder line_def_35px _01.png,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_Feeder line_def_35px _02.png
+,7,7,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_dungeon_def_35px_01.png,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_dungeon_def_35px_02.png
+,8,8,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_Feeder line_def_35px _01.png,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_Feeder line_def_35px _02.png
+,9,9,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_Feeder line_def_35px _01.png,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_Feeder line_def_35px _02.png
+,11,11,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_Feeder line_def_35px _01.png,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_Feeder line_def_35px _02.png
+,12,12,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_Feeder line_def_35px _01.png,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_Feeder line_def_35px _02.png
+,103,103,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_Feeder line_def_35px _01.png,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_Feeder line_def_35px _02.png
+,108,108,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_Feeder line_def_35px _01.png,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_Feeder line_def_35px _02.png

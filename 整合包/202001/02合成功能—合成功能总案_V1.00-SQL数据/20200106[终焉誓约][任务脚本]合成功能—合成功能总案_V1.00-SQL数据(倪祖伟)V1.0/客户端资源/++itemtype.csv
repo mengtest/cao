@@ -1,0 +1,10 @@
+﻿,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional
+,uint32,string,uint32,uint32,string,string,uint32,uint32,uint32,uint32,uint32
+,id,name,sort,time_type,time_min,time_max,amount_limit,flag,price,awardid,actionid
+备注,物品id,名称,物品类型,时间类型,时间上限,时间下限,叠加上限,物品flag,售出金币,奖励id,Action id
+,610012,R本命碎片,10,0,,,9999,64,100,0,0
+,610013,SR本命碎片,10,0,,,9999,64,200,0,0
+,610014,SSR本命碎片,10,0,,,9999,64,300,0,0
+,610022,蓝色符文碎片,10,0,,,9999,64,100,0,0
+,610023,紫色符文碎片,10,0,,,9999,64,200,0,0
+,610024,橙色符文碎片,10,0,,,9999,64,300,0,0

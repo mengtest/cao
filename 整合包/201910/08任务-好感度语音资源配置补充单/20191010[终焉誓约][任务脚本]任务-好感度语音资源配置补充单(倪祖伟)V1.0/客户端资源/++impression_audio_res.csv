@@ -1,0 +1,10 @@
+﻿,required,required,required,required,required
+,uint32,uint32,int32,uint32,uint32
+,id,hero_id,unlock_level,chinese_id,japanese_id
+备注,英雄id拼接音频索引,英雄id,解锁等级,中文的音频id,日文的音频id
+,10104,101,4,4,0
+,10105,101,6,5,0
+,10106,101,8,6,0
+,10402,104,3,26,0
+,10403,104,6,27,0
+,10702,107,3,31,0

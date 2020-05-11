@@ -1,0 +1,10 @@
+﻿,optional,optional,optional,optional,optional,optional
+,uint32,uint32,uint32,uint32,uint32,string
+,id,type,monitor_id,activity_id,show_type,data1
+备注,广播id,广播类型,监听ID,活动ID,显示方式,data1
+,1,1,2233,0,0,0
+,2,1,2234,0,0,0
+,3,1,2235,0,0,0
+,6,3,0,0,3,070000
+,7,3,0,0,3,110000
+,8,3,0,0,3,170000

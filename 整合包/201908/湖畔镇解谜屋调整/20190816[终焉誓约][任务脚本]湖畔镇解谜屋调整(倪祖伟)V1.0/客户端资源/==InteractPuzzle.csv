@@ -1,0 +1,5 @@
+﻿,required,optional,optional,optional,optional,optional,optional
+,uint32,uint32,uint32,string,string,uint32,uint32
+,id,type,resId,resName,resPos,resArg,soundId
+备注,解谜事件Id,事件类型,资源ID,资源名称,资源位置,资源参数,音效ID
+,101005,1,0,,"0,0,0",1,0

@@ -1,0 +1,5 @@
+﻿,required,required,required,required,required,required,required,required,required,required,required,repeated,required,required,required,required,required,required,required,required,required
+,uint32,uint32,uint32,uint32,uint32,uint32,uint32,string,string,uint32,uint32,uint32,uint32,int32,int32,string,string,int32,int32,int32,string
+,id,guide_id,step,wait,complete,type,mode,name,path,follow,duration,showObject,data_1,data_2,data_3,str_1,str_2,direction,effectType,finger_to,iconPath
+Mark,流水id,引导索引,步骤,等待服务端消息 0否 1是,完成引导消息,引导类型 1:UI界面 2:对话 3:战斗引导,引导方式 0:遮罩按钮点击 1:预先隐藏物体,索引名,目标路径,遮罩跟随 0否 1是,跟随时间（毫秒）,显示隐藏对象,"特殊数据 (type=1,data=CgTalk表的对话ID)","特殊数据 (type=1,data=CgTalk表的对话ID)","特殊数据 (type=1,data=CgTalk表的对话ID)",字符数据,字符数据,文字方向,指引特效类型,特效手指方向,精灵路径
+,12301,123,1,0,1,1,108,LeftTaskPanel,left/Scroll View/Viewport/Content/task1,1,100,,3134,31,-57,,,1,0,0,

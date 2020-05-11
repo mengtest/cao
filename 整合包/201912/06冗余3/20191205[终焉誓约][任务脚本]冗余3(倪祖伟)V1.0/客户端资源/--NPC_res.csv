@@ -1,0 +1,10 @@
+﻿,required,optional,optional
+,uint32,string,string
+,id,headPath,normalHalfPath
+备注,id,标准头像,标准半身像
+,3468,Textures/Atlas/Dyn/CharacterCommonHead/EliteWarrio.png,Textures/Atlas/Dyn/CharacterHalfBody/TribaleliteWarrior.png
+,3558,Textures\Atlas\Dyn\CharacterCommonHead\default.png,Textures\Atlas\Dyn\CharacterHalfBody\Completelytransparent.png
+,3559,Textures\Atlas\Dyn\CharacterCommonHead\default.png,Textures\Atlas\Dyn\CharacterHalfBody\Bailiff.png
+,3681,Textures/Atlas/Dyn/CharacterCommonHead/HaiMo.png,Textures/Atlas/Dyn/CharacterHalfBody/HaiJuMo.png
+,3682,Textures\Atlas\Dyn\CharacterCommonHead\Dani.png,Textures\Atlas\Dyn\CharacterHalfBody\Dani.png
+,3683,Textures\Atlas\Dyn\CharacterCommonHead\Sylvansskinny.png,Textures\Atlas\Dyn\CharacterHalfBody\Mentionspirit.png

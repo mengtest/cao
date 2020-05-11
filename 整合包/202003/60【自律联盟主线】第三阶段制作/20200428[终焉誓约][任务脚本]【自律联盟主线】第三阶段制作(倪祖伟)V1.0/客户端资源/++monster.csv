@@ -1,0 +1,5 @@
+﻿,required,required,optional,optional,optional,optional,optional,optional,optional,repeated,repeated,optional,repeated,optional,repeated,optional
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,string,uint32,string,uint32,uint32
+,id,name,attr_type,type,sex,family,profession,level,attr_id,special_effects,own_skills,skill_que,skill_vis,skill_loop_que,skill_que_vis,action_id
+备注,怪物ID,注释,属性适配类型,怪物类型,性别,家族,职业类型,等级,怪物属性ID,特殊效果ID,拥有技能列表,技能序列,技能序列可见性,循环技能序列,循环技能序列可见性,效果ID
+,9000699,,0,0,1,7,2,1,9000699,,1005801;1005802,"0,1,0;0,1",0,"0,1,0;0,1",0,0

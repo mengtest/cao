@@ -1,0 +1,644 @@
+--region [CopyMap]AoZiJiaZu_Day3.lua
+--Purpose:		奥兹家族第三天副本
+--Creator: 		倪祖伟
+--Created:		2019-10-31
+--Modifier:		$Author: 倪祖伟 $
+--Modified:		$Date: 19-10-31 $
+--RCS-ID:		$Revision: 1 $
+--endregion
+--===========================副本基础配置====================================--
+local BaoDiNum = 15
+local tPos = {}
+   tPos[1] = "22.49,1.643,-22.01"
+   tPos[2] = "21.93,1.643,-26.18"
+   tPos[3] = "26.62,1.643,-21.36"
+   tPos[4] = "25.36,1.643,-27.95"
+   tPos[5] = "28.42,1.643,-25.13"
+
+local tSkyShiYanCreateGen = {
+    -- 3148001,3148002,3148003,3148004,3148005,
+    3148006,3148008,3148010,
+    3148011,3148012,3148013,3148015,3148016,3148018,3148019,3148020,3148021,3148022
+    }
+local tSevenColGenID = {
+    3148011,3148012,3148013,3148014,3148015,3148016,3148017
+}
+local tGenIDAboutFZ = {
+    3148001,3148002,3148003,3148004,3148005,        --五小心
+    3148010,3148022                                 --障碍、障碍陷阱
+}
+
+local nCopyMapMissId = 3148
+local nTempData = 1232
+--data1~data5 记录各个小星星的灯亮暗；data6 记录次数
+local nCollectTime = 1
+--掩码data6记录第二个任务的触发的对白
+
+local tWuMangXing = {}          --五芒星
+tWuMangXing[3148001] = {                  --3148001
+    3148004,3148005
+}
+tWuMangXing[3148002] = {          --3148002             3148003
+    3148003,3148005
+}
+tWuMangXing[3148003] = {              --3148004     3148005
+    3148002,3148004
+}
+tWuMangXing[3148004] = {
+    3148001,3148003
+}
+tWuMangXing[3148005] = {
+    3148001,3148002
+}
+
+local tWuMangXingDataIndex = {}
+tWuMangXingDataIndex[3148001] = CONST_TEMP_DATA.Data1
+tWuMangXingDataIndex[3148002] = CONST_TEMP_DATA.Data2
+tWuMangXingDataIndex[3148003] = CONST_TEMP_DATA.Data3
+tWuMangXingDataIndex[3148004] = CONST_TEMP_DATA.Data4
+tWuMangXingDataIndex[3148005] = CONST_TEMP_DATA.Data5
+
+-- local tWuMangPosIndex = {}
+-- tWuMangPosIndex[3148001] = 1
+-- tWuMangPosIndex[3148002] = 2
+-- tWuMangPosIndex[3148003] = 3
+-- tWuMangPosIndex[3148004] = 4
+-- tWuMangPosIndex[3148005] = 5
+
+local tEffecInfo = {}
+tEffecInfo["An"] = 2021
+tEffecInfo["Ming"] = 2079--2018
+tEffecInfo["WuMangXing"] = 2077--2020
+tEffecInfo["FaZhenO"] = 2078--2028
+--tEffecInfo["xiaoxing"] = 2079
+--==================================
+local tNpcGroup= {}
+tNpcGroup.collet1 = 60473
+tNpcGroup.collet2 = 60474
+tNpcGroup.collet3 = 60475
+tNpcGroup.collet4 = 60476
+tNpcGroup.collet5 = 60477
+tNpcGroup.collet6 = 60478
+tNpcGroup.collet7 = 60479
+tNpcGroup.monster1= 60480
+tNpcGroup.monster2= 60481
+
+tNpcGroup.Trap1 = 30683
+tNpcGroup.Trap2 = 30680
+tNpcGroup.Trap3 = 30682
+tNpcGroup.TrapFZ = 30681
+tNpcGroup.TrapDo = 30706
+
+
+local tGenId = {}
+tGenId.collet1 = 3148011
+tGenId.collet2 = 3148012
+tGenId.collet3 = 3148013
+tGenId.collet4 = 3148014
+tGenId.collet5 = 3148015
+tGenId.collet6 = 3148016
+tGenId.collet7 = 3148017
+tGenId.Colmonster1= 3148018
+tGenId.Colmonster2= 3148019
+tGenId.monster1= 3148020
+tGenId.monster2= 3148021
+tGenId.valveDoor=3148010
+tGenId.TrapDoor= 3148022
+--=================================
+local tDialog = {}
+tDialog.EnterMap = 6918
+tDialog.pos1 = 6919
+tDialog.pos2 = 7027
+tDialog.pos3 = 7039
+tDialog.FaZe = 7024
+tDialog.Door = 7023
+tDialog.Collet1 = 6920
+tDialog.Collet2 = 6921
+tDialog.Collet3 = 6922
+tDialog.Collet1_3 = 7022
+tDialog.Collet4 = 7029
+tDialog.Collet5 = 7030
+tDialog.Collet4_5 = 7038
+tDialog.Collet6 = 7040
+tDialog.Collet7 = 7041
+tDialog.Collet6_7 = 7042
+tDialog.battle = 7028
+tDialog.pass = 7043
+tDialog.FZone = 7025
+tDialog.FZovr = 7026
+tDialog.BaoDi = 7058
+--===================================
+rwtTarget[60320] = {}
+rwtTarget[60320]["Title"] = tLuaText[LANGUAGE_CONFIG][21890]
+rwtTarget[60320]["ReqCollectId"] = {tNpcGroup.collet1,tNpcGroup.collet2,tNpcGroup.collet3,tNpcGroup.collet4,tNpcGroup.collet5,tNpcGroup.collet6,tNpcGroup.collet7}
+-- rwtTarget[60320]["ReqDialogId"] = tDialog.EnterMap
+rwtTarget[60320]["ReqCount"] = 7
+
+rwtTarget[60321] = {}
+rwtTarget[60321]["Title"] = tLuaText[LANGUAGE_CONFIG][21891]
+rwtTarget[60321]["ReqDialogId"] = tDialog.pass
+rwtTarget[60321]["ReqCount"] = 1
+
+-- rwtTarget[60322] = {}
+-- rwtTarget[60322]["Title"] = tLuaText[LANGUAGE_CONFIG][21892]
+-- rwtTarget[60322]["ReqTrap"] = 30682
+-- -- rwtTarget[60322]["ReqDialogId"] = tDialog.pos2
+-- rwtTarget[60322]["ReqCount"] = 1
+
+-- rwtTarget[60323] = {}
+-- rwtTarget[60323]["Title"] = tLuaText[LANGUAGE_CONFIG][21893]
+-- -- rwtTarget[60323]["ReqTrap"] = 30683
+-- rwtTarget[60323]["ReqDialogId"] = 7028
+-- rwtTarget[60323]["ReqCount"] = 1
+
+
+
+rwtCopyMapMission[nCopyMapMissId] = rwtCopyMapMission[nCopyMapMissId] or {}
+rwtCopyMapMission[nCopyMapMissId]["ReqLev"] = 1
+rwtCopyMapMission[nCopyMapMissId]["Difficulty"] = 1
+rwtCopyMapMission[nCopyMapMissId]["TargetStepNum"] = 2
+rwtCopyMapMission[nCopyMapMissId]["Target1"] = {60320}
+rwtCopyMapMission[nCopyMapMissId]["Target2"] = {60321}
+-- rwtCopyMapMission[nCopyMapMissId]["Target3"] = {60322}
+-- rwtCopyMapMission[nCopyMapMissId]["Target4"] = {60323}
+rwtCopyMapMission[nCopyMapMissId]["Target99"] = {60072}
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"] = {}
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"] = {}
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1] = {}
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["OpenDialog"] = {}
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["OpenDialog"]["DialogId"] = tDialog.EnterMap
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["DynCreate"] = tSkyShiYanCreateGen
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"] = {}
+-- rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][1] = {}
+-- rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][1]["TargetType"] = 4
+-- rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][1]["TargetId"] = 3148001
+-- rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][1]["EffectId"] = tEffecInfo["An"]
+-- rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][1]["Scale"] = 30
+-- rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][2] = {}
+-- rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][2]["TargetType"] = 4
+-- rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][2]["TargetId"] = 3148002
+-- rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][2]["EffectId"] = tEffecInfo["An"]
+-- rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][2]["Scale"] = 30
+-- rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][3] = {}
+-- rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][3]["TargetType"] = 4
+-- rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][3]["TargetId"] = 3148003
+-- rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][3]["EffectId"] = tEffecInfo["An"]
+-- rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][3]["Scale"] = 30
+-- rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][4] = {}
+-- rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][4]["TargetType"] = 4
+-- rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][4]["TargetId"] = 3148004
+-- rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][4]["EffectId"] = tEffecInfo["An"]
+-- rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][4]["Scale"] = 30
+-- rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][5] = {}
+-- rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][5]["TargetType"] = 4
+-- rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][5]["TargetId"] = 3148005
+-- rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][5]["EffectId"] = tEffecInfo["An"]
+-- rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][5]["Scale"] = 30
+
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][1] = {}
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][1]["TargetType"] = 7
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][1]["TargetId"] = 0
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][1]["EffectId"] = tEffecInfo["An"]
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][1]["Pos"] = tPos[1]
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][1]["Scale"] = 30
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][2] = {}
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][2]["TargetType"] = 7
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][2]["TargetId"] = 0
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][2]["EffectId"] = tEffecInfo["An"]
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][2]["Pos"] = tPos[2]
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][2]["Scale"] = 30
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][3] = {}
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][3]["TargetType"] = 7
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][3]["TargetId"] = 0
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][3]["EffectId"] = tEffecInfo["An"]
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][3]["Pos"] = tPos[3]
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][3]["Scale"] = 30
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][4] = {}
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][4]["TargetType"] = 7
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][4]["TargetId"] = 0
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][4]["EffectId"] = tEffecInfo["An"]
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][4]["Pos"] = tPos[4]
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][4]["Scale"] = 30
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][5] = {}
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][5]["TargetType"] = 7
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][5]["EffectId"] = tEffecInfo["An"]
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][5]["TargetId"] = 0
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][5]["Pos"] = tPos[5]
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][5]["Scale"] = 30
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][6] = {}
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][6]["TargetType"] = 7
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][6]["TargetId"] = 0
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][6]["EffectId"] = tEffecInfo["WuMangXing"]
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][6]["Pos"] = "25.01,1.64,-24.4101"
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["AddEffect"][6]["Angle"] = "0,27,0"
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["SetUserTempData"] = {}
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["SetUserTempData"][1] = {}
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["SetUserTempData"][1]["TempDataID"] = nTempData
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["SetUserTempData"][1]["DataIndex"] = CONST_TEMP_DATA.Data1
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["SetUserTempData"][1]["SetValue"] = 1
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["SetUserTempData"][2] = {}
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["SetUserTempData"][2]["TempDataID"] = nTempData
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["SetUserTempData"][2]["DataIndex"] = CONST_TEMP_DATA.Data2
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["SetUserTempData"][2]["SetValue"] = 1
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["SetUserTempData"][3] = {}
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["SetUserTempData"][3]["TempDataID"] = nTempData
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["SetUserTempData"][3]["DataIndex"] = CONST_TEMP_DATA.Data3
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["SetUserTempData"][3]["SetValue"] = 1
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["SetUserTempData"][4] = {}
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["SetUserTempData"][4]["TempDataID"] = nTempData
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["SetUserTempData"][4]["DataIndex"] = CONST_TEMP_DATA.Data4
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["SetUserTempData"][4]["SetValue"] = 1
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["SetUserTempData"][5] = {}
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["SetUserTempData"][5]["TempDataID"] = nTempData
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["SetUserTempData"][5]["DataIndex"] = CONST_TEMP_DATA.Data5
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["SetUserTempData"][5]["SetValue"] = 1
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["SetUserTempData"][6] = {}
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["SetUserTempData"][6]["TempDataID"] = nTempData
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["SetUserTempData"][6]["DataIndex"] = CONST_TEMP_DATA.Data6
+rwtCopyMapMission[nCopyMapMissId]["CopyMapInit"]["Events"][1]["SetUserTempData"][6]["SetValue"] = 0
+
+
+
+function rwCopyMapAoZiJiaZu_Collect(GenId)
+    local index = rwTempDataGetValue(nTempData,CONST_TEMP_DATA.Data6,rwUserGetId())
+    if index >= BaoDiNum then
+        rwOpenNpcChatDialog(tDialog.BaoDi)
+        return
+    end
+    rwUserTempDataSet(nTempData,index+1,CONST_TEMP_DATA.Data6,rwUserGetId())
+    if not tWuMangXing[GenId] then
+        return
+    end
+    rwCopyMapAoZiJiaZu_EffectChange(GenId)      --自身光效转换
+    for _, v in ipairs(tWuMangXing[GenId]) do   --五芒星对面光效转换
+        rwCopyMapAoZiJiaZu_EffectChange(v)
+    end
+    rwCopyMapAoZiJiaZu_ChkWuMangXing()
+end
+
+function rwCopyMapAoZiJiaZu_EffectChange(GenId)
+    local dataIndex = tWuMangXingDataIndex[GenId]                   --获取对应的DataIndex
+    if rwTempDataGetValue(nTempData,dataIndex,rwUserGetId()) == 1 then  --=1则为灰暗状态
+        rwSpecialStatus_AddEffect(4,GenId, tEffecInfo["Ming"], "", 0,30)
+        rwUserTempDataSet(nTempData,2,dataIndex,rwUserGetId())
+    elseif rwTempDataGetValue(nTempData,dataIndex,rwUserGetId()) == 2 then  --=2则为明状态
+        rwSpecialStatus_RemoveEffect(4,GenId, tEffecInfo["Ming"])               --光效转为暗，掩码记录为1
+        rwUserTempDataSet(nTempData,1,dataIndex,rwUserGetId())
+    end
+end
+
+-- function rwCopyMapAoZiJiaZu_EffectChange(GenId)
+--     local dataIndex = tWuMangXingDataIndex[GenId]                   --获取对应的DataIndex
+--     if rwTempDataGetValue(nTempData,dataIndex,rwUserGetId()) == 1 then  --=1则为灰暗状态
+--         rwSpecialStatus_RemoveEffect(6,GenId, tEffecInfo["An"])             --光效转为明，掩码记录为2
+--         rwSpecialStatus_AddEffect(6,GenId, tEffecInfo["Ming"], "", 0,30)
+--         rwUserTempDataSet(nTempData,2,dataIndex,rwUserGetId())
+--     elseif rwTempDataGetValue(nTempData,dataIndex,rwUserGetId()) == 2 then  --=2则为明状态
+--         rwSpecialStatus_RemoveEffect(6,GenId, tEffecInfo["Ming"])               --光效转为暗，掩码记录为1
+--         rwSpecialStatus_AddEffect(6,GenId, tEffecInfo["An"], "", 0,30)
+--         rwUserTempDataSet(nTempData,1,dataIndex,rwUserGetId())
+--     end
+-- end
+
+function rwCopyMapAoZiJiaZu_PassFaZhen()
+    rwSpecialStatus_AddEffect(7,0, tEffecInfo["FaZhenO"], "25.01,1.64,-24.4101","0,27,0")
+    rwSpecialStatus_RemoveEffect(7,0,tEffecInfo["WuMangXing"])
+    
+
+    --没有返回，则表示全是2，全亮
+    rwOpenNpcChatDialog(tDialog.FZovr)
+    --rwBaseTarget:create(60320):EventOnTargetUpdate()
+    --删除路障
+    for i,v in ipairs(tGenIDAboutFZ) do
+        rwDelGenEvent(v)
+    end
+    for i,v in ipairs(tPos) do
+        rwSpecialStatus_AddEffect(7,0, tEffecInfo.Ming, v,0,30)
+    end
+end
+
+function rwCopyMapAoZiJiaZu_ChkWuMangXing()
+    if rwTempDataGetValue(nTempData,CONST_TEMP_DATA["Data6"],rwUserGetId()) == 0 then
+        rwUserTempDataSet(nTempData,1,CONST_TEMP_DATA["Data6"],rwUserGetId())
+        rwOpenNpcChatDialog(tDialog.FZone)
+    end
+    for i = 1,5 do
+        if rwTempDataGetValue(nTempData,CONST_TEMP_DATA["Data"..i],rwUserGetId()) == 1 then
+            return
+        end
+    end
+    rwCopyMapAoZiJiaZu_PassFaZhen()
+end
+
+rwtNpcGroup[tNpcGroup.Trap1] = rwtNpcGroup[tNpcGroup.Trap1] or {}
+rwtNpcGroup[tNpcGroup.Trap1]["Type"] = CONST_NPCGROUP_TYPE.Trap
+rwtNpcGroup[tNpcGroup.Trap1]["DelTrap"] = 1
+rwtNpcGroup[tNpcGroup.Trap1]["Awards"] = {}
+rwtNpcGroup[tNpcGroup.Trap1]["Awards"]["Events"] = {}
+rwtNpcGroup[tNpcGroup.Trap1]["Awards"]["Events"][1] = {}
+rwtNpcGroup[tNpcGroup.Trap1]["Awards"]["Events"][1]["OpenDialog"] = {}
+rwtNpcGroup[tNpcGroup.Trap1]["Awards"]["Events"][1]["OpenDialog"]["DialogId"] = tDialog.pos1
+
+rwtNpcGroup[tNpcGroup.Trap2] = rwtNpcGroup[tNpcGroup.Trap2] or {}
+rwtNpcGroup[tNpcGroup.Trap2]["Type"] = CONST_NPCGROUP_TYPE.Trap
+rwtNpcGroup[tNpcGroup.Trap2]["DelTrap"] = 1
+rwtNpcGroup[tNpcGroup.Trap2]["Awards"] = {}
+rwtNpcGroup[tNpcGroup.Trap2]["Awards"]["Events"] = {}
+rwtNpcGroup[tNpcGroup.Trap2]["Awards"]["Events"][1] = {}
+-- rwtNpcGroup[tNpcGroup.Trap2]["Awards"]["Events"][1]["OpenDialog"] = {}
+-- rwtNpcGroup[tNpcGroup.Trap2]["Awards"]["Events"][1]["OpenDialog"]["DialogId"] = tDialog.pos2
+rwtNpcGroup[tNpcGroup.Trap2]["Awards"]["Events"][1]["PlaySceneAnimation"]={}
+rwtNpcGroup[tNpcGroup.Trap2]["Awards"]["Events"][1]["PlaySceneAnimation"]["Id"] = 17201
+rwtNpcGroup[tNpcGroup.Trap2]["Awards"]["Events"][1]["PlaySceneAnimation"]["Type"] = 2
+rwtNpcGroup[tNpcGroup.Trap2]["Awards"]["Events"][1]["PlaySceneAnimation"]["IsChgScenePlay"] = 0
+
+rwtNpcGroup[tNpcGroup.Trap3] = rwtNpcGroup[tNpcGroup.Trap3] or {}
+rwtNpcGroup[tNpcGroup.Trap3]["Type"] = CONST_NPCGROUP_TYPE.Trap
+rwtNpcGroup[tNpcGroup.Trap3]["DelTrap"] = 1
+rwtNpcGroup[tNpcGroup.Trap3]["Awards"] = {}
+rwtNpcGroup[tNpcGroup.Trap3]["Awards"]["Events"] = {}
+rwtNpcGroup[tNpcGroup.Trap3]["Awards"]["Events"][1] = {}
+rwtNpcGroup[tNpcGroup.Trap3]["Awards"]["Events"][1]["OpenDialog"] = {}
+rwtNpcGroup[tNpcGroup.Trap3]["Awards"]["Events"][1]["OpenDialog"]["DialogId"] = tDialog.pos3
+
+
+rwtNpcGroup[tNpcGroup.TrapDo] = rwtNpcGroup[tNpcGroup.TrapDo] or {}
+rwtNpcGroup[tNpcGroup.TrapDo]["Type"] = CONST_NPCGROUP_TYPE.Trap
+-- rwtNpcGroup[tNpcGroup.TrapDo]["DelTrap"] = 1
+rwtNpcGroup[tNpcGroup.TrapDo]["Awards"] = {}
+rwtNpcGroup[tNpcGroup.TrapDo]["Awards"]["Events"] = {}
+rwtNpcGroup[tNpcGroup.TrapDo]["Awards"]["Events"][1] = {}
+rwtNpcGroup[tNpcGroup.TrapDo]["Awards"]["Events"][1]["OpenDialog"] = {}
+rwtNpcGroup[tNpcGroup.TrapDo]["Awards"]["Events"][1]["OpenDialog"]["DialogId"] = tDialog.Door
+
+rwtDialog[tDialog.Door] = rwtDialog[tDialog.Door] or {}
+rwtDialog[tDialog.Door]["DialogEndInit"] = {}
+rwtDialog[tDialog.Door]["DialogEndInit"]["Events"] = {}
+rwtDialog[tDialog.Door]["DialogEndInit"]["Events"][1] = {}
+rwtDialog[tDialog.Door]["DialogEndInit"]["Events"][1]["DynCreate"] = {3148007}
+-- rwtDialog[tDialog.Door]["DialogEnd"] = function(nid)
+--     rwSpecialStatus_AddEffect(4,3148001, tEffecInfo["An"], "", 0,30)
+--     rwSpecialStatus_AddEffect(4,3148002, tEffecInfo["An"], "", 0,30)
+--     rwSpecialStatus_AddEffect(4,3148003, tEffecInfo["An"], "", 0,30)
+--     rwSpecialStatus_AddEffect(4,3148004, tEffecInfo["An"], "", 0,30)
+--     rwSpecialStatus_AddEffect(4,3148005, tEffecInfo["An"], "", 0,30)
+-- end
+
+
+rwtNpcGroup[tNpcGroup.TrapFZ] = rwtNpcGroup[tNpcGroup.TrapFZ] or {}
+rwtNpcGroup[tNpcGroup.TrapFZ]["Type"] = CONST_NPCGROUP_TYPE.Trap
+rwtNpcGroup[tNpcGroup.TrapFZ]["DelTrap"] = 1
+rwtNpcGroup[tNpcGroup.TrapFZ]["Awards"] = {}
+rwtNpcGroup[tNpcGroup.TrapFZ]["Awards"]["Events"] = {}
+rwtNpcGroup[tNpcGroup.TrapFZ]["Awards"]["Events"][1] = {}
+rwtNpcGroup[tNpcGroup.TrapFZ]["Awards"]["Events"][1]["OpenDialog"] = {}
+rwtNpcGroup[tNpcGroup.TrapFZ]["Awards"]["Events"][1]["OpenDialog"]["DialogId"] = tDialog.FaZe
+
+rwtDialog[tDialog.FaZe] = rwtDialog[tDialog.FaZe] or {}
+rwtDialog[tDialog.FaZe]["DialogEndInit"] = {}
+rwtDialog[tDialog.FaZe]["DialogEndInit"]["Events"] = {}
+rwtDialog[tDialog.FaZe]["DialogEndInit"]["Events"][1] = {}
+rwtDialog[tDialog.FaZe]["DialogEndInit"]["Events"][1]["DynCreate"] = {3148001,3148002,3148003,3148004,3148005}
+
+rwtDialog[tDialog.BaoDi] = rwtDialog[tDialog.BaoDi] or {}
+rwtDialog[tDialog.BaoDi]["DialogEnd"] = function(nid)
+    rwCopyMapAoZiJiaZu_PassFaZhen()
+end
+
+--==五芒星=====================================================
+rwtNpcGroup[60459] = rwtNpcGroup[60459] or {}
+rwtNpcGroup[60459]["Type"] = CONST_NPCGROUP_TYPE.Collect
+rwtNpcGroup[60459]["CollectTime"] = nCollectTime
+rwtNpcGroup[60459]["NotDel"] = 1
+rwtNpcGroup[60459]["Func"] = function(nGenEventId)
+    rwCopyMapAoZiJiaZu_Collect(nGenEventId)
+end
+
+rwtNpcGroup[60460] = rwtNpcGroup[60460] or {}
+rwtNpcGroup[60460]["Type"] = CONST_NPCGROUP_TYPE.Collect
+rwtNpcGroup[60460]["CollectTime"] = nCollectTime
+rwtNpcGroup[60460]["NotDel"] = 1
+rwtNpcGroup[60460]["Func"] = function(nGenEventId)
+    rwCopyMapAoZiJiaZu_Collect(nGenEventId)
+end
+
+rwtNpcGroup[60461] = rwtNpcGroup[60461] or {}
+rwtNpcGroup[60461]["Type"] = CONST_NPCGROUP_TYPE.Collect
+rwtNpcGroup[60461]["CollectTime"] = nCollectTime
+rwtNpcGroup[60461]["NotDel"] = 1
+rwtNpcGroup[60461]["Func"] = function(nGenEventId)
+    rwCopyMapAoZiJiaZu_Collect(nGenEventId)
+end
+
+rwtNpcGroup[60462] = rwtNpcGroup[60462] or {}
+rwtNpcGroup[60462]["Type"] = CONST_NPCGROUP_TYPE.Collect
+rwtNpcGroup[60462]["CollectTime"] = nCollectTime
+rwtNpcGroup[60462]["NotDel"] = 1
+rwtNpcGroup[60462]["Func"] = function(nGenEventId)
+    rwCopyMapAoZiJiaZu_Collect(nGenEventId)
+end
+
+rwtNpcGroup[60463] = rwtNpcGroup[60463] or {}
+rwtNpcGroup[60463]["Type"] = CONST_NPCGROUP_TYPE.Collect
+rwtNpcGroup[60463]["CollectTime"] = nCollectTime
+rwtNpcGroup[60463]["NotDel"] = 1
+rwtNpcGroup[60463]["Func"] = function(nGenEventId)
+    rwCopyMapAoZiJiaZu_Collect(nGenEventId)
+end
+
+--=============================================
+rwtNpcGroup[tNpcGroup.collet1] = rwtNpcGroup[tNpcGroup.collet1] or {}
+rwtNpcGroup[tNpcGroup.collet1]["Type"] = CONST_NPCGROUP_TYPE.Collect
+rwtNpcGroup[tNpcGroup.collet1]["Awards"] = {}
+rwtNpcGroup[tNpcGroup.collet1]["Awards"]["Events"] = {}
+rwtNpcGroup[tNpcGroup.collet1]["Awards"]["Events"][1] = {}
+rwtNpcGroup[tNpcGroup.collet1]["Awards"]["Events"][1]["OpenDialog"] = {}
+rwtNpcGroup[tNpcGroup.collet1]["Awards"]["Events"][1]["OpenDialog"]["DialogId"] = tDialog.Collet1
+
+rwtNpcGroup[tNpcGroup.collet2] = rwtNpcGroup[tNpcGroup.collet2] or {}
+rwtNpcGroup[tNpcGroup.collet2]["Type"] = CONST_NPCGROUP_TYPE.Collect
+rwtNpcGroup[tNpcGroup.collet2]["Awards"] = {}
+rwtNpcGroup[tNpcGroup.collet2]["Awards"]["Events"] = {}
+rwtNpcGroup[tNpcGroup.collet2]["Awards"]["Events"][1] = {}
+rwtNpcGroup[tNpcGroup.collet2]["Awards"]["Events"][1]["OpenDialog"] = {}
+rwtNpcGroup[tNpcGroup.collet2]["Awards"]["Events"][1]["OpenDialog"]["DialogId"] = tDialog.Collet2
+
+rwtNpcGroup[tNpcGroup.collet3] = rwtNpcGroup[tNpcGroup.collet3] or {}
+rwtNpcGroup[tNpcGroup.collet3]["Type"] = CONST_NPCGROUP_TYPE.Collect
+rwtNpcGroup[tNpcGroup.collet3]["Awards"] = {}
+rwtNpcGroup[tNpcGroup.collet3]["Awards"]["Events"] = {}
+rwtNpcGroup[tNpcGroup.collet3]["Awards"]["Events"][1] = {}
+rwtNpcGroup[tNpcGroup.collet3]["Awards"]["Events"][1]["OpenDialog"] = {}
+rwtNpcGroup[tNpcGroup.collet3]["Awards"]["Events"][1]["OpenDialog"]["DialogId"] = tDialog.Collet3
+
+rwtNpcGroup[tNpcGroup.collet4] = rwtNpcGroup[tNpcGroup.collet4] or {}
+rwtNpcGroup[tNpcGroup.collet4]["Type"] = CONST_NPCGROUP_TYPE.Collect
+rwtNpcGroup[tNpcGroup.collet4]["Awards"] = {}
+rwtNpcGroup[tNpcGroup.collet4]["Awards"]["Events"] = {}
+rwtNpcGroup[tNpcGroup.collet4]["Awards"]["Events"][1] = {}
+rwtNpcGroup[tNpcGroup.collet4]["Awards"]["Events"][1]["OpenDialog"] = {}
+rwtNpcGroup[tNpcGroup.collet4]["Awards"]["Events"][1]["OpenDialog"]["DialogId"] = tDialog.Collet4
+
+rwtNpcGroup[tNpcGroup.collet5] = rwtNpcGroup[tNpcGroup.collet5] or {}
+rwtNpcGroup[tNpcGroup.collet5]["Type"] = CONST_NPCGROUP_TYPE.Collect
+rwtNpcGroup[tNpcGroup.collet5]["Awards"] = {}
+rwtNpcGroup[tNpcGroup.collet5]["Awards"]["Events"] = {}
+rwtNpcGroup[tNpcGroup.collet5]["Awards"]["Events"][1] = {}
+rwtNpcGroup[tNpcGroup.collet5]["Awards"]["Events"][1]["OpenDialog"] = {}
+rwtNpcGroup[tNpcGroup.collet5]["Awards"]["Events"][1]["OpenDialog"]["DialogId"] = tDialog.Collet5
+
+rwtNpcGroup[tNpcGroup.collet6] = rwtNpcGroup[tNpcGroup.collet6] or {}
+rwtNpcGroup[tNpcGroup.collet6]["Type"] = CONST_NPCGROUP_TYPE.Collect
+rwtNpcGroup[tNpcGroup.collet6]["Awards"] = {}
+rwtNpcGroup[tNpcGroup.collet6]["Awards"]["Events"] = {}
+rwtNpcGroup[tNpcGroup.collet6]["Awards"]["Events"][1] = {}
+rwtNpcGroup[tNpcGroup.collet6]["Awards"]["Events"][1]["OpenDialog"] = {}
+rwtNpcGroup[tNpcGroup.collet6]["Awards"]["Events"][1]["OpenDialog"]["DialogId"] = tDialog.Collet6
+
+rwtNpcGroup[tNpcGroup.collet7] = rwtNpcGroup[tNpcGroup.collet7] or {}
+rwtNpcGroup[tNpcGroup.collet7]["Type"] = CONST_NPCGROUP_TYPE.Collect
+rwtNpcGroup[tNpcGroup.collet7]["Awards"] = {}
+rwtNpcGroup[tNpcGroup.collet7]["Awards"]["Events"] = {}
+rwtNpcGroup[tNpcGroup.collet7]["Awards"]["Events"][1] = {}
+rwtNpcGroup[tNpcGroup.collet7]["Awards"]["Events"][1]["OpenDialog"] = {}
+rwtNpcGroup[tNpcGroup.collet7]["Awards"]["Events"][1]["OpenDialog"]["DialogId"] = tDialog.Collet7
+
+
+
+
+rwtNpcGroup[tNpcGroup.monster1] = rwtNpcGroup[tNpcGroup.monster1] or {}
+rwtNpcGroup[tNpcGroup.monster1]["Type"] = CONST_NPCGROUP_TYPE.Collect
+rwtNpcGroup[tNpcGroup.monster1]["NotDel"] = 1
+rwtNpcGroup[tNpcGroup.monster1]["Awards"] = {}
+rwtNpcGroup[tNpcGroup.monster1]["Awards"]["Events"] = {}
+rwtNpcGroup[tNpcGroup.monster1]["Awards"]["Events"][1] = {}
+-- rwtNpcGroup[tNpcGroup.monster1]["Awards"]["Events"][1]["AutoBattle"] = {}
+-- rwtNpcGroup[tNpcGroup.monster1]["Awards"]["Events"][1]["AutoBattle"]["GenId"] = 3148019
+rwtNpcGroup[tNpcGroup.monster1]["Awards"]["Events"][1]["OpenDialog"] = {}
+rwtNpcGroup[tNpcGroup.monster1]["Awards"]["Events"][1]["OpenDialog"]["DialogId"] = tDialog.battle
+rwtNpcGroup[tNpcGroup.monster1]["Awards"]["Events"][1]["OpenDialog"]["nId"] = tGenId.monster1
+
+rwtNpcGroup[tNpcGroup.monster2] = rwtNpcGroup[tNpcGroup.monster2] or {}
+rwtNpcGroup[tNpcGroup.monster2]["Type"] = CONST_NPCGROUP_TYPE.Collect
+rwtNpcGroup[tNpcGroup.monster2]["NotDel"] = 1
+rwtNpcGroup[tNpcGroup.monster2]["Awards"] = {}
+rwtNpcGroup[tNpcGroup.monster2]["Awards"]["Events"] = {}
+rwtNpcGroup[tNpcGroup.monster2]["Awards"]["Events"][1] = {}
+rwtNpcGroup[tNpcGroup.monster2]["Awards"]["Events"][1]["OpenDialog"] = {}
+rwtNpcGroup[tNpcGroup.monster2]["Awards"]["Events"][1]["OpenDialog"]["DialogId"] = tDialog.battle
+rwtNpcGroup[tNpcGroup.monster2]["Awards"]["Events"][1]["OpenDialog"]["nId"] = tGenId.monster2
+
+rwtDialog[tDialog.battle] = rwtDialog[tDialog.battle] or {}
+rwtDialog[tDialog.battle]["DialogEndInit"] = {}
+rwtDialog[tDialog.battle]["DialogEndInit"]["Events"] = {}
+rwtDialog[tDialog.battle]["DialogEndInit"]["Events"][1] = {}
+rwtDialog[tDialog.battle]["DialogEndInit"]["Events"][1]["AutoBattle"] = {}
+rwtDialog[tDialog.battle]["DialogEndInit"]["Events"][1]["AutoBattle"]["GenIdBynId"] = true
+
+
+function rwCopyMapAoZiJiaZu_Monster1_die()
+    rwDelGenEvent(tGenId.Colmonster1)
+    rwAddGenEvent(3148014)
+end
+function rwCopyMapAoZiJiaZu_Monster2_die()
+    rwDelGenEvent(tGenId.Colmonster2)
+    rwAddGenEvent(3148017)
+end
+
+rwtMonsterGroup_Func[200823] = rwtMonsterGroup_Func[200823] or {}
+table.insert(rwtMonsterGroup_Func[200823],rwCopyMapAoZiJiaZu_Monster1_die)
+rwtMonsterGroup_Func[200824] = rwtMonsterGroup_Func[200824] or {}
+table.insert(rwtMonsterGroup_Func[200824],rwCopyMapAoZiJiaZu_Monster2_die)
+
+-- tValve[1122] = tValve[1122] or {}
+-- tValve[1122]["Type"] = CONST_VALVE_TYPE.DOOR
+-- tValve[1122]["ValveEnterFunc"] =  function(nValveType, nGenId, nValveId)
+--     rwOpenNpcChatDialog(tDialog.door)
+-- end
+
+--==检查每个房间采集清，则播放另一对白=====================================
+
+rwtDialog[tDialog.Collet1] = rwtDialog[tDialog.Collet1] or {}
+rwtDialog[tDialog.Collet1]["DialogEndInit"] = {}
+rwtDialog[tDialog.Collet1]["DialogEndInit"]["Events"] = {}
+rwtDialog[tDialog.Collet1]["DialogEndInit"]["Events"][1] = {}
+rwtDialog[tDialog.Collet1]["DialogEndInit"]["Events"][1]["ChkGenEventNoExist"] = {tGenId.collet2,tGenId.collet3}
+rwtDialog[tDialog.Collet1]["DialogEndInit"]["Events"][1]["OpenDialog"] = {}
+rwtDialog[tDialog.Collet1]["DialogEndInit"]["Events"][1]["OpenDialog"]["DialogId"] = tDialog.Collet1_3
+
+rwtDialog[tDialog.Collet2] = rwtDialog[tDialog.Collet2] or {}
+rwtDialog[tDialog.Collet2]["DialogEndInit"] = {}
+rwtDialog[tDialog.Collet2]["DialogEndInit"]["Events"] = {}
+rwtDialog[tDialog.Collet2]["DialogEndInit"]["Events"][1] = {}
+rwtDialog[tDialog.Collet2]["DialogEndInit"]["Events"][1]["ChkGenEventNoExist"] = {tGenId.collet1,tGenId.collet3}
+rwtDialog[tDialog.Collet2]["DialogEndInit"]["Events"][1]["OpenDialog"] = {}
+rwtDialog[tDialog.Collet2]["DialogEndInit"]["Events"][1]["OpenDialog"]["DialogId"] = tDialog.Collet1_3
+
+rwtDialog[tDialog.Collet3] = rwtDialog[tDialog.Collet3] or {}
+rwtDialog[tDialog.Collet3]["DialogEndInit"] = {}
+rwtDialog[tDialog.Collet3]["DialogEndInit"]["Events"] = {}
+rwtDialog[tDialog.Collet3]["DialogEndInit"]["Events"][1] = {}
+rwtDialog[tDialog.Collet3]["DialogEndInit"]["Events"][1]["ChkGenEventNoExist"] = {tGenId.collet1,tGenId.collet2}
+rwtDialog[tDialog.Collet3]["DialogEndInit"]["Events"][1]["OpenDialog"] = {}
+rwtDialog[tDialog.Collet3]["DialogEndInit"]["Events"][1]["OpenDialog"]["DialogId"] = tDialog.Collet1_3
+-----------------------
+rwtDialog[tDialog.Collet4] = rwtDialog[tDialog.Collet4] or {}
+rwtDialog[tDialog.Collet4]["DialogEndInit"] = {}
+rwtDialog[tDialog.Collet4]["DialogEndInit"]["Events"] = {}
+rwtDialog[tDialog.Collet4]["DialogEndInit"]["Events"][1] = {}
+rwtDialog[tDialog.Collet4]["DialogEndInit"]["Events"][1]["ChkGenEventNoExist"] = {tGenId.collet5,3148020}
+rwtDialog[tDialog.Collet4]["DialogEndInit"]["Events"][1]["OpenDialog"] = {}
+rwtDialog[tDialog.Collet4]["DialogEndInit"]["Events"][1]["OpenDialog"]["DialogId"] = tDialog.Collet4_5
+
+rwtDialog[tDialog.Collet5] = rwtDialog[tDialog.Collet5] or {}
+rwtDialog[tDialog.Collet5]["DialogEndInit"] = {}
+rwtDialog[tDialog.Collet5]["DialogEndInit"]["Events"] = {}
+rwtDialog[tDialog.Collet5]["DialogEndInit"]["Events"][1] = {}
+rwtDialog[tDialog.Collet5]["DialogEndInit"]["Events"][1]["ChkGenEventNoExist"] = {tGenId.collet4,3148020}
+rwtDialog[tDialog.Collet5]["DialogEndInit"]["Events"][1]["OpenDialog"] = {}
+rwtDialog[tDialog.Collet5]["DialogEndInit"]["Events"][1]["OpenDialog"]["DialogId"] = tDialog.Collet4_5
+---------------------
+rwtDialog[tDialog.Collet6] = rwtDialog[tDialog.Collet6] or {}
+rwtDialog[tDialog.Collet6]["DialogEndInit"] = {}
+rwtDialog[tDialog.Collet6]["DialogEndInit"]["Events"] = {}
+rwtDialog[tDialog.Collet6]["DialogEndInit"]["Events"][1] = {}
+rwtDialog[tDialog.Collet6]["DialogEndInit"]["Events"][1]["ChkGenEventNoExist"] = {tGenId.collet7,3148021}
+rwtDialog[tDialog.Collet6]["DialogEndInit"]["Events"][1]["OpenDialog"] = {}
+rwtDialog[tDialog.Collet6]["DialogEndInit"]["Events"][1]["OpenDialog"]["DialogId"] = tDialog.Collet6_7
+
+rwtDialog[tDialog.Collet7] = rwtDialog[tDialog.Collet7] or {}
+rwtDialog[tDialog.Collet7]["DialogEndInit"] = {}
+rwtDialog[tDialog.Collet7]["DialogEndInit"]["Events"] = {}
+rwtDialog[tDialog.Collet7]["DialogEndInit"]["Events"][1] = {}
+rwtDialog[tDialog.Collet7]["DialogEndInit"]["Events"][1]["ChkGenEventNoExist"] = {tGenId.collet6,3148021}
+rwtDialog[tDialog.Collet7]["DialogEndInit"]["Events"][1]["OpenDialog"] = {}
+rwtDialog[tDialog.Collet7]["DialogEndInit"]["Events"][1]["OpenDialog"]["DialogId"] = tDialog.Collet6_7
+
+--==判断第7句==========================
+rwtDialog[tDialog.Collet1_3] = rwtDialog[tDialog.Collet1_3] or {}
+rwtDialog[tDialog.Collet1_3]["DialogEndInit"] = {}
+rwtDialog[tDialog.Collet1_3]["DialogEndInit"]["Events"] = {}
+rwtDialog[tDialog.Collet1_3]["DialogEndInit"]["Events"][1] = {}
+rwtDialog[tDialog.Collet1_3]["DialogEndInit"]["Events"][1]["ChkGenEventNoExist"] = tSevenColGenID
+rwtDialog[tDialog.Collet1_3]["DialogEndInit"]["Events"][1]["OpenDialog"] = {}
+rwtDialog[tDialog.Collet1_3]["DialogEndInit"]["Events"][1]["OpenDialog"]["DialogId"] = tDialog.pass
+
+rwtDialog[tDialog.Collet4_5] = rwtDialog[tDialog.Collet4_5] or {}
+rwtDialog[tDialog.Collet4_5]["DialogEndInit"] = {}
+rwtDialog[tDialog.Collet4_5]["DialogEndInit"]["Events"] = {}
+rwtDialog[tDialog.Collet4_5]["DialogEndInit"]["Events"][1] = {}
+rwtDialog[tDialog.Collet4_5]["DialogEndInit"]["Events"][1]["ChkGenEventNoExist"] = tSevenColGenID
+rwtDialog[tDialog.Collet4_5]["DialogEndInit"]["Events"][1]["OpenDialog"] = {}
+rwtDialog[tDialog.Collet4_5]["DialogEndInit"]["Events"][1]["OpenDialog"]["DialogId"] = tDialog.pass
+
+rwtDialog[tDialog.Collet6_7] = rwtDialog[tDialog.Collet6_7] or {}
+rwtDialog[tDialog.Collet6_7]["DialogEndInit"] = {}
+rwtDialog[tDialog.Collet6_7]["DialogEndInit"]["Events"] = {}
+rwtDialog[tDialog.Collet6_7]["DialogEndInit"]["Events"][1] = {}
+rwtDialog[tDialog.Collet6_7]["DialogEndInit"]["Events"][1]["ChkGenEventNoExist"] = tSevenColGenID
+rwtDialog[tDialog.Collet6_7]["DialogEndInit"]["Events"][1]["OpenDialog"] = {}
+rwtDialog[tDialog.Collet6_7]["DialogEndInit"]["Events"][1]["OpenDialog"]["DialogId"] = tDialog.pass
+
+function moqi()
+    rwSendSystemMessage("copy==moqi")
+end

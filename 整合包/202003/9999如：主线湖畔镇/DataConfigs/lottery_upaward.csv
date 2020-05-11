@@ -1,0 +1,4 @@
+﻿,optional,optional,optional,optional,optional,optional,optional,optional,optional
+,uint32,uint32,uint32,uint32,string,uint32,uint32,uint32,uint32
+,id,raffle_type,upaward_type,upaward_id,pos,size,rotate,mirror,layer
+Mark,id,抽卡类型,奖励类型,道具id,坐标,大小,旋转,镜像翻转,层级

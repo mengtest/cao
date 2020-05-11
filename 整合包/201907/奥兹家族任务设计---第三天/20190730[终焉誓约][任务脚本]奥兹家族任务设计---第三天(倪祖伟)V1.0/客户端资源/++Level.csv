@@ -1,0 +1,5 @@
+﻿,required,required,required,required,required,required,required,required,required,required,optional,repeated,optional,repeated,required
+,uint32,string,string,uint32,uint32,uint32,uint32,float,float,float,int32,int32,string,int32,int32
+,levelID,name,desc,sceneID,sort,subsort,type,enterPosX,enterPosY,enterPosZ,audioClipID,stepClipID,loadBgName,AudioClipLoopID,auto
+备注,关卡ID,关卡名,关卡描述,资源名称,类型(-1客户端场景、0主城、1野外、2副本),子类型,"属性(2进制,地图限制)",入口坐标X,入口坐标Y(暂时添加，是否需要？？？),入口坐标Z,背景音乐,英雄脚步声,场景加载背景名,循环音乐（分号隔开,
+,3148,地下研究室,地下研究室,172,2,0,0,43.31,4.29,-43.63,1009,2260;2261;2262;2263;2264,"60,61,62,63,64,65,66,67,68,69,74,75",,0

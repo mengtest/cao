@@ -1,0 +1,5 @@
+﻿,required,required,required,optional,optional,optional,optional,optional,optional,optional
+,uint32,uint32,uint32,string,string,string,string,string,string,uint32
+,id,desc_id,statusType,statusIcon,statusHeadEffect,statusBodyEffect,statusFootEffect,uiEffect,textIcon,audio
+Mark,状态ID(状态来自skill.xlsx表技能状态 id规则为：技能id 后面再加2位数字),描述id,buff类型,状态图标,头部特效,身体特效,脚底特效,ui特效,,音效id
+,7002,7002,7002,Textures/Atlas/Dyn/Buff/yinshendoupeng.png,,,,Prefab/EffectUI/Effect_UI_buff_ty_yinshendoupeng.prefab,,0

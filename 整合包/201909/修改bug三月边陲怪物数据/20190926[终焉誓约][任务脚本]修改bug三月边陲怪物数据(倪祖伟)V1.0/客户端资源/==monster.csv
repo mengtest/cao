@@ -1,0 +1,6 @@
+﻿,required,required,optional,required,required,required,required,optional,required,repeated,repeated,required,repeated,required,repeated,required
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,string,uint32,string,uint32,uint32
+,id,name,attr_type,type,sex,family,profession,level,attr_id,special_effects,own_skills,skill_que,skill_vis,skill_loop_que,skill_que_vis,action_id
+备注,怪物ID,注释,属性适配类型,怪物类型,性别,家族,职业类型,等级,怪物属性ID,特殊效果ID,拥有技能列表,技能序列,技能序列可见性,循环技能序列,循环技能序列可见性,效果ID
+魔脊半人鱼,9000072,魔脊半人鱼,0,1,0,5,1,35,9000072,1071;1101,1004701;1004702;1004703,"1,0,1;0,1,2",0,"0,0,1;0,0,2;0,1,1",0,0
+阔斧鹿角兽,9000073,阔斧鹿角兽,0,0,0,1,1,35,9000073,1221,1003401;1003402;1003403,"1,0,1;0,1,2",0,"0,0,1;0,0,2;0,1,1",0,0

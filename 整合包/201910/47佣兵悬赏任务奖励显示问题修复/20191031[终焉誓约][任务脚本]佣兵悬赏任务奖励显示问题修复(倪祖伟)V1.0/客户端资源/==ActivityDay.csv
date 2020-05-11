@@ -1,0 +1,5 @@
+﻿,required,required,required,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional
+,uint32,uint32,uint32,string,uint32,string,uint32,string,string,string,int32,string,string,string,string,string
+,id,type,taskType,name,bgType,position,needLevel,beginTime,endTime,exp,maxExp,GroupId,mapbg,activebg,rewardId,text
+备注,活动id,活动大类型（0为自律同盟 2为其他）,用作区分活动类型比如(6为跑腿任务，类型和TimeLimit表对应),活动名称,活动框背景选择（0为普通活动框，1为高级活动框）,2d地图显示位置,开放等级,活动开始时间,活动结束时间,每次活动所获得的活跃度值,活跃度最大值,寻路GroupId,背景图片路径,小背景图片路径,奖励Id,显示内容文字
+,3,1,0,悬赏,0,"-320,-50",0,0,0,0,0,1000 70011,,,1;3030013;3060030;10,     “那些混蛋，仗着自己有点实力就到处惹事，还真不把我铁臂安道<br>夫放在眼里！”说着这样话的安道夫作势就要亲自执行正义的铁拳，<br>好在被大伙拦下。在长达三天三夜的讨论后，自律联盟最终发布了“<br>不限次数，但目标会随着进度变强”的悬赏任务。

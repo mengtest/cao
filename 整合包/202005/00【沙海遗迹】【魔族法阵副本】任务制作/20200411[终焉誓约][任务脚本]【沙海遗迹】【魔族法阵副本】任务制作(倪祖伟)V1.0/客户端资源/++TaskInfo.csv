@@ -1,0 +1,6 @@
+﻿,required,optional,required,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional
+,uint32,uint32,int32,int32,int32,int32,int32,string,int32,string,int32,string,uint32,int32,int32,string,uint32,uint32,uint32,uint32,string
+,Task_id,NPC_id,Type,SubType,areaId,Quality,Starttype,Data1,Endtype,Data2,effect,missionMap,escortLookface,talkDur,awardGroupId,QuestionMark,AutoTask,Typemask,countdown_show,countdown_type,countdown_icon
+备注,任务id,所属NPCID,任务类型,子类型（采集任务1）,所属区域ID,品质,进行中点击追踪面板触发的效果,对应数据,完成时点击追踪面板触发的功,对应数据,接受和完成特效,护送任务地图,护送Npc模型,喊话间隔时间,任务奖组Id,NPC/Monster头顶任务问号或者路标问号,自动任务,图标类型,倒计时限时,是否显示倒计时,倒计时图标路径
+,60356,0,7,0,0,0,1,,1,,2,0,0,0,0,0,0,0,0,0,
+,60408,0,7,0,0,0,1,,1,,2,0,0,0,0,0,0,0,0,0,

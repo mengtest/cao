@@ -1,0 +1,5 @@
+﻿,required,required,required
+,uint32,uint32,uint32
+,id,approach_mask,approach_skip
+备注,流水id,获取方式二进制,跳转的界面功能id
+,37,36,7

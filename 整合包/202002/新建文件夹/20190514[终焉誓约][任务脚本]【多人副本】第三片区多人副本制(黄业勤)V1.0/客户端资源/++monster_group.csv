@@ -1,0 +1,15 @@
+﻿,optional,optional,optional,optional,repeated,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32
+,id,name,fight,multi_boss,monster,money,user_exp,hero_exp,hero_impression,exp_ball,reward_id,action_id,max_battle_time,battle_check,attack_status_id,fight_type
+备注,ID,备注,战力,多人boss,怪物id,掉落金币,战队经验,英雄经验,英雄好感度,经验球经验,奖励id,事件id,战斗限时,战斗检测,偷袭状态,战斗力压制算法类型
+,200579,摩尼耶,0,0,1000891,0,0,0,0,0,1000495,0,600000,0,0,0
+,200580,黑龙舰兵,0,0,1000892,0,0,0,0,0,1000495,0,600000,0,0,0
+,200581,合成怪,0,0,1000893,0,0,0,0,0,1000495,0,600000,0,0,0
+,200582,海魔,0,0,1000894,0,0,0,0,0,1000495,0,600000,0,0,0
+,200583,黑龙战士,0,0,1000895,0,0,0,0,0,1000495,0,600000,0,0,0
+,200584,扬博士,0,0,1000896,0,0,0,0,0,1000495,0,600000,0,0,0
+,200585,四蹄神,0,0,1000897,0,0,0,0,0,0,0,600000,0,0,0
+,200586,尼格斯,0,0,1000898,0,0,0,0,0,0,0,600000,0,0,0
+,200587,机械石像,0,0,1000899,0,0,0,0,0,0,0,600000,0,0,0
+,200588,愤怒,0,1,1000900,0,0,0,0,0,0,0,600000,0,0,0
+,200736,亚兹莫,0,1,1001202,0,0,0,0,0,0,0,600000,0,0,0

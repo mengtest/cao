@@ -1,0 +1,10 @@
+﻿,required,required,required,required,required
+,int32,string,int32,int32,int32
+,id,project_id,basic_num,bonus_num,cost_rmb_cent
+备注,流水id对应界面档位顺序,商品id,基础红钻数量,额外赠送红钻数量,对应货币（分）
+,1,1,6,0,600
+,2,2,30,1,3000
+,3,3,98,5,9800
+,4,4,168,15,16800
+,5,5,328,40,32800
+,6,6,648,100,64800

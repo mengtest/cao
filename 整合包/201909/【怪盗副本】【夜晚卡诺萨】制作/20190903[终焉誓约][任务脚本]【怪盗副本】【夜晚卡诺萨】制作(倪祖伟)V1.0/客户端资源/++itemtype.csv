@@ -1,0 +1,6 @@
+﻿,required,optional,required,required,required,optional,optional,optional
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32
+,id,name,sort,amount_limit,flag,price,awardid,actionid
+备注,物品id,名称,物品类型,叠加上限,物品flag,售出金币,奖励id,Action id
+,7000008,掩护斗篷,8,9999,10,100,0,0
+,7000009,禁卫军制服,8,9999,10,100,0,0

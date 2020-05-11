@@ -1,0 +1,7 @@
+﻿,required,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,string,float,float
+,id,name,mapid,event_type,event_id,path_id,flag,intask,story_id,life_time,level_id,battle_scene,position,rotation_y,scale
+备注,分段id,名字,关卡id,事件类型,事件id,路径id,number,怪物是否显示,怪物是否喊话,存在时间,子关卡id,战斗场景id,坐标,Y轴旋转角度,模型缩放比例
+,2001506,北方暴君,2001,2,900182,0,1,1,0,0,0,58,"-78.9,0.1,-138.4",0,1
+,2001996,魔族士兵,2001,2,900339,0,1,0,0,0,0,58,"-63.81,0.06,-169.22",301.12,1
+,2001999,加固封印,2001,1,60226,0,1,0,0,0,0,0,"-91.55,0.06,-186.12",0,1

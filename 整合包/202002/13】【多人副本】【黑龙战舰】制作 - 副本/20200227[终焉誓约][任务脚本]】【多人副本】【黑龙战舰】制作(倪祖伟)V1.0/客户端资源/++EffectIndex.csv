@@ -1,0 +1,5 @@
+﻿,required,required,optional
+,uint32,string,string
+,id,effect_name,des
+备注,索引id,特效名称,注释
+,9999,Effect_buff_zengjiagongji,

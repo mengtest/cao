@@ -1,0 +1,3 @@
+﻿,id,talkName,dialogue,firstBtnText,secondBtnText,actionText
+备注,索引id,强制名称,对白内容,第一个按钮文本,第二个按钮文本,action的文本参数
+,1145001,,镇民的人数较多，解药尚未全部配置完成。等待的时间里，可以去<br><color=#bd4104>自律联盟</color>磨练一番，增强自己的实力。,马上前往自律联盟,不，我想休息一会,

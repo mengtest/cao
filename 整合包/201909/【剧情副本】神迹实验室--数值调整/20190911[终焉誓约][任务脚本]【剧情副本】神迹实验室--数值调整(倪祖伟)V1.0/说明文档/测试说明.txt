@@ -1,0 +1,49 @@
+------------------------------------------
+任务名称：【剧情副本】神迹实验室--数值调整
+By：倪祖伟
+Date：2019-09-11
+ERP链接：http://forum.nderp.99.com/Forum/TopicList-346693.aspx
+------------------------------------------
+需求：
+修改神迹实验室怪物奖励数值
+------------------------------------------
+测试PM：
+@luacall </F>rwEnterMap</N>3071
+------------------------------------------
+测试重点：
+
+------------------------------------------
+自测：
+Id：
+
+宝箱怪      
+                怪物ID          奖励ID
+40193   200423  1000736         1000480
+
+
+宝箱
+40147       1000283
+40148       1000284
+
+解救小女孩
+奖励ID
+1000285
+
+通关奖励
+1000286
+
+怪物ID：
+怪物组      怪物ID（属性ID）
+200326      1000834
+200327      9000276
+200328      9000276
+200329      9000277
+200330      9000278
+
+------------------------------------------
+
+I0922 13:12:05.592531	userid:3000000026, PM CMD:awardrandom 1000286 100000	- mysj/SceneModule/RegHandle_debug.go:45
+I0922 13:12:05.839393	award random result awardId:1000286 total times:100000	- mysj/SceneModule/RegHandle_debug.go:725
+I0922 13:12:05.839497	awardGroup:1	 awardType:1	 awardId:2110002	 itemNum:50	 times:100000	 pecent:100.00%	- mysj/SceneModule/RegHandle_debug.go:727
+I0922 13:12:05.839574	awardGroup:1	 awardType:1	 awardId:2120014	 itemNum:30	 times:100000	 pecent:100.00%	- mysj/SceneModule/RegHandle_debug.go:727
+I0922 13:12:05.839607	awardGroup:1	 awardType:1	 awardId:1	 itemNum:1000	 times:100000	 pecent:100.00%	- mysj/SceneModule/RegHandle_debug.go:727

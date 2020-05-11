@@ -1,0 +1,7 @@
+﻿,required,repeated,repeated,repeated,required,required
+,uint32,uint32,uint32,uint32,uint32,uint32
+,id,npc_ids,text_ids,text_modes,show_time,wait_time
+备注,对话id,地图刷新id序列组,文本id序列组,文本背景序列组,显示时长,等待时间
+,1201,,10219,,5,5
+,1202,,10220,,5,5
+,1203,,10221,,5,5

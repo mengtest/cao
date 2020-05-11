@@ -1,6 +1,0 @@
-﻿,required,required,required
-,int32,int32,int32
-,id,mask,award_id
-备注,问卷id,掩码位,奖励ID
-,1,1,7000697
-,2,2,7000698

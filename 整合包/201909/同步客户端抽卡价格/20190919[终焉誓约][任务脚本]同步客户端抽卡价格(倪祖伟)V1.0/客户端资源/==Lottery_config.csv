@@ -1,0 +1,7 @@
+﻿,required,required,required,required,required,optional,optional,optional,optional,optional
+,int32,int32,int32,int32,int32,uint32,uint32,string,int32,uint32
+,id,raffle_type,need_item,need_num,need_num_ten,buy_item,buy_exp_num,bannerPath,replaceType,cgId
+"备注,",id,抽取类型,消耗物品ID,消耗数量,十连抽消耗数量,购买道具id,购买经验量,图标路径,替换类型,过场动画id
+,1,1,1,500,5000,4,5000,Textures/Atlas/GUI/CallMainPanel/Newest/LegendaryHeroes.png,0,777777
+,2,2,120012,1,10,8,1000,Textures/Atlas/GUI/CallMainPanel/Newest/BasicDestiny.png,0,777778
+,3,3,120013,1,10,4,5000,Textures/Atlas/GUI/CallMainPanel/Newest/LegendaryHeroes.png,1,777777

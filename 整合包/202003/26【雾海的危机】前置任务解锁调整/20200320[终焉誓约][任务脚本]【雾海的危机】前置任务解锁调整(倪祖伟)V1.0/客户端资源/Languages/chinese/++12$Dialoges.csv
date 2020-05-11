@@ -1,0 +1,3 @@
+﻿,id,talkName,dialogue,firstBtnText,secondBtnText,actionText,dialogue_Japanese
+备注,索引id,强制名称,对白内容,第一个按钮文本,第二个按钮文本,action的文本参数,日配对白内容
+,1286901,,亲爱的冒险者，你是想参加<color=#bd4104>雾海的危机</color>吗？那必须先完成任务<color=#bd4104>雾海迷云</color>才行哦。现在你想立即开启这段冒险吗？,当然！,再让我考虑下。,,

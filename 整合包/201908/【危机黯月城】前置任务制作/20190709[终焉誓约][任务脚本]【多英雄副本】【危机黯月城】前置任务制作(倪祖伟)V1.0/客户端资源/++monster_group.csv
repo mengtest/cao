@@ -1,0 +1,12 @@
+﻿,required,required,required,required,repeated,required,required,required,required,required,required,required,required,required,required
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32
+,id,name,fight,multi_boss,monster,money,user_exp,hero_exp,exp_ball,reward_id,action_id,max_battle_time,battle_check,attack_status_id,fight_type
+备注,ID,备注,战力,多人boss,怪物id,掉落金币,战队经验,英雄经验,经验球经验,奖励id,事件id,战斗限时,战斗检测,偷袭状态,战斗力压制算法类型
+,200772,黯月贪狼,0,0,1001244,0,0,0,0,0,0,600000,0,0,0
+,200773,黯月践踏者,0,0,1001245,0,0,0,0,0,0,600000,0,0,0
+,200774,黯月邪法师,0,0,1001246,0,0,0,0,0,0,600000,0,0,0
+,900585,赤焰魔狼,0,0,9000654,0,0,0,0,0,0,600000,0,0,0
+,900586,狂怒魔爪,0,0,9000655,0,0,0,0,0,0,600000,0,1,0
+,900587,黑暗惩戒者,0,0,9000656,0,0,0,0,0,0,600000,0,0,0
+,900588,极渊魔徒,0,0,9000657,0,0,0,0,0,0,600000,0,0,0
+,900589,巨角魔,0,0,9000658,0,0,0,0,0,0,600000,0,0,0

@@ -1,0 +1,7 @@
+﻿,required,optional,optional
+,uint32,string,string
+,id,headPath,normalHalfPath
+备注,id,标准头像,标准半身像
+,3920,Textures/Atlas/Dyn/CharacterCommonHead/Elves.png,Textures\Atlas\Dyn\CharacterHalfBody\eldersofdarkelves.png
+,3921,Textures/Atlas/Dyn/CharacterCommonHead/DruidElder.png,Textures\Atlas\Dyn\CharacterHalfBody\DruidElder.png
+,3922,Textures/Atlas/Dyn/CharacterCommonHead/eldersoftree.png,Textures\Atlas\Dyn\CharacterHalfBody\eldersoftree.png

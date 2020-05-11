@@ -1,0 +1,17 @@
+﻿,required,optional,optional,optional
+,uint32,string,uint64,uint32
+,id,path,approach,red_flag
+备注,物品资源Id,图标路径,获取方式类型,是否一直显示红点 1：是 0：否
+,5,Textures/Atlas/Dyn/Item/5.png,640,0
+出战经验,6,Textures/Atlas/Dyn/Item/6.png,640,0
+,100003,Textures/Atlas/Dyn/Item/100003.png,0,0
+,120022,Textures/Atlas/Dyn/Item/120022.png,0,0
+,120023,Textures/Atlas/Dyn/Item/120023.png,0,0
+快速战斗券,210000,Textures/Atlas/Dyn/Item/210000.png,2080,0
+召唤券,210023,Textures/Atlas/Dyn/Item/210023.png,2048,0
+曜金钥匙,310010,Textures/Atlas/Dyn/Item/310010.png,2048,0
+霜晶钥匙,310020,Textures/Atlas/Dyn/Item/310020.png,2048,0
+联盟礼箱,410012,Textures/Atlas/Dyn/Item/410012.png,0,1
+,430004,Textures/Atlas/Dyn/Item/430004.png,0,1
+,3010013,Textures/Atlas/Dyn/Item/3010013.png,2147483650,0
+,3040013,Textures/Atlas/Dyn/Item/3040013.png,2049,0

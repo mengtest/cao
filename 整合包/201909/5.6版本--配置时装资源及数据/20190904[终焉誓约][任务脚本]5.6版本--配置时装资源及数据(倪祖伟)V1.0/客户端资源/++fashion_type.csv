@@ -1,0 +1,7 @@
+﻿,required,optional,required
+,uint32,string,uint32
+,id,fashion_name,hero_id
+备注,时装ID,时装名称,英雄ID
+,111,迪罗赞默认,111
+,113,纳塔娜默认,113
+,114,萨米尔默认,114

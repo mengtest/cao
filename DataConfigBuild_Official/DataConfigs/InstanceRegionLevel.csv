@@ -1,8 +1,0 @@
-﻿,required,required,optional,optional
-,uint32,uint32,string,string
-,id,scene_id,original_scene_pos,des
-Mark,id,场景ID,划分中心点,注释
-,1,0,"0,0,0",不进行配置 留给主副本
-,2,28,"450,0,150","ID2子副本中点位置,幻阵场景"
-,3,161,"750,0,150",树心城副本第二层
-,4,162,"1050,0,150",树心城副本第三层

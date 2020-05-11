@@ -1,7 +1,0 @@
-﻿,required,required,required,required,required,required,required
-,uint32,uint32,uint32,uint32,uint32,uint32,uint32
-,id,shop_type,award_id,num,refresh_time,times_type,ticket_id
-备注,ID,商城类型,抽取分组,收取的商品个数,自然刷新时间,刷新次数类型,刷新券id
-,1,4,1,1,1,49,210043
-,2,4,2,2,1,49,210043
-,3,4,3,2,1,49,210043

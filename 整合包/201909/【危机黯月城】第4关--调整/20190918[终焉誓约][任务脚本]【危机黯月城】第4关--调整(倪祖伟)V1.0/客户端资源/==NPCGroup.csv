@@ -1,0 +1,15 @@
+﻿,required,required,required,required,required,optional,required,required,required,optional,optional,optional,optional
+,uint32,uint32,string,uint32,uint32,string,uint32,uint32,float,uint32,int32,string,string
+,id,sceneId,regionSize,shapeType,type,name,plowlevel,glowlevel,scale,lookfaceId,background,des,uiPos
+备注,NPC组Id,关卡Id,区域大小,区域形状,NPC组类型(1npc/building/box/map/5copy/6transfor/7trap/8采集),名字,触发交互界面等级,npc群组最低等级,尺寸,外形id,NPC群组聊天背景,描述,（相对位置）建筑等或无模型类型UI名称位置
+,20614,3096,,0,1,绯红女巫,0,0,1,10054,0,,
+,20615,3096,,0,1,女巫忠仆,0,0,1,10058,0,,
+,20616,3096,,0,1,黑夜异教徒,0,0,1,10013,0,,
+,20617,3096,,0,1,亡魂傀儡,0,0,1,10040,0,,
+,20618,3096,"6,6,6",0,1,苍蓝领主拉弥娅,0,0,1,10057,0,,
+,20619,3096,"0,0,0",0,1,绯红女巫,0,0,1,10054,0,,
+,20620,3096,"0,0,0",0,1,女巫忠仆,0,0,1,10058,0,,
+,20621,3096,"0,0,0",0,1,黑夜异教徒,0,0,1,10013,0,,
+,20622,3096,"0,0,0",0,1,亡魂傀儡,0,0,1,10040,0,,
+,21023,3097,"0,0,0",0,1,白骨孤狼,0,0,1,10026,0,,
+,21024,3097,"0,0,0",0,1,荒原践踏者,0,0,1,10050,0,,

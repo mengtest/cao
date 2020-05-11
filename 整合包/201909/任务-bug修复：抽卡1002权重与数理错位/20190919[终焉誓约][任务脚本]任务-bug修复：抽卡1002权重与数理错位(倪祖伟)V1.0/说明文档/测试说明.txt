@@ -1,0 +1,69 @@
+------------------------------------------
+任务名称：任务-bug修复：抽卡1002权重与数理错位
+By：倪祖伟
+Date：2019-09-19
+ERP链接：http://forum.nderp.99.com/Forum/TopicList-346787.aspx
+------------------------------------------
+需求：
+
+------------------------------------------
+测试PM：
+@giftrandom 1002 100000
+服务端模拟抽奖
+@additem 120012 1000
+添加友情抽卡
+------------------------------------------
+测试重点：
+
+------------------------------------------
+自测：
+
+I1101 09:03:46.708003	userid:3000000015, PM CMD:giftrandom 1002 100000	- mysj/SceneModule/RegHandle_debug.go:45
+I1101 09:03:46.759475	gift random result awardId:1002 total times:100000	- mysj/SceneModule/RegHandle_debug.go:777
+I1101 09:03:46.759605	awardType:2	 itemType:4082	 itemNum:1	 times:6905	 pecent:6.90%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.759675	awardType:2	 itemType:4092	 itemNum:1	 times:7127	 pecent:7.13%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.759724	awardType:2	 itemType:4153	 itemNum:1	 times:836	 pecent:0.84%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.759768	awardType:2	 itemType:4084	 itemNum:1	 times:205	 pecent:0.20%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.759815	awardType:2	 itemType:4104	 itemNum:1	 times:198	 pecent:0.20%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.759864	awardType:2	 itemType:4024	 itemNum:1	 times:191	 pecent:0.19%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.759917	awardType:2	 itemType:4052	 itemNum:1	 times:7003	 pecent:7.00%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.759953	awardType:2	 itemType:4103	 itemNum:1	 times:814	 pecent:0.81%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.759984	awardType:2	 itemType:4072	 itemNum:1	 times:7078	 pecent:7.08%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.760033	awardType:2	 itemType:4053	 itemNum:1	 times:821	 pecent:0.82%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.760080	awardType:2	 itemType:4094	 itemNum:1	 times:193	 pecent:0.19%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.760127	awardType:2	 itemType:4154	 itemNum:1	 times:216	 pecent:0.22%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.760175	awardType:2	 itemType:4093	 itemNum:1	 times:799	 pecent:0.80%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.760222	awardType:2	 itemType:4083	 itemNum:1	 times:788	 pecent:0.79%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.760269	awardType:2	 itemType:4184	 itemNum:1	 times:208	 pecent:0.21%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.760316	awardType:2	 itemType:4123	 itemNum:1	 times:862	 pecent:0.86%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.760364	awardType:2	 itemType:4113	 itemNum:1	 times:798	 pecent:0.80%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.760411	awardType:2	 itemType:4102	 itemNum:1	 times:7050	 pecent:7.05%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.760459	awardType:2	 itemType:4033	 itemNum:1	 times:834	 pecent:0.83%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.760507	awardType:2	 itemType:4042	 itemNum:1	 times:7149	 pecent:7.15%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.760553	awardType:2	 itemType:4124	 itemNum:1	 times:218	 pecent:0.22%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.760614	awardType:2	 itemType:4012	 itemNum:1	 times:6913	 pecent:6.91%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.760702	awardType:2	 itemType:4022	 itemNum:1	 times:6979	 pecent:6.98%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.760753	awardType:2	 itemType:4032	 itemNum:1	 times:7015	 pecent:7.02%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.760791	awardType:2	 itemType:4133	 itemNum:1	 times:785	 pecent:0.78%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.760841	awardType:2	 itemType:4073	 itemNum:1	 times:821	 pecent:0.82%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.760896	awardType:2	 itemType:4044	 itemNum:1	 times:203	 pecent:0.20%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.760968	awardType:2	 itemType:4143	 itemNum:1	 times:754	 pecent:0.75%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.761018	awardType:2	 itemType:4014	 itemNum:1	 times:181	 pecent:0.18%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.761065	awardType:2	 itemType:4062	 itemNum:1	 times:6957	 pecent:6.96%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.761112	awardType:2	 itemType:4063	 itemNum:1	 times:749	 pecent:0.75%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.761154	awardType:2	 itemType:4114	 itemNum:1	 times:196	 pecent:0.20%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.761189	awardType:2	 itemType:4174	 itemNum:1	 times:202	 pecent:0.20%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.761237	awardType:2	 itemType:4064	 itemNum:1	 times:231	 pecent:0.23%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.761281	awardType:2	 itemType:4134	 itemNum:1	 times:220	 pecent:0.22%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.761331	awardType:2	 itemType:4034	 itemNum:1	 times:214	 pecent:0.21%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.761379	awardType:2	 itemType:4144	 itemNum:1	 times:191	 pecent:0.19%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.761426	awardType:2	 itemType:4122	 itemNum:1	 times:7038	 pecent:7.04%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.761472	awardType:2	 itemType:4112	 itemNum:1	 times:6996	 pecent:7.00%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.761519	awardType:2	 itemType:4013	 itemNum:1	 times:795	 pecent:0.80%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.761566	awardType:2	 itemType:4043	 itemNum:1	 times:833	 pecent:0.83%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.761630	awardType:2	 itemType:4023	 itemNum:1	 times:811	 pecent:0.81%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.761678	awardType:2	 itemType:4054	 itemNum:1	 times:191	 pecent:0.19%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.761725	awardType:2	 itemType:4164	 itemNum:1	 times:216	 pecent:0.22%	- mysj/SceneModule/RegHandle_debug.go:779
+I1101 09:03:46.761768	awardType:2	 itemType:4074	 itemNum:1	 times:216	 pecent:0.22%	- mysj/SceneModule/RegHandle_debug.go:779
+T1101 09:03:46.761797	data trans from 0xf00000e to 0xf000013, sessionId:3 *csmsg.MsgPmCmdS2C:result:OK 	- nd/sparklet/servicelib/service_call.go:434
+D1101 09:03:46.762014	send to client sessionId:3:*csmsg.MsgPmCmdS2C: result:OK 	- nd/sparklet/services/gate/gate.go:268

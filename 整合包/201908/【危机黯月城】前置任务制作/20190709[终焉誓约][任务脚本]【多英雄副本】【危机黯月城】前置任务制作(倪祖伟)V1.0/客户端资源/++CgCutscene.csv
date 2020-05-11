@@ -1,0 +1,7 @@
+﻿,required,required,required,required,required,required,required
+,uint32,uint32,uint32,uint32,uint32,uint32,string
+,id,sceneId,eventType,action,eventType1,action1,prefabPath
+Mark,id,归属场景ID,事件,事件行为,事件,事件行为,预制路径
+,1021,10,0,0,0,0,Prefab/Cutscene/cg_YuCiTongShi_AnYueCheng.prefab
+,15521,155,0,0,0,0,Prefab/Cutscene/cg_AnYueChengYingDao_1.prefab
+,15522,155,0,0,0,0,Prefab/Cutscene/cg_AnYueChengYingDao_2.prefab

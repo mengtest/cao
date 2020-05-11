@@ -1,0 +1,8 @@
+﻿,required,required,required
+,uint32,uint32,uint32
+,id,lock_level_id,dialogs_id
+备注,id,地牢id,对话表id
+,1,11,7078
+,2,14,7079
+,3,15,7080
+,4,21,7081

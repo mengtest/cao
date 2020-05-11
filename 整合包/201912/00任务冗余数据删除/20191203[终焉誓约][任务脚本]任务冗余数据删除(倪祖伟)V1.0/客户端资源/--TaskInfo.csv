@@ -1,0 +1,12 @@
+﻿,required,optional,required,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,required,required
+,uint32,uint32,int32,int32,int32,int32,int32,string,int32,string,int32,string,uint32,int32,int32,string,uint32,uint32,uint32
+,Task_id,NPC_id,Type,SubType,areaId,Quality,Starttype,Data1,Endtype,Data2,effect,missionMap,escortLookface,talkDur,awardGroupId,QuestionMark,AutoTask,Typemask,countdown_show
+备注,任务id,所属NPCID,任务类型,子类型（采集任务1）,所属区域ID,品质,进行中点击追踪面板触发的效果,对应数据,完成时点击追踪面板触发的功,对应数据,接受和完成特效,护送任务地图,护送Npc模型,喊话间隔时间,任务奖组Id,NPC/Monster头顶任务问号或者路标问号,自动任务,图标类型,倒计时限时
+核实赫丽的身份,10107,0,1,0,0,0,3,1 2001 30087,1,,5,0,0,0,0,"2 0 2001 2.01,0.05,-15.46",0,102,0
+,10235,0,1,0,0,0,3,"0 2003 -131.93,0.11,-36.02",1,,2,0,0,0,0,"-131.93,0.11,-36.02",0,0,0
+,10252,0,1,2,0,0,3,"0 2003 -141.99,0.11,-38.63",1,,1,2003,105,0,0,"-141.99,0.11,-38.63",0,106,0
+,10255,0,1,0,0,0,3,"0 2003 -162.06,0.08,-68.79",1,,2,0,0,0,0,"-162.06,0.08,-68.79",0,1,0
+,10439,0,1,0,0,0,1,,1,,5,0,0,0,0,0,0,1,0
+,10618,0,1,0,0,0,1,,1,,2,0,0,0,0,0,0,1,0
+,10680,0,1,0,0,0,1,,1,,2,0,0,0,0,0,0,101,0
+,60046,0,7,0,0,0,3,2 3030 200229,1,,2,0,0,0,0,200229,0,503,0

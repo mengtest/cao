@@ -1,0 +1,6 @@
+﻿,required,required
+,uint32,uint32
+,id,hero_id
+备注,ID,英雄id
+,11,111
+,12,112

@@ -1,0 +1,13 @@
+﻿,required,optional,optional
+,uint32,string,string
+,id,headPath,normalHalfPath
+备注,id,标准头像,标准半身像
+,3859,Textures/Atlas/Dyn/CharacterCommonHead/Thairay.png,Textures/Atlas/Dyn/CharacterHalfBody/Thairay.png
+,3860,Textures\Atlas\Dyn\CharacterCommonHead\default.png,Textures\Atlas\Dyn\CharacterHalfBody\GoblinHead.png
+,3861,Textures\Atlas\Dyn\CharacterCommonHead\default.png,Textures\Atlas\Dyn\CharacterHalfBody\Captainirving.png
+,3862,Textures\Atlas\Dyn\CharacterCommonHead\default.png,Textures\Atlas\Dyn\CharacterHalfBody\breadgodmissionary.png
+,3863,Textures\Atlas\Dyn\CharacterCommonHead\default.png,Textures\Atlas\Dyn\CharacterHalfBody\TheBardofMammon.png
+,3864,Textures/Atlas/Dyn/CharacterCommonHead/default.png,Textures\Atlas\Dyn\CharacterHalfBody\Abbey.png
+,3865,Textures\Atlas\Dyn\CharacterCommonHead\default.png,Textures\Atlas\Dyn\CharacterHalfBody\FloristMemory.png
+,3866,Textures/Atlas/Dyn/CharacterCommonHead/default.png,Textures\Atlas\Dyn\CharacterHalfBody\adventurersLeader.png
+,3963,Textures/Atlas/Dyn/CharacterCommonHead/default.png,Textures\Atlas\Dyn\CharacterHalfBody\Teluo.png

@@ -1,0 +1,5 @@
+﻿,required,required,repeated,repeated,required,required,required,required
+,uint32,uint32,uint32,uint32,string,string,string,string
+,id,boss_id,status1,status2,site1,site2,site3,site4
+备注,副本id,怪物id,特性组1, 特性组2,小怪3个坐标,小怪3个坐标,小怪3个坐标,小怪3个坐标
+,3097,200468,1031;1041,,"-34.24,0.096,26.29;-38,0.096,28.24;-38.19,0.096,24.03","-27.37,0.096,31.45;-27.15,0.096,35.72;-31.18,0.096,33.51",,

@@ -1,0 +1,7 @@
+﻿,required,optional,optional,optional,optional,optional,optional
+,uint32,uint32,uint32,string,string,uint32,uint32
+,id,type,resId,resName,resPos,resArg,soundId
+备注,解谜事件Id,事件类型,资源ID,资源名称,资源位置,资源参数,音效ID
+,101000,100,14,,"0,0,0",12,0
+,101005,6,0,Prefab/EffectUI/Effect_UIjiemi_shu02.prefab,"324,66,0",0,0
+,101012,6,0,Prefab/EffectUI/Effect_UIjiemi_yuwang.prefab,"-516,268,0",0,0

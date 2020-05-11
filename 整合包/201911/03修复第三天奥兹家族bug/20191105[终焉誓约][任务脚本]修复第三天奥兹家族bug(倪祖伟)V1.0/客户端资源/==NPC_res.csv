@@ -1,0 +1,11 @@
+﻿,required,optional,optional
+,uint32,string,string
+,id,headPath,normalHalfPath
+备注,id,标准头像,标准半身像
+,3860,Textures\Atlas\Dyn\CharacterCommonHead\default.png,Textures\Atlas\Dyn\CharacterHalfBody\Completelytransparent.png
+,3861,Textures\Atlas\Dyn\CharacterCommonHead\default.png,Textures\Atlas\Dyn\CharacterHalfBody\Completelytransparent.png
+,3862,Textures\Atlas\Dyn\CharacterCommonHead\default.png,Textures\Atlas\Dyn\CharacterHalfBody\Completelytransparent.png
+,3863,Textures\Atlas\Dyn\CharacterCommonHead\default.png,Textures\Atlas\Dyn\CharacterHalfBody\Completelytransparent.png
+,3864,Textures\Atlas\Dyn\CharacterCommonHead\default.png,Textures\Atlas\Dyn\CharacterHalfBody\Completelytransparent.png
+,3865,Textures\Atlas\Dyn\CharacterCommonHead\default.png,Textures\Atlas\Dyn\CharacterHalfBody\Completelytransparent.png
+,3866,Textures\Atlas\Dyn\CharacterCommonHead\default.png,Textures\Atlas\Dyn\CharacterHalfBody\Completelytransparent.png

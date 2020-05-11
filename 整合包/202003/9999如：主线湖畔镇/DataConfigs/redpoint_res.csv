@@ -1,0 +1,35 @@
+﻿,required,required,optional,optional
+,uint32,uint32,uint32,string
+,id,sort,redType,path
+备注,id,优先级,红点展示的类型 0：无需路径直接显示界面的 1：图标 2：特效,红点对应路径
+英雄突破,1,10,1,Textures\Atlas\GUI\[CommonWidget]\Red\Training.png
+装备进阶,2,25,1,Textures\Atlas\GUI\[CommonWidget]\Red\Equipment.png
+技能升级,3,20,1,Textures\Atlas\GUI\[CommonWidget]\Red\skill.png
+符文镶嵌,4,30,1,Textures\Atlas\GUI\[CommonWidget]\Red\skill.png
+符文升级,5,35,1,Textures\Atlas\GUI\[CommonWidget]\Red\skill.png
+羁绊礼包,6,36,1,Textures\Atlas\GUI\[CommonWidget]\Red\Giftbag.png
+本命镶嵌,7,15,1,Textures\Atlas\GUI\[CommonWidget]\Red\pet.png
+本命升星,8,40,1,Textures\Atlas\GUI\[CommonWidget]\Red\pet.png
+自律联盟,11,45,1,Textures\Atlas\GUI\[CommonWidget]\Red\Task.png
+好友宝箱,12,50,1,Textures\Atlas\GUI\[CommonWidget]\Red\Giftbag.png
+讨伐领主,13,51,1,Textures\Atlas\GUI\[CommonWidget]\Red\Giftbag.png
+战技研习,14,52,1,Textures\Atlas\GUI\[CommonWidget]\Red\Giftbag.png
+最强指南,15,53,1,Textures\Atlas\GUI\[CommonWidget]\Red\Giftbag.png
+王牌通缉,21,54,1,Textures\Atlas\GUI\[CommonWidget]\Red\Giftbag.png
+圣界来袭,22,55,1,Textures\Atlas\GUI\[CommonWidget]\Red\Giftbag.png
+黯月事件簿,23,56,1,Textures\Atlas\GUI\[CommonWidget]\Red\Giftbag.png
+开服放送庆典,24,57,1,Textures\Atlas\GUI\[CommonWidget]\Red\Giftbag.png
+骑士考核,25,59,1,Textures\Atlas\GUI\[CommonWidget]\Red\Giftbag.png
+成就 ,31,60,1,Textures\Atlas\GUI\[CommonWidget]\Red\Giftbag.png
+每日签到,32,61,1,Textures\Atlas\GUI\[CommonWidget]\Red\Giftbag.png
+新手14日签到,33,62,1,Textures\Atlas\GUI\[CommonWidget]\Red\Giftbag.png
+问卷,41,41,1,Textures\Atlas\GUI\[CommonWidget]\Red\Giftbag.png
+每日课程,42,63,1,Textures\Atlas\GUI\[CommonWidget]\Red\Giftbag.png
+物品已满,43,42,1,Textures\Atlas\GUI\[CommonWidget]\Red\bag.png
+好友,44,44,1,Textures\Atlas\GUI\[CommonWidget]\Red\notice.png
+邮件,45,43,1,Textures\Atlas\GUI\[CommonWidget]\Red\notice.png
+邀请,46,46,1,Textures\Atlas\GUI\[CommonWidget]\Red\notice.png
+公会周活跃,51,64,1,Textures\Atlas\GUI\[CommonWidget]\Red\Giftbag.png
+公会悬赏,52,65,1,Textures\Atlas\GUI\[CommonWidget]\Red\Giftbag.png
+公会管理,53,47,1,Textures\Atlas\GUI\[CommonWidget]\Red\notice.png
+公会红包,54,66,1,Textures\Atlas\GUI\[CommonWidget]\Red\Giftbag.png

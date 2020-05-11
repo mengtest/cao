@@ -1,0 +1,10 @@
+﻿,required,optional,optional
+,uint32,string,string
+,id,headPath,normalHalfPath
+备注,id,标准头像,标准半身像
+,3993,Textures/Atlas/Dyn/CharacterCommonHead/BaiYinDunZhan.png,Textures\Atlas\Dyn\CharacterHalfBody\SilverShieldwar.png
+,3997,Textures/Atlas/Dyn/CharacterCommonHead/Adancer.png,Textures\Atlas\Dyn\CharacterHalfBody\Adancer.png
+,3998,Textures\Atlas\Dyn\CharacterCommonHead\OusangBoyleAunt.png,Textures\Atlas\Dyn\CharacterHalfBody\OusangBoyleAunt.png
+,3999,Textures/Atlas/Dyn/CharacterCommonHead/Bailiff.png,Textures\Atlas\Dyn\CharacterHalfBody\Bailiff.png
+,4000,Textures\Atlas\Dyn\CharacterCommonHead\Uncle.png,Textures\Atlas\Dyn\CharacterHalfBody\Uncle.png
+,4001,Textures/Atlas/Dyn/CharacterCommonHead/default.png,Textures\Atlas\Dyn\CharacterHalfBody\Womanoldwoman.png

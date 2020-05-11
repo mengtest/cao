@@ -1,0 +1,13 @@
+﻿,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional
+,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,string,string
+,id,shop_type,deblocking_id,refresh_time,times_type,refresh_money,money_id,ticket_id,limit_time_type,time_min,time_max
+备注,ID,商城类型,功能解锁ID,自然刷新时间,刷新次数类型,正常货币id,物品货币id,刷新券id,时间类型,时间上限,时间下线
+罗兰钻商店,1,1,0,0,0,0,0,0,0,0,0
+公会商店,2,2,17,180,61,0,0,210043,0,0,0
+本命商店,3,3,14,720,49,2,0,210043,0,0,0
+英雄商店,4,4,14,0,0,0,0,0,0,0,0
+竞技场商店,5,5,0,0,0,0,0,0,0,0,0
+骑士商店,6,6,52,0,0,0,0,0,0,0,0
+梦境小铺,7,7,28,180,62,0,0,210043,0,0,0
+试炼限时商店,8,8,0,0,0,0,0,0,1,20200210000000,20200310000000
+,9,100,0,0,0,0,0,0,1,20200331000000,20201231000000

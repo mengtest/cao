@@ -1,0 +1,7 @@
+﻿,required,required,optional
+,uint32,string,string
+,id,effect_name,des
+备注,索引id,特效名称,注释
+,2077,Effect_Scene_wuxingfazhen_an,五芒星黯光效
+,2078,Effect_Scene_wuxingfazhen_start,五芒星亮光效
+,2079,Effect_Scenemoxin_fengyinfazhen_s_chuxian,五芒星阵点亮起光效

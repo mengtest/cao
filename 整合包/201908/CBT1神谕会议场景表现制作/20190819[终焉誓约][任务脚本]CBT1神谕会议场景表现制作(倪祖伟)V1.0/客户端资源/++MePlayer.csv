@@ -1,0 +1,5 @@
+﻿,required,repeated,repeated
+,uint32,uint32,uint32
+,levelID,leftFactionIds,rightFactionIds
+备注,关卡ID,我方佣兵ID列表,敌方佣兵ID列表
+,870,101;105;201,87020106;8709001

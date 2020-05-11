@@ -1,0 +1,9 @@
+﻿,required,required,required,required,required,optional,required,required,required,optional,optional,optional,optional
+,uint32,uint32,string,uint32,uint32,string,uint32,uint32,float,uint32,int32,string,string
+,id,sceneId,regionSize,shapeType,type,name,plowlevel,glowlevel,scale,lookfaceId,background,des,uiPos
+备注,NPC组Id,关卡Id,区域大小,区域形状,NPC组类型(1npc/building/box/map/5copy/6transfor/7trap/8采集),名字,触发交互界面等级,npc群组最低等级,尺寸,外形id,NPC群组聊天背景,描述,（相对位置）建筑等或无模型类型UI名称位置
+,20636,3097,"6,6,6",0,1,混沌魔魂,0,0,1,10023,0,,
+,20637,3097,"6,6,6",0,1,觉醒魔魂,0,0,1,10049,0,,
+,20638,3097,"6,6,6",0,1,赤焰狼王,0,0,1,10026,0,,
+,20623,3097,"6,6,6",0,1,惩戒屠夫,0,0,1,10015,0,,
+,20624,3097,"10,10,10",0,1,炼狱之主,0,0,1,10036,0,,

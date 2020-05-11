@@ -1,0 +1,6 @@
+﻿,required,required,required,required
+,uint32,uint32,uint32,uint32
+,id,award_id,item_id,item_num
+备注,id,奖励id,物品id,物品数量
+,843,2000624,3060210,2
+,844,2000624,1,50

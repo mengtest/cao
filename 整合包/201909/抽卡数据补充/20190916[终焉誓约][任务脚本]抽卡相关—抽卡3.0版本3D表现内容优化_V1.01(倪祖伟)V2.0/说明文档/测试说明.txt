@@ -1,0 +1,191 @@
+﻿------------------------------------------
+任务名称：抽卡数据补充
+By：倪祖伟
+Date：2019-09-16
+ERP链接：如：http://forum.nderp.99.com/Forum/TopicList-347035.aspx
+------------------------------------------
+需求：
+
+------------------------------------------
+测试PM：
+@giftrandom 2011 100000
+------------------------------------------
+测试重点：
+
+------------------------------------------
+自测：
+--1001
+I0928 15:42:15.868400	userid:3000000000, PM CMD:giftrandom 1001 100000	- mysj/SceneModule/RegHandle_debug.go:45
+I0928 15:42:15.922159	gift random result awardId:1001 total times:100000	- mysj/SceneModule/RegHandle_debug.go:776
+I0928 15:42:15.922276	awardType:4	 itemType:2110202	 itemNum:2	 times:1153	 pecent:1.15%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.922334	awardType:4	 itemType:2042021	 itemNum:2	 times:783	 pecent:0.78%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.922383	awardType:4	 itemType:2014021	 itemNum:2	 times:759	 pecent:0.76%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.922461	awardType:4	 itemType:2022032	 itemNum:1	 times:262	 pecent:0.26%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.922510	awardType:4	 itemType:2012032	 itemNum:1	 times:258	 pecent:0.26%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.922557	awardType:4	 itemType:2110001	 itemNum:5	 times:5921	 pecent:5.92%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.922604	awardType:4	 itemType:2014032	 itemNum:1	 times:240	 pecent:0.24%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.922650	awardType:4	 itemType:2110103	 itemNum:1	 times:258	 pecent:0.26%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.922702	awardType:4	 itemType:2043021	 itemNum:2	 times:742	 pecent:0.74%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.922749	awardType:4	 itemType:2013032	 itemNum:1	 times:279	 pecent:0.28%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.922795	awardType:4	 itemType:2022021	 itemNum:2	 times:675	 pecent:0.68%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.922842	awardType:4	 itemType:2110403	 itemNum:1	 times:240	 pecent:0.24%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.922890	awardType:4	 itemType:2044032	 itemNum:1	 times:227	 pecent:0.23%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.922945	awardType:4	 itemType:2054032	 itemNum:1	 times:253	 pecent:0.25%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.922992	awardType:4	 itemType:2052032	 itemNum:1	 times:229	 pecent:0.23%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.923039	awardType:4	 itemType:3060320	 itemNum:1	 times:192	 pecent:0.19%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.923098	awardType:4	 itemType:2110302	 itemNum:2	 times:1175	 pecent:1.17%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.923146	awardType:4	 itemType:2110503	 itemNum:1	 times:266	 pecent:0.27%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.923192	awardType:4	 itemType:2011021	 itemNum:2	 times:745	 pecent:0.75%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.923238	awardType:4	 itemType:3060210	 itemNum:1	 times:807	 pecent:0.81%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.923272	awardType:4	 itemType:3060010	 itemNum:3	 times:803	 pecent:0.80%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.923318	awardType:4	 itemType:2051032	 itemNum:1	 times:245	 pecent:0.25%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.923365	awardType:4	 itemType:2024032	 itemNum:1	 times:280	 pecent:0.28%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.923410	awardType:4	 itemType:2110102	 itemNum:2	 times:1190	 pecent:1.19%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.923455	awardType:4	 itemType:2120102	 itemNum:1	 times:956	 pecent:0.96%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.923502	awardType:4	 itemType:2051021	 itemNum:2	 times:735	 pecent:0.74%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.923547	awardType:4	 itemType:3060020	 itemNum:2	 times:735	 pecent:0.74%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.923593	awardType:4	 itemType:2041021	 itemNum:2	 times:768	 pecent:0.77%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.923639	awardType:4	 itemType:2043032	 itemNum:1	 times:255	 pecent:0.25%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.923685	awardType:4	 itemType:2013021	 itemNum:2	 times:744	 pecent:0.74%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.923732	awardType:4	 itemType:210000	 itemNum:1	 times:4915	 pecent:4.91%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.923777	awardType:4	 itemType:2061021	 itemNum:2	 times:715	 pecent:0.71%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.923823	awardType:4	 itemType:204010	 itemNum:1	 times:5055	 pecent:5.05%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.923874	awardType:4	 itemType:3060410	 itemNum:1	 times:834	 pecent:0.83%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.923951	awardType:4	 itemType:2021032	 itemNum:1	 times:251	 pecent:0.25%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.923999	awardType:4	 itemType:3060610	 itemNum:1	 times:856	 pecent:0.86%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.924034	awardType:4	 itemType:2120013	 itemNum:1	 times:3899	 pecent:3.90%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.924078	awardType:4	 itemType:2063021	 itemNum:2	 times:742	 pecent:0.74%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.924114	awardType:4	 itemType:2054021	 itemNum:2	 times:734	 pecent:0.73%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.924153	awardType:4	 itemType:2053032	 itemNum:1	 times:236	 pecent:0.24%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.924193	awardType:4	 itemType:3060420	 itemNum:1	 times:356	 pecent:0.36%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.924229	awardType:4	 itemType:2012021	 itemNum:2	 times:751	 pecent:0.75%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.924277	awardType:4	 itemType:210010	 itemNum:1	 times:4859	 pecent:4.86%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.924324	awardType:4	 itemType:2110002	 itemNum:1	 times:1168	 pecent:1.17%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.924374	awardType:4	 itemType:2023021	 itemNum:2	 times:747	 pecent:0.75%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.924420	awardType:4	 itemType:3060110	 itemNum:1	 times:832	 pecent:0.83%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.924467	awardType:4	 itemType:3060030	 itemNum:1	 times:109	 pecent:0.11%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.924513	awardType:4	 itemType:2062021	 itemNum:2	 times:729	 pecent:0.73%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.924559	awardType:4	 itemType:2110303	 itemNum:1	 times:272	 pecent:0.27%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.924605	awardType:4	 itemType:3060220	 itemNum:1	 times:393	 pecent:0.39%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.924650	awardType:4	 itemType:3	 itemNum:3000	 times:10011	 pecent:10.01%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.924696	awardType:4	 itemType:2120402	 itemNum:1	 times:1047	 pecent:1.05%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.924742	awardType:4	 itemType:2110402	 itemNum:2	 times:1226	 pecent:1.23%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.924788	awardType:4	 itemType:2110502	 itemNum:2	 times:1177	 pecent:1.18%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.924834	awardType:4	 itemType:2044021	 itemNum:2	 times:746	 pecent:0.75%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.924891	awardType:4	 itemType:3030013	 itemNum:1	 times:98	 pecent:0.10%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.924947	awardType:4	 itemType:2042032	 itemNum:1	 times:265	 pecent:0.26%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.924995	awardType:4	 itemType:3060510	 itemNum:1	 times:794	 pecent:0.79%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.925041	awardType:4	 itemType:2061032	 itemNum:1	 times:272	 pecent:0.27%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.925100	awardType:4	 itemType:2120302	 itemNum:1	 times:888	 pecent:0.89%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.925147	awardType:4	 itemType:2064032	 itemNum:1	 times:252	 pecent:0.25%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.925193	awardType:4	 itemType:2062032	 itemNum:1	 times:259	 pecent:0.26%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.925238	awardType:4	 itemType:3060520	 itemNum:1	 times:405	 pecent:0.41%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.925284	awardType:4	 itemType:2011032	 itemNum:1	 times:249	 pecent:0.25%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.925329	awardType:4	 itemType:2024021	 itemNum:2	 times:709	 pecent:0.71%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.925375	awardType:4	 itemType:4	 itemNum:5000	 times:9886	 pecent:9.89%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.925443	awardType:4	 itemType:310010	 itemNum:1	 times:5099	 pecent:5.10%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.925490	awardType:4	 itemType:2052021	 itemNum:2	 times:728	 pecent:0.73%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.925527	awardType:4	 itemType:2021021	 itemNum:2	 times:747	 pecent:0.75%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.925574	awardType:4	 itemType:2000054	 itemNum:1	 times:100	 pecent:0.10%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.925611	awardType:4	 itemType:2063032	 itemNum:1	 times:248	 pecent:0.25%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.925645	awardType:4	 itemType:8	 itemNum:10000	 times:9954	 pecent:9.95%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.925678	awardType:4	 itemType:2053021	 itemNum:2	 times:724	 pecent:0.72%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.925718	awardType:4	 itemType:2023032	 itemNum:1	 times:226	 pecent:0.23%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.925766	awardType:4	 itemType:2110203	 itemNum:1	 times:244	 pecent:0.24%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.925812	awardType:4	 itemType:3060620	 itemNum:1	 times:364	 pecent:0.36%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.925858	awardType:4	 itemType:2120202	 itemNum:1	 times:987	 pecent:0.99%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.925904	awardType:4	 itemType:2064021	 itemNum:2	 times:770	 pecent:0.77%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.925961	awardType:4	 itemType:3060120	 itemNum:1	 times:392	 pecent:0.39%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.926007	awardType:4	 itemType:2041032	 itemNum:1	 times:221	 pecent:0.22%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:15.926064	awardType:4	 itemType:3060310	 itemNum:1	 times:284	 pecent:0.28%	- mysj/SceneModule/RegHandle_debug.go:778
+T0928 15:42:15.926105	data trans from 0xf00000e to 0xf000013, sessionId:2 *csmsg.MsgPmCmdS2C:result:OK 	- nd/sparklet/servicelib/service_call.go:434
+
+
+--1002
+I0928 15:42:16.358275	userid:3000000000, PM CMD:giftrandom 1002 100000	- mysj/SceneModule/RegHandle_debug.go:45
+I0928 15:42:16.403372	gift random result awardId:1002 total times:100000	- mysj/SceneModule/RegHandle_debug.go:776
+I0928 15:42:16.403479	awardType:2	 itemType:4164	 itemNum:20	 times:2208	 pecent:2.21%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.403538	awardType:2	 itemType:4053	 itemNum:80	 times:2169	 pecent:2.17%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.403587	awardType:2	 itemType:4063	 itemNum:80	 times:2171	 pecent:2.17%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.403637	awardType:2	 itemType:4102	 itemNum:700	 times:2253	 pecent:2.25%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.403684	awardType:2	 itemType:4042	 itemNum:700	 times:2275	 pecent:2.27%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.403731	awardType:2	 itemType:4103	 itemNum:80	 times:2206	 pecent:2.21%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.403778	awardType:2	 itemType:4034	 itemNum:20	 times:2185	 pecent:2.18%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.403825	awardType:2	 itemType:4073	 itemNum:80	 times:2217	 pecent:2.22%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.403871	awardType:2	 itemType:4112	 itemNum:700	 times:2246	 pecent:2.25%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.403927	awardType:2	 itemType:4104	 itemNum:20	 times:2204	 pecent:2.20%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.403975	awardType:2	 itemType:4024	 itemNum:20	 times:2230	 pecent:2.23%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.404050	awardType:2	 itemType:4043	 itemNum:80	 times:2218	 pecent:2.22%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.404112	awardType:2	 itemType:4072	 itemNum:700	 times:2245	 pecent:2.24%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.404160	awardType:2	 itemType:4124	 itemNum:20	 times:2253	 pecent:2.25%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.404206	awardType:2	 itemType:4154	 itemNum:20	 times:2244	 pecent:2.24%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.404252	awardType:2	 itemType:4032	 itemNum:700	 times:2209	 pecent:2.21%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.404298	awardType:2	 itemType:4044	 itemNum:20	 times:2159	 pecent:2.16%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.404344	awardType:2	 itemType:4133	 itemNum:80	 times:2268	 pecent:2.27%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.404383	awardType:2	 itemType:4174	 itemNum:20	 times:2158	 pecent:2.16%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.404430	awardType:2	 itemType:4092	 itemNum:700	 times:2200	 pecent:2.20%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.404477	awardType:2	 itemType:4184	 itemNum:20	 times:2211	 pecent:2.21%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.404523	awardType:2	 itemType:4062	 itemNum:700	 times:2196	 pecent:2.20%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.404569	awardType:2	 itemType:4093	 itemNum:80	 times:2224	 pecent:2.22%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.404616	awardType:2	 itemType:4113	 itemNum:80	 times:2231	 pecent:2.23%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.404662	awardType:2	 itemType:4084	 itemNum:20	 times:2258	 pecent:2.26%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.404709	awardType:2	 itemType:4083	 itemNum:80	 times:2262	 pecent:2.26%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.404756	awardType:2	 itemType:4054	 itemNum:20	 times:2166	 pecent:2.17%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.404803	awardType:2	 itemType:4122	 itemNum:700	 times:2282	 pecent:2.28%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.404848	awardType:2	 itemType:4074	 itemNum:20	 times:2246	 pecent:2.25%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.404894	awardType:2	 itemType:4012	 itemNum:700	 times:2177	 pecent:2.18%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.404948	awardType:2	 itemType:4123	 itemNum:80	 times:2290	 pecent:2.29%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.404996	awardType:2	 itemType:4082	 itemNum:700	 times:2249	 pecent:2.25%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.405042	awardType:2	 itemType:4144	 itemNum:20	 times:2313	 pecent:2.31%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.405101	awardType:2	 itemType:4014	 itemNum:20	 times:2233	 pecent:2.23%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.405149	awardType:2	 itemType:4094	 itemNum:20	 times:2238	 pecent:2.24%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.405195	awardType:2	 itemType:4022	 itemNum:700	 times:2208	 pecent:2.21%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.405241	awardType:2	 itemType:4052	 itemNum:700	 times:2258	 pecent:2.26%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.405288	awardType:2	 itemType:4064	 itemNum:20	 times:2218	 pecent:2.22%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.405333	awardType:2	 itemType:4033	 itemNum:80	 times:2229	 pecent:2.23%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.405380	awardType:2	 itemType:4013	 itemNum:80	 times:2238	 pecent:2.24%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.405426	awardType:2	 itemType:4114	 itemNum:20	 times:2149	 pecent:2.15%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.405471	awardType:2	 itemType:4143	 itemNum:80	 times:2133	 pecent:2.13%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.405517	awardType:2	 itemType:4134	 itemNum:20	 times:2235	 pecent:2.24%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.405592	awardType:2	 itemType:4153	 itemNum:80	 times:2233	 pecent:2.23%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.405635	awardType:2	 itemType:4023	 itemNum:80	 times:2205	 pecent:2.21%	- mysj/SceneModule/RegHandle_debug.go:778
+T0928 15:42:16.405663	data trans from 0xf00000e to 0xf000013, sessionId:2 *csmsg.MsgPmCmdS2C:result:OK 	- nd/sparklet/servicelib/service_call.go:4
+
+--2002
+I0928 15:42:16.765387	userid:3000000000, PM CMD:giftrandom 2002 100000	- mysj/SceneModule/RegHandle_debug.go:45
+I0928 15:42:16.834842	gift random result awardId:2002 total times:100000	- mysj/SceneModule/RegHandle_debug.go:776
+I0928 15:42:16.834950	awardType:2	 itemType:4114	 itemNum:1	 times:1309	 pecent:1.31%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.834990	awardType:2	 itemType:4123	 itemNum:1	 times:5044	 pecent:5.04%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835021	awardType:2	 itemType:4074	 itemNum:1	 times:1436	 pecent:1.44%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835062	awardType:2	 itemType:4044	 itemNum:1	 times:1381	 pecent:1.38%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835094	awardType:2	 itemType:4073	 itemNum:1	 times:5018	 pecent:5.02%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835124	awardType:2	 itemType:4013	 itemNum:1	 times:5014	 pecent:5.01%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835153	awardType:2	 itemType:4093	 itemNum:1	 times:5013	 pecent:5.01%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835182	awardType:2	 itemType:4164	 itemNum:1	 times:1405	 pecent:1.41%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835218	awardType:2	 itemType:4153	 itemNum:1	 times:5017	 pecent:5.02%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835253	awardType:2	 itemType:4144	 itemNum:1	 times:1318	 pecent:1.32%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835289	awardType:2	 itemType:4184	 itemNum:1	 times:1397	 pecent:1.40%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835325	awardType:2	 itemType:4043	 itemNum:1	 times:4993	 pecent:4.99%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835359	awardType:2	 itemType:4014	 itemNum:1	 times:1421	 pecent:1.42%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835392	awardType:2	 itemType:4154	 itemNum:1	 times:1330	 pecent:1.33%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835426	awardType:2	 itemType:4134	 itemNum:1	 times:1395	 pecent:1.39%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835479	awardType:2	 itemType:4054	 itemNum:1	 times:1397	 pecent:1.40%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835517	awardType:2	 itemType:4094	 itemNum:1	 times:1347	 pecent:1.35%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835555	awardType:2	 itemType:4023	 itemNum:1	 times:5050	 pecent:5.05%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835594	awardType:2	 itemType:4113	 itemNum:1	 times:4904	 pecent:4.90%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835631	awardType:2	 itemType:4063	 itemNum:1	 times:5006	 pecent:5.01%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835669	awardType:2	 itemType:4103	 itemNum:1	 times:4979	 pecent:4.98%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835705	awardType:2	 itemType:4033	 itemNum:1	 times:4957	 pecent:4.96%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835773	awardType:2	 itemType:4104	 itemNum:1	 times:1399	 pecent:1.40%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835811	awardType:2	 itemType:4143	 itemNum:1	 times:4953	 pecent:4.95%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835846	awardType:2	 itemType:4174	 itemNum:1	 times:1402	 pecent:1.40%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835880	awardType:2	 itemType:4124	 itemNum:1	 times:1355	 pecent:1.36%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835925	awardType:2	 itemType:4083	 itemNum:1	 times:5058	 pecent:5.06%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835958	awardType:2	 itemType:4133	 itemNum:1	 times:5170	 pecent:5.17%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.835990	awardType:2	 itemType:4084	 itemNum:1	 times:1419	 pecent:1.42%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.836026	awardType:2	 itemType:4034	 itemNum:1	 times:1385	 pecent:1.38%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.836081	awardType:2	 itemType:4053	 itemNum:1	 times:4994	 pecent:4.99%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.836120	awardType:2	 itemType:4024	 itemNum:1	 times:1390	 pecent:1.39%	- mysj/SceneModule/RegHandle_debug.go:778
+I0928 15:42:16.836156	awardType:2	 itemType:4064	 itemNum:1	 times:1344	 pecent:1.34%	- mysj/SceneModule/RegHandle_debug.go:778
+T0928 15:42:16.836183	data trans from 0xf00000e to 0xf000013, sessionId:2 *csmsg.MsgPmCmdS2C:result:OK 	- nd/sparklet/servicelib/service_call.go:434
+D0928 15:42:16.836337	send to client sessionId:2:*csmsg.MsgPmCmdS2C: result:OK 	- nd/sparklet/services/gate/gate.go:268

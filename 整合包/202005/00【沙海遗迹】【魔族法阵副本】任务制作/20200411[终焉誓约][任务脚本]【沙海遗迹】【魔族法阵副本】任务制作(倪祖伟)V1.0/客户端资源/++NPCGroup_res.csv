@@ -1,0 +1,25 @@
+﻿,required,optional,optional,optional,repeated,optional,optional,repeated,optional,optional
+,uint32,string,string,string,uint32,uint32,uint32,uint32,int32,int32
+,id,effectPath,iconPath,defaultAnim,talk_ids,talk_time,talk_wait_time,dialog_ids,trap_stay,is_turn
+备注,npcGroupID,魔法阵路径,显示图标,默认动作,气泡id组,气泡显示时长,等待时间,对话id组,0 陷阱触发方式不变 1 陷阱停留触发,是否对话时进行转向，1不可转向
+,21384,,,die_forever,,0,0,,0,0
+,21385,,,die_forever,,0,0,,0,0
+,21386,,,die_forever,,0,0,,0,0
+,21387,,,die_forever,,0,0,,0,0
+,21388,,,die_forever,,0,0,,0,0
+,21389,,,die_forever,,0,0,,0,0
+,21390,,,die_forever,,0,0,,0,0
+,30751,Prefab/Effect/Effect_Scene_YWchuansongmen.prefab,,,,0,0,,0,0
+,30753,Prefab/Effect/Scene/Effect_Scenemoxin_fengyinfazhen_an.prefab,,,,0,0,,0,0
+,60504,Prefab/Effect/Scene/Effect_Scene_caiji.prefab,,,,0,0,,0,0
+,60507,Prefab/Effect/Scene/Effect_Scene_caiji.prefab,,,,0,0,,0,0
+,60511,Prefab/Effect/Scene/Effect_Scene_caiji.prefab,,,,0,0,,0,0
+,60512,Prefab/Effect/Scene/Effect_Scene_caiji.prefab,,,,0,0,,0,0
+,60514,Prefab/Effect/Scene/Effect_Scene_caiji.prefab,,,,0,0,,0,0
+,60515,Prefab/Effect/Scene/Effect_Scene_caiji.prefab,,,,0,0,,0,0
+,60516,Prefab/Effect/Scene/Effect_Scene_caiji.prefab,,,,0,0,,0,0
+,60517,Prefab/Effect/Scene/Effect_Scene_caiji.prefab,,,,0,0,,0,0
+,60518,Prefab/Effect/Scene/Effect_Scene_caiji.prefab,,,,0,0,,0,0
+,60519,Prefab/Effect/Scene/Effect_Scene_caiji.prefab,,,,0,0,,0,0
+,60520,Prefab/Effect/Scene/Effect_Scene_caiji.prefab,,,,0,0,,0,0
+,60521,Prefab/Effect/Scene/Effect_Scene_caiji.prefab,,,,0,0,,0,0

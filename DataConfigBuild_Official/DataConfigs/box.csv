@@ -1,7 +1,0 @@
-﻿,required,required,required,required,required,required,required,required
-,int32,string,int32,int32,int32,int32,int32,int32
-,id,box_name,box_gift,friend_point,need_time,help_limit,help_time,cost_friend_point
-备注,宝箱id,宝箱名字,宝箱奖励id,答谢友情点数,开箱时间,帮助上限,帮助加速时间,每分钟友情点消耗
-,101,粗木箱,6000091,5,240,6,12,3
-,102,秘银箱,6000092,5,480,8,20,3
-,103,炼金宝箱,6000093,5,720,10,28,3

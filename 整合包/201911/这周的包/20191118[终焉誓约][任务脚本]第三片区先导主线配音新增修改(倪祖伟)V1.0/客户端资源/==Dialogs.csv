@@ -1,0 +1,8 @@
+﻿,required,required,required,optional,optional,optional,optional,optional,optional,optional,optional,optional
+,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32
+,indexId,Id,Index,talkId,Leftid,leftFace,Midid,midFace,Rightid,rightFace,voiceId,IsSkip
+备注,,对白ID,下标,说话者,左半身像，填写NPCid,左边表情编号,中间半身像,中间表情,右半身像，填写NPCid,右边表情编号,配音ID,1：能跳过 0：不能跳过（默认不能跳过）
+,1095302,10953,2,3343,3343,0,-1,0,301,100306,12809,1
+,1095405,10954,5,3344,301,0,-1,0,3344,0,13024,1
+,1209702,12097,2,201,-1,0,-1,0,201,100205,13025,1
+,1209703,12097,3,101,101,100105,-1,0,201,100205,13026,1

@@ -1,0 +1,8 @@
+﻿,required,optional,optional,optional
+,uint32,string,uint64,uint32
+,id,path,approach,red_flag
+备注,物品资源Id,图标路径,获取方式类型,是否一直显示红点 1：是 0：否
+,410032,Textures/Atlas/Dyn/Item/410022.png,34359738368,1
+,410033,Textures/Atlas/Dyn/Item/410023.png,34359738368,1
+,410034,Textures/Atlas/Dyn/Item/410024.png,34359738368,1
+,460014,Textures/Atlas/Dyn/Item/410021.png,0,0

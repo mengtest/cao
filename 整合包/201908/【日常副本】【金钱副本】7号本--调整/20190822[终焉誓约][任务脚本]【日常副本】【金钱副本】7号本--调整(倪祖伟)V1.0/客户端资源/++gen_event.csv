@@ -1,0 +1,14 @@
+﻿,required,required,required,required,required,required,required,required,required,required,required,required,required,required,required
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,string,float,float
+,id,name,mapid,event_type,event_id,path_id,flag,intask,story_id,life_time,level_id,battle_scene,position,rotation_y,scale
+备注,分段id,名字,关卡id,事件类型,事件id,路径id,number,怪物是否显示,怪物是否喊话,存在时间,子关卡id,战斗场景id,坐标,Y轴旋转角度,模型缩放比例
+,3138013,星曜宝箱,3138,1,40292,0,1,0,0,0,0,0,,0,1
+,3138014,星曜宝箱,3138,1,40292,0,1,0,0,0,0,0,,0,1
+,3138015,星曜宝箱,3138,1,40292,0,1,0,0,0,0,0,,0,1
+,3138016,星曜宝箱,3138,1,40292,0,1,0,0,0,0,0,,0,1
+,3138017,星曜宝箱,3138,1,40292,0,1,0,0,0,0,0,,0,1
+,3138018,星尘宝箱,3138,1,40293,0,1,0,0,0,0,0,,0,1
+,3138019,星尘宝箱,3138,1,40293,0,1,0,0,0,0,0,,0,1
+,3138020,星尘宝箱,3138,1,40293,0,1,0,0,0,0,0,,0,1
+,3138021,星尘宝箱,3138,1,40293,0,1,0,0,0,0,0,,0,1
+,3138022,星尘宝箱,3138,1,40293,0,1,0,0,0,0,0,,0,1

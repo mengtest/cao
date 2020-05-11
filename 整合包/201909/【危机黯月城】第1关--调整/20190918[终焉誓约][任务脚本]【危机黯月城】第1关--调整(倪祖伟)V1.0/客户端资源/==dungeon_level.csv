@@ -1,0 +1,5 @@
+﻿,required,required,repeated,repeated,required
+,uint32,uint32,uint32,uint32,uint32
+,id,level_id,monster1_id,monster2_id,boss_id
+备注,ID,关卡id,战力,多人boss,怪物id
+,1,3097,200466;200467,0,200468

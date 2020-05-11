@@ -1,0 +1,7 @@
+﻿,required,required,required,required
+,uint32,uint32,uint32,string
+,id,approach_mask,approach_skip,icon_path
+备注,流水id,获取方式二进制,是否可以跳转,背景资源路径
+,1,0,0,
+,3,2,0,
+,4,3,0,

@@ -1,0 +1,7 @@
+﻿,required,required
+,int32,uint32
+,id,mask
+备注,系统功能ID,掩码
+,49,47
+,50,48
+,51,49

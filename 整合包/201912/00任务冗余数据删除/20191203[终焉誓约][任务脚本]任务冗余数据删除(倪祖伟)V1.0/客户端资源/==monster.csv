@@ -1,0 +1,5 @@
+﻿,required,required,optional,required,required,required,required,optional,required,repeated,repeated,required,repeated,required,repeated,required
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,string,uint32,string,uint32,uint32
+,id,name,attr_type,type,sex,family,profession,level,attr_id,special_effects,own_skills,skill_que,skill_vis,skill_loop_que,skill_que_vis,action_id
+备注,怪物ID,注释,属性适配类型,怪物类型,性别,家族,职业类型,等级,怪物属性ID,特殊效果ID,拥有技能列表,技能序列,技能序列可见性,循环技能序列,循环技能序列可见性,效果ID
+,812107,夜崎隐,0,2,1,6,1,60,812107,,10701;10702;10703;10704;10705;10706;2010701,"6,6",0,"6,6",0,0

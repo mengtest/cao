@@ -1,0 +1,11 @@
+﻿,required,optional,optional
+,uint32,string,string
+,id,headPath,normalHalfPath
+备注,id,标准头像,标准半身像
+,3815,Textures\Atlas\Dyn\CharacterCommonHead\default.png,Textures\Atlas\Dyn\CharacterHalfBody\DeLiYi2heart.png
+,3816,Textures/Atlas/Dyn/CharacterCommonHead/DarkGhost.png,Textures\Atlas\Dyn\CharacterHalfBody\GuardwarlordSalin.png
+,3817,Textures/Atlas/Dyn/CharacterCommonHead/default.png,Textures\Atlas\Dyn\CharacterHalfBody\Teluo.png
+,3818,Textures/Atlas/Dyn/CharacterCommonHead/Thairay.png,Textures\Atlas\Dyn\CharacterHalfBody\Thairay.png
+,3924,Textures/Atlas/Dyn/CharacterCommonHead/AndrewBlack.png,Textures\Atlas\Dyn\CharacterHalfBody\AndrewBlack.png
+,3925,Textures/Atlas/Dyn/CharacterCommonHead/ArmedWolf.png,Textures\Atlas\Dyn\CharacterHalfBody\Wolves.png
+,3926,Textures/Atlas/Dyn/CharacterCommonHead/DarkGhost.png,Textures\Atlas\Dyn\CharacterHalfBody\Darksoul.png

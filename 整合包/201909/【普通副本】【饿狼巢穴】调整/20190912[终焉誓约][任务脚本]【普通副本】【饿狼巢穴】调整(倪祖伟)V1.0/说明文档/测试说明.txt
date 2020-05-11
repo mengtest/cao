@@ -1,0 +1,34 @@
+﻿------------------------------------------
+任务名称：【普通副本】【饿狼巢穴】调整
+By：倪祖伟
+Date：2019-09-12
+ERP链接：http://forum.nderp.99.com/Forum/TopicList-341014.aspx
+------------------------------------------
+需求：
+修改普通本饿狼巢穴数值，怪物路径
+1、临近入口的两只巡逻怪，改为一只
+2、白狼移到房间外
+3、修改怪物，属性，不再是适配怪了
+4、添加通关奖励
+------------------------------------------
+测试PM：
+@luacall </F>rwEnterMap</N>3038
+@awardrandom 1000833 100000
+------------------------------------------
+测试重点：
+
+------------------------------------------
+自测：
+
+I0924 14:54:39.762804	userid:3000000028, PM CMD:awardrandom 1000833 100000	- mysj/SceneModule/RegHandle_debug.go:45
+I0924 14:54:40.143866	award random result awardId:1000833 total times:100000	- mysj/SceneModule/RegHandle_debug.go:725
+I0924 14:54:40.143993	awardGroup:2	 awardType:1	 awardId:2110001	 itemNum:5	 times:39999	 pecent:40.00%	- mysj/SceneModule/RegHandle_debug.go:727
+I0924 14:54:40.144018	awardGroup:1	 awardType:1	 awardId:8	 itemNum:5000	 times:100000	 pecent:100.00%	- mysj/SceneModule/RegHandle_debug.go:727
+I0924 14:54:40.144038	awardGroup:1	 awardType:1	 awardId:4	 itemNum:5000	 times:100000	 pecent:100.00%	- mysj/SceneModule/RegHandle_debug.go:727
+I0924 14:54:40.144114	awardGroup:1	 awardType:1	 awardId:3	 itemNum:1000	 times:100000	 pecent:100.00%	- mysj/SceneModule/RegHandle_debug.go:727
+I0924 14:54:40.144159	awardGroup:2	 awardType:1	 awardId:2110001	 itemNum:4	 times:30114	 pecent:30.11%	- mysj/SceneModule/RegHandle_debug.go:727
+I0924 14:54:40.144178	awardGroup:3	 awardType:1	 awardId:3060030	 itemNum:1	 times:1204	 pecent:1.20%	- mysj/SceneModule/RegHandle_debug.go:727
+I0924 14:54:40.144196	awardGroup:3	 awardType:1	 awardId:3030013	 itemNum:1	 times:279	 pecent:0.28%	- mysj/SceneModule/RegHandle_debug.go:727
+I0924 14:54:40.144214	awardGroup:2	 awardType:1	 awardId:2110001	 itemNum:6	 times:29887	 pecent:29.89%	- mysj/SceneModule/RegHandle_debug.go:727
+I0924 14:54:40.144232	awardGroup:1	 awardType:1	 awardId:5	 itemNum:100	 times:100000	 pecent:100.00%	- mysj/SceneModule/RegHandle_debug.go:727
+T0924 14:54:40.144318	data trans from 0xf00000e to 0xf000013, sessionId:4 *csmsg.MsgPmCmdS2C:result:OK 	- nd/sparklet/servicelib/service_call.go:434

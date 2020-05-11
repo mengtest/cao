@@ -1,0 +1,5 @@
+﻿,required,required,optional
+,uint32,string,string
+,id,effect_name,des
+备注,索引id,特效名称,注释
+,2083,Effect_Scene_wuxingfazhenxiao_an,五芒星明黯交替光效

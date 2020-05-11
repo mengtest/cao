@@ -1,0 +1,5 @@
+﻿,required,required,required,required,required,required,required,required,required,required,required
+,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32
+,id,map_id,type,start_time,end_time,condition1_type,condition1_num,condition2_type,condition2_num,condition3_type,condition3_num
+备注,流水id,副本id,验证类型,开启时间,结束时间,条件类型,条件数据,条件类型,条件数据,条件类型,条件数据
+,3158,3158,1,120000,235959,1,55,0,0,0,0

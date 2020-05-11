@@ -1,0 +1,5 @@
+﻿,required,required,required,required
+,uint32,uint32,uint32,uint32
+,id,approach_skip,data1,data2
+备注,来源id,跳转的界面功能id,数据1,数据2
+,0,0,0,0

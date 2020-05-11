@@ -1,0 +1,9 @@
+﻿,required,optional,optional,optional,optional,repeated,repeated,optional
+,uint32,string,string,string,string,uint32,uint32,uint32
+,id,headPath,normalHalfPath,live_path,twinkle_que,related_persons,related_type,area_id
+备注,id,标准头像,标准半身像,Live2D预制体资源的路径,眨眼twinkle的序列，使用LiveTwinkle表中的Id拼成数组实现,图鉴npc关系id,图鉴npc关系类型,所属片区id
+,3758,Textures/Atlas/Dyn/CharacterCommonHead/default.png,Textures\Atlas\Dyn\CharacterHalfBody\Nest.png,,,0,0,0
+,3759,Textures/Atlas/Dyn/CharacterCommonHead/default.png,Textures\Atlas\Dyn\CharacterHalfBody\Completelytransparent.png,,,0,0,0
+,3760,Textures/Atlas/Dyn/CharacterCommonHead/default.png,Textures\Atlas\Dyn\CharacterHalfBody\Completelytransparent.png,,,0,0,0
+,3761,Textures/Atlas/Dyn/CharacterCommonHead/default.png,Textures\Atlas\Dyn\CharacterHalfBody\anger.png,,,0,0,0
+,3839,Textures\Atlas\Dyn\CharacterCommonHead\default.png,Textures\Atlas\Dyn\CharacterHalfBody\Completelytransparent.png,,,0,0,0

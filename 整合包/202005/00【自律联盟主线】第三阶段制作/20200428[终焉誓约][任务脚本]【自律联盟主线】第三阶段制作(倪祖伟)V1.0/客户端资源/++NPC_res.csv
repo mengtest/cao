@@ -1,0 +1,5 @@
+﻿,required,optional,optional,optional,optional,optional,repeated,repeated,optional
+,uint32,string,string,string,uint32,string,uint32,uint32,uint32
+,id,headPath,normalHalfPath,live_path,default_face,twinkle_que,related_persons,related_type,area_id
+备注,id,标准头像,标准半身像,Live2D预制体资源的路径,默认表情id,眨眼twinkle的序列，使用LiveTwinkle表中的Id拼成数组实现,图鉴npc关系id,图鉴npc关系类型,所属片区id
+,4239,Textures\Atlas\Dyn\CharacterCommonHead\default.png,Textures\Atlas\Dyn\CharacterHalfBody\Minnie.png,npc_mini,210001,,0,0,0

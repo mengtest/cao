@@ -1,0 +1,5 @@
+﻿,required,required,required,required,required,required,required,required,required,required,required
+,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32
+,id,levelId,groupId,playWay,battleResult,action,actionId,triggerType,data1,data2,loop
+Mark,id,关卡id,怪物组id,播放时机,战斗结果,事件行为,事件参数,触发类型,触发参数,触发参数,是否每次执行
+,100368,3148,200823,2,1,1,7059,1,0,0,0

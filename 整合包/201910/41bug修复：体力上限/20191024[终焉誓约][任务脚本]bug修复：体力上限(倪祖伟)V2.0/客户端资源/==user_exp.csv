@@ -1,0 +1,8 @@
+﻿,required,required,required,optional,optional
+,uint32,uint32,uint32,uint32,uint32
+英雄进阶,id,level,need_exp,ap_point,ap_reward
+备注,id,战队等级,升级经验,体力值上限,奖励体力值
+,17,17,6500,96,50
+,18,18,7500,98,50
+,23,23,16000,108,50
+,24,24,18600,110,50

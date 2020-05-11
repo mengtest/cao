@@ -1,0 +1,6 @@
+﻿,required,required,required,required,required,required
+,uint32,uint32,uint32,int32,uint32,uint32
+,id,hero_id,index,unlock_level,task_id,num
+备注,英雄id拼接任务索引,英雄id,索引,解锁等级,起始任务,结局数量
+,40101,401,1,0,70561,1
+,40102,401,2,6,70574,1

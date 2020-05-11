@@ -1,0 +1,9 @@
+﻿,required,required,required,required,required,required,required,required,required,required,required,required
+,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32
+,id,shop_type,target_type,target_id,target_num,limit_times,consume1_id,consume1_num,consume2_id,consume2_num,consume3_id,consume3_num
+备注,流水id,商城编号,目标类型,目标id,目标数量,次数限制,消耗物品id1,消耗物品数量1,消耗物品id2,消耗物品数量2,消耗物品id3,消耗物品数量3
+,1,100,1,3010013,2,0,3060030,1,204010,10,0,0
+,2,100,2,401,1,3,3014014,1,3060030,1,204010,10
+,3,100,3,4122,1,3,3060030,5,0,0,0,0
+,4,100,4,10102,1,1,3060030,5,0,0,0,0
+,5,100,5,10000,1,1,3060030,10,0,0,0,0

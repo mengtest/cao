@@ -1,0 +1,43 @@
+﻿------------------------------------------
+任务名称：【剧情副本】饿狼巢穴--数值调整
+By：倪祖伟
+Date：2019-09-11
+ERP链接：http://forum.nderp.99.com/Forum/TopicList-346674.aspx
+------------------------------------------
+需求：
+修改饿狼巢穴怪物奖励数值
+------------------------------------------
+测试PM：
+@luacall </F>rwEnterMap</N>3011
+awardrandom 1000016 100000
+进入副本
+------------------------------------------
+测试重点：
+
+------------------------------------------
+自测：
+
+ID：
+,monster_group          monsterId(也是属性id)
+,200152,隐雾狐         ,1000294 ,
+,200153,霜晶巨熊       ,1000297 ,
+,200154,森林战熊       ,1000295 ,
+,200156,碎魂狼王乌迪尔 ,1000296 ,
+
+宝箱1奖励ID  1000039
+宝箱2奖励ID  1000040
+通关奖励ID   1000016
+
+
+===============================================
+D0922 13:12:01.518894	send heartbeat to node 1	- nd/sparklet/services/harbor/harbor.go:731
+I0922 13:12:01.755063	award random result awardId:1000016 total times:100000	- mysj/SceneModule/RegHandle_debug.go:725
+I0922 13:12:01.755170	awardGroup:1	 awardType:1	 awardId:210000	 itemNum:2	 times:100000	 pecent:100.00%	- mysj/SceneModule/RegHandle_debug.go:727
+I0922 13:12:01.755220	awardGroup:1	 awardType:1	 awardId:2110001	 itemNum:30	 times:100000	 pecent:100.00%	- mysj/SceneModule/RegHandle_debug.go:727
+I0922 13:12:01.755261	awardGroup:1	 awardType:1	 awardId:1	 itemNum:1000	 times:100000	 pecent:100.00%	- mysj/SceneModule/RegHandle_debug.go:727
+T0922 13:12:01.755305	data trans from 0xf00000e to 0xf000013, sessionId:2 *csmsg.MsgPmCmdS2C:result:OK 	- nd/sparklet/servicelib/service_call.go:434
+
+I0922 13:12:02.162866	userid:3000000026, PM CMD:awardrandom 1000039 100000	- mysj/SceneModule/RegHandle_debug.go:45
+I0922 13:12:02.360036	award random result awardId:1000039 total times:100000	- mysj/SceneModule/RegHandle_debug.go:725
+I0922 13:12:02.360142	awardGroup:1	 awardType:1	 awardId:3	 itemNum:5000	 times:100000	 pecent:100.00%	- mysj/SceneModule/RegHandle_debug.go:727
+I0922 13:12:02.360192	awardGroup:1	 awardType:1	 awardId:1	 itemNum:50	 times:100000	 pecent:100.00%	- mysj/SceneModule/RegHandle_debug.go:727

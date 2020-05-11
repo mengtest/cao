@@ -1,9 +1,0 @@
-﻿,required,required,required,required,required
-,int32,string,string,string,string
-,areaId,areaName,norTexPath,greyTexPath,actTexPath
-备注,片区Id,片区名称,正常显示图片,未激活显示图片,开启显示图片
-,1,卡诺萨城,GUI/TransferPanel/transferNormal1,GUI/TransferPanel/transferGray1,GUI/TransferPanel/transferActive1
-,2,雷鸣大陆,GUI/TransferPanel/transferNormal2,GUI/TransferPanel/transferGray2,GUI/TransferPanel/transferActive2
-,3,古加尼尔,GUI/TransferPanel/transferNormal2,GUI/TransferPanel/transferGray2,GUI/TransferPanel/transferActive2
-,4,失落群岛,GUI/TransferPanel/transferNormal2,GUI/TransferPanel/transferGray2,GUI/TransferPanel/transferActive2
-,5,天空城,GUI/TransferPanel/transferNormal2,GUI/TransferPanel/transferGray2,GUI/TransferPanel/transferActive2

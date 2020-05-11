@@ -1,0 +1,6 @@
+﻿,required,required,required,required
+,uint32,uint32,float,float
+,id,audio_id,in_time,duration
+备注,流水id,音频id,开始时间,持续时间
+,1,12539,0,2.5
+,30,11460,0,5

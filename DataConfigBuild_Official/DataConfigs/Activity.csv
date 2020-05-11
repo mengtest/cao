@@ -1,4 +1,0 @@
-﻿,required,required,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional
-,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,int32,int32,int32,int32
-,id,type,condition1_type,condition1_num,condition2_type,condition2_num,condition3_type,condition3_num,Date1,Date2,Date3,Date4
-备注,活动id,活动类型,参与条件1类型,参与条件1值,参与条件2类型,参与条件2值,参与条件3类型,参与条件3值,,,,

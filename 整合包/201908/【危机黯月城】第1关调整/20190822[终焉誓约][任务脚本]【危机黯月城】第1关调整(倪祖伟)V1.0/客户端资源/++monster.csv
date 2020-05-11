@@ -1,0 +1,6 @@
+﻿,required,required,optional,required,required,required,required,optional,required,repeated,repeated,required,repeated,required,repeated,required
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,string,uint32,string,uint32,uint32
+,id,name,attr_type,type,sex,family,profession,level,attr_id,special_effects,own_skills,skill_que,skill_vis,skill_loop_que,skill_que_vis,action_id
+备注,怪物ID,注释,属性适配类型,怪物类型,性别,家族,职业类型,等级,怪物属性ID,特殊效果ID,拥有技能列表,技能序列,技能序列可见性,循环技能序列,循环技能序列可见性,效果ID
+,1001247,混沌魔魂,0,0,1,1,1,0,1001247,1111,1002301;1002302,"0,1,0;1,0,1,0",0,"0,1;1,0,1,0,1;0,1,0;1,0,1",0,0
+,1001248,觉醒魔魂,0,0,1,1,1,0,1001248,,1004901;1004902,"0,0,1;0,0,1",0,"0,0,1;0,0,1",0,0

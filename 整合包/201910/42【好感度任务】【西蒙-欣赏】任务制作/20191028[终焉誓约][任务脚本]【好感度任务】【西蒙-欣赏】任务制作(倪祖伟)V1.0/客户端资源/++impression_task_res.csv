@@ -1,0 +1,5 @@
+﻿,required,required,required,required,required
+,uint32,uint32,uint32,uint32,string
+,id,reward1,reward2,reward3,task_id
+备注,英雄id拼接任务索引,结局1的奖励id,结局2的奖励id,结局3的奖励id,任务id列表
+,10103,2000636,2000637,0,"70423,70424,70425,70426,70427,70428,70429,70430"

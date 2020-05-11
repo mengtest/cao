@@ -1,0 +1,24 @@
+﻿,required,optional,optional,optional,repeated,required,required,repeated,optional
+,uint32,string,string,string,uint32,uint32,uint32,uint32,int32
+,id,effectPath,iconPath,defaultAnim,talk_ids,talk_time,talk_wait_time,dialog_ids,trap_stay
+备注,npcGroupID,魔法阵路径,显示图标,默认动作,气泡id组,气泡显示时长,等待时间,对话id组,0 陷阱触发方式不变 1 陷阱停留触发
+,20710,Prefab/Effect/Scene/Effect_Scenemoxin_fengyinfazhen_huo.prefab,,,,0,0,,0
+,20711,Prefab/Effect/Scene/Effect_Scenemoxin_fengyinfazhen_huo.prefab,,,,0,0,,0
+,20712,Prefab/Effect/Scene/Effect_Scenemoxin_fengyinfazhen_huo.prefab,,,,0,0,,0
+,20713,Prefab/Effect/Scene/Effect_Scenemoxin_fengyinfazhen_huo.prefab,,,,0,0,,0
+,20714,Prefab/Effect/Scene/Effect_Scenemoxin_fengyinfazhen_huo.prefab,,,,0,0,,0
+,20737,Prefab/Effect/Scene/Effect_Scenemoxin_fengyinfazhen_huo.prefab,,,,0,0,,0
+,20738,Prefab/Effect/Scene/Effect_Scenemoxin_fengyinfazhen_huo.prefab,,,,0,0,,0
+,20739,Prefab/Effect/Scene/Effect_Scenemoxin_fengyinfazhen_huo.prefab,,,,0,0,,0
+,20740,Prefab/Effect/Scene/Effect_Scenemoxin_fengyinfazhen_huo.prefab,,,,0,0,,0
+,20741,Prefab/Effect/Scene/Effect_Scenemoxin_fengyinfazhen_huo.prefab,,,,0,0,,0
+,20765,Prefab/Effect/Scene/Effect_Scenemoxin_fengyinfazhen_huo.prefab,,,,0,0,,0
+,20766,Prefab/Effect/Scene/Effect_Scenemoxin_fengyinfazhen_huo.prefab,,,,0,0,,0
+,20767,Prefab/Effect/Scene/Effect_Scenemoxin_fengyinfazhen_huo.prefab,,,,0,0,,0
+,20768,Prefab/Effect/Scene/Effect_Scenemoxin_fengyinfazhen_huo.prefab,,,,0,0,,0
+,20769,Prefab/Effect/Scene/Effect_Scenemoxin_fengyinfazhen_huo.prefab,,,,0,0,,0
+,20847,Prefab/Effect/Scene/Effect_Scenemoxin_fengyinfazhen_huo.prefab,,,,0,0,,0
+,20848,Prefab/Effect/Scene/Effect_Scenemoxin_fengyinfazhen_huo.prefab,,,,0,0,,0
+,20849,Prefab/Effect/Scene/Effect_Scenemoxin_fengyinfazhen_huo.prefab,,,,0,0,,0
+,20850,Prefab/Effect/Scene/Effect_Scenemoxin_fengyinfazhen_huo.prefab,,,,0,0,,0
+,20851,Prefab/Effect/Scene/Effect_Scenemoxin_fengyinfazhen_huo.prefab,,,,0,0,,0

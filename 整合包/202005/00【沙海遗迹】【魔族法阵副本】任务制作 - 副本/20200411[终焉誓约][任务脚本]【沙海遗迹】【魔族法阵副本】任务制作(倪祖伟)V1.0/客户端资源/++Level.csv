@@ -1,0 +1,5 @@
+﻿,optional,optional,optional,optional,optional,optional,optional,optional,optional,repeated,optional,repeated
+,uint32,string,uint32,uint32,uint32,float,float,float,int32,int32,string,int32
+,levelID,name,sceneID,sort,subsort,enterPosX,enterPosY,enterPosZ,audioClipID,stepClipID,loadBgName,AudioClipLoopID
+备注,关卡ID,关卡名,资源名称,类型(-1客户端场景、0主城、1野外、2副本),子类型,入口坐标X,入口坐标Y(暂时添加，是否需要？？？),入口坐标Z,背景音乐,英雄脚步声,场景加载背景名,循环音乐（分号隔开
+,3160,怨魔空间,155,2,0,-135.36,-21.25002,-33.1,1013,2260;2261;2262;2263;2264,"77,78,79,80,81,82,83,84,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012",

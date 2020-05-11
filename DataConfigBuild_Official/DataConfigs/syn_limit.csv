@@ -1,9 +1,0 @@
-﻿,required,required,required
-,uint32,uint32,uint32
-,id,grade,limit
-备注,ID,军团职位等级,职位权限
-,1,10,15
-,2,20,15
-,3,30,11
-,4,40,0
-,5,50,0
