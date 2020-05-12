@@ -1,0 +1,14 @@
+﻿,required,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,repeated,optional,repeated,optional,optional,optional,optional,optional
+,uint32,string,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32
+,id,name,group,type,map_attr,map_times,team_max,team_min,fire,money,user_exp,hero_exp,exp_ball,reward_id,time,need_ap,auto,activity_id,activity_award
+备注,地图id,地图名称,分组,地图类型,地图属性二进制,次数类型,最多组队人数,最少组队人数,是否篝火,通关金币,通关战队经验值,通关英雄经验值,通关经验球经验值,奖励id,通关限制时间,需要体力值,是否支持自动探索,活动id,活动奖励id
+,3163,雾夜城二十一层,1,6,0,1,0,0,0,0,0,0,0,0,2400,0,0,0,0
+,3164,雾夜城二十二层,1,6,0,1,0,0,0,0,0,0,0,0,2400,0,0,0,0
+,3165,雾夜城二十三层,1,6,0,1,0,0,0,0,0,0,0,0,2400,0,0,0,0
+,3166,雾夜城二十四层,1,6,0,1,0,0,0,0,0,0,0,0,2400,0,0,0,0
+,3167,雾夜城二十五层,1,6,0,1,0,0,0,0,0,0,0,0,2400,0,0,0,0
+,3168,雾夜城二十六层,1,6,0,1,0,0,0,0,0,0,0,0,2400,0,0,0,0
+,3169,雾夜城二十七层,1,6,0,1,0,0,0,0,0,0,0,0,2400,0,0,0,0
+,3170,雾夜城二十八层,1,6,0,1,0,0,0,0,0,0,0,0,2400,0,0,0,0
+,3171,雾夜城二十九层,1,6,0,1,0,0,0,0,0,0,0,0,2400,0,0,0,0
+,3172,雾夜城三十层,1,6,0,1,0,0,0,0,0,0,0,0,2400,0,0,0,0

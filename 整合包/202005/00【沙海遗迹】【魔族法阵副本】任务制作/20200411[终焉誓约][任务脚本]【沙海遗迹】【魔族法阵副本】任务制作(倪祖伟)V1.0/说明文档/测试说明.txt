@@ -13,7 +13,45 @@ ERP链接：http://forum.nderp.99.com/Forum/TopicList-363962.aspx
 测试重点：
 
 ------------------------------------------
-自测：
+奖励ID
+tAward.Normal  = 1001050 --宝箱奖励
+tAward.Special = 1001051 --稀有奖励 --地图左上脚房间
+tAward.Specia2 = 1001054 --高级奖励 --地图下方房间
+tAward.PassBox = 1001052 --超级宝箱奖励
+tAward.Collect = 1001053 --采集物奖励
+1001066,    
+1001067,
+1001068,
+1001069
+
+自测奖励日志：
+
+T0503 06:44:22.030039	data trans from 0xf000014 to 0xf00000f, sessionId:2 *csmsg.MsgPmCmdC2S:strData:"awardrandom 1001050 100000" 	- nd/sparklet/servicelib/service_call.go:434
+I0503 06:44:22.030292	userid:100000000042, PM CMD:awardrandom 1001050 100000	- mysj/SceneModule/RegHandle_debug.go:49
+I0503 06:44:22.250981	award random result awardId:1001050 total times:100000	- mysj/SceneModule/RegHandle_debug.go:558
+I0503 06:44:22.251152	awardGroup:1	 awardType:1	 awardId:3	 itemNum:2000	 times:24795	 pecent:24.80%	- mysj/SceneModule/RegHandle_debug.go:560
+I0503 06:44:22.251201	awardGroup:2	 awardType:1	 awardId:3060320	 itemNum:1	 times:20221	 pecent:20.22%	- mysj/SceneModule/RegHandle_debug.go:560
+I0503 06:44:22.251324	awardGroup:1	 awardType:1	 awardId:2110001	 itemNum:2	 times:25294	 pecent:25.29%	- mysj/SceneModule/RegHandle_debug.go:560
+I0503 06:44:22.251368	awardGroup:2	 awardType:1	 awardId:210000	 itemNum:1	 times:19865	 pecent:19.86%	- mysj/SceneModule/RegHandle_debug.go:560
+I0503 06:44:22.251486	awardGroup:2	 awardType:1	 awardId:204010	 itemNum:1	 times:19970	 pecent:19.97%	- mysj/SceneModule/RegHandle_debug.go:560
+I0503 06:44:22.251562	awardGroup:2	 awardType:1	 awardId:120012	 itemNum:1	 times:19895	 pecent:19.89%	- mysj/SceneModule/RegHandle_debug.go:560
+I0503 06:44:22.251675	awardGroup:1	 awardType:1	 awardId:4	 itemNum:5000	 times:24806	 pecent:24.81%	- mysj/SceneModule/RegHandle_debug.go:560
+I0503 06:44:22.251725	awardGroup:2	 awardType:1	 awardId:3060020	 itemNum:1	 times:20049	 pecent:20.05%	- mysj/SceneModule/RegHandle_debug.go:560
+I0503 06:44:22.251772	awardGroup:1	 awardType:1	 awardId:8	 itemNum:5000	 times:25105	 pecent:25.10%	- mysj/SceneModule/RegHandle_debug.go:560
+T0503 06:44:22.251874	data trans from 0xf00000f to 0xf000014, sessionId:2 *csmsg.MsgPmCmdS2C:result:OK 	- nd/sparklet/servicelib/service_call.go:434
+D0503 06:44:22.252344	send to client sessionId:2:*csmsg.MsgPmCmdS2C: result:OK 	- nd/sparklet/services/gate/gate.go:267
+T0503 06:44:22.447821	data trans from 0xf000014 to 0xf00000f, sessionId:2 *csmsg.MsgPmCmdC2S:strData:"awardrandom 1001053 100000" 	- nd/sparklet/servicelib/service_call.go:434
+I0503 06:44:22.448016	userid:100000000042, PM CMD:awardrandom 1001053 100000	- mysj/SceneModule/RegHandle_debug.go:49
+I0503 06:44:22.497722	award random result awardId:1001053 total times:100000	- mysj/SceneModule/RegHandle_debug.go:558
+I0503 06:44:22.497808	awardGroup:1	 awardType:1	 awardId:2110001	 itemNum:1	 times:10143	 pecent:10.14%	- mysj/SceneModule/RegHandle_debug.go:560
+I0503 06:44:22.497840	awardGroup:1	 awardType:1	 awardId:3	 itemNum:1000	 times:19928	 pecent:19.93%	- mysj/SceneModule/RegHandle_debug.go:560
+I0503 06:44:22.497865	awardGroup:1	 awardType:1	 awardId:4	 itemNum:3000	 times:19951	 pecent:19.95%	- mysj/SceneModule/RegHandle_debug.go:560
+I0503 06:44:22.497888	awardGroup:1	 awardType:1	 awardId:3060020	 itemNum:1	 times:9916	 pecent:9.92%	- mysj/SceneModule/RegHandle_debug.go:560
+I0503 06:44:22.497925	awardGroup:1	 awardType:1	 awardId:8	 itemNum:3000	 times:20154	 pecent:20.15%	- mysj/SceneModule/RegHandle_debug.go:560
+I0503 06:44:22.497953	awardGroup:1	 awardType:1	 awardId:3060320	 itemNum:1	 times:10072	 pecent:10.07%	- mysj/SceneModule/RegHandle_debug.go:560
+I0503 06:44:22.497978	awardGroup:1	 awardType:1	 awardId:3060010	 itemNum:1	 times:9836	 pecent:9.84%	- mysj/SceneModule/RegHandle_debug.go:560
+T0503 06:44:22.498002	data trans from 0xf00000f to 0xf000014, sessionId:2 *csmsg.MsgPmCmdS2C:result:OK 	- nd/sparklet/servicelib/service_call.go:434
+D0503 06:44:22.498118	send to client sessionId:2:*csmsg.MsgPmCmdS2C: result:OK 	- nd/sparklet/services/gate/gate.go:267
 
 
 
