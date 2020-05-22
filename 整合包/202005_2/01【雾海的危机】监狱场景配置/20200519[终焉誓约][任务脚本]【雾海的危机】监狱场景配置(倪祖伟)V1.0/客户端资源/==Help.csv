@@ -1,0 +1,7 @@
+﻿,required,required,required
+,int32,int32,string
+,id,mode,info
+备注,帮助id,帮助模式,帮助信息
+,6,1,"87,89"
+,10,1,"125,126,127,128,129"
+,34,2,"77,78"

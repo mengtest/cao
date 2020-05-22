@@ -1,0 +1,5 @@
+﻿,required,required
+,int32,uint32
+,id,mask
+备注,系统功能ID,掩码
+新插入的CBT1版本问卷,48,46

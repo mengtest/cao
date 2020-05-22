@@ -1,0 +1,5 @@
+﻿,required,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional
+,int32,string,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32
+,id,pet_name,pet_type,start_life,growth_life,start_phy_atk,growth_phy_atk,start_mgc_atk,growth_mgc_atk,start_phy_def,growth_phy_def,start_mgc_def,growth_mgc_def,skill0_id,skill0_id2,skill0_id3,exclusive_hero,pet_money
+"备注,",幻兽id,,幻兽类型,初始生命值,生命成长值,初始物攻值,物攻成长值,初始魔攻值,魔攻成长值,初始物防值,物防成长值,初始魔防值,魔防成长值,天赋技能id,天赋技能2id,天赋技能3id,专属英雄,拆解获得幻兽币
+,113164,幻梦兔斑尼,3,1860,2326000,0,0,207,259600,78,98300,82,103300,11316,0,0,113,50

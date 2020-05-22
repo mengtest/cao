@@ -1,0 +1,5 @@
+﻿,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional
+,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,string,string,uint32,uint32,string
+,levelID,areaID,needAP,fight,monsterID,drop1,drop2,drop3,drop4,drop5,drop6,activity_id,activity_drop_1,dropnum_min1,dropnum_max1,activity_drop_2,dropnum_min2,dropnum_max2,activity_drop_3,dropnum_min3,dropnum_max3,activity_drop_4,dropnum_min4,dropnum_max4,levelPos,TaskID,keyIndex,sort,updateTime
+备注,副本地图id,片区地图id,所需体力,推荐战力,首领怪物id,可能掉落1,可能掉落2,可能掉落3,可能掉落4,可能掉落5,可能掉落6,对应的活动id,,,,,,,,,,,,,副本入口坐标,任务ID,关键帧索引,顺序,更新时间
+,3146,3,20,21000,200735,2051032,2052032,2063032,2064032,0,0,10057,1001,0,20,0,0,0,0,0,0,0,0,0,167;-46,10492,0,0,

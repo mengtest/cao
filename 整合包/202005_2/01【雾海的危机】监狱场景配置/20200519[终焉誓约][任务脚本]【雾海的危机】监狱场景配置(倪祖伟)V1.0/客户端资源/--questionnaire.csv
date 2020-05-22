@@ -1,0 +1,5 @@
+﻿,required,required,optional,required
+,int32,int32,int32,int32
+,id,mask,deblock_id,award_id
+备注,问卷id,掩码位,对应system_beblocking表,奖励ID
+,4,4,57,7001267

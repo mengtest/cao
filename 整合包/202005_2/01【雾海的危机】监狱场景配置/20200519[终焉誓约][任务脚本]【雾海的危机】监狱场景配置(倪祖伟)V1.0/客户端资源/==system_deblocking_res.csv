@@ -1,0 +1,5 @@
+﻿,required,required,required,optional,required,optional,optional
+,int32,int32,string,int32,int32,string,int32
+,id,type,Task,level,functionId,Path,guide
+备注,系统功能ID,系统功能类型,解锁需要完成的所有任务ID,解锁任务对应的等级,对应主界面功能图标表ID,对应图标路径,引导Id
+新插入的CBT1版本问卷,48,3,,0,0,Textures\Atlas\Dyn\UnlockIcon\icon_questionnaire.png,0

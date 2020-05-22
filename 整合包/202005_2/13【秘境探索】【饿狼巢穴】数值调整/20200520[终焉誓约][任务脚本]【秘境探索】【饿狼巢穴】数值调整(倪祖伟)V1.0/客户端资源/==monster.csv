@@ -1,0 +1,8 @@
+﻿,required,required,optional,optional,optional,optional,optional,optional,optional,repeated,repeated,optional,repeated,optional,repeated,optional
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,string,uint32,string,uint32,uint32
+,id,name,attr_type,type,sex,family,profession,level,attr_id,special_effects,own_skills,skill_que,skill_vis,skill_loop_que,skill_que_vis,action_id
+备注,怪物ID,注释,属性适配类型,怪物类型,性别,家族,职业类型,等级,怪物属性ID,特殊效果ID,拥有技能列表,技能序列,技能序列可见性,循环技能序列,循环技能序列可见性,效果ID
+,1000199,残暴孤熊,0,0,1,1,1,5,1000199,1011;1121,1005301;1005302,"0,0,1;0,0,1",0,"0,0,1;0,0,1",0,0
+白眼独狼,1000200,白眼独狼,0,1,1,1,1,6,1000200,1011,1004401;1004402,"0,1,0;1,0,1,0",0,"0,1;1,0,1,0,1;0,1,0;1,0,1",0,0
+,1000201,冰霜巨熊,0,0,1,1,1,6,1000201,1011,1004901;1004902,"0,0,1;0,0,1",0,"0,0,1;0,0,1",0,0
+BOSS狼王,1000202,碎魂狼王乌迪尔,0,2,1,1,1,7,1000202,1011,1002601;1002602;1002603,"0,1,0,2;1,0,1,2",0,"0,1,2;1,0,1,0,2;0,1,1;1,0,1,2",0,0

@@ -1,0 +1,6 @@
+﻿,required,optional,optional,optional,optional
+,uint32,string,string,string,uint32
+,id,path,tiny_path,approach,red_flag
+备注,物品id,图标路径,小图标路径,来源,是否一直显示红点
+,4004,Textures/Atlas/Dyn/PetItem/4234.png,,0,0
+,4014,Textures/Atlas/Dyn/Item/4014.png,,0,0

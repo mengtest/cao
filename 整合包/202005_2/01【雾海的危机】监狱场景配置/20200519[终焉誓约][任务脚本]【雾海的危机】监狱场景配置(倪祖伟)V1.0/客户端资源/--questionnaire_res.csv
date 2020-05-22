@@ -1,0 +1,5 @@
+﻿,required,required
+,int32,string
+,id,url
+备注,问卷id,问卷url地址
+,4,https://sdwj.99.com/q/a6rqYz

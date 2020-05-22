@@ -1,0 +1,5 @@
+﻿,required,required,required,required,required,required
+,uint32,uint32,string,string,uint32,uint32
+,id,fashion_id,start_time,end_time,money_type,price
+备注,流水id,时装id,开始时间,结束时间,货币类型,售价
+,1001,10103,20200101000000,20201231000000,999,28

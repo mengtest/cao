@@ -1,0 +1,5 @@
+﻿,required,required,required,required,repeated,repeated,required,required,required,required
+,uint32,uint32,uint32,uint32,uint32,uint32,string,string,string,string
+,id,hard,clew,boss_id,status1,status2,site1,site2,site3,site4
+备注,副本id,副本难度,线索标记,怪物id,特性组1,特性组2,小怪3个坐标,小怪3个坐标,小怪3个坐标,小怪3个坐标
+,3102,0,1,200508,1623;1636,1604;1620,"-18.74,0.07,7.66;-20.006,0.07,4.35;-16.33,0.07,5.08","20.15,0.07,7.03;18.82,0.07,3.7;16.69,0.07,6.28","-17.70,0.07,21.305;-18.59,0.07,17.74;-20.86,0.07,20.29","21.26,0.07,20.01;18.4,0.07,17.65;17.51,0.07,21.45"

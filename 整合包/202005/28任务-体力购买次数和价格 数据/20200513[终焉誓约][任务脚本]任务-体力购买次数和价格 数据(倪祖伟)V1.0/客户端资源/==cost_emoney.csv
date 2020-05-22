@@ -1,0 +1,5 @@
+﻿,required,required,required,required
+,uint32,uint32,uint32,uint32
+,id,times_type,times,cost
+备注,流水号,次数类型,第几次,花费
+,6000,60,10,100
