@@ -1,0 +1,8 @@
+﻿,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,repeated,optional,optional,repeated,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32
+,id,name,type_id,affect_faction,target_rule,duration,end_condition,end_data,trigger_interval,trigger_percent,ishelpful,override_id,max_superposition,clear,special_effects,parm1,parm2,parm3,attr_exp1,attr_class1,attr_value1,attr_exp2,attr_class2,attr_value2,attr_exp3,attr_class3,attr_value3
+Mark,状态ID(状态来自skill.xlsx表技能状态 id规则为：技能id 后面再加2位数字),name,buff类型ID,作用阵营,状态目标,buff时间（毫秒）,结束条件0时间内有效1值消耗完2持续到本次出手完,结束参数值,触发间隔,状态触发概率,0:良性状态 1:不良状态,覆盖的类型,状态叠加的最大层数,能否清除,特殊效果,buff值,buff值2,buff值3,属性数值公式 0:Add加 1:Sub减 2:Mul乘 3:Div除 4:Set直接设 5:PercentAdd百分比加 6:PercentSub百分比减,属性类型,属性值,属性数值公式 0:Add加 1:Sub减 2:Mul乘 3:Div除 4:Set直接设 5:PercentAdd百分比加 6:PercentSub百分比减,属性类型,属性值,属性数值公式 0:Add加 1:Sub减 2:Mul乘 3:Div除 4:Set直接设 5:PercentAdd百分比加 6:PercentSub百分比减,属性类型,属性值
+魔法防御降低50%，持续20招，不可叠加。,104201,布偶娃娃,1042,0,0,0,13,20,0,10000,1,,1,0,,0,0,0,6,5,5000,6,4,5000,0,0,0
+下个技能伤害额外提升20%，持续1招。不可叠加。,410401,重击增幅,4104,1,0,0,11,1,0,10000,0,4104,1,0,,0,0,0,0,31,5000,0,0,0,0,0,0
+下个技能伤害额外提升30%，持续1招。不可叠加。,410402,重击增幅,4104,1,0,0,11,1,0,10000,0,4104,1,0,,0,0,0,0,31,7500,0,0,0,0,0,0
+下个技能伤害额外提升40%，持续1招。不可叠加。,410403,重击增幅,4104,1,0,0,11,1,0,10000,0,4104,1,0,,0,0,0,0,31,10000,0,0,0,0,0,0

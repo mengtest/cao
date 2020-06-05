@@ -1,0 +1,10 @@
+﻿,required,required,required,required,required,required,required,required,required,required,required,required,required,required,required,required,required
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,string
+,id,name,percent,position,isalive,listen_actor,trigger_type,trigger_arg1,trigger_arg2,trigger_arg3,trigger_arg4,respond_actor,respond_type,respond_arg1,respond_arg2,respond_arg3,respond_arg4
+备注,流水号,name,生效概率,所在位置才触发,存活状态才触发,监听触发的角色,触发事件的类型,触发事件条件参数1,触发事件条件参数2,触发事件条件参数3,触发事件条件参数4,响应事件的角色,响应事件的类型,响应事件参数1,响应事件参数2,响应事件参数3,响应事件参数4
+技能3 2级,10260,,10000,1,1,10,1,0,0,0,0,10,44,1001,2,5800,
+技能3 3级,10261,,10000,1,1,10,1,0,0,0,0,10,44,1001,2,5600,
+技能3 4级,10262,,10000,1,1,10,1,0,0,0,0,10,44,1001,2,5400,
+技能3 5级,10263,,10000,1,1,10,1,0,0,0,0,10,44,1001,2,5200,
+技能3 6级,10264,,10000,1,1,10,1,0,0,0,0,10,44,1001,2,4500,
+技能3 7级,10265,,10000,1,1,10,1,0,0,0,0,10,44,1001,2,2500,

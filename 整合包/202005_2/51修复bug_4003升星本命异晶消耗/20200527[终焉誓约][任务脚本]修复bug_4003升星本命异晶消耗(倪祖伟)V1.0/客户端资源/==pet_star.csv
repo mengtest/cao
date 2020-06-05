@@ -1,0 +1,11 @@
+﻿,required,required,required,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional
+,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32,int32
+,id,pet_id,star,attr_type1,add_type1,attr_data1,attr_type2,add_type2,attr_data2,money,pet_num,material_id1,material_num1,material_id2,material_num2,material_id3,material_num3,replace_pet
+"备注,",id,幻兽id,星级,属性类型1,属性加成方式1,属性值1,属性类型2,属性加成方式2,属性值2,所需金币,所需幻兽数量,材料1ID,材料1数量,材料2ID,材料2数量,材料3ID,材料3数量,可替代本命
+,562,4003,1,2,1,1000,0,0,0,10000,1,6003003,8,0,0,0,0,0
+,563,4003,2,3,1,1000,0,0,0,10000,1,6003003,16,0,0,0,0,0
+,564,4003,3,1,1,1000,0,0,0,10000,1,6003003,24,0,0,0,0,0
+,565,4003,4,11,1,800,0,0,0,10000,1,6003003,40,0,0,0,0,0
+,566,4003,5,32,1,800,0,0,0,10000,1,6003003,40,0,0,0,0,0
+,567,4003,6,1,1,1000,0,0,0,10000,1,6003003,40,0,0,0,0,0
+,568,4003,7,31,1,800,0,0,0,10000,1,6003003,40,0,0,0,0,0

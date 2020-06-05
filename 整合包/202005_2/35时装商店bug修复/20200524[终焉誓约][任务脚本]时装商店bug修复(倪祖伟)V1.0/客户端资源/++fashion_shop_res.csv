@@ -1,0 +1,8 @@
+﻿,required,required
+,uint32,uint32
+,id,original_price
+备注,流水id,原价
+,1001,98
+,1002,272
+,1003,392
+,1004,196

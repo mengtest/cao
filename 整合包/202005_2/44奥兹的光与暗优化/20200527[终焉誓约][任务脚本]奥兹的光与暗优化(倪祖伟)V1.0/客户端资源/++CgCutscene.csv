@@ -1,0 +1,5 @@
+﻿,required,required,required,required,required,required,optional,optional,required
+,uint32,uint32,uint32,uint32,uint32,uint32,string,string,string
+,id,sceneId,eventType,action,eventType1,action1,Fade,FadeColor,prefabPath
+Mark,id,归属场景ID,事件,事件行为,事件,事件行为,淡入淡出 a;b  a:进入对白 b：对白退出 类型：0：无 1：完整的淡入淡出 2：衔接的淡入或者淡出,淡入淡出过渡颜色RGBA,预制路径
+,17202,172,0,0,0,0,,,Prefab/Cutscene/cg_AoZiJiaZu3_FaZhen.prefab

@@ -1,0 +1,5 @@
+﻿,required,required,required,required
+,uint32,uint32,string,string
+,type,sort,path_normal,path_complete
+备注,任务类型,优先级,普通图标路径,完成图标路径
+,112,112,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_Feeder line_def_35px _01.png,Textures\Atlas\GUI\LeftTaskPanel\Newest\icon_Feeder line_def_35px _02.png

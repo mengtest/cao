@@ -1,0 +1,5 @@
+﻿,optional,optional,optional,optional,optional,optional,optional,optional,optional
+,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32
+,id,shop_type,award_id,item_type,money_type,money_id,price,limit_amount,weight
+备注,ID,商城类型,奖励id,商品ID,货币类型,消耗货币ID,售价,限购个数,权重
+,122,3,7,5000023,11,0,25,10,1

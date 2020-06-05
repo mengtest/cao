@@ -1,0 +1,8 @@
+﻿,required,required,required,required,required,required
+,uint32,uint32,uint32,uint32,string,string
+,id,hero_type_id,hero_class,special,talent1_name,talent1_desc
+备注,流水号,英雄id,进阶数,特殊标记 0 普通 1特殊,天赋名,天赋描述
+,10805,108,5,1,熊之啸,熊型态时，伤害提升<color=#e57a20>15%</color>。人形态时，治疗量提升<color=#e57a20>15%</color>。
+,11102,111,2,0,雷霆光辉,通过【<color=#e57a20>奥义技</color>】获得的护盾提升<color=#e57a20>1</color>倍。
+,11401,114,1,0,鹰眼强袭,角色处于编队中时，我方全队暴击率<br>提升<color=#e57a20>5%</color>。
+,30105,301,5,1,致命之怒,<color=#e57a20>【辅助技】</color>的技能效果延长<color=#e57a20>1</color>招，保留<br>的最低生命值提升至<color=#e57a20>15%</color>。【<color=#e57a20>技能4</color>】<br>的重置触发条件调整为生命值低于<color=#e57a20>15%</color>时发动。

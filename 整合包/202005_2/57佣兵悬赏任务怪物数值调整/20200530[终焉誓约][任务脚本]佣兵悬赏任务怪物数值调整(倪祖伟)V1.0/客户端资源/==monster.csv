@@ -1,0 +1,7 @@
+﻿,required,required,optional,optional,optional,optional,optional,optional,optional,repeated,repeated,optional,repeated,optional,repeated,optional
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,string,uint32,string,uint32,uint32
+,id,name,attr_type,type,sex,family,profession,level,attr_id,special_effects,own_skills,skill_que,skill_vis,skill_loop_que,skill_que_vis,action_id
+备注,怪物ID,注释,属性适配类型,怪物类型,性别,家族,职业类型,等级,怪物属性ID,特殊效果ID,拥有技能列表,技能序列,技能序列可见性,循环技能序列,循环技能序列可见性,效果ID
+沙海苍鹰伊妮,9000451,沙海苍鹰伊妮,0,1,1,1,1,16,9000451,1637,1002501;1002502;1002503,"0,1,0,2;1,0,1,2",0,"0,1,2;1,0,1,0,2;0,1,1;1,0,1,2",0,0
+暗夜魔导师特里,9000452,暗夜魔导师特里,0,1,1,6,2,18,9000452,1011;1605,900101;900102;900103;900104,"2,1,3;0,1,1",0,"0,1,2;0,2,1,3;0,1,1",0,0
+魔魇使徒,9000453,魔魇使徒,0,1,1,6,1,18,9000453,1011;1621,1003701;1003702;1003703;1003704,"0,1,2,3",0,"0,1,2,3",0,0
