@@ -1,8 +1,0 @@
-﻿,required,required
-,uint32,string
-,id,picture
-备注,分享id,图片路径
-,1,0
-,2,Textures\Atlas\Dyn\Poster\ximeng.png
-,3,0
-,4,0

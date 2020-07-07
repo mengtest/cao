@@ -1,0 +1,9 @@
+﻿,required,required
+,uint32,uint32
+,approach_id,deblocking_id
+备注,跳转id,解锁id
+本命占卜,201,14
+英雄占卜,202,14
+公会,500,17
+多人副本,700,25
+每日签到,1000,36

@@ -3,3 +3,4 @@
 ,id,sceneId,regionSize,shapeType,type,name,plowlevel,glowlevel,scale,lookfaceId,background,des,uiPos
 备注,NPC组Id,关卡Id,区域大小,区域形状,NPC组类型(1npc/building/box/map/5copy/6transfor/7trap/8采集),名字,触发交互界面等级,npc群组最低等级,尺寸,外形id,NPC群组聊天背景,描述,（相对位置）建筑等或无模型类型UI名称位置
 ,40340,3150,,0,8,尤妮娅的宝箱,0,0,1,1021,0,,
+,40341,3150,,0,8,尤妮娅的宝箱,0,0,1,1021,0,,

@@ -1,6 +1,0 @@
-﻿,required,required,required,required,required,required,required,required,required
-,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32
-,id,card_type,card_time,daily_award_mail,circle_time,circle_award_mail,days_limit,trail_id,trail_time
-备注,特权卡id,特权卡类型,生效天数,每日奖励的邮件id,周期天数,周期奖励的邮件id,续费的上限天数,体验卡的物品id,体验卡的生效天数
-,201,1,30,20101,0,0,60,0,0
-,301,2,7,30101,0,0,0,0,0

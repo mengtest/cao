@@ -1,7 +1,0 @@
-﻿,required,required,required,required
-,uint32,string,string,string
-,id,show_bounses1,show_bounses2,show_bounses3
-备注,章节ID,奖励预览,奖励预览,奖励预览
-,101,"1,50","1,100","1,200"
-,102,"1,50","1,100","1,200"
-,202,"1,100","1,150","1,300"

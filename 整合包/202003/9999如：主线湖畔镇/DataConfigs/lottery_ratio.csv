@@ -1,4 +1,0 @@
-﻿,optional,optional,optional,optional,optional,optional,optional
-,uint32,uint32,uint32,uint32,uint32,uint32,uint32
-,id,raffle_type,award_type,itemtype_id,itemtype_num,itemtype_ratio,itemtype_is_up
-Mark,,抽取类型,道具类型,道具id,道具数量,道具概率,是否概率提升

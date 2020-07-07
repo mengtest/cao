@@ -1,6 +1,0 @@
-﻿,required,required,required,required,required,required,required,required,required
-,uint32,uint32,uint32,uint32,string,string,uint32,string,uint32
-,id,activity_id,award_id,points,show_item,goals,random_num,special_goals,special_random_num
-备注,流水ID,活动ID,奖励ID,对应积分,展示物品,所开启的目标,刷新数量,开启高级目标,高级目标刷新数量
-,1,10019,0,666,210024;210023;6003003;1;3,"1,5;2,5;3,5;4,5;5,5;6,5;7,5;8,5;9,5;10,5",6,"11,5;12,5;13,5;14,5;15,5;16,5",2
-,2,10020,0,666,210024;210023;3010013;1;3,"1,5;2,5;3,5;4,5;5,5;6,5;7,5;8,5;9,5;10,5",6,"11,5;12,5;13,5;14,5;15,5;16,5",2

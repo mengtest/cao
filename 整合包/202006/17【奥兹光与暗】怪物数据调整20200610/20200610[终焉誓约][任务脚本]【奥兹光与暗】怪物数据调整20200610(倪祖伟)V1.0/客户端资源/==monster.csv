@@ -1,0 +1,8 @@
+﻿,required,required,optional,optional,optional,optional,optional,optional,optional,repeated,repeated,optional,repeated,optional,repeated,optional
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,string,uint32,string,uint32,uint32
+,id,name,attr_type,type,sex,family,profession,level,attr_id,special_effects,own_skills,skill_que,skill_vis,skill_loop_que,skill_que_vis,action_id
+备注,怪物ID,注释,属性适配类型,怪物类型,性别,家族,职业类型,等级,怪物属性ID,特殊效果ID,拥有技能列表,技能序列,技能序列可见性,循环技能序列,循环技能序列可见性,效果ID
+,9000659,古沃,0,0,1,4,1,18,9000659,,5201101;5201102;5201103,"0,1;0,2,2",0,"0,1;0,0,2;0,1;0,1,2,2;0",0,0
+,9000662,药剂师莉莉娜,0,0,1,6,2,22,9000662,1031,1005801;1005802,"0,0,1",0,"0,0,1;0,1,1",0,0
+,9000664,守护兽,0,1,1,1,1,28,9000664,1011,1001401;1001402;1001403,"0,1,2",0,"0,1,0;0,1,0,2;0,1,0;2,1,0;0,1,0",0,0
+,9000665,白银盾战,0,0,1,4,1,28,9000665,,5201101;5201102;5201103,"0,1;0,2,2",0,"0,1;0,0,2;0,1;0,1,2,2;0",0,0

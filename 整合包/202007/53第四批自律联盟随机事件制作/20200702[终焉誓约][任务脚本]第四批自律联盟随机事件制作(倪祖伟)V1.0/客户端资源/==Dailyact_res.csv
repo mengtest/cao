@@ -1,0 +1,5 @@
+﻿,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional
+,uint32,string,uint32,uint32,uint32,uint32,uint32,string,uint32,string,uint32,uint32,string,uint32,uint32,uint32,string,string,uint32,uint32,uint32
+,id,bgpath,sortid,group,rankid,audio,discondition,data,type,data1,data2,show_type,show_time,disappear,times_type,shop_type,icon_path,poster_path,poster_rankid,name,first_dialog
+备注,表示序列号,背景图片索引,活动类型Id,分组,序列号,音频,显示条件,data值,指引类型,data1值,预显示天数,时间限时类型,时间文字,根据任务完成情况显示,,对应的商城,主界面按钮,轮播图标,轮播图片顺序,名字id,首次点击对白id
+雾海的危机,10015,Textures/Atlas/GUI/DailyActivityMainPanel/banner_bg_iso_zh-chs.png,15,2,3,22220050,2,10545;70222,3,0,3,0,,0,0,0,Textures/Atlas/GUI/ActivityLoopListPanel/Newly/icon_wuhaiweiji_def_50px.png,,0,29815,0

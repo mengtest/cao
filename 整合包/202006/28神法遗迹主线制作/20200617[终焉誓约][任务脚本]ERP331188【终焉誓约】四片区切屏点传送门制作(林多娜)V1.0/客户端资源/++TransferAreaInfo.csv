@@ -1,0 +1,5 @@
+﻿,required,required
+,int32,string
+,areaId,texturePath
+备注,片区Id,图片路径
+,6,GUI/TransferPanel/transferNormal5

@@ -1,0 +1,10 @@
+﻿,required,required,required,optional,optional,optional,optional
+,int32,uint32,uint32,int32,int32,uint32,string
+,id,levelid,idGenEvent,targetid,cg,transition,position
+备注,切屏点id,levelid,gen_event的Id,目标切屏点id,切屏时播放的cgid,是否需要黑屏,链接的坐标，没配的话取genevent，配置的话可以防止来回传送
+,32,2003,20030677,33,0,0,
+,33,2005,20080021,32,0,0,
+,34,2005,20080022,35,0,0,
+,35,2005,20080023,34,0,0,
+,36,2005,20080024,37,0,0,
+,37,2005,20080025,36,0,0,

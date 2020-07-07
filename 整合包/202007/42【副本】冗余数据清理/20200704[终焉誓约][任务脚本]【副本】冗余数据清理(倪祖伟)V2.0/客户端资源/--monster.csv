@@ -1,0 +1,6 @@
+﻿,required,required,optional,optional,optional,optional,optional,optional,optional,repeated,repeated,optional,repeated,optional,repeated,optional
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,string,uint32,string,uint32,uint32
+,id,name,attr_type,type,sex,family,profession,level,attr_id,special_effects,own_skills,skill_que,skill_vis,skill_loop_que,skill_que_vis,action_id
+备注,怪物ID,注释,属性适配类型,怪物类型,性别,家族,职业类型,等级,怪物属性ID,特殊效果ID,拥有技能列表,技能序列,技能序列可见性,循环技能序列,循环技能序列可见性,效果ID
+BOSS哈扎特,1000196,哈扎克,301,0,1,5,1,10,10005,,1000501;1000502,"0,1,1",0,"0,1;0,1,1",0,0
+野蛮孤狼1,1000198,野蛮孤狼,102,0,1,1,1,5,10023,1011;1121,1002301;1002302,"0,1,0;1,0,1,0",0,"0,1;1,0,1,0,1;0,1,0;1,0,1",0,0

@@ -1,0 +1,8 @@
+﻿,required,required,required,required,required
+,int32,uint32,int32,uint32,uint32
+,id,levelId,areaId,idGenEvent,showtip
+备注,Id,场景Id,片区Id,gen_event的Id,显示传送点tip
+,16,2008,6,20080026,1
+,17,2008,6,20080027,1
+,18,2008,6,20080028,1
+,19,2008,6,20080029,1

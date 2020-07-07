@@ -1,0 +1,16 @@
+﻿,required,optional,optional,optional,optional,optional,repeated,repeated,optional
+,uint32,string,string,string,uint32,string,uint32,uint32,uint32
+,id,headPath,normalHalfPath,live_path,default_face,twinkle_que,related_persons,related_type,area_id
+备注,id,标准头像,标准半身像,Live2D预制体资源的路径,默认表情id,眨眼twinkle的序列，使用LiveTwinkle表中的Id拼成数组实现,图鉴npc关系id,图鉴npc关系类型,所属片区id
+,4487,Textures/Atlas/Dyn/CharacterCommonHead/default.png,Textures\Atlas\Dyn\CharacterHalfBody\Completelytransparent.png,,0,,0,0,0
+,4488,Textures/Atlas/Dyn/CharacterCommonHead/default.png,Textures\Atlas\Dyn\CharacterHalfBody\Completelytransparent.png,,0,,0,0,0
+,4489,Textures/Atlas/Dyn/CharacterCommonHead/default.png,Textures\Atlas\Dyn\CharacterHalfBody\Completelytransparent.png,,0,,0,0,0
+,4490,Textures/Atlas/Dyn/CharacterCommonHead/ForestHunter.png,Textures\Atlas\Dyn\CharacterHalfBody\SenLinLieShou.png,npc_senlinlieshou,248001,,0,0,0
+,4491,Textures/Atlas/Dyn/CharacterCommonHead/ForestHunter.png,Textures\Atlas\Dyn\CharacterHalfBody\SenLinLieShou.png,npc_senlinlieshou,248001,,0,0,0
+,4492,Textures/Atlas/Dyn/CharacterCommonHead/Bailiff.png,Textures\Atlas\Dyn\CharacterHalfBody\Bailiff.png,npc_fengchezhenlaoyeye,100700,,3036;3009,0;0,2001
+,4493,Textures/Atlas/Dyn/CharacterCommonHead/default.png,Textures\Atlas\Dyn\CharacterHalfBody\Completelytransparent.png,,0,,0,0,0
+,4494,Textures/Atlas/Dyn/CharacterCommonHead/default.png,Textures\Atlas\Dyn\CharacterHalfBody\Completelytransparent.png,,0,,0,0,0
+,4495,Textures/Atlas/Dyn/CharacterCommonHead/default.png,Textures\Atlas\Dyn\CharacterHalfBody\Completelytransparent.png,,0,,0,0,0
+,4496,Textures/Atlas/Dyn/CharacterCommonHead/default.png,Textures\Atlas\Dyn\CharacterHalfBody\Completelytransparent.png,,0,,0,0,0
+,4497,Textures/Atlas/Dyn/CharacterCommonHead/FemalechildrenMiddleEast.png,Textures\Atlas\Dyn\CharacterHalfBody\FemalechildrenMiddleEast.png,npc_zhongdongxiaoluoli,110001,,0,0,0
+,4498,Textures/Atlas/Dyn/CharacterCommonHead/Uncle.png,Textures\Atlas\Dyn\CharacterHalfBody\UncleNPC.png,npc_dashu_normal,229001,,0,0,0

@@ -1,0 +1,19 @@
+﻿,required,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional
+,int32,int32,string,int32,int32,string,int32,int32,string,int32,int32,string,int32,int32,int32,int32,int32,int32,int32,int32,string,string,int32,int32,string,string,int32,int32,int32,int32,int32,int32,int32,int32,string,int32
+,indexId,leftAlpha,LeftGradient,leftMagicEffect,midAlpha,MidGradient,midMagicEffect,rightAlpha,RightGradient,rightMagicEffect,action,data,bgName,Monochrome,MonoTime,ZoomStart,ZoomEnd,ZoomTime,bgFadeIn,hideContine,interactBtn,nextBtns,effectClipID,bgmClipID,DialogFade,FadeColor,screenShake,ShakeDistance,ShakeFreq,ShakeDirect,ShakeTime,GuideID,showItemId,ShowMask,MaskColor,MaskTime
+备注,,左边透明度,左边半身像的颜色渐变效果，格式为：角度;色值1 RGBA值;过度位置万分比;色值2 RGBA值;过读位置万分比...,左边魔法效果,中间透明度,中间半身像的颜色渐变效果，格式为：角度;色值1 RGBA值;过度位置万分比;色值2 RGBA值;过读位置万分比...,中间魔法效果,右边透明度,右边半身像的颜色渐变效果，格式为：角度;色值1 RGBA值;过度位置万分比;色值2 RGBA值;过读位置万分比...,右边魔法效果,点击继续后的动作Id,对应数据,背景,背景黑白/彩色过渡默认0：不需要过渡 1：黑白变为彩色 2：彩色变为黑白,黑白/彩色过渡所需时间单位为毫秒,动态背景缩放其实大小单位为百分比，最小值级默认值为100,动态背景缩放终止大小单位为百分比，最小值及默认值为100%当该字段与ZoomStart字段都为默认值时表示无需动态背景缩放,动态背景缩放由起始大小变为终止大小的时间 单位毫秒,背景是否淡入,是否不显示继续按钮（默认显示）,对白互动按钮,下一步选项按钮,音效ID,背景音乐ID,对白衔淡入淡出 a;b  a:进入对白 b：对白退出 类型：0：无 1：完整的淡入淡出 2：衔接的淡入或者淡出,淡入淡出过渡颜色RGBA,屏幕震动,屏幕震动幅度 100倍数,屏幕震动频率默认0 越大抖动越频繁,屏幕震动方向默认0：无需震动方向1：上下抖动2：左右抖动,屏幕震动持续时间 单位毫秒,同时触发的引导ID,对白同时显示的物品id,触发蒙板0：不需要1：需要,蒙板颜色及透明度RGBA,蒙板持续时间单位毫秒
+,518601,-1,,0,-1,,0,-1,,0,0,,0,0,0,0,0,0,0,0,,,0,0,0,,0,0,0,0,0,0,0,0,,0
+,518602,-1,,0,-1,,0,-1,,0,0,,0,0,0,0,0,0,0,0,,,0,0,0,,0,0,0,0,0,0,0,0,,0
+,518701,-1,,0,-1,,0,-1,,0,0,,0,0,0,0,0,0,0,0,,,0,0,0,,0,0,0,0,0,0,0,0,,0
+,518702,-1,,0,-1,,0,-1,,0,0,,0,0,0,0,0,0,0,0,,,0,0,0,,0,0,0,0,0,0,0,0,,0
+,518901,-1,,0,-1,,0,-1,,0,0,,0,0,0,0,0,0,0,0,,,0,0,0,,0,0,0,0,0,0,0,0,,0
+,518902,-1,,0,-1,,0,-1,,0,0,,0,0,0,0,0,0,0,0,,,0,0,0,,0,0,0,0,0,0,0,0,,0
+,519001,-1,,0,-1,,0,-1,,0,0,,0,0,0,0,0,0,0,0,,,0,0,0,,0,0,0,0,0,0,0,0,,0
+,519002,-1,,0,-1,,0,-1,,0,0,,0,0,0,0,0,0,0,0,,,0,0,0,,0,0,0,0,0,0,0,0,,0
+,519003,-1,,0,-1,,0,-1,,0,0,,0,0,0,0,0,0,0,0,,,0,0,0,,0,0,0,0,0,0,0,0,,0
+,519101,-1,,0,-1,,0,-1,,0,0,,0,0,0,0,0,0,0,0,,,0,0,0,,0,0,0,0,0,0,0,0,,0
+,519102,-1,,0,-1,,0,-1,,0,0,,0,0,0,0,0,0,0,0,,,0,0,0,,0,0,0,0,0,0,0,0,,0
+,519201,-1,,0,-1,,0,-1,,0,0,,0,0,0,0,0,0,0,0,,,0,0,0,,0,0,0,0,0,0,0,0,,0
+,519202,-1,,0,-1,,0,-1,,0,0,,0,0,0,0,0,0,0,0,,,0,0,0,,0,0,0,0,0,0,0,0,,0
+,677701,-1,,0,-1,,0,-1,,0,0,,0,0,0,0,0,0,0,0,,,0,0,0,,0,0,0,0,0,0,0,0,,0
+,677702,-1,,0,-1,,0,-1,,0,0,,0,0,0,0,0,0,0,0,,,0,0,0,,0,0,0,0,0,0,0,0,,0

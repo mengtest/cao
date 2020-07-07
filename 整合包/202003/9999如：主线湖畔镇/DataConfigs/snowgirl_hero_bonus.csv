@@ -1,7 +1,0 @@
-﻿,required,required,required
-,uint32,uint32,uint32
-,id,hero_id,bonus
-备注,id,英雄id,百分比
-,1,101,50
-,2,201,100
-,3,301,150

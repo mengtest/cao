@@ -1,0 +1,5 @@
+﻿,required,required,required,required,required,required,required,required,required
+,uint32,uint32,uint32,string,string,uint32,uint32,uint32,uint32
+,id,against_id,type,starttime,endtime,data1,data2,data3,day
+备注,流水ID,互斥id,活动类型,开始时间,结束时间,data1,data2,data3,开服天数
+等级奖励,10008,0,0,1,1,0,0,0,0

@@ -5,7 +5,7 @@
 #论坛链接:http://forum.nderp.99.com/Forum/TopicList-373031.aspx
 ###################################################
 #注释部分
-DELETE FROM `fashion_shop` WHERE `id` in (1,2,3,4);
+#DELETE FROM `fashion_shop` WHERE `id` in (1,2,3,4);
 #打开注释部分
 DELETE FROM `fashion_shop` WHERE `id` in (1001,1002,1003,1004);
 

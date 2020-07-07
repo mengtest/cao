@@ -1,0 +1,7 @@
+﻿,required,required,optional,optional,optional,optional,optional,optional,optional,repeated,repeated,optional,repeated,optional,repeated,optional
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,string,uint32,string,uint32,uint32
+,id,name,attr_type,type,sex,family,profession,level,attr_id,special_effects,own_skills,skill_que,skill_vis,skill_loop_que,skill_que_vis,action_id
+备注,怪物ID,注释,属性适配类型,怪物类型,性别,家族,职业类型,等级,怪物属性ID,特殊效果ID,拥有技能列表,技能序列,技能序列可见性,循环技能序列,循环技能序列可见性,效果ID
+,1001231,邪恶的哥布林,301,0,1,5,1,0,1001231,1624,1000701;1000702;1000703,"1,0,1;0,2,1",0,"1,0,1,0,1;0,1,0;0,1,2;1,0,1;2,0,1;1,0,1",0,0
+,1001232,贪婪的哥布林,301,2,1,5,1,0,1001232,1640,1000501;1000502;1000503,"0,2,1;1,0,1",0,"0,1,0;0,1,2;1,0,1,0,1;1,0,1;2,0,1;1,0,1",0,0
+,1001681,哈蒙,0,1,1,1,1,0,1001681,,1001201;1001202;1001203,"0,2;2,1,0;0,0,1",0,"0,2;2,0,1,0;0,1",0,0

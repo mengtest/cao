@@ -1,0 +1,6 @@
+﻿,required,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,string,float,float
+,id,name,mapid,event_type,event_id,path_id,flag,intask,story_id,life_time,level_id,battle_scene,position,rotation_y,scale
+备注,分段id,名字,关卡id,事件类型,事件id,路径id,number,怪物是否显示,怪物是否喊话,存在时间,子关卡id,战斗场景id,坐标,Y轴旋转角度,模型缩放比例
+,20010223,恶魔之子,2001,2,900483,0,1,0,0,0,0,58,"-54.93,0.096,-170.54",30,1
+,20050328,工程师卡尔文,2005,1,30650,0,1,0,0,0,0,0,"35.99,12.04,-319.55",0,1

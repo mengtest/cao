@@ -1,0 +1,7 @@
+﻿,optional,optional,optional,optional,optional,optional,optional,optional
+,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32
+,id,type,sub_type,award_id,money,Core_num,Item1_ID,Item1_num
+备注,物品ID,类型,子类型,合成结果,所需金钱数量,核心材料数量,材料1ID,材料1数量
+,211,2,1,6000327,10000,5,5000012,1
+,212,2,2,6000328,30000,4,5000023,1
+,213,2,3,6000328,50000,3,5000034,1

@@ -1,0 +1,11 @@
+﻿,required,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional
+,uint32,string,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,string,float,float
+,id,name,mapid,event_type,event_id,path_id,flag,intask,story_id,life_time,level_id,battle_scene,position,rotation_y,scale
+备注,分段id,名字,关卡id,事件类型,事件id,路径id,number,怪物是否显示,怪物是否喊话,存在时间,子关卡id,战斗场景id,坐标,Y轴旋转角度,模型缩放比例
+,20010372,,2001,1,30818,0,1,0,0,0,0,0,"-67.247,9.79,-98.31",0,1
+,20010373,,2001,1,30819,0,1,0,0,0,0,0,"-14.36,0.15,-98.00",0,1
+,20010374,,2001,1,30820,0,1,0,0,0,0,0,"-17.704,0.04,-131.2",0,1
+,20010375,,2001,1,30821,0,1,0,0,0,0,0,"-26.377,0.09,-132.6",0,1
+,20010376,,2001,1,50079,0,1,0,0,0,0,0,"-26.377,0.09,-132.6",0,1
+,20010377,,2001,1,21473,0,1,0,0,0,0,0,"-4.70,0.05,-110.62",288.95,1
+,20010378,,2001,1,21474,0,1,0,0,0,0,0,"-7.74,0.07,-109.23",90,1

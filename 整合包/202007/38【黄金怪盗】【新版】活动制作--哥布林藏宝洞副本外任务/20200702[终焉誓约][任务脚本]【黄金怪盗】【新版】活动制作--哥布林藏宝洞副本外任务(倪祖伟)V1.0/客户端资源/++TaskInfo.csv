@@ -1,0 +1,10 @@
+﻿,required,optional,required,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional,optional
+,uint32,uint32,int32,int32,int32,int32,int32,string,int32,string,int32,string,uint32,int32,int32,string,uint32,uint32,uint32,uint32,string
+,Task_id,NPC_id,Type,SubType,areaId,Quality,Starttype,Data1,Endtype,Data2,effect,missionMap,escortLookface,talkDur,awardGroupId,QuestionMark,AutoTask,Typemask,countdown_show,countdown_type,countdown_icon
+备注,任务id,所属NPCID,任务类型,子类型（采集任务1）,所属区域ID,品质,进行中点击追踪面板触发的效果,对应数据,完成时点击追踪面板触发的功,对应数据,接受和完成特效,护送任务地图,护送Npc模型,喊话间隔时间,任务奖组Id,NPC/Monster头顶任务问号或者路标问号,自动任务,图标类型,倒计时限时,是否显示倒计时,倒计时图标路径
+,70659,0,9,0,0,0,1,,1,,5,0,0,0,0,,0,0,0,0,
+,70660,0,9,0,0,0,3,1 2001 30818,1,,5,0,0,0,0,"2 0 2001 -65.40,9.80,-99.07",0,0,0,0,
+,70661,0,9,0,0,0,3,1 2001 30819,1,,5,0,0,0,0,"2 0 2001 -14.36,0.15,-98.00",0,0,0,0,
+,70662,0,9,0,0,0,3,1 2001 30820,1,,5,0,0,0,0,"2 0 2001 -16.28,0.05,-130.20",0,0,0,0,
+,70663,0,9,0,0,0,3,1 2001 30821,1,,5,0,0,0,0,"2 0 2001 -26.45,0.11,-133.56",0,0,0,0,
+,70664,0,9,0,0,0,3,1 2001 50079,1,,2,0,0,0,0,"2 0 2001 -26.45,0.11,-133.56",0,0,0,0,

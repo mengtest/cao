@@ -1,6 +1,0 @@
-﻿,required,required,required,required,required,required,required,required,required,required,required,required
-,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32
-,id,failure_length,item1_id,item1_num,item2_id,item2_num,item3_id,item3_num,item4_id,item4_num,item5_id,item5_num
-备注,邮件id,失效时长,物品id1,数量1,物品id2,数量2,物品id3,数量3,物品id4,数量4,物品id5,数量5
-,20101,10,1,200,204020,2,3,5000,0,0,0,0
-,30101,15,120013,1,0,0,0,0,0,0,0,0

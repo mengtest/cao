@@ -1,7 +1,0 @@
-﻿,required,required,required,required,required,required,required,required
-,uint32,uint32,uint32,uint32,uint32,uint32,uint32,uint32
-,id,difficulty,star1,star_bonuses1,star2,star_bonuses2,star3,star_bonuses3
-备注,章节ID,难度,星级数量,奖励ID,星级数量,奖励ID,星级数量,奖励ID
-,101,0,1,7000762,2,7000763,3,7000764
-,102,0,2,7000765,4,7000766,6,7000767
-,202,1,2,7000768,4,7000769,6,7000770

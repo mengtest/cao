@@ -1,8 +1,0 @@
-﻿,required,required,required,required,required
-,uint32,uint32,uint32,uint32,uint32
-,id,type,award_id,award_type,data1
-备注,分享id,分享类型,奖励id,奖励类型,参数1
-,1,1,0,0,0
-,2,2,2000678,1,10206
-,3,3,2000678,1,0
-,4,4,2000678,1,0

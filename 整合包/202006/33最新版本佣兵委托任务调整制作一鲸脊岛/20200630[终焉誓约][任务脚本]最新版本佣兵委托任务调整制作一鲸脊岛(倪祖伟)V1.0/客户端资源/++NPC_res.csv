@@ -1,0 +1,7 @@
+﻿,required,optional,optional,optional,optional,optional,repeated,repeated,optional
+,uint32,string,string,string,uint32,string,uint32,uint32,uint32
+,id,headPath,normalHalfPath,live_path,default_face,twinkle_que,related_persons,related_type,area_id
+备注,id,标准头像,标准半身像,Live2D预制体资源的路径,默认表情id,眨眼twinkle的序列，使用LiveTwinkle表中的Id拼成数组实现,图鉴npc关系id,图鉴npc关系类型,所属片区id
+,4517,Textures/Atlas/Dyn/CharacterCommonHead/MiningEngineer.png,Textures\Atlas\Dyn\CharacterHalfBody\caikuanggongbing.png,npc_caikuanggongbing,266001,,0,0,0
+,4518,Textures\Atlas\Dyn\CharacterCommonHead\EliteWarrio.png,Textures\Atlas\Dyn\CharacterHalfBody\TribaleliteWarrior.png,npc_qiangjiedezhenming,167001,,0,0,0
+,4519,Textures/Atlas/Dyn/CharacterCommonHead/APuLegend.png,Textures\Atlas\Dyn\CharacterHalfBody\ShiMoShou.png,npc_shimoshou,264001,,0,0,0
